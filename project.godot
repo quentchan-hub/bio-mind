@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[accessibility]
+
+general/accessibility_support=2
+
+[application]
+
+config/name="BioMind"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+config/icon="res://Assets/Autres Assets A Jeter/icon.svg"
+
+[display]
+
+window/size/viewport_width=540
+window/size/viewport_height=1130
+
+[dotnet]
+
+project/assembly_name="BioMind"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/Autres Assets A Jeter/": "teal",
+"res://Assets/BioMindhead/": "teal",
+"res://Assets/BioMinds/": "teal",
+"res://Assets/Plateau/": "teal",
+"res://Assets/Safe/": "teal"
+}
+
+[rendering]
+
+renderer/rendering_method="mobile"

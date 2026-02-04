@@ -1,0 +1,18 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://jajpelhbk5sf"]
+
+[sub_resource type="SystemFont" id="SystemFont_c5nr8"]
+font_names = PackedStringArray("Machine")
+
+[resource]
+font = SubResource("SystemFont_c5nr8")
+font_size = 70
+font_color = Color(1, 0.09019608, 0.039215688, 1)
+outline_size = 10
+outline_color = Color(0.9999997, 0.99419457, 0.9931635, 1)
+shadow_size = 16
+shadow_color = Color(0, 0, 0.8235294, 1)
+shadow_offset = Vector2(1, 15)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(1, 4)
+stacked_shadow_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/outline_size = 10
