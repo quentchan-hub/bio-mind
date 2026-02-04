@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://e01tv4ge5kyh"]
+[gd_scene load_steps=65 format=3 uid="uid://e01tv4ge5kyh"]
 
 [ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
 [ext_resource type="Texture2D" uid="uid://de4um7yss2my5" path="res://Settings/dot_white.tres" id="1_jnovg"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://4lqx8yhjq5ik" path="res://Settings/AffichageScores.tres" id="10_13dyv"]
 [ext_resource type="Texture2D" uid="uid://bjkibk02evjd3" path="res://Assets/BioMindhead/BioMind_Yellow_Head.png" id="10_d1ul7"]
 [ext_resource type="Texture2D" uid="uid://bnlx3den7fnat" path="res://Assets/BioMindhead/BioMind_Blue_Head.png" id="11_pinj1"]
+[ext_resource type="Script" uid="uid://s73pfeelqd8d" path="res://Scenes/GlowGreenEffect.cs" id="11_tb15e"]
 [ext_resource type="FontFile" uid="uid://dxw20vr4lvb1" path="res://Fonts/BLACKOPSONE-REGULAR.TTF" id="12_b8rtp"]
 [ext_resource type="StyleBox" uid="uid://cl7spbhg72juh" path="res://Settings/panelboutonsreponses.tres" id="12_r71lk"]
 [ext_resource type="FontFile" uid="uid://c5pgju5k8hoe1" path="res://Fonts/IMPACT.TTF" id="13_612k1"]
@@ -177,7 +178,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:texture:gradient:offsets")
+tracks/0/path = NodePath("GlowGreenEffect:texture:gradient:offsets")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -192,7 +193,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:texture:gradient:offsets")
+tracks/0/path = NodePath("GlowGreenEffect:texture:gradient:offsets")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -628,10 +629,10 @@ process_material = SubResource("ParticleProcessMaterial_b8rtp")
 
 [node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel"]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer"]
 layout_mode = 2
@@ -906,10 +907,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0017067, 1)
-theme_override_constants/separation = 10
+theme_override_constants/separation = 0
 
 [node name="TopGameZone" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox"]
-custom_minimum_size = Vector2(0, 420)
+custom_minimum_size = Vector2(0, 350)
 layout_mode = 2
 size_flags_vertical = 0
 color = Color(1, 1, 1, 0)
@@ -920,9 +921,9 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 337.0
 grow_horizontal = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/TopGameZone/MarginContainer"]
 layout_mode = 2
@@ -936,7 +937,7 @@ texture = ExtResource("4_wi7yl")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/TopGameZone/MarginContainer/VBoxContainer/Coffre"]
+[node name="GlowGreenEffect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/TopGameZone/MarginContainer/VBoxContainer/Coffre" node_paths=PackedStringArray("coffreAnim")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -950,6 +951,8 @@ offset_bottom = 11.333328
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_dcl8t")
+script = ExtResource("11_tb15e")
+coffreAnim = NodePath("../CoffreAnim")
 
 [node name="CoffreAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/TopGameZone/MarginContainer/VBoxContainer/Coffre"]
 libraries = {
@@ -972,7 +975,6 @@ offset_top = 10.0
 offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = -40
 columns = 3
 
 [node name="LabelNiveau" type="Label" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
@@ -1031,7 +1033,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
@@ -1043,7 +1045,7 @@ follow_focus = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 20
+theme_override_constants/separation = 0
 alignment = 2
 
 [node name="AttemptRow1" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
@@ -1196,6 +1198,1356 @@ visible = false
 layout_mode = 2
 color = Color(0, 0, 0, 0.32000002)
 
+[node name="AttemptRow2" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow2/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow3" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow3/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow4" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow4/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow5" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow5/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow6" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow6/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow7" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow7/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow8" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow8/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow9" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow9/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
+[node name="AttemptRow10" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GlowEffect" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10"]
+layout_mode = 2
+size_flags_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="GlowEffectAnim" type="AnimationPlayer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+script = ExtResource("14_pinj1")
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button2" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button3" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/PlayerSlots/MarginContainer/HBoxContainer/AspectRatioContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="GameSlots" type="PanelContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("12_r71lk")
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect2" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect3" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="TextureRect4" type="TextureRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect/HBoxSlots/GameSlots/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_d1ul7")
+
+[node name="ColorRect" type="ColorRect" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/MidGameZone/MarginContainer/ScrollContainer/VBoxZoneQA/AttemptRow10/GlowEffect"]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 0.32000002)
+
 [node name="HSeparator" type="HSeparator" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_68ajo")
@@ -1231,7 +2583,6 @@ theme_override_styles/hover = ExtResource("13_pinj1")
 theme_override_styles/focus = ExtResource("13_d1ul7")
 
 [node name="MarginContainer" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/BotGameZone/BottomUIOption1/HBoxContainer/Button"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1391,7 +2742,6 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="BottomUIOption2" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/BotGameZone"]
-visible = false
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -1406,7 +2756,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/h_separation = 50
+theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 5
 columns = 3
 
@@ -1579,6 +2929,7 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="BottomUIOption3" type="MarginContainer" parent="GameContainer/BorderlineBGPanel/MarginContainer/ZoneDeJeuControl/VBox/BotGameZone"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

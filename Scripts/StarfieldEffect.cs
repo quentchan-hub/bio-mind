@@ -21,7 +21,7 @@ public partial class StarfieldEffect : Control
 	private List<Star> _stars = new List<Star>();
 	private RandomNumberGenerator rng = new RandomNumberGenerator();
 
-	[Export] public int StarCount = 50;
+	[Export] public int StarCount = 150;
 
 	// -------------------------------
 	// _Ready : initialisation
@@ -48,7 +48,7 @@ public partial class StarfieldEffect : Control
 				rng.RandfRange(0, Size.X),
 				rng.RandfRange(0, Size.Y)
 			),
-			radius = rng.RandfRange(0.3f, 2.0f),
+			radius = rng.RandfRange(0.3f, 2.5f),
 			alphaPhase = rng.RandfRange(0, Mathf.Tau),
 			alphaSpeed = rng.RandfRange(0.8f, 1.80f)
 		};
