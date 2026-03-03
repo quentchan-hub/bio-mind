@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddob45vvpwd37"]
+
+[ext_resource type="Script" uid="uid://csks25wf1fmm8" path="res://Scripts/HintButton.cs" id="1_pqfd4"]
+
+[node name="HintButton" type="ColorRect"]
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_pqfd4")

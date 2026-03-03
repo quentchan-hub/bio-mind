@@ -1,0 +1,141 @@
+[gd_scene load_steps=9 format=3 uid="uid://tto86px2ryko"]
+
+[ext_resource type="Script" uid="uid://bn5ydqtqbynox" path="res://Scripts/AttemptRow.cs" id="1_605b4"]
+[ext_resource type="PackedScene" uid="uid://bn2enc4ph1p0h" path="res://Scenes/player_slot.tscn" id="2_1lvok"]
+[ext_resource type="StyleBox" uid="uid://civeoandy3cxt" path="res://Settings/flat_glow_effect.tres" id="2_dqity"]
+[ext_resource type="StyleBox" uid="uid://cl7spbhg72juh" path="res://Settings/panelboutonsreponses.tres" id="3_8oh5m"]
+[ext_resource type="PackedScene" uid="uid://ddob45vvpwd37" path="res://Scenes/hint_button.tscn" id="5_ml34d"]
+
+[sub_resource type="Animation" id="Animation_dm5gj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y1m5i"]
+resource_name = "row_glow"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.5686275), Color(1, 1, 1, 1), Color(1, 1, 1, 0.5686275)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qoydj"]
+_data = {
+&"RESET": SubResource("Animation_dm5gj"),
+&"row_glow": SubResource("Animation_y1m5i")
+}
+
+[node name="AttemptRow" type="MarginContainer" node_paths=PackedStringArray("SlotContainer", "HintContainer", "RowAnim", "BlockTouch")]
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_605b4")
+SlotContainer = NodePath("HBoxSlots/PlayerSlots/MarginContainer/SlotContainer")
+PlayerSlot = ExtResource("2_1lvok")
+HintContainer = NodePath("HBoxSlots/GameSlots/TextureRect/HintContainer")
+HintButton = ExtResource("5_ml34d")
+RowAnim = NodePath("RowAnim")
+BlockTouch = NodePath("BlockTouch")
+
+[node name="GlowEffect" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("2_dqity")
+
+[node name="RowAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qoydj")
+}
+
+[node name="HBoxSlots" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="PlayerSlots" type="PanelContainer" parent="HBoxSlots"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_8oh5m")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxSlots/PlayerSlots"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 5
+
+[node name="SlotContainer" type="HBoxContainer" parent="HBoxSlots/PlayerSlots/MarginContainer"]
+layout_mode = 2
+
+[node name="PlayerSlot" parent="HBoxSlots/PlayerSlots/MarginContainer/SlotContainer" instance=ExtResource("2_1lvok")]
+layout_mode = 2
+
+[node name="PlayerSlot2" parent="HBoxSlots/PlayerSlots/MarginContainer/SlotContainer" instance=ExtResource("2_1lvok")]
+layout_mode = 2
+
+[node name="PlayerSlot3" parent="HBoxSlots/PlayerSlots/MarginContainer/SlotContainer" instance=ExtResource("2_1lvok")]
+layout_mode = 2
+
+[node name="PlayerSlot4" parent="HBoxSlots/PlayerSlots/MarginContainer/SlotContainer" instance=ExtResource("2_1lvok")]
+layout_mode = 2
+
+[node name="GameSlots" type="PanelContainer" parent="HBoxSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_8oh5m")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxSlots/GameSlots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+
+[node name="HintContainer" type="GridContainer" parent="HBoxSlots/GameSlots/TextureRect"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="HintButton" parent="HBoxSlots/GameSlots/TextureRect/HintContainer" instance=ExtResource("5_ml34d")]
+layout_mode = 2
+
+[node name="BlockTouch" type="ColorRect" parent="."]
+visible = false
+layout_mode = 2
+focus_mode = 2
+color = Color(0, 0, 0, 0.19607843)

@@ -1,0 +1,2223 @@
+[gd_scene load_steps=97 format=3 uid="uid://e01tv4ge5kyh"]
+
+[ext_resource type="Script" uid="uid://dw1f07bu3f8rp" path="res://Scripts/UiManager.cs" id="1_8blbl"]
+[ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
+[ext_resource type="Script" uid="uid://bfmph3dhdkkh0" path="res://Scripts/Brain.cs" id="1_tk2p1"]
+[ext_resource type="LabelSettings" uid="uid://jajpelhbk5sf" path="res://Settings/biomind_title_label_settings.tres" id="1_vqx31"]
+[ext_resource type="Texture2D" uid="uid://cgtl0q3ognrqw" path="res://Assets/BioMinds/Team6NoBG2.webp" id="3_n04ve"]
+[ext_resource type="LabelSettings" uid="uid://dv21wwgd8ugma" path="res://Settings/result_label_settings.tres" id="4_6lb63"]
+[ext_resource type="Script" uid="uid://dh2pyajtay41y" path="res://Scripts/HomeScreen.cs" id="4_gvfd6"]
+[ext_resource type="SystemFont" uid="uid://bujlmmn752mno" path="res://Settings/difficulty_button_font.tres" id="4_mqm5i"]
+[ext_resource type="LabelSettings" uid="uid://cp5o8ivib11po" path="res://Settings/biomind_subtitle_label_settings.tres" id="4_qoydj"]
+[ext_resource type="Texture2D" uid="uid://e1ug7aqd584j" path="res://Assets/Safe/CoffreFerme5.4.webp" id="4_wi7yl"]
+[ext_resource type="Texture2D" uid="uid://1jbf3l36o1hg" path="res://Assets/BioMindhead/BioMind_Black_Head.png" id="6_mqm5i"]
+[ext_resource type="StyleBox" uid="uid://cudmoc7asxngr" path="res://Settings/difficulty_btn_normal_flat.tres" id="7_dm5gj"]
+[ext_resource type="Texture2D" uid="uid://b6tqyicii458a" path="res://Assets/BioMindhead/BioMind_Purple_Head.png" id="7_jnovg"]
+[ext_resource type="Texture2D" uid="uid://bsfft1f8hqu6m" path="res://Assets/BioMindhead/BioMind_Red_Head.png" id="8_13dyv"]
+[ext_resource type="StyleBox" uid="uid://ce8okfd7bj547" path="res://Settings/difficulty_btn_pressed_flat.tres" id="8_qoydj"]
+[ext_resource type="StyleBox" uid="uid://beej2epojqrvs" path="res://Settings/difficulty_btn_hover_flat.tres" id="9_lolh4"]
+[ext_resource type="Texture2D" uid="uid://b64kpby7ndt6v" path="res://Assets/BioMindhead/BioMind_White_Head.png" id="9_r71lk"]
+[ext_resource type="Texture2D" uid="uid://bjkibk02evjd3" path="res://Assets/BioMindhead/BioMind_Yellow_Head.png" id="10_d1ul7"]
+[ext_resource type="ButtonGroup" uid="uid://cj28bwx6bssol" path="res://Settings/difficulty_button_group.tres" id="10_q8m6m"]
+[ext_resource type="StyleBox" uid="uid://b0dirgb1mtdpc" path="res://Settings/Play_Btn_normal_flat.tres" id="11_gqamb"]
+[ext_resource type="FontFile" uid="uid://dxw20vr4lvb1" path="res://Fonts/BLACKOPSONE-REGULAR.TTF" id="12_b8rtp"]
+[ext_resource type="StyleBox" uid="uid://2wxum48qd44p" path="res://Settings/play_btn_pressed_flat.tres" id="12_gqamb"]
+[ext_resource type="FontFile" uid="uid://c5pgju5k8hoe1" path="res://Fonts/IMPACT.TTF" id="13_612k1"]
+[ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="13_d1ul7"]
+[ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="13_pinj1"]
+[ext_resource type="StyleBox" uid="uid://cfx5k36o3lmnr" path="res://Settings/play_btn_hover_flat.tres" id="13_q8m6m"]
+[ext_resource type="LabelSettings" uid="uid://cbvg855oq8h1i" path="res://Settings/tuto_label_font_dyn.tres" id="14_5gwyn"]
+[ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="15_yhvps"]
+[ext_resource type="Script" uid="uid://s73pfeelqd8d" path="res://Scripts/GlowGreenEffect.cs" id="16_hpjjw"]
+[ext_resource type="Script" uid="uid://dtvhhneemkn8d" path="res://Scripts/GameScreen.cs" id="17_65hfw"]
+[ext_resource type="LabelSettings" uid="uid://cpgglm6jxn5ie" path="res://Settings/font_midgamezone_label.tres" id="18_1lsdj"]
+[ext_resource type="Texture2D" uid="uid://bnlx3den7fnat" path="res://Assets/BioMindhead/BioMind_Blue_Head.png" id="19_612k1"]
+[ext_resource type="Texture2D" uid="uid://bcai313hijbmn" path="res://Assets/Buttons/HomeButton.Webp" id="21_j7e3e"]
+[ext_resource type="Texture2D" uid="uid://b11m5qn20fqx4" path="res://Settings/bloc_background_dark_blue.tres" id="22_gvfd6"]
+[ext_resource type="Texture2D" uid="uid://buxckxojcp5dj" path="res://Assets/Buttons/HelpButton.webp" id="22_y2ulj"]
+[ext_resource type="PackedScene" uid="uid://tto86px2ryko" path="res://Scenes/attempt_row.tscn" id="24_ep8v8"]
+[ext_resource type="Script" uid="uid://c45413vjwk77t" path="res://Scripts/ResultButton.cs" id="38_dgrhb"]
+[ext_resource type="StyleBox" uid="uid://cdagyo00whtfd" path="res://Settings/back_home_button.tres" id="39_dgrhb"]
+[ext_resource type="StyleBox" uid="uid://btdgla7464cqg" path="res://Settings/flat_play_again_normal.tres" id="41_q8m6m"]
+[ext_resource type="SystemFont" uid="uid://bst8woildkesg" path="res://Settings/button.tres" id="41_rgw24"]
+[ext_resource type="Texture2D" uid="uid://ofm3v60mi1y7" path="res://Assets/Buttons/ClearButtonNormal.NoText.2.1.webp" id="41_yisvs"]
+[ext_resource type="Script" uid="uid://brstn6ayrq1a3" path="res://Scripts/WarningLabels.cs" id="42_mtrk6"]
+[ext_resource type="Texture2D" uid="uid://bypvwxc6850lw" path="res://Assets/Buttons/ValidateButtonNormal.NoText.2.1.webp" id="42_rgw24"]
+[ext_resource type="StyleBox" uid="uid://b0qrib23c5tse" path="res://Settings/tuto_label_box_flat.tres" id="43_semxg"]
+[ext_resource type="StyleBox" uid="uid://d3jycox53b4x0" path="res://Settings/tuto_title_box_flat.tres" id="44_ep8v8"]
+[ext_resource type="StyleBox" uid="uid://d4fkvl1jwyqjj" path="res://Settings/tuto_point.tres" id="45_65hfw"]
+[ext_resource type="LabelSettings" uid="uid://dmkcmvbgj1ted" path="res://Settings/tuto_title_font.tres" id="45_3133c"]
+[ext_resource type="Script" uid="uid://cwebiyg6uvi3d" path="res://Scripts/EndScreen.cs" id="45_lfh1j"]
+[ext_resource type="LabelSettings" uid="uid://derm3dpdmwcgm" path="res://Settings/tuto_text_yellow.tres" id="46_xf5i4"]
+[ext_resource type="Texture2D" uid="uid://d1m5aq71c28nt" path="res://Assets/Arrows/arrow_decorative_n.png" id="47_3133c"]
+[ext_resource type="LabelSettings" uid="uid://c8w4ut0w0dkwg" path="res://Settings/tuto2_1.tres" id="49_js5gh"]
+[ext_resource type="Texture2D" uid="uid://3g4u181ctrc3" path="res://Assets/Buttons/icon_cross_yellow.png" id="49_pfa0l"]
+[ext_resource type="Texture2D" uid="uid://cx2cb5xpcc2ij" path="res://Assets/Arrows/arrow_decorative_n_small.png" id="51_5gwyn"]
+[ext_resource type="Script" uid="uid://dfx43uldpfgke" path="res://Scripts/TutoExitLayer.cs" id="51_65hfw"]
+[ext_resource type="AudioStream" uid="uid://ck4wniq5p3rma" path="res://Assets/Sounds/universfield-bright-notification-352449.mp3" id="52_xf5i4"]
+[ext_resource type="Texture2D" uid="uid://y0c7jcbba31p" path="res://Assets/Buttons/icon_cross_blue.png" id="56_t3x2a"]
+[ext_resource type="Script" uid="uid://cgl2hity0htx5" path="res://Scripts/TutoCloseButton.cs" id="57_1bbis"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_robvp"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="Gradient" id="Gradient_612k1"]
+offsets = PackedFloat32Array(0, 0.44626167, 1)
+colors = PackedColorArray(0.007843138, 0.12156863, 0.3137255, 1, 0, 0, 0, 0, 0.007843138, 0.12156863, 0.3137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_us6mg"]
+gradient = SubResource("Gradient_612k1")
+fill_from = Vector2(0.5555556, 0)
+fill_to = Vector2(0.55128205, 1)
+
+[sub_resource type="Gradient" id="Gradient_lrj6d"]
+offsets = PackedFloat32Array(0, 0.75)
+colors = PackedColorArray(0.87058824, 0.87058824, 0.4, 0.83137256, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fkxa7"]
+gradient = SubResource("Gradient_lrj6d")
+height = 80
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Animation" id="Animation_ml53l"]
+resource_name = "BGBiomind"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxTop/TextureRect:texture:gradient:offsets")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedFloat32Array(0, 0.75), PackedFloat32Array(0.4, 0.75)]
+}
+
+[sub_resource type="Animation" id="Animation_wi7yl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxTop/TextureRect:texture:gradient:offsets")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedFloat32Array(0, 0.75)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6xvmx"]
+_data = {
+&"BGTitle": SubResource("Animation_ml53l"),
+&"RESET": SubResource("Animation_wi7yl")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nuxi"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="SystemFont" id="SystemFont_t1ebt"]
+font_names = PackedStringArray("Avengeance Heroic Avenger", "Bernard MT", "Arial")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgw24"]
+bg_color = Color(0.23921569, 0.23921569, 0.23921569, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_top = 20.0
+anti_aliasing_size = 0.01
+
+[sub_resource type="LabelSettings" id="LabelSettings_qoydj"]
+font_size = 22
+font_color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lolh4"]
+font_size = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6gtk"]
+bg_color = Color(0, 0, 0.2901961, 0.92156863)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="Gradient" id="Gradient_as1ww"]
+offsets = PackedFloat32Array(0.5, 0.65, 0.8)
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 0.50980395, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dcl8t"]
+gradient = SubResource("Gradient_as1ww")
+height = 58
+fill = 1
+fill_from = Vector2(0.49568966, 0.49137932)
+
+[sub_resource type="Animation" id="Animation_robvp"]
+resource_name = "GlowGreen"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowGreenEffect:texture:gradient:offsets")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedFloat32Array(0, 0.65, 0.8), PackedFloat32Array(0.5, 0.65, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_86mtp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GlowGreenEffect:texture:gradient:offsets")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedFloat32Array(0.5, 0.65, 0.8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lrj6d"]
+_data = {
+&"GlowGreen": SubResource("Animation_robvp"),
+&"RESET": SubResource("Animation_86mtp")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_bb0on"]
+font = ExtResource("13_612k1")
+font_size = 22
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_68ajo"]
+color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft0vu"]
+bg_color = Color(0.35057518, 0.43170124, 0.73695916, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 20.0
+expand_margin_top = 10.0
+expand_margin_right = 20.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqa0b"]
+font = ExtResource("12_b8rtp")
+font_size = 28
+
+[sub_resource type="Animation" id="Animation_hptg1"]
+resource_name = "EmptySlots!"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 1, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_luji1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ypcqt"]
+_data = {
+&"EmptySlots!": SubResource("Animation_hptg1"),
+&"RESET": SubResource("Animation_luji1")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn2g2"]
+bg_color = Color(0.6, 0.6, 0.6, 0.32941177)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6wfu"]
+bg_color = Color(0.20392157, 0.3019608, 0.45882353, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.8, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kddde"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yisvs"]
+
+[sub_resource type="Animation" id="Animation_yisvs"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_rgw24"]
+resource_name = "anim_tuto_1.1"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer/Tuto2_1:label_settings:stacked_outline_0/size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer/Tuto2_1:label_settings:stacked_outline_1/size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer/Tuto2_1:label_settings:font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 1), Color(1, 0.8, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer/Tuto2_1:label_settings:font_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [22, 22]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer/Tuto2_1:label_settings:outline_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 2]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer/Tuto2_1:label_settings:shadow_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r6gtk"]
+_data = {
+&"RESET": SubResource("Animation_yisvs"),
+&"tuto_2_1": SubResource("Animation_rgw24")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lb63"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_color = Color(0.8001019, 0.8001019, 0, 0)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68ajo"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8001019, 0.8001019, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
+shadow_size = 20
+
+[sub_resource type="Animation" id="Animation_iufls"]
+resource_name = "MidGlowEffect"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RowEffects/GlowEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1, 1.25, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../ResultTitle/GlowEffect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75, 1, 1.25, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dgrhb"]
+resource_name = "PlayAgainBtnEffect"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [80, 75]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [70, 65]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [80, 75]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_bottom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [50, 45]
+}
+
+[sub_resource type="Animation" id="Animation_b8rtp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RowEffects/GlowEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../ResultTitle/GlowEffect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [80]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_top")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [70]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [80]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../../../BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer:theme_override_constants/margin_bottom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [50]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_612k1"]
+_data = {
+&"MidGlowEffect": SubResource("Animation_iufls"),
+&"PlayAgainBtnEffect": SubResource("Animation_dgrhb"),
+&"RESET": SubResource("Animation_b8rtp")
+}
+
+[node name="Brain" type="CanvasLayer" node_paths=PackedStringArray("GameScreen")]
+script = ExtResource("1_tk2p1")
+GameScreen = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen")
+
+[node name="UIManager" type="Control" parent="." node_paths=PackedStringArray("HomeScreen", "GameScreen", "EndScreen", "Brain")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8blbl")
+HomeScreen = NodePath("BorderlineBGPanel/MarginContainer/HomeScreen")
+GameScreen = NodePath("BorderlineBGPanel/MarginContainer/GameScreen")
+EndScreen = NodePath("BorderlineBGPanel/MarginContainer/EndScreen")
+Brain = NodePath("..")
+
+[node name="BorderlineBGPanel" type="PanelContainer" parent="UIManager"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_robvp")
+
+[node name="StarfieldEffect" type="Control" parent="UIManager/BorderlineBGPanel"]
+layout_mode = 2
+script = ExtResource("1_13dyv")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_us6mg")
+
+[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "OptionsOverlay")]
+visible = false
+layout_mode = 2
+script = ExtResource("4_gvfd6")
+Brain = NodePath("../../../..")
+OptionsOverlay = NodePath("OptionsOverlay")
+
+[node name="VBoxGlobal" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="TopHome" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxTop" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/TopHome"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.5
+offset_top = 47.0
+offset_right = 173.5
+offset_bottom = 255.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/TopHome/VBoxTop"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_fkxa7")
+
+[node name="BioMindLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/TopHome/VBoxTop/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BioMind"
+label_settings = ExtResource("1_vqx31")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="CodeBreaker" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/TopHome/VBoxTop"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "- SENTAI CODE BREAKER -"
+label_settings = ExtResource("4_qoydj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TitleAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/TopHome"]
+libraries = {
+&"": SubResource("AnimationLibrary_6xvmx")
+}
+
+[node name="Mid1Home" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid1Home"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="VBoxMid" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid1Home/MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid1Home/MarginContainer/VBoxMid"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5nuxi")
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid1Home/MarginContainer/VBoxMid/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("3_n04ve")
+expand_mode = 5
+
+[node name="Mid2Home" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxMid" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 37
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 10
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer"]
+layout_mode = 2
+
+[node name="DifficultyLevel" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="EasyBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_mqm5i")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_dm5gj")
+theme_override_styles/pressed = ExtResource("8_qoydj")
+theme_override_styles/hover = ExtResource("9_lolh4")
+toggle_mode = true
+button_pressed = true
+action_mode = 0
+button_group = ExtResource("10_q8m6m")
+text = "Facile"
+
+[node name="MediumBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_mqm5i")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_dm5gj")
+theme_override_styles/pressed = ExtResource("8_qoydj")
+theme_override_styles/hover = ExtResource("9_lolh4")
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("10_q8m6m")
+text = "Moyen"
+
+[node name="ExpertBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_mqm5i")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_dm5gj")
+theme_override_styles/pressed = ExtResource("8_qoydj")
+theme_override_styles/hover = ExtResource("9_lolh4")
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("10_q8m6m")
+text = "Expert"
+
+[node name="HardBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("4_mqm5i")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = ExtResource("7_dm5gj")
+theme_override_styles/pressed = ExtResource("8_qoydj")
+theme_override_styles/hover = ExtResource("9_lolh4")
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("10_q8m6m")
+text = "Hardcore"
+
+[node name="MarginContainer2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -31.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 13
+alignment = 1
+
+[node name="PlayBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer"]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_t1ebt")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = ExtResource("11_gqamb")
+theme_override_styles/pressed = ExtResource("12_gqamb")
+theme_override_styles/hover = ExtResource("13_q8m6m")
+text = "Jouer"
+
+[node name="OptionsBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_t1ebt")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rgw24")
+theme_override_styles/pressed = ExtResource("12_gqamb")
+theme_override_styles/hover = ExtResource("13_q8m6m")
+text = "Options"
+
+[node name="BotHome" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxBot" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="SloganLine" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/VBoxBot"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "Découvrez le code secret du coffre et accédez aux Bio-Gemmes !"
+label_settings = SubResource("LabelSettings_qoydj")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/VBoxBot"]
+layout_mode = 2
+
+[node name="RulesTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/VBoxBot"]
+layout_mode = 2
+text = "Règles de la mission :"
+label_settings = SubResource("LabelSettings_lolh4")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/VBoxBot"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/VBoxBot/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 20
+
+[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/VBoxBot/Control/MarginContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 2
+accessibility_name = "RulesText"
+theme_override_font_sizes/font_size = 20
+text = "🔴 = Bonne couleur, bonne position
+⚪ = Bonne couleur, mauvaise position"
+autowrap_mode = 3
+
+[node name="OptionsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
+visible = false
+anchors_preset = 0
+offset_right = 494.0
+offset_bottom = 1084.0
+
+[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 281.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r6gtk")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+label_settings = ExtResource("14_5gwyn")
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "option1"
+
+[node name="PanelContainer2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer2"]
+layout_mode = 2
+text = "option2"
+
+[node name="PanelContainer3" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+text = "option3"
+
+[node name="CloseOptionsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+icon = ExtResource("56_t3x2a")
+
+[node name="GameScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "LabelLevelValue", "LabelTryValue", "LabelTryMaxValue", "RowContainer", "scrollContainer", "TutorialOverlay", "WarningLabels", "HintAudio")]
+visible = false
+layout_mode = 2
+script = ExtResource("17_65hfw")
+Brain = NodePath("../../../..")
+LabelLevelValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelLevelValue")
+LabelTryValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelTryValue")
+LabelTryMaxValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelTryMaxValue")
+RowContainer = NodePath("VBox/MidGameZone/MarginContainer/ScrollContainer/RowContainer")
+AttemptRowScene = ExtResource("24_ep8v8")
+scrollContainer = NodePath("VBox/MidGameZone/MarginContainer/ScrollContainer")
+TutorialOverlay = NodePath("TutorialOverlay")
+WarningLabels = NodePath("WarningLabels")
+HintAudio = NodePath("HintAudio")
+
+[node name="VBox" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0017067, 1)
+theme_override_constants/separation = 0
+
+[node name="TopGameZone" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox"]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+size_flags_vertical = 0
+color = Color(1, 1, 1, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 337.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer"]
+layout_mode = 2
+
+[node name="Coffre" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("4_wi7yl")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="GlowGreenEffect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/Coffre" node_paths=PackedStringArray("CoffreAnim")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = -46.66667
+offset_right = 31.0
+offset_bottom = 11.333328
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_dcl8t")
+script = ExtResource("16_hpjjw")
+CoffreAnim = NodePath("../CoffreAnim")
+
+[node name="CoffreAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/Coffre"]
+libraries = {
+&"": SubResource("AnimationLibrary_lrj6d")
+}
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(350, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("22_gvfd6")
+
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="LabelTry" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Essai"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="LabelLevel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Niveau"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="LabelTryMax" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Max Essais"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="LabelTryValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+label_settings = SubResource("LabelSettings_bb0on")
+horizontal_alignment = 1
+
+[node name="LabelLevelValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Facile"
+label_settings = SubResource("LabelSettings_bb0on")
+horizontal_alignment = 1
+
+[node name="LabelTryMaxValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "12"
+label_settings = SubResource("LabelSettings_bb0on")
+horizontal_alignment = 1
+
+[node name="Buttons" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomeButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons"]
+layout_mode = 1
+offset_right = 96.0
+offset_bottom = 96.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("21_j7e3e")
+expand_icon = true
+
+[node name="HelpButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -104.0
+offset_right = -8.0
+offset_bottom = 96.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+icon = ExtResource("22_y2ulj")
+expand_icon = true
+
+[node name="MidGameZone" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox"]
+custom_minimum_size = Vector2(0.365, 0)
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/MidGameZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/MidGameZone/MarginContainer"]
+layout_mode = 2
+follow_focus = true
+
+[node name="RowContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/MidGameZone/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_68ajo")
+
+[node name="BotGameZone" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+color = Color(1, 1, 1, 0.039)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BottomUIOption2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/v_separation = 5
+columns = 3
+
+[node name="HeadButtonBlue" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BlueHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("19_612k1")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButtonBlack" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BlackHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlack/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_mqm5i")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButtonPurple" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonPurple"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PurpleHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonPurple/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_jnovg")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButtonRed" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonRed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="RedHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonRed/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_13dyv")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButtonWhite" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonWhite"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="WhiteHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonWhite/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("9_r71lk")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButtonYellow" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonYellow"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="YellowHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonYellow/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("10_d1ul7")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ClearButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer2"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("41_rgw24")
+theme_override_font_sizes/font_size = 13
+text = "EFFACER"
+icon = ExtResource("41_yisvs")
+icon_alignment = 1
+expand_icon = true
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ValidateButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_fonts/font = ExtResource("41_rgw24")
+theme_override_font_sizes/font_size = 13
+text = "VALIDER"
+icon = ExtResource("42_rgw24")
+icon_alignment = 1
+expand_icon = true
+
+[node name="WarningLabels" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" node_paths=PackedStringArray("WarningPlayer")]
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -25.0
+offset_right = 113.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ft0vu")
+script = ExtResource("42_mtrk6")
+WarningPlayer = NodePath("WarningPlayer")
+
+[node name="WarningEmptySlots" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/WarningLabels"]
+layout_mode = 2
+text = "Emplacement(s) vide(s) ! "
+label_settings = SubResource("LabelSettings_uqa0b")
+horizontal_alignment = 1
+
+[node name="WarningPlayer" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/WarningLabels"]
+libraries = {
+&"": SubResource("AnimationLibrary_ypcqt")
+}
+
+[node name="TutorialOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yn2g2")
+
+[node name="Top" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TopOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top"]
+layout_mode = 1
+offset_top = 30.0
+offset_right = 494.0
+offset_bottom = 208.0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6wfu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = ExtResource("43_semxg")
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("44_ep8v8")
+
+[node name="Tuto1Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "But du jeu "
+label_settings = ExtResource("45_3133c")
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kddde")
+
+[node name="Tuto1_0" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/PanelContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "Trouver le code de 4 couleurs parmi un total 
+de 6 couleurs possible. 12 essais maximum. "
+label_settings = ExtResource("49_js5gh")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer"]
+layout_mode = 2
+
+[node name="Tuto1_1" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Niveau de difficulté"
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Tuto1_2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Essai actuel"
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Tuto1_3" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Nombre d'essai maximal"
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Arrow1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 178.0
+offset_right = 438.0
+offset_bottom = 233.0
+
+[node name="ArrowTuto1_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+flip_v = true
+
+[node name="ArrowTuto1_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+flip_v = true
+
+[node name="ArrowTuto1_3" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+flip_v = true
+
+[node name="Mid" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
+layout_mode = 2
+
+[node name="MidOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 488.0
+offset_right = 495.0
+offset_bottom = 570.0
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6wfu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 2
+
+[node name="Tuto2_1" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Emplacements à remplir	"
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Tuto2_2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Indices"
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/panel = ExtResource("43_semxg")
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("44_ep8v8")
+
+[node name="Tuto2Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Ligne de réponse"
+label_settings = ExtResource("45_3133c")
+horizontal_alignment = 1
+
+[node name="Arrow2_1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = -53.0
+offset_right = 356.0
+offset_bottom = -20.0
+
+[node name="ArrowTuto2_1_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+
+[node name="ArrowTuto2_1_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+
+[node name="ArrowTuto2_1_3" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+
+[node name="ArrowTuto2_1_4" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+
+[node name="Arrow2_2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay"]
+layout_mode = 2
+
+[node name="ArrowTuto2_2_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_2"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 412.0
+offset_top = -53.0
+offset_right = -40.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("47_3133c")
+stretch_mode = 4
+
+[node name="Bot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="BotOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 741.0
+offset_right = 495.0
+offset_bottom = 852.0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6wfu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("43_semxg")
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("44_ep8v8")
+
+[node name="Tuto3Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Sélection et Validation"
+label_settings = ExtResource("45_3133c")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer"]
+layout_mode = 2
+
+[node name="Tuto3_1" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Saisissez 
+votre sélection"
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Tuto3_2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = ExtResource("45_65hfw")
+text = "Effacer / Valider 
+la ligne complète."
+label_settings = ExtResource("46_xf5i4")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Arrows3_1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 120.0
+offset_right = 370.0
+offset_bottom = 331.0
+columns = 3
+
+[node name="ArrowTuto3_1_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("51_5gwyn")
+stretch_mode = 2
+flip_v = true
+
+[node name="ArrowTuto3_1_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("51_5gwyn")
+stretch_mode = 2
+flip_v = true
+
+[node name="ArrowTuto3_1_3" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("51_5gwyn")
+stretch_mode = 2
+flip_v = true
+
+[node name="ArrowTuto3_1_4" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("51_5gwyn")
+stretch_mode = 2
+flip_v = true
+
+[node name="ArrowTuto3_1_5" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("51_5gwyn")
+stretch_mode = 2
+flip_v = true
+
+[node name="ArrowTuto3_1_6" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("51_5gwyn")
+stretch_mode = 2
+flip_v = true
+
+[node name="Arrows3_2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay"]
+layout_mode = 2
+
+[node name="ArrowTuto3_2_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_2"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 0
+offset_left = 359.00006
+offset_top = 170.0
+offset_right = 391.00006
+offset_bottom = 202.0
+rotation = 2.3561945
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("51_5gwyn")
+stretch_mode = 3
+
+[node name="ArrowTuto3_2_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_2"]
+material = SubResource("CanvasItemMaterial_yisvs")
+layout_mode = 0
+offset_left = 361.62744
+offset_top = 263.62744
+offset_right = 393.62744
+offset_bottom = 295.62744
+rotation = 2.3561945
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("51_5gwyn")
+stretch_mode = 3
+
+[node name="Arrows" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TutoAnimPlayer" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
+root_node = NodePath("../../../../../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_r6gtk")
+}
+
+[node name="TutoCloseButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer" node_paths=PackedStringArray("TutorialOverlay")]
+z_index = 4
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+icon = ExtResource("49_pfa0l")
+icon_alignment = 1
+script = ExtResource("57_1bbis")
+TutorialOverlay = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="TutoExitLayer" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer" node_paths=PackedStringArray("TutorialOverlay")]
+visible = false
+layout_mode = 2
+focus_mode = 2
+script = ExtResource("51_65hfw")
+TutorialOverlay = NodePath("../..")
+
+[node name="HintAudio" type="AudioStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
+stream = ExtResource("52_xf5i4")
+
+[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("ResultLabel")]
+layout_mode = 2
+script = ExtResource("45_lfh1j")
+ResultLabel = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle/ResultLabel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopEnd" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MidEnd" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer"]
+layout_mode = 2
+
+[node name="ResultTitle" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GlowEffect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 52.0
+offset_top = 41.5
+offset_right = 446.0
+offset_bottom = 100.0
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_6lb63")
+
+[node name="ResultLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle"]
+layout_mode = 0
+offset_left = 51.5
+offset_top = 31.5
+offset_right = 442.5
+offset_bottom = 86.5
+size_flags_vertical = 6
+text = "BRAVO ! OU PERDU !"
+label_settings = ExtResource("4_6lb63")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResultRow" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxSlots" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowEffects" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow"]
+layout_mode = 2
+
+[node name="GlowEffect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 474.0
+offset_bottom = 78.0
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+
+[node name="ResultSlots" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
+layout_mode = 0
+offset_right = 474.0
+offset_bottom = 78.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="ResultSlotContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Slot" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("38_dgrhb")
+
+[node name="Slot2" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("38_dgrhb")
+
+[node name="Slot3" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot3"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("38_dgrhb")
+
+[node name="Slot4" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot4"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("38_dgrhb")
+
+[node name="Fader" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
+visible = false
+layout_mode = 0
+offset_right = 454.0
+offset_bottom = 138.0
+color = Color(0, 0, 0, 1)
+
+[node name="BotEnd" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer"]
+layout_mode = 2
+
+[node name="PlayAgainZone" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 70
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 50
+
+[node name="PlayAgain" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_t1ebt")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = ExtResource("41_q8m6m")
+theme_override_styles/hover = ExtResource("11_gqamb")
+text = "Rejouer"
+
+[node name="BackHomeZone" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/BackHomeZone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="BackHome" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/BackHomeZone/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("SystemFont_t1ebt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("39_dgrhb")
+theme_override_styles/hover = ExtResource("11_gqamb")
+text = "Accueil"
+
+[node name="EndScreenAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
+root_node = NodePath("../VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow")
+libraries = {
+&"": SubResource("AnimationLibrary_612k1")
+}
+
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/EasyBtn" to="." method="_on_easy_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/MediumBtn" to="." method="_on_medium_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/ExpertBtn" to="." method="_on_expert_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/HardBtn" to="." method="_on_hard_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/OptionsBtn" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_options_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/CloseOptionsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_close_options_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HomeButton" to="UIManager" method="_on_home_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HelpButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_help_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_blue_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlack" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_black_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonPurple" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_purple_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonRed" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_red_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonWhite" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_white_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonYellow" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_yellow_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer2/ClearButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_clear_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer/ValidateButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_validate_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoCloseButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoCloseButton" method="_on_pressed"]
+[connection signal="focus_entered" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoExitLayer" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoExitLayer" method="_on_focus_entered"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer/PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer/PlayAgain" to="UIManager" method="_on_play_again_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/BackHomeZone/MarginContainer/BackHome" to="UIManager" method="_on_back_home_pressed"]

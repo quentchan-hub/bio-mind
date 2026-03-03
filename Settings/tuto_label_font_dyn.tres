@@ -1,0 +1,15 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cbvg855oq8h1i"]
+
+[sub_resource type="SystemFont" id="SystemFont_1i0jx"]
+font_names = PackedStringArray("Sakkal Majalla", "Ropstone", "Parisienne", "Gigi")
+multichannel_signed_distance_field = true
+
+[resource]
+font = SubResource("SystemFont_1i0jx")
+font_size = 32
+stacked_outline_count = 3
+stacked_outline_0/size = 2
+stacked_outline_0/color = Color(1, 1, 1, 1)
+stacked_outline_1/size = 6
+stacked_outline_1/color = Color(1, 0.8, 0, 1)
+stacked_outline_2/color = Color(0.5890956, 0.5890956, 0.5890956, 1)

@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2l45fit0ovo0"]
+
+[ext_resource type="Script" uid="uid://q122c508560d" path="res://Brouillons/Pendulum.cs" id="1_din5r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_din5r"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_din5r"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.82738096)
+colors = PackedColorArray(0, 1, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r3wwm"]
+gradient = SubResource("Gradient_din5r")
+fill = 1
+fill_from = Vector2(0.47844827, 0.50431037)
+fill_to = Vector2(0.09051724, 0.21982759)
+
+[sub_resource type="Gradient" id="Gradient_oxxdr"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.82738096)
+colors = PackedColorArray(0, 0, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8husr"]
+gradient = SubResource("Gradient_oxxdr")
+fill = 1
+fill_from = Vector2(0.47844827, 0.50431037)
+fill_to = Vector2(0.09051724, 0.21982759)
+
+[sub_resource type="Gradient" id="Gradient_ljuil"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.82738096)
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6sgjy"]
+gradient = SubResource("Gradient_ljuil")
+fill = 1
+fill_from = Vector2(0.47844827, 0.50431037)
+fill_to = Vector2(0.09051724, 0.21982759)
+
+[node name="NotMain" type="Node2D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 545.0
+offset_bottom = 363.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+render_target_clear_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport"]
+offset_right = 517.0
+offset_bottom = 509.0
+color = Color(0.12941177, 0.003921569, 0.20784314, 0.03137255)
+
+[node name="Pendulum" type="Node2D" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("circle")]
+position = Vector2(250, 173)
+script = ExtResource("1_din5r")
+circle = NodePath("Circle")
+
+[node name="Circle" type="Sprite2D" parent="SubViewportContainer/SubViewport/Pendulum"]
+material = SubResource("CanvasItemMaterial_din5r")
+position = Vector2(0, 100)
+texture = SubResource("GradientTexture2D_r3wwm")
+
+[node name="Pendulum2" type="Node2D" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("circle")]
+position = Vector2(250, 173)
+script = ExtResource("1_din5r")
+delay = 0.1
+circle = NodePath("Circle")
+
+[node name="Circle" type="Sprite2D" parent="SubViewportContainer/SubViewport/Pendulum2"]
+material = SubResource("CanvasItemMaterial_din5r")
+position = Vector2(0, 100)
+texture = SubResource("GradientTexture2D_8husr")
+
+[node name="Pendulum3" type="Node2D" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("circle")]
+position = Vector2(250, 173)
+script = ExtResource("1_din5r")
+delay = 0.3
+circle = NodePath("Circle")
+
+[node name="Circle" type="Sprite2D" parent="SubViewportContainer/SubViewport/Pendulum3"]
+material = SubResource("CanvasItemMaterial_din5r")
+position = Vector2(0, 100)
+texture = SubResource("GradientTexture2D_6sgjy")

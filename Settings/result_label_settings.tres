@@ -1,0 +1,23 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dv21wwgd8ugma"]
+
+[resource]
+font_size = 40
+font_color = Color(1, 0.84313726, 0, 1)
+outline_size = 10
+outline_color = Color(1, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 4
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/offset = Vector2(0, 6)
+stacked_shadow_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/outline_size = 10
+stacked_shadow_1/offset = Vector2(0, 10)
+stacked_shadow_1/color = Color(0.2398856, 0.4627601, 1, 1)
+stacked_shadow_1/outline_size = 14
+stacked_shadow_2/offset = Vector2(0, 14)
+stacked_shadow_2/color = Color(0.38623577, 0.5774652, 1, 1)
+stacked_shadow_2/outline_size = 17
+stacked_shadow_3/offset = Vector2(0, 18)
+stacked_shadow_3/color = Color(1, 1, 1, 1)
+stacked_shadow_3/outline_size = 19

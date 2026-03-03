@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://p2hcbm618tg6"]
+
+[ext_resource type="Script" uid="uid://dphfuvv8a14yy" path="res://Brouillons/Test1.cs" id="1_f0tba"]
+[ext_resource type="Script" uid="uid://b2220nyyk3ra6" path="res://Brouillons/Pshchitt.cs" id="2_v657l"]
+
+[node name="Test1" type="Node2D"]
+script = ExtResource("1_f0tba")
+
+[node name="pshchitt" type="Node2D" parent="." node_paths=PackedStringArray("Test1")]
+script = ExtResource("2_v657l")
+Test1 = NodePath("..")

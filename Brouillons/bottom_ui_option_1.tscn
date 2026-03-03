@@ -1,0 +1,194 @@
+[gd_scene load_steps=10 format=3 uid="uid://ds6rf4jutyslt"]
+
+[ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="1_nbly6"]
+[ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="2_5q7qc"]
+[ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="3_i5lg5"]
+[ext_resource type="Texture2D" uid="uid://bnlx3den7fnat" path="res://Assets/BioMindhead/BioMind_Blue_Head.png" id="4_vg1hj"]
+[ext_resource type="Texture2D" uid="uid://1jbf3l36o1hg" path="res://Assets/BioMindhead/BioMind_Black_Head.png" id="5_l8057"]
+[ext_resource type="Texture2D" uid="uid://b6tqyicii458a" path="res://Assets/BioMindhead/BioMind_Purple_Head.png" id="6_5mx3d"]
+[ext_resource type="Texture2D" uid="uid://bsfft1f8hqu6m" path="res://Assets/BioMindhead/BioMind_Red_Head.png" id="7_6jewp"]
+[ext_resource type="Texture2D" uid="uid://b64kpby7ndt6v" path="res://Assets/BioMindhead/BioMind_White_Head.png" id="8_ch75d"]
+[ext_resource type="Texture2D" uid="uid://bjkibk02evjd3" path="res://Assets/BioMindhead/BioMind_Yellow_Head.png" id="9_opxex"]
+
+[node name="BottomUIOption1" type="MarginContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_nbly6")
+theme_override_styles/hover = ExtResource("2_5q7qc")
+theme_override_styles/focus = ExtResource("3_i5lg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_vg1hj")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_nbly6")
+theme_override_styles/hover = ExtResource("2_5q7qc")
+theme_override_styles/focus = ExtResource("3_i5lg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_l8057")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_nbly6")
+theme_override_styles/hover = ExtResource("2_5q7qc")
+theme_override_styles/focus = ExtResource("3_i5lg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_5mx3d")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_nbly6")
+theme_override_styles/hover = ExtResource("2_5q7qc")
+theme_override_styles/focus = ExtResource("3_i5lg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button4/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_6jewp")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_nbly6")
+theme_override_styles/hover = ExtResource("2_5q7qc")
+theme_override_styles/focus = ExtResource("3_i5lg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button5/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_ch75d")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button6" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_nbly6")
+theme_override_styles/hover = ExtResource("2_5q7qc")
+theme_override_styles/focus = ExtResource("3_i5lg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Button6/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("9_opxex")
+expand_mode = 2
+stretch_mode = 5

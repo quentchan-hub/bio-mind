@@ -14,7 +14,8 @@ general/accessibility_support=2
 
 [application]
 
-config/name="BioMind"
+config/name="BioMind - Dynamique"
+run/main_scene="uid://e01tv4ge5kyh"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://Assets/Autres Assets A Jeter/icon.svg"
 
@@ -22,6 +23,7 @@ config/icon="res://Assets/Autres Assets A Jeter/icon.svg"
 
 window/size/viewport_width=540
 window/size/viewport_height=1130
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -30,11 +32,28 @@ project/assembly_name="BioMind"
 [file_customization]
 
 folder_colors={
+"res://Assets/Arrows/": "teal",
 "res://Assets/Autres Assets A Jeter/": "teal",
+"res://Assets/Autres Assets A Jeter/Plateau/": "teal",
 "res://Assets/BioMindhead/": "teal",
 "res://Assets/BioMinds/": "teal",
-"res://Assets/Plateau/": "teal",
-"res://Assets/Safe/": "teal"
+"res://Assets/Buttons/": "teal",
+"res://Assets/Effects/": "teal",
+"res://Assets/Safe/": "teal",
+"res://Assets/Sounds/": "teal"
+}
+
+[input]
+
+p={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":80,"physical_keycode":0,"key_label":0,"unicode":112,"location":0,"echo":false,"script":null)
+]
+}
+o={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":79,"physical_keycode":0,"key_label":0,"unicode":111,"location":0,"echo":false,"script":null)
+]
 }
 
 [rendering]

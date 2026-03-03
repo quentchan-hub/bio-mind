@@ -1,0 +1,241 @@
+[gd_scene load_steps=10 format=3 uid="uid://ln1nuxsrk5hf"]
+
+[ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="1_i3y0b"]
+[ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="2_1elu1"]
+[ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="3_63f2m"]
+[ext_resource type="Texture2D" uid="uid://colganbfsvqmj" path="res://Assets/BioMindhead/BioMind_Blue_Head.webp" id="4_joelu"]
+[ext_resource type="Texture2D" uid="uid://bqe6gi1qnbkl0" path="res://Assets/BioMindhead/BioMind_Black_Head.webp" id="5_72gxx"]
+[ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="6_yhsu0"]
+[ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="7_ekw7h"]
+[ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="8_j3dwt"]
+[ext_resource type="Texture2D" uid="uid://cqfp5xj8v2mvp" path="res://Assets/BioMindhead/BioMind_Yellow_Head.webp" id="9_u8bto"]
+
+[node name="BottomUIOption4" type="MarginContainer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+
+[node name="MarginSpacer" type="Control" parent="FlowContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="FlowContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_i3y0b")
+theme_override_styles/hover = ExtResource("2_1elu1")
+theme_override_styles/focus = ExtResource("3_63f2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="FlowContainer/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Button/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_joelu")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button2" type="Button" parent="FlowContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_i3y0b")
+theme_override_styles/hover = ExtResource("2_1elu1")
+theme_override_styles/focus = ExtResource("3_63f2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="FlowContainer/Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 6
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Button2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_72gxx")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button3" type="Button" parent="FlowContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_i3y0b")
+theme_override_styles/hover = ExtResource("2_1elu1")
+theme_override_styles/focus = ExtResource("3_63f2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="FlowContainer/Button3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Button3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_yhsu0")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SpringSpacer" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer2" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer3" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer4" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer5" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer6" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer7" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer8" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer9" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SpringSpacer10" type="Control" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button4" type="Button" parent="FlowContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_i3y0b")
+theme_override_styles/hover = ExtResource("2_1elu1")
+theme_override_styles/focus = ExtResource("3_63f2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="FlowContainer/Button4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Button4/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_ekw7h")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button5" type="Button" parent="FlowContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_i3y0b")
+theme_override_styles/hover = ExtResource("2_1elu1")
+theme_override_styles/focus = ExtResource("3_63f2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="FlowContainer/Button5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Button5/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_j3dwt")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Button6" type="Button" parent="FlowContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("1_i3y0b")
+theme_override_styles/hover = ExtResource("2_1elu1")
+theme_override_styles/focus = ExtResource("3_63f2m")
+
+[node name="MarginContainer" type="MarginContainer" parent="FlowContainer/Button6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="TextureRect" type="TextureRect" parent="FlowContainer/Button6/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("9_u8bto")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginSpacer2" type="Control" parent="FlowContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 8

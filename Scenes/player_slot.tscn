@@ -1,0 +1,30 @@
+[gd_scene load_steps=11 format=3 uid="uid://bn2enc4ph1p0h"]
+
+[ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="1_ngvu5"]
+[ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="2_xu7ug"]
+[ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="3_gv6ec"]
+[ext_resource type="Script" uid="uid://b01yajd41slxt" path="res://Scripts/BoardButton.cs" id="4_00yvh"]
+[ext_resource type="Texture2D" uid="uid://colganbfsvqmj" path="res://Assets/BioMindhead/BioMind_Blue_Head.webp" id="5_o32ue"]
+[ext_resource type="Texture2D" uid="uid://bqe6gi1qnbkl0" path="res://Assets/BioMindhead/BioMind_Black_Head.webp" id="6_1qh0f"]
+[ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="7_jp02q"]
+[ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="8_1yohw"]
+[ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="9_1wumi"]
+[ext_resource type="Texture2D" uid="uid://cqfp5xj8v2mvp" path="res://Assets/BioMindhead/BioMind_Yellow_Head.webp" id="10_ybyyp"]
+
+[node name="PlayerSlot" type="AspectRatioContainer"]
+size_flags_horizontal = 3
+
+[node name="BoardButton" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("1_ngvu5")
+theme_override_styles/hover = ExtResource("2_xu7ug")
+theme_override_styles/focus = ExtResource("3_gv6ec")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_00yvh")
+HeadTextures = Array[Texture2D]([ExtResource("5_o32ue"), ExtResource("6_1qh0f"), ExtResource("7_jp02q"), ExtResource("8_1yohw"), ExtResource("9_1wumi"), ExtResource("10_ybyyp")])
+
+[connection signal="pressed" from="BoardButton" to="BoardButton" method="_on_pressed"]
