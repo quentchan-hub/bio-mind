@@ -193,6 +193,25 @@ public partial class GameScreen : Control
 		EmitSignal(SignalName.OnRowComplete, playerGuess);
 	}
 	
+	private void _on_clear_button_pressed()
+	{
+		var playerSlotContainer = _boardButtonFocused.GetParent().GetParent();
+		foreach (Node child in playerSlotContainer.GetChildren())
+		{
+			foreach (Node button in child.GetChildren())
+			{
+				if (button is BoardButton boardButton)
+				{
+					boardButton.ClearIcon();
+				}
+			}
+		}
+		var _firstButton = playerSlotContainer.GetChild(0).GetChild(0) as BoardButton;
+		_firstButton.GrabFocus();
+		_firstButton.AcceptEvent();
+		OnBoardButtonFocused(_firstButton);
+	}
+	
 	public async void ManageHints(int rightPosition, int wrongPosition)
 	{
 		var currentHintContainer = FocusedRow.FindChild("HintContainer*");
@@ -216,7 +235,7 @@ public partial class GameScreen : Control
 			{
 				GD.Print("Rouge");
 				(hintButtons[hintIndex] as HintButton)?.RedHint();
-				//HintAudio.Play();
+				HintAudio.Play();
 				hintIndex++;
 				await ToSignal(GetTree().CreateTimer(0.5), "timeout");
 			}
@@ -229,7 +248,7 @@ public partial class GameScreen : Control
 			{
 				GD.Print("Blanc");
 				(hintButtons[hintIndex] as HintButton)?.WhiteHint();
-				//HintAudio.Play();
+				HintAudio.Play();
 				hintIndex++;
 				await ToSignal(GetTree().CreateTimer(0.5), "timeout");
 			}

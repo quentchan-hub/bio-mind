@@ -4,8 +4,11 @@ using System;
 public partial class Brain : Node
 {
 	[Signal]
+	public delegate void DisplaySolutionEventHandler(Godot.Collections.Array<int> _solution);
+	
+	[Signal]
 	public delegate void OnHintsReadyEventHandler(int rightPosition, int wrongPosition);
-
+	
 	[Signal]
 	public delegate void UpdateCurrentRowEventHandler(int currentRow);
 
@@ -38,6 +41,7 @@ public partial class Brain : Node
 		GameScreen.DisplayLevel(difficulty);
 		GameScreen.InstantiateBoard(rows, slots, hints);
 		GameScreen.DisplayMaxTry(rows.ToString());
+		EndScreen.InstantiateResultSlots(slots);
 
 		_rows = rows;
 		_slots = slots;
@@ -139,13 +143,15 @@ public partial class Brain : Node
 
 		if (rightPosition == _slots)
 		{
-			EmitSignal(SignalName.OnGameOver, true);
+			EmitSignal(SignalName.OnGameOver, true); // partie gagné
+			EmitSignal(SignalName.DisplaySolution, _solution);
 			return;
 		}
 
 		if (_currentRow >= _rows - 1)
 		{
-			EmitSignal(SignalName.OnGameOver, false);
+			EmitSignal(SignalName.OnGameOver, false); // partie perdue
+			EmitSignal(SignalName.DisplaySolution, _solution);
 			return;
 		}
 

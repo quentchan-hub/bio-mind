@@ -23,7 +23,7 @@ config/icon="res://Assets/Autres Assets A Jeter/icon.svg"
 
 window/size/viewport_width=540
 window/size/viewport_height=1130
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

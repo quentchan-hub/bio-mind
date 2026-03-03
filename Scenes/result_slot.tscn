@@ -1,0 +1,28 @@
+[gd_scene load_steps=11 format=3 uid="uid://b57pd5ra7nt37"]
+
+[ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="1_nkjsu"]
+[ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="2_4shfp"]
+[ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="3_0wp5a"]
+[ext_resource type="Script" uid="uid://c45413vjwk77t" path="res://Scripts/ResultButton.cs" id="4_s5c8i"]
+[ext_resource type="Texture2D" uid="uid://colganbfsvqmj" path="res://Assets/BioMindhead/BioMind_Blue_Head.webp" id="6_jl5wy"]
+[ext_resource type="Texture2D" uid="uid://bqe6gi1qnbkl0" path="res://Assets/BioMindhead/BioMind_Black_Head.webp" id="7_q4hyv"]
+[ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="8_ku13e"]
+[ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="9_vorxv"]
+[ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="10_ecuji"]
+[ext_resource type="Texture2D" uid="uid://cqfp5xj8v2mvp" path="res://Assets/BioMindhead/BioMind_Yellow_Head.webp" id="11_im5wa"]
+
+[node name="ResultSlot" type="AspectRatioContainer"]
+size_flags_horizontal = 3
+
+[node name="ResultButton" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = ExtResource("1_nkjsu")
+theme_override_styles/hover = ExtResource("2_4shfp")
+theme_override_styles/focus = ExtResource("3_0wp5a")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_s5c8i")
+ResultTextures = Array[Texture2D]([ExtResource("6_jl5wy"), ExtResource("7_q4hyv"), ExtResource("8_ku13e"), ExtResource("9_vorxv"), ExtResource("10_ecuji"), ExtResource("11_im5wa")])

@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://bfmph3dhdkkh0" path="res://Scripts/Brain.cs" id="1_tk2p1"]
 [ext_resource type="LabelSettings" uid="uid://jajpelhbk5sf" path="res://Settings/biomind_title_label_settings.tres" id="1_vqx31"]
 [ext_resource type="Texture2D" uid="uid://cgtl0q3ognrqw" path="res://Assets/BioMinds/Team6NoBG2.webp" id="3_n04ve"]
-[ext_resource type="LabelSettings" uid="uid://dv21wwgd8ugma" path="res://Settings/result_label_settings.tres" id="4_6lb63"]
 [ext_resource type="Script" uid="uid://dh2pyajtay41y" path="res://Scripts/HomeScreen.cs" id="4_gvfd6"]
 [ext_resource type="SystemFont" uid="uid://bujlmmn752mno" path="res://Settings/difficulty_button_font.tres" id="4_mqm5i"]
 [ext_resource type="LabelSettings" uid="uid://cp5o8ivib11po" path="res://Settings/biomind_subtitle_label_settings.tres" id="4_qoydj"]
@@ -36,7 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://b11m5qn20fqx4" path="res://Settings/bloc_background_dark_blue.tres" id="22_gvfd6"]
 [ext_resource type="Texture2D" uid="uid://buxckxojcp5dj" path="res://Assets/Buttons/HelpButton.webp" id="22_y2ulj"]
 [ext_resource type="PackedScene" uid="uid://tto86px2ryko" path="res://Scenes/attempt_row.tscn" id="24_ep8v8"]
-[ext_resource type="Script" uid="uid://c45413vjwk77t" path="res://Scripts/ResultButton.cs" id="38_dgrhb"]
 [ext_resource type="StyleBox" uid="uid://cdagyo00whtfd" path="res://Settings/back_home_button.tres" id="39_dgrhb"]
 [ext_resource type="StyleBox" uid="uid://btdgla7464cqg" path="res://Settings/flat_play_again_normal.tres" id="41_q8m6m"]
 [ext_resource type="SystemFont" uid="uid://bst8woildkesg" path="res://Settings/button.tres" id="41_rgw24"]
@@ -55,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://cx2cb5xpcc2ij" path="res://Assets/Arrows/arrow_decorative_n_small.png" id="51_5gwyn"]
 [ext_resource type="Script" uid="uid://dfx43uldpfgke" path="res://Scripts/TutoExitLayer.cs" id="51_65hfw"]
 [ext_resource type="AudioStream" uid="uid://ck4wniq5p3rma" path="res://Assets/Sounds/universfield-bright-notification-352449.mp3" id="52_xf5i4"]
+[ext_resource type="PackedScene" uid="uid://b57pd5ra7nt37" path="res://Scenes/result_slot.tscn" id="54_xf5i4"]
 [ext_resource type="Texture2D" uid="uid://y0c7jcbba31p" path="res://Assets/Buttons/icon_cross_blue.png" id="56_t3x2a"]
 [ext_resource type="Script" uid="uid://cgl2hity0htx5" path="res://Scripts/TutoCloseButton.cs" id="57_1bbis"]
 
@@ -439,14 +438,36 @@ corner_detail = 20
 shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
 shadow_size = 20
 
+[sub_resource type="LabelSettings" id="LabelSettings_65hfw"]
+font_size = 70
+font_color = Color(1, 0.84313726, 0, 1)
+outline_size = 10
+outline_color = Color(1, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 4
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/offset = Vector2(0, 6)
+stacked_shadow_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/outline_size = 10
+stacked_shadow_1/offset = Vector2(0, 10)
+stacked_shadow_1/color = Color(0.2398856, 0.4627601, 1, 1)
+stacked_shadow_1/outline_size = 14
+stacked_shadow_2/offset = Vector2(0, 14)
+stacked_shadow_2/color = Color(0.38623577, 0.5774652, 1, 1)
+stacked_shadow_2/outline_size = 17
+stacked_shadow_3/offset = Vector2(0, 18)
+stacked_shadow_3/color = Color(1, 1, 1, 1)
+stacked_shadow_3/outline_size = 19
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68ajo"]
 bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 draw_center = false
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.8001019, 0.8001019, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.88235295, 0, 1)
 border_blend = true
 corner_radius_top_left = 15
 corner_radius_top_right = 15
@@ -457,8 +478,6 @@ shadow_size = 20
 
 [sub_resource type="Animation" id="Animation_iufls"]
 resource_name = "MidGlowEffect"
-length = 2.0
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -619,9 +638,12 @@ _data = {
 &"RESET": SubResource("Animation_b8rtp")
 }
 
-[node name="Brain" type="CanvasLayer" node_paths=PackedStringArray("GameScreen")]
+[node name="Brain" type="CanvasLayer" node_paths=PackedStringArray("HomeScreen", "GameScreen", "EndScreen", "UiManager")]
 script = ExtResource("1_tk2p1")
+HomeScreen = NodePath("UIManager/BorderlineBGPanel/MarginContainer/HomeScreen")
 GameScreen = NodePath("UIManager/BorderlineBGPanel/MarginContainer/GameScreen")
+EndScreen = NodePath("UIManager/BorderlineBGPanel/MarginContainer/EndScreen")
+UiManager = NodePath("UIManager")
 
 [node name="UIManager" type="Control" parent="." node_paths=PackedStringArray("HomeScreen", "GameScreen", "EndScreen", "Brain")]
 layout_mode = 3
@@ -1921,7 +1943,6 @@ TutorialOverlay = NodePath("../..")
 metadata/_edit_use_anchors_ = true
 
 [node name="TutoExitLayer" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer" node_paths=PackedStringArray("TutorialOverlay")]
-visible = false
 layout_mode = 2
 focus_mode = 2
 script = ExtResource("51_65hfw")
@@ -1930,10 +1951,15 @@ TutorialOverlay = NodePath("../..")
 [node name="HintAudio" type="AudioStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
 stream = ExtResource("52_xf5i4")
 
-[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("ResultLabel")]
+[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("ResultLabel", "Brain", "ResultSlotContainer", "EndScreenAnim")]
+visible = false
 layout_mode = 2
 script = ExtResource("45_lfh1j")
 ResultLabel = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle/ResultLabel")
+Brain = NodePath("../../../..")
+ResultSlotContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer")
+ResultSlotScene = ExtResource("54_xf5i4")
+EndScreenAnim = NodePath("EndScreenAnim")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
 layout_mode = 1
@@ -1967,6 +1993,7 @@ grow_vertical = 2
 [node name="MidEnd" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd"]
 layout_mode = 1
@@ -1985,24 +2012,30 @@ size_flags_vertical = 3
 
 [node name="GlowEffect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 52.0
-offset_top = 41.5
-offset_right = 446.0
-offset_bottom = 100.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 56.0
+offset_right = -99.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_6lb63")
 
 [node name="ResultLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle"]
-layout_mode = 0
-offset_left = 51.5
-offset_top = 31.5
-offset_right = 442.5
-offset_bottom = 86.5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 6
-text = "BRAVO ! OU PERDU !"
-label_settings = ExtResource("4_6lb63")
+text = "BRAVO !"
+label_settings = SubResource("LabelSettings_65hfw")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -2032,17 +2065,23 @@ layout_mode = 2
 
 [node name="GlowEffect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_right = 474.0
-offset_bottom = 78.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
 
 [node name="ResultSlots" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
-layout_mode = 0
-offset_right = 474.0
-offset_bottom = 78.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
@@ -2052,69 +2091,8 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Slot" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
+[node name="ResultSlot" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer" instance=ExtResource("54_xf5i4")]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = ExtResource("15_yhvps")
-theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("38_dgrhb")
-
-[node name="Slot2" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot2"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = ExtResource("15_yhvps")
-theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("38_dgrhb")
-
-[node name="Slot3" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot3"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = ExtResource("15_yhvps")
-theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("38_dgrhb")
-
-[node name="Slot4" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ResultButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer/Slot4"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/normal = ExtResource("15_yhvps")
-theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
-icon_alignment = 1
-expand_icon = true
-script = ExtResource("38_dgrhb")
 
 [node name="Fader" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
 visible = false

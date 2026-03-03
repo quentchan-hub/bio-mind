@@ -71,7 +71,7 @@ public partial class AttemptRow : MarginContainer
 		btnFocused.GrabFocus();
 		btnFocused.AcceptEvent();
 		GetTheRowGlow();
-		OnBoardButtonSelected(btnFocused);
+			OnBoardButtonSelected(btnFocused);
 	}
 	
 	public void GetTheRowGlow()

@@ -3,27 +3,17 @@ using System;
 
 public partial class ResultButton : Button
 {
-	[Export] public Texture2D[] HeadTextures;
-	
-	public enum HeadColor
-	{
-		Blue,		// index 0
-		Black,		// index 1
-		Purple,		// index 2 etc. 
-		Red,
-		White,
-		Yellow
-	}
+	[Export] public Texture2D[] ResultTextures;
 	
 	public override void _Ready()
 	{
 		ClearIcon();
 	}
-
-	public void SetHead(int index)
+	
+	public void SetResult(int index)
 	{
-		if (index >= 0 && index < HeadTextures.Length)
-			Icon = HeadTextures[index];
+		if (index >= 0 && index < ResultTextures.Length)
+			Icon = ResultTextures[index];
 	}
 	
 	public void ClearIcon()
