@@ -25,7 +25,6 @@ public partial class HintButton : ColorRect
 	
 	public void RedHint()
 	{
-		GD.Print("draw red");
 		_isHintGiven = true;
 		hintColor = Colors.Red;
 		QueueRedraw();

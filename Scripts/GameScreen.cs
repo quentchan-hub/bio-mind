@@ -83,11 +83,11 @@ public partial class GameScreen : Control
 	public void FirstButtonFocus()
 	{
 		// joue une méthode de RowAttempt pour Focus premier bouton du board
-		_firstRow.FocusFirstInRow();
+		_firstRow.CallDeferred("FocusFirstInRow");
 		// Force le scroll à commencer tout en haut
 		scrollContainer.ScrollVertical = 0;
 		// Récupère en tant que _boardButtonFocused le bouton qui a le focus (FirstButton)
-		_boardButtonFocused = GetViewport().GuiGetFocusOwner() as BoardButton;
+		//_boardButtonFocused = GetViewport().GuiGetFocusOwner() as BoardButton;
 	}
 	
 	public void OnBoardButtonFocused(BoardButton button)
@@ -101,8 +101,7 @@ public partial class GameScreen : Control
 	
 	//  == MISE EN RELATION COULEUR SELECTIONNEE/APPLIQUEE == //
 	private void _on_head_button_blue_pressed()
-	{				
-		
+	{
 		_boardButtonFocused?.SetHead((int)BoardButton.HeadColor.Blue);
 		FocusNextButton();
 	}
@@ -144,8 +143,6 @@ public partial class GameScreen : Control
 			var nextBoardButton = nextPlayerSlot.GetChild(0) as BoardButton;
 			nextBoardButton.GrabFocus();
 			_boardButtonFocused = nextBoardButton;
-			//var FocusedRow = _boardButtonFocused.GetParent().GetParent().GetParent().GetParent().GetParent().GetParent();
-			//GD.Print("FocusedRow is " + FocusedRow.Name);
 		}
 	}
 	
@@ -158,7 +155,6 @@ public partial class GameScreen : Control
 	// APPUI SUR VALIDER => Envoi selection à Brain
 	public void _on_validate_button_pressed()
 	{
-		GD.Print("bouton valider appuyé");
 		var playerSlotContainer = _boardButtonFocused.GetParent().GetParent();
 		
 		// RAZ playerGuess entre chaque ligne
@@ -187,7 +183,6 @@ public partial class GameScreen : Control
 				}
 			}
 		}
-		GD.Print(playerGuess + "dans gamezone avant envoi");
 		FocusedRow.StopAnim();
 		// Ensuite il y a l'envoi à la logique de jeu GameLogic
 		EmitSignal(SignalName.OnRowComplete, playerGuess);
@@ -224,8 +219,6 @@ public partial class GameScreen : Control
 			}
 		}
 		
-		GD.Print("hintButtons.Count = " + hintButtons.Count);
-		
 		int hintIndex = 0;
 
 		// Hints rouges (bien placés)
@@ -233,7 +226,6 @@ public partial class GameScreen : Control
 		{
 			if (hintIndex < hintButtons.Count)
 			{
-				GD.Print("Rouge");
 				(hintButtons[hintIndex] as HintButton)?.RedHint();
 				HintAudio.Play();
 				hintIndex++;
@@ -246,7 +238,6 @@ public partial class GameScreen : Control
 		{
 			if (hintIndex < hintButtons.Count)
 			{
-				GD.Print("Blanc");
 				(hintButtons[hintIndex] as HintButton)?.WhiteHint();
 				HintAudio.Play();
 				hintIndex++;
@@ -263,9 +254,12 @@ public partial class GameScreen : Control
 	}
 	
 	// MAJ Compteur "Essai"
-	private void DisplayCurrentTryValue(int current)
+	private void DisplayCurrentTryValue(int row)
 	{
+		int current = row + 1;
 		LabelTryValue.Text = current.ToString();
 		GD.Print($"Essai {current}");
 	}
+	
+
 }

@@ -14,15 +14,10 @@ public partial class UiManager : Control
 		Brain.OnGameOver += DisplayEndScreen;
 	}
 
-	private void _on_play_btn_pressed()
+	public void OnGameStart()
 	{
 		DisplayGameScreen();
-		//GameScreen.FirstButtonFocus();
-	}
-		
-	private void _on_play_again_pressed()
-	{
-		DisplayGameScreen();
+		GameScreen.FirstButtonFocus();
 	}
 	
 	private void _on_back_home_pressed()
@@ -66,4 +61,6 @@ public partial class UiManager : Control
 			EndScreen.LoseCase();
 		}
 	}
+	
+
 }

@@ -1,6 +1,7 @@
 [gd_resource type="StyleBoxFlat" format=3 uid="uid://cdagyo00whtfd"]
 
 [resource]
+content_margin_top = 15.0
 bg_color = Color(0.23753911, 0.23753914, 0.23753902, 1)
 border_width_left = 2
 border_width_top = 2
@@ -10,4 +11,3 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
-expand_margin_top = 10.0

@@ -30,8 +30,13 @@ public partial class Brain : Node
 
 	public override void _Ready()
 	{
-		_on_easy_btn_pressed();
 		GameScreen.OnRowComplete += CheckRow;
+		CallDeferred(nameof(InitGame));
+	}
+
+	private void InitGame()
+	{
+		_on_easy_btn_pressed();
 	}
 
 	// ================= CONFIGURATION =================
@@ -42,40 +47,51 @@ public partial class Brain : Node
 		GameScreen.InstantiateBoard(rows, slots, hints);
 		GameScreen.DisplayMaxTry(rows.ToString());
 		EndScreen.InstantiateResultSlots(slots);
+		EndScreen.DifficultyMode(_gameDifficulty);
+		
 
 		_rows = rows;
 		_slots = slots;
 		_hints = hints;
 		_currentRow = 0;
 
-		GameScreen.FirstButtonFocus();
 		EmitSignal(SignalName.UpdateCurrentRow, _currentRow);
-
-		NewGame();
 	}
 
 	private void _on_easy_btn_pressed()
 	{
-		GameConfigurator("Facile", 12, 4, 4);
 		_gameDifficulty = 1;
+		GameConfigurator("Facile", 12, 4, 4);
 	}
 
 	private void _on_medium_btn_pressed()
 	{
-		GameConfigurator("Moyen", 10, 4, 4);
 		_gameDifficulty = 2;
-	}
-
-	private void _on_expert_btn_pressed()
-	{
-		GameConfigurator("Expert", 8, 4, 4);
-		_gameDifficulty = 3;
+		GameConfigurator("Moyen", 10, 4, 4);
 	}
 
 	private void _on_hard_btn_pressed()
 	{
-		GameConfigurator("Hard", 6, 5, 5);
+		_gameDifficulty = 3;
+		GameConfigurator("Difficile", 8, 4, 4);
+	}
+
+	private void _on_expert_btn_pressed()
+	{
 		_gameDifficulty = 4;
+		GameConfigurator("Expert", 8, 5, 5);
+	}
+	
+	private void _on_play_btn_pressed()
+	{
+		switch (_gameDifficulty)
+		{
+			case 1: _on_easy_btn_pressed(); break;
+ 			case 2: _on_medium_btn_pressed(); break;
+			case 3: _on_hard_btn_pressed(); break;
+			case 4: _on_expert_btn_pressed(); break;
+		}
+		NewGame();
 	}
 	
 	private void _on_play_again_pressed()
@@ -84,10 +100,10 @@ public partial class Brain : Node
 		{
 			case 1: _on_easy_btn_pressed(); break;
  			case 2: _on_medium_btn_pressed(); break;
-			case 3: _on_expert_btn_pressed(); break;
-			case 4: _on_hard_btn_pressed(); break;
+			case 3: _on_hard_btn_pressed(); break;
+			case 4: _on_expert_btn_pressed(); break;
 		}
-
+		NewGame();
 	}
 	
 	// ================= NOUVELLE PARTIE =================
@@ -95,6 +111,7 @@ public partial class Brain : Node
 	private void NewGame()
 	{
 		RandomPickedNumbers();
+		UiManager.OnGameStart();
 	}
 
 	private void RandomPickedNumbers()
@@ -103,7 +120,7 @@ public partial class Brain : Node
 
 		for (int i = 0; i < _slots; i++)
 		{
-			int randomNb = (int)(GD.Randi() % 6);
+			int randomNb = (int)(GD.Randi() % 6); // Randi renvoi un type uint = entier positif seulement
 			_solution.Add(randomNb);
 		}
 
@@ -138,7 +155,6 @@ public partial class Brain : Node
 			}
 		}
 		GD.Print("right "+ rightPosition, " wrong "+ wrongPosition);
-		GD.Print("emission signal hints");
 		EmitSignal(SignalName.OnHintsReady, rightPosition, wrongPosition);
 
 		if (rightPosition == _slots)

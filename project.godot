@@ -17,7 +17,7 @@ general/accessibility_support=2
 config/name="BioMind - Dynamique"
 run/main_scene="uid://e01tv4ge5kyh"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
-config/icon="res://Assets/Autres Assets A Jeter/icon.svg"
+config/icon="res://Brouillons/Autres Assets A Jeter/icon.svg"
 
 [display]
 
@@ -33,14 +33,17 @@ project/assembly_name="BioMind"
 
 folder_colors={
 "res://Assets/Arrows/": "teal",
-"res://Assets/Autres Assets A Jeter/": "teal",
-"res://Assets/Autres Assets A Jeter/Plateau/": "teal",
 "res://Assets/BioMindhead/": "teal",
 "res://Assets/BioMinds/": "teal",
 "res://Assets/Buttons/": "teal",
 "res://Assets/Effects/": "teal",
+"res://Assets/Effects/Sparks/": "teal",
+"res://Assets/Effects/Trace/": "teal",
+"res://Assets/Orbs/": "teal",
 "res://Assets/Safe/": "teal",
-"res://Assets/Sounds/": "teal"
+"res://Assets/Sounds/": "teal",
+"res://Brouillons/Autres Assets A Jeter/": "teal",
+"res://Brouillons/Autres Assets A Jeter/Plateau/": "teal"
 }
 
 [input]

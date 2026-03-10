@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpkonil04ooxb"]
 
-[ext_resource type="Texture2D" uid="uid://1jbf3l36o1hg" path="res://Assets/BioMindhead/BioMind_Black_Head.png" id="1_xo7nk"]
-[ext_resource type="Texture2D" uid="uid://b6tqyicii458a" path="res://Assets/BioMindhead/BioMind_Purple_Head.png" id="2_0tkwk"]
-[ext_resource type="Texture2D" uid="uid://bsfft1f8hqu6m" path="res://Assets/BioMindhead/BioMind_Red_Head.png" id="3_wjecm"]
-[ext_resource type="Texture2D" uid="uid://b64kpby7ndt6v" path="res://Assets/BioMindhead/BioMind_White_Head.png" id="4_fhpu4"]
-[ext_resource type="Texture2D" uid="uid://bjkibk02evjd3" path="res://Assets/BioMindhead/BioMind_Yellow_Head.png" id="5_0hypb"]
-[ext_resource type="Texture2D" uid="uid://bnlx3den7fnat" path="res://Assets/BioMindhead/BioMind_Blue_Head.png" id="6_l6tqe"]
+[ext_resource type="Texture2D" uid="uid://1jbf3l36o1hg" path="res://Brouillons/BioMind_Black_Head.png" id="1_xo7nk"]
+[ext_resource type="Texture2D" uid="uid://b6tqyicii458a" path="res://Brouillons/BioMind_Purple_Head.png" id="2_0tkwk"]
+[ext_resource type="Texture2D" uid="uid://bsfft1f8hqu6m" path="res://Brouillons/BioMind_Red_Head.png" id="3_wjecm"]
+[ext_resource type="Texture2D" uid="uid://b64kpby7ndt6v" path="res://Brouillons/BioMind_White_Head.png" id="4_fhpu4"]
+[ext_resource type="Texture2D" uid="uid://bjkibk02evjd3" path="res://Brouillons/BioMind_Yellow_Head.png" id="5_0hypb"]
+[ext_resource type="Texture2D" uid="uid://bnlx3den7fnat" path="res://Brouillons/BioMind_Blue_Head.png" id="6_l6tqe"]
 
 [sub_resource type="Animation" id="Animation_0ytqx"]
 resource_name = "ColorPicker"

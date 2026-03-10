@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bftdboq2jyjdy"]
 
-[ext_resource type="Texture2D" uid="uid://bi7mcddxc1s4m" path="res://Assets/Autres Assets A Jeter/Plateau/BioMind_Plateau.png" id="1_lyj47"]
-[ext_resource type="Texture2D" uid="uid://ygm8i2a8njm7" path="res://Assets/Autres Assets A Jeter/Plateau/BioTrou.png" id="2_opb28"]
+[ext_resource type="Texture2D" uid="uid://bi7mcddxc1s4m" path="res://Brouillons/Autres Assets A Jeter/Plateau/BioMind_Plateau.png" id="1_lyj47"]
+[ext_resource type="Texture2D" uid="uid://ygm8i2a8njm7" path="res://Brouillons/Autres Assets A Jeter/Plateau/BioTrou.png" id="2_opb28"]
 
 [node name="BIOTROUX" type="Node2D"]
 

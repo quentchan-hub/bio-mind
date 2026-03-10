@@ -155,10 +155,10 @@ public partial class GameZone : Control
 		// envoi signal à game logic => joueur a 10 essais
 	}
 
-	private void _on_expert_btn_pressed()
+	private void _on_difficile_btn_pressed()
 	{
 		// Afficher le mode de difficulté
-		LabelNiveauSel.Text = "Expert";
+		LabelNiveauSel.Text = "Difficile";
 		// 8 lignes visibles (donc les 4 dernières invisibles)
 		AttemptRow9.Visible = false;
 		AttemptRow10.Visible = false;
@@ -173,7 +173,7 @@ public partial class GameZone : Control
 
 		// envoi signal à game logic => joueur a 8 essais
 		// dévoile une gemme => si joueur obtient 5 gemmes ...
-		// ...=> coffre entièrement ouvert => dévoile hardcore mode
+		// ...=> coffre entièrement ouvert => dévoile Expert mode
 	}
 
 	private void _on_hard_btn_pressed()
@@ -250,7 +250,6 @@ public partial class GameZone : Control
 				}
 			}
 		}
-		GD.Print(playerGuess + "dans gamezone avant envoi");
 		// Ensuite il y a l'envoi à la logique de jeu GameLogic
 		EmitSignal(SignalName.OnPlayerGuessComplete, playerGuess);
 		
@@ -295,10 +294,7 @@ public partial class GameZone : Control
 		
 		var parentRow = _currentRow.GetParent();
 		int currentIndex = _currentRow.GetIndex();
-		
-		GD.Print("currentIndex = ", currentIndex);
-		GD.Print("parentRow.GetChildCount = ", parentRow.GetChildCount());
-		
+	
 		// Vérifier qu'il y a bien une ligne suivante et qu'on est pas à la dernière
 		if (currentIndex < parentRow.GetChildCount())
 		{
@@ -331,7 +327,6 @@ public partial class GameZone : Control
 	private void UpdateAttemptLabel(int current, int max)
 	{
 		LabelNbTentative.Text = current.ToString();
-		GD.Print($"Essai {current}/{max}");
 	}
 	
 }	

@@ -68,10 +68,11 @@ public partial class AttemptRow : MarginContainer
 	{
 		var firstButton = SlotContainer.GetChild(0).GetChild(0) as BoardButton;
 		btnFocused = firstButton;
+		//await ToSignal(GetTree().CreateTimer(1.7f), "timeout");
 		btnFocused.GrabFocus();
 		btnFocused.AcceptEvent();
 		GetTheRowGlow();
-			OnBoardButtonSelected(btnFocused);
+		OnBoardButtonSelected(btnFocused);
 	}
 	
 	public void GetTheRowGlow()
