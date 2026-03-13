@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=3 uid="uid://e01tv4ge5kyh"]
+[gd_scene load_steps=177 format=3 uid="uid://e01tv4ge5kyh"]
 
 [ext_resource type="Script" uid="uid://dw1f07bu3f8rp" path="res://Scripts/UiManager.cs" id="1_8blbl"]
 [ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
@@ -24,7 +24,9 @@
 [ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="15_yhvps"]
 [ext_resource type="Texture2D" uid="uid://drkvfygb83ppq" path="res://Assets/Effects/Circle/circle_02.png" id="16_btl52"]
 [ext_resource type="Script" uid="uid://s73pfeelqd8d" path="res://Scripts/GlowGreenEffect.cs" id="16_hpjjw"]
+[ext_resource type="Script" uid="uid://cl5r6uxo6tyc8" path="res://Scripts/BotTabContainer.cs" id="16_swgr2"]
 [ext_resource type="Script" uid="uid://dtvhhneemkn8d" path="res://Scripts/GameScreen.cs" id="17_65hfw"]
+[ext_resource type="Script" uid="uid://dkgy5tav6cp8q" path="res://Scripts/Orbs.cs" id="17_ipi4e"]
 [ext_resource type="Texture2D" uid="uid://cuw66t5cfbdd5" path="res://Assets/Orbs/Black_Orb2.webp" id="17_wuhsp"]
 [ext_resource type="LabelSettings" uid="uid://cpgglm6jxn5ie" path="res://Settings/font_midgamezone_label.tres" id="18_1lsdj"]
 [ext_resource type="Texture2D" uid="uid://co6woue5a3b5c" path="res://Assets/Orbs/Blue_Orb2.webp" id="18_cal7y"]
@@ -35,13 +37,33 @@
 [ext_resource type="Texture2D" uid="uid://dqgmlgy6cyl7h" path="res://Assets/Orbs/Yellow_Orb2.webp" id="22_crcpg"]
 [ext_resource type="Texture2D" uid="uid://b11m5qn20fqx4" path="res://Settings/bloc_background_dark_blue.tres" id="22_gvfd6"]
 [ext_resource type="Texture2D" uid="uid://buxckxojcp5dj" path="res://Assets/Buttons/HelpButton.webp" id="22_y2ulj"]
+[ext_resource type="Texture2D" uid="uid://dkduod14h3hee" path="res://Assets/SuperMind/Icons/SuperMind - Icon - LeftArm.webp" id="23_gh155"]
 [ext_resource type="PackedScene" uid="uid://tto86px2ryko" path="res://Scenes/attempt_row.tscn" id="24_ep8v8"]
+[ext_resource type="StyleBox" uid="uid://cewbtw5alp0gd" path="res://Settings/GenericWindowBoxFlat.tres" id="24_ojt81"]
+[ext_resource type="Texture2D" uid="uid://ctfkr18rgom6v" path="res://Assets/SuperMind/Icons/SuperMind - Icon - EmptyGrey.webp" id="24_wrswc"]
+[ext_resource type="Script" uid="uid://1nhux0iv1w7e" path="res://Scripts/SuperMind.cs" id="25_4tmx4"]
+[ext_resource type="Texture2D" uid="uid://cmtod2fvrg15b" path="res://Assets/SuperMind/Icons/SuperMind - Icon - RightArm.webp" id="25_j34bq"]
+[ext_resource type="Texture2D" uid="uid://bmnsrmw3uu3r8" path="res://Assets/SuperMind/Icons/SuperMind - Icon - LeftLeg.webp" id="26_8s0d3"]
+[ext_resource type="Texture2D" uid="uid://bl8cuag48cjr" path="res://Assets/SuperMind/Icons/SuperMind - Icon - RightLeg.webp" id="27_swgr2"]
+[ext_resource type="Texture2D" uid="uid://dyolxhjcyrve6" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Head.webp" id="28_ax470"]
+[ext_resource type="Script" uid="uid://dgsm52lf26m7d" path="res://Scripts/RobotPartsOverlay.cs" id="28_wrswc"]
+[ext_resource type="Texture2D" uid="uid://btx38j0ewqq2w" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Chest.webp" id="29_ipi4e"]
+[ext_resource type="Texture2D" uid="uid://un4gfxfx5k7e" path="res://Assets/SuperMind/Pictures/SuperMind - LeftArm.webp" id="29_tjbi0"]
+[ext_resource type="Texture2D" uid="uid://dmbvhlp0tsw5q" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Sword.png" id="30_4tmx4"]
 [ext_resource type="Texture2D" uid="uid://colganbfsvqmj" path="res://Assets/BioMindhead/BioMind_Blue_Head.webp" id="30_hbkoi"]
+[ext_resource type="Texture2D" uid="uid://bohhwiewd7a3y" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Shield.png" id="31_e2xik"]
 [ext_resource type="Texture2D" uid="uid://bqe6gi1qnbkl0" path="res://Assets/BioMindhead/BioMind_Black_Head.webp" id="31_iuc65"]
+[ext_resource type="Texture2D" uid="uid://khq10oy6eb5l" path="res://Assets/SuperMind/Pictures/SuperMind - RightArm.webp" id="31_oyo4v"]
+[ext_resource type="Texture2D" uid="uid://cpqmrg17ofy66" path="res://Assets/SuperMind/Pictures/SuperMind - RightLeg.webp" id="32_e03w5"]
 [ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="32_reelv"]
 [ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="33_27bwp"]
+[ext_resource type="Texture2D" uid="uid://dcdrn851530tu" path="res://Assets/SuperMind/Pictures/SuperMind - LeftLeg.webp" id="33_qqb1g"]
+[ext_resource type="Texture2D" uid="uid://ciodwwegwmi3g" path="res://Assets/SuperMind/Pictures/SuperMind - Chest.webp" id="34_1h6my"]
 [ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="34_e07rd"]
+[ext_resource type="Texture2D" uid="uid://cmc6t4ypavy57" path="res://Assets/SuperMind/Pictures/SuperMind - Head.webp" id="35_j34bq"]
 [ext_resource type="Texture2D" uid="uid://cqfp5xj8v2mvp" path="res://Assets/BioMindhead/BioMind_Yellow_Head.webp" id="35_mefj4"]
+[ext_resource type="Texture2D" uid="uid://b3wb2tdrskklx" path="res://Assets/SuperMind/Pictures/SuperMind - Sword.webp" id="36_8s0d3"]
+[ext_resource type="Texture2D" uid="uid://cvbywoqhqj4ra" path="res://Assets/SuperMind/Pictures/SuperMind - Shield.webp" id="37_swgr2"]
 [ext_resource type="StyleBox" uid="uid://cdagyo00whtfd" path="res://Settings/back_home_button.tres" id="39_dgrhb"]
 [ext_resource type="SystemFont" uid="uid://bst8woildkesg" path="res://Settings/button.tres" id="41_rgw24"]
 [ext_resource type="Texture2D" uid="uid://ofm3v60mi1y7" path="res://Assets/Buttons/ClearButtonNormal.NoText.2.1.webp" id="41_yisvs"]
@@ -82,6 +104,10 @@
 [ext_resource type="Texture2D" uid="uid://b1f3opckea0eu" path="res://Assets/Effects/Sparks/spark_05.png" id="78_8hq12"]
 [ext_resource type="Texture2D" uid="uid://c0ley5vmm21r5" path="res://Assets/Effects/Sparks/spark_06.png" id="79_8hq12"]
 [ext_resource type="Texture2D" uid="uid://cr3v1y54ljtrr" path="res://Assets/Effects/Circle/scorch_02.png" id="80_2dy84"]
+[ext_resource type="Script" uid="uid://c5io1tlpegagj" path="res://Scenes/OrbSpawn.cs" id="86_4tmx4"]
+[ext_resource type="Script" uid="uid://bn8fh0ghmqjg8" path="res://Scripts/PartTexture.cs" id="100_8s0d3"]
+[ext_resource type="Script" uid="uid://dgij0uqsvx6t7" path="res://Scenes/RobotPartSpawn.cs" id="104_y6xxu"]
+[ext_resource type="Script" uid="uid://b4bsqngcxkksy" path="res://Scenes/TestsDebug.cs" id="108_a22le"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_robvp"]
 bg_color = Color(0, 0, 0, 1)
@@ -193,7 +219,7 @@ corner_radius_bottom_left = 30
 anti_aliasing_size = 0.01
 
 [sub_resource type="LabelSettings" id="LabelSettings_qoydj"]
-font_size = 22
+font_size = 25
 font_color = Color(1, 0.84313726, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py4g2"]
@@ -212,19 +238,17 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_6tb1a"]
-font_size = 18
+font_size = 19
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6gtk"]
-bg_color = Color(0, 0, 0.2901961, 0.92156863)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 0.84313726, 0, 1)
-corner_radius_top_left = 45
-corner_radius_top_right = 45
-corner_radius_bottom_right = 45
-corner_radius_bottom_left = 45
+[sub_resource type="Gradient" id="Gradient_ax470"]
+offsets = PackedFloat32Array(0.9060773, 0.9116022, 1)
+colors = PackedColorArray(1, 1, 1, 0.1764706, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ipi4e"]
+gradient = SubResource("Gradient_ax470")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wuhsp"]
 bg_color = Color(0.9019608, 0.23921569, 0.2, 1)
@@ -238,6 +262,15 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 anti_aliasing_size = 0.01
+
+[sub_resource type="Gradient" id="Gradient_4tmx4"]
+offsets = PackedFloat32Array(0.7016575, 1)
+colors = PackedColorArray(1, 1, 1, 0.7647059, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e2xik"]
+gradient = SubResource("Gradient_4tmx4")
+fill = 1
+fill_from = Vector2(0.491453, 0.48290598)
 
 [sub_resource type="Gradient" id="Gradient_as1ww"]
 offsets = PackedFloat32Array(0.5, 0.65, 0.8)
@@ -519,6 +552,88 @@ gradient = SubResource("Gradient_667dm")
 fill = 1
 fill_from = Vector2(0.7905983, 0.37179488)
 fill_to = Vector2(0.20512821, 0.72649574)
+
+[sub_resource type="Gradient" id="Gradient_8s0d3"]
+colors = PackedColorArray(0, 0.90588236, 1, 0, 0.58431375, 1, 1, 0.6784314)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_swgr2"]
+noise_type = 0
+seed = 4
+frequency = 0.0009
+offset = Vector3(0, 290.32, 0)
+cellular_jitter = -2.07
+cellular_return_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ax470"]
+noise = SubResource("FastNoiseLite_swgr2")
+color_ramp = SubResource("Gradient_8s0d3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kia4f"]
+bg_color = Color(0, 0, 0, 0.20784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lb63"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+border_color = Color(0.8001019, 0.8001019, 0, 0)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
+shadow_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_65hfw"]
+font_size = 60
+font_color = Color(1, 0.84313726, 0, 1)
+outline_size = 10
+outline_color = Color(1, 0, 0, 1)
+stacked_outline_count = 1
+stacked_shadow_count = 4
+stacked_outline_0/size = 4
+stacked_outline_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/offset = Vector2(0, 6)
+stacked_shadow_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/outline_size = 10
+stacked_shadow_1/offset = Vector2(0, 10)
+stacked_shadow_1/color = Color(0.2398856, 0.4627601, 1, 1)
+stacked_shadow_1/outline_size = 14
+stacked_shadow_2/offset = Vector2(0, 14)
+stacked_shadow_2/color = Color(0.38623577, 0.5774652, 1, 1)
+stacked_shadow_2/outline_size = 17
+stacked_shadow_3/offset = Vector2(0, 18)
+stacked_shadow_3/color = Color(1, 1, 1, 1)
+stacked_shadow_3/outline_size = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68ajo"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.88235295, 0, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btl52"]
+content_margin_top = 15.0
+bg_color = Color(0.9019608, 0.23921569, 0.2, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing_size = 0.01
 
 [sub_resource type="Animation" id="Animation_kddde"]
 resource_name = "FallenStars"
@@ -3610,6 +3725,538 @@ tracks/143/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/144/type = "value"
+tracks/144/imported = false
+tracks/144/enabled = true
+tracks/144/path = NodePath("../../../../../BotEnd/ButtonBlocker:visible")
+tracks/144/interp = 1
+tracks/144/loop_wrap = true
+tracks/144/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/145/type = "value"
+tracks/145/imported = false
+tracks/145/enabled = true
+tracks/145/path = NodePath("../../Expert/RobotPartSpawn:position")
+tracks/145/interp = 1
+tracks/145/loop_wrap = true
+tracks/145/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/146/type = "value"
+tracks/146/imported = false
+tracks/146/enabled = true
+tracks/146/path = NodePath("../../Expert/RobotPartSpawn/MarginContainer2/VBoxContainer:modulate")
+tracks/146/interp = 1
+tracks/146/loop_wrap = true
+tracks/146/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_py4g2"]
+resource_name = "SixOrbs"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Hard/TreasureSpawn/Control/Treasure:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.3666668, 1.5, 1.7, 2.0100002, 2.0900002, 2.2600002, 2.6100001, 2.6999998, 2.92, 3.5666666, 3.666667, 3.7200003, 3.83),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.22352941), Color(1, 1, 1, 0.22352941), Color(1, 1, 1, 0.92941177), Color(1, 1, 1, 0.23137255), Color(1, 1, 1, 0.23137255), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.48235294), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture:gradient:offsets")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 3.6933331, 3.8000002, 6.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [PackedFloat32Array(0.2872928, 1), PackedFloat32Array(0.2872928, 1), PackedFloat32Array(0.6243094, 0.95027626), PackedFloat32Array(0.6243094, 0.95027626), PackedFloat32Array(0.9005525, 0.98895025)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture:fill_from")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 3.6933331, 3.8000002, 6.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.7905983, 0.37179488), Vector2(0.7905983, 0.37179488), Vector2(0.52991456, 0.17948718), Vector2(0.52991456, 0.17948718), Vector2(0.491453, 0.47435898)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture:fill_to")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 3.6933331, 3.8000002, 6.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.20512821, 0.72649574), Vector2(0.20512821, 0.72649574), Vector2(0.50427353, 0.9444444), Vector2(0.50427353, 0.9444444), Vector2(0.5, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 3.81, 3.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 4.1862907, 4.2666664, 4.5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.69411767), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/Lightnings:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 3.7693167, 3.8569994, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/Lightnings2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 3.9333334, 3.9666667, 4.0333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/Lightnings3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1, 4.0666666, 4.166667, 4.8, 4.8999996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/SideLightnings:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1, 4.2333336, 4.366667, 4.8, 4.8999996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/HaloExt:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1, 4.5, 4.6, 5, 6.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.49019608), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1, 4.8, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/HalosElecs:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1, 5, 5.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1, 5, 5.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec3:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1, 5, 5.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec4:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1, 5, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec5:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1, 5, 5.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec6:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1, 5, 5.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec7:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1, 5, 5.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite2:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(1, 6, 6.1000004, 6.2, 6.3, 6.3999996, 6.5, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 1), Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 1), Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 1), Color(0.8352941, 1, 0, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite2:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1, 6.3999996, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 2), Vector2(1, 2), Vector2(0, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect1:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect2:scale")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect3:scale")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect4:scale")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect5:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect6:scale")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(1, 7.3, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect1:scale")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(1, 6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect2:scale")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(1, 6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect3:scale")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(1, 6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect4:scale")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(1, 6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect5:scale")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1, 6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect6:scale")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1, 6.5, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1, 4.8, 7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Color(0.3019608, 0.72156864, 0, 0), Color(0.3019608, 0.72156864, 0, 1), Color(0.3019608, 0.72156864, 0, 0)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1, 6.5, 6.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [SubResource("GradientTexture2D_crcpg"), SubResource("GradientTexture2D_crcpg"), null]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../../Hard/TreasureSpawn/MarginContainer2/VBoxContainer/CongratsTreasure:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(1, 7.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../../Hard/TreasureSpawn/MarginContainer2/VBoxContainer/NewLevel:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(1, 7.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../../Hard/TreasureSpawn/Control/GreyFilterOnOrbs:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(1, 4.4858613, 4.9418983, 7.1000004),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6901961), Color(1, 1, 1, 0)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../../../../../BotEnd/ButtonBlocker:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_1nut0"]
 resource_name = "WinEasyMed"
@@ -4278,6 +4925,30 @@ tracks/54/keys = {
 [sub_resource type="Animation" id="Animation_e07rd"]
 resource_name = "WinHard"
 length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Expert/RobotPartSpawn:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333333, 0.6666667, 0.7, 0.73333335, 0.76666665, 0.8, 0.8333333, 0.8666667, 0.9, 0.93333334, 0.96666664, 1, 1.0333333, 1.0666667, 1.1, 1.1333333, 1.1666666, 1.2, 1.2333333, 1.2666667, 1.3, 1.3333334, 1.3666667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(600, 0), Vector2(502.30258, 0), Vector2(364.8059, 0), Vector2(212.13205, 0), Vector2(65.63489, 0), Vector2(-58.474, 0), Vector2(-150, 0), Vector2(-204.74036, 0), Vector2(-223.75037, 0), Vector2(-212.13202, 0), Vector2(-177.59076, 0), Vector2(-128.97833, 0), Vector2(-75, 0), Vector2(-23.205444, 0), Vector2(20.673706, 0), Vector2(53.03302, 0), Vector2(72.38666, 0), Vector2(79.107666, 0), Vector2(75, 0), Vector2(62.78784, 0), Vector2(45.600708, 0), Vector2(26.51654, 0), Vector2(8.204346, 0), Vector2(-7.309265, 0), Vector2(-18.75, 0), Vector2(-25.59259, 0), Vector2(-27.968811, 0), Vector2(-26.51654, 0), Vector2(-22.198792, 0), Vector2(-16.122314, 0), Vector2(-9.375, 0), Vector2(-2.9006958, 0), Vector2(2.5842285, 0), Vector2(6.6291504, 0), Vector2(9.04834, 0), Vector2(9.888428, 0), Vector2(9.375, 0), Vector2(7.8484497, 0), Vector2(5.7000732, 0), Vector2(3.3145752, 0), Vector2(1.0255127, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Expert/RobotPartSpawn/MarginContainer2/VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2666667, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_iuc65"]
 resource_name = "WinExpert"
@@ -4834,489 +5505,17 @@ tracks/45/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_py4g2"]
-resource_name = "SixOrbs"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../../Hard/TreasureSpawn/Control/Treasure:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(3, 3.3666668, 3.5, 3.7, 4.01, 4.09, 4.26, 4.61, 4.7, 4.92, 5.5666666, 5.666667, 5.7200003, 5.83),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.22352941), Color(1, 1, 1, 0.22352941), Color(1, 1, 1, 0.92941177), Color(1, 1, 1, 0.23137255), Color(1, 1, 1, 0.23137255), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.48235294), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture:gradient:offsets")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(3, 5.693333, 5.8, 8.5, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [PackedFloat32Array(0.2872928, 1), PackedFloat32Array(0.2872928, 1), PackedFloat32Array(0.6243094, 0.95027626), PackedFloat32Array(0.6243094, 0.95027626), PackedFloat32Array(0.9005525, 0.98895025)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture:fill_from")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(3, 5.693333, 5.8, 8.5, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0.7905983, 0.37179488), Vector2(0.7905983, 0.37179488), Vector2(0.52991456, 0.17948718), Vector2(0.52991456, 0.17948718), Vector2(0.491453, 0.47435898)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture:fill_to")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(3, 5.693333, 5.8, 8.5, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0.20512821, 0.72649574), Vector2(0.20512821, 0.72649574), Vector2(0.50427353, 0.9444444), Vector2(0.50427353, 0.9444444), Vector2(0.5, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(3, 5.81, 5.85),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(3, 6.1862907, 6.2666664, 6.5, 8.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.69411767), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/Lightnings:modulate")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(3, 5.7693167, 5.8569994, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/Lightnings2:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(3, 5.9333334, 5.9666667, 6.0333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/Lightnings3:modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(3, 6.0666666, 6.166667, 6.8, 6.8999996),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("../../Hard/TreasureSpawn/Control/Eclairs/SideLightnings:modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(3, 6.2333336, 6.366667, 6.8, 6.8999996),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/HaloExt:modulate")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(3, 6.5, 6.6, 7, 8.5, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.49019608), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat32Array(3, 6.8, 7),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/HalosElecs:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
-"times": PackedFloat32Array(3, 6.6, 7),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec:modulate")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(3, 7, 7.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec2:modulate")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
-"times": PackedFloat32Array(3, 7, 7.8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec3:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(3, 7, 7.8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec4:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(3, 7, 7.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec5:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
-"times": PackedFloat32Array(3, 7, 7.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec6:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
-"times": PackedFloat32Array(3, 7, 7.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite/ArcsElecs/ArcElec7:modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
-"times": PackedFloat32Array(3, 7, 7.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite2:modulate")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(3, 8, 8.1, 8.2, 8.3, 8.4, 8.5, 9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 1), Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 1), Color(0.8352941, 1, 0, 0), Color(0.8352941, 1, 0, 1), Color(0.8352941, 1, 0, 0)]
-}
-tracks/21/type = "value"
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite2:position")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/keys = {
-"times": PackedFloat32Array(3, 8.4, 8.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 2), Vector2(1, 2), Vector2(0, 0)]
-}
-tracks/22/type = "value"
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect1:scale")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/keys = {
-"times": PackedFloat32Array(8.5, 9.1),
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../../../../../BotEnd/ButtonBlocker:visible")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0, 3.5),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
-}
-tracks/23/type = "value"
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect2:scale")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/keys = {
-"times": PackedFloat32Array(8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
-}
-tracks/24/type = "value"
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect3:scale")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/keys = {
-"times": PackedFloat32Array(8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
-}
-tracks/25/type = "value"
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect4:scale")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/keys = {
-"times": PackedFloat32Array(8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
-}
-tracks/26/type = "value"
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect5:scale")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/keys = {
-"times": PackedFloat32Array(8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
-}
-tracks/27/type = "value"
-tracks/27/imported = false
-tracks/27/enabled = true
-tracks/27/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/WhiteLight/TextureRect6:scale")
-tracks/27/interp = 1
-tracks/27/loop_wrap = true
-tracks/27/keys = {
-"times": PackedFloat32Array(8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(6, 6.242)]
-}
-tracks/28/type = "value"
-tracks/28/imported = false
-tracks/28/enabled = true
-tracks/28/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs:modulate")
-tracks/28/interp = 1
-tracks/28/loop_wrap = true
-tracks/28/keys = {
-"times": PackedFloat32Array(3, 9.3, 9.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/29/type = "value"
-tracks/29/imported = false
-tracks/29/enabled = true
-tracks/29/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect1:scale")
-tracks/29/interp = 1
-tracks/29/loop_wrap = true
-tracks/29/keys = {
-"times": PackedFloat32Array(3, 8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
-}
-tracks/30/type = "value"
-tracks/30/imported = false
-tracks/30/enabled = true
-tracks/30/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect2:scale")
-tracks/30/interp = 1
-tracks/30/loop_wrap = true
-tracks/30/keys = {
-"times": PackedFloat32Array(3, 8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
-}
-tracks/31/type = "value"
-tracks/31/imported = false
-tracks/31/enabled = true
-tracks/31/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect3:scale")
-tracks/31/interp = 1
-tracks/31/loop_wrap = true
-tracks/31/keys = {
-"times": PackedFloat32Array(3, 8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
-}
-tracks/32/type = "value"
-tracks/32/imported = false
-tracks/32/enabled = true
-tracks/32/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect4:scale")
-tracks/32/interp = 1
-tracks/32/loop_wrap = true
-tracks/32/keys = {
-"times": PackedFloat32Array(3, 8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
-}
-tracks/33/type = "value"
-tracks/33/imported = false
-tracks/33/enabled = true
-tracks/33/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect5:scale")
-tracks/33/interp = 1
-tracks/33/loop_wrap = true
-tracks/33/keys = {
-"times": PackedFloat32Array(3, 8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
-}
-tracks/34/type = "value"
-tracks/34/imported = false
-tracks/34/enabled = true
-tracks/34/path = NodePath("../../Hard/TreasureSpawn/Control/Flashs/HalosElecs/FlashInt/FlashLight/TextureRect6:scale")
-tracks/34/interp = 1
-tracks/34/loop_wrap = true
-tracks/34/keys = {
-"times": PackedFloat32Array(3, 8.5, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0.224, 0.233), Vector2(0.224, 0.233), Vector2(1, 1.04)]
-}
-tracks/35/type = "value"
-tracks/35/imported = false
-tracks/35/enabled = true
-tracks/35/path = NodePath("../../Hard/TreasureSpawn/Control/Electricite:modulate")
-tracks/35/interp = 1
-tracks/35/loop_wrap = true
-tracks/35/keys = {
-"times": PackedFloat32Array(3, 6.8, 9),
-"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Color(0.3019608, 0.72156864, 0, 0), Color(0.3019608, 0.72156864, 0, 1), Color(0.3019608, 0.72156864, 0, 0)]
-}
-tracks/36/type = "value"
-tracks/36/imported = false
-tracks/36/enabled = true
-tracks/36/path = NodePath("../../Hard/TreasureSpawn/Control/AmbiantLight:texture")
-tracks/36/interp = 1
-tracks/36/loop_wrap = true
-tracks/36/keys = {
-"times": PackedFloat32Array(3, 8.5, 8.55),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [SubResource("GradientTexture2D_crcpg"), SubResource("GradientTexture2D_crcpg"), null]
-}
-tracks/37/type = "value"
-tracks/37/imported = false
-tracks/37/enabled = true
-tracks/37/path = NodePath("../../Hard/TreasureSpawn/MarginContainer2/VBoxContainer/CongratsTreasure:modulate")
-tracks/37/interp = 1
-tracks/37/loop_wrap = true
-tracks/37/keys = {
-"times": PackedFloat32Array(3, 9.5, 10),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/38/type = "value"
-tracks/38/imported = false
-tracks/38/enabled = true
-tracks/38/path = NodePath("../../Hard/TreasureSpawn/MarginContainer2/VBoxContainer/NewLevel:modulate")
-tracks/38/interp = 1
-tracks/38/loop_wrap = true
-tracks/38/keys = {
-"times": PackedFloat32Array(3, 9.5, 10),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/39/type = "value"
-tracks/39/imported = false
-tracks/39/enabled = true
-tracks/39/path = NodePath("../../Hard/TreasureSpawn/Control/GreyFilterOnOrbs:modulate")
-tracks/39/interp = 1
-tracks/39/loop_wrap = true
-tracks/39/keys = {
-"times": PackedFloat32Array(3, 6.4858613, 6.9418983, 9.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6901961), Color(1, 1, 1, 0)]
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1nut0"]
@@ -5331,73 +5530,6 @@ _data = {
 &"WinExpert": SubResource("Animation_e07rd"),
 &"WinHard": SubResource("Animation_iuc65")
 }
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kia4f"]
-bg_color = Color(0, 0, 0, 0.20784314)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lb63"]
-bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
-border_color = Color(0.8001019, 0.8001019, 0, 0)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-corner_detail = 20
-shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
-shadow_size = 20
-
-[sub_resource type="LabelSettings" id="LabelSettings_65hfw"]
-font_size = 60
-font_color = Color(1, 0.84313726, 0, 1)
-outline_size = 10
-outline_color = Color(1, 0, 0, 1)
-stacked_outline_count = 1
-stacked_shadow_count = 4
-stacked_outline_0/size = 4
-stacked_outline_0/color = Color(0, 0, 1, 1)
-stacked_shadow_0/offset = Vector2(0, 6)
-stacked_shadow_0/color = Color(0, 0, 1, 1)
-stacked_shadow_0/outline_size = 10
-stacked_shadow_1/offset = Vector2(0, 10)
-stacked_shadow_1/color = Color(0.2398856, 0.4627601, 1, 1)
-stacked_shadow_1/outline_size = 14
-stacked_shadow_2/offset = Vector2(0, 14)
-stacked_shadow_2/color = Color(0.38623577, 0.5774652, 1, 1)
-stacked_shadow_2/outline_size = 17
-stacked_shadow_3/offset = Vector2(0, 18)
-stacked_shadow_3/color = Color(1, 1, 1, 1)
-stacked_shadow_3/outline_size = 19
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68ajo"]
-bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
-draw_center = false
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.8, 0.88235295, 0, 1)
-border_blend = true
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
-shadow_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btl52"]
-content_margin_top = 15.0
-bg_color = Color(0.9019608, 0.23921569, 0.2, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 0.84313726, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing_size = 0.01
 
 [sub_resource type="Animation" id="Animation_iufls"]
 resource_name = "MidGlowEffect"
@@ -5605,21 +5737,17 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 texture = SubResource("GradientTexture2D_us6mg")
 
-[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "OptionsOverlay", "ConfirmReset", "DisplayCollectInstruct", "OrbCollection", "OrbBlack", "OrbBlue", "OrbPurple", "OrbRed", "OrbWhite", "OrbYellow", "ExpertBtn")]
+[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "BotTabContainer", "OptionsOverlay", "ConfirmReset", "Orbs", "SuperMind", "ExpertBtn")]
+visible = false
 layout_mode = 2
 script = ExtResource("4_gvfd6")
 Brain = NodePath("../../../..")
 EndScreen = NodePath("../EndScreen")
+BotTabContainer = NodePath("VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer")
 OptionsOverlay = NodePath("OptionsOverlay")
 ConfirmReset = NodePath("OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/ConfirmationDialog")
-DisplayCollectInstruct = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/DisplayCollecInstruct")
-OrbCollection = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection")
-OrbBlack = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot/OrbBlack")
-OrbBlue = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot2/OrbBlue")
-OrbPurple = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot3/OrbPurple")
-OrbRed = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot4/OrbRed")
-OrbWhite = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot5/OrbWhite")
-OrbYellow = NodePath("VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot6/OrbYellow")
+Orbs = NodePath("VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs")
+SuperMind = NodePath("VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind")
 ExpertBtn = NodePath("VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/ExpertBtn")
 
 [node name="VBoxGlobal" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
@@ -5799,7 +5927,6 @@ button_group = ExtResource("10_q8m6m")
 text = "Difficile"
 
 [node name="ExpertBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -5902,17 +6029,19 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="TabContainer" type="TabContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer"]
+[node name="BotTabContainer" type="TabContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 theme_override_styles/panel = SubResource("StyleBoxFlat_py4g2")
-current_tab = 0
+current_tab = 1
+script = ExtResource("16_swgr2")
 
-[node name="Règles" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer"]
+[node name="Rules" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Règles"]
+[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Rules"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -5922,21 +6051,29 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 2
 accessibility_name = "RulesText"
+theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
 theme_override_font_sizes/font_size = 20
-text = "Trouver le code de 4 couleurs parmi un total 
-de 6 couleurs possible.
+text = "Trouver le code secret de 4 couleurs parmi un total de 6 couleurs possible.
+⚠️ Une même couleur peut se répéter.
 🔴 = Bonne couleur, bonne position
-⚪ = Bonne couleur, mauvaise position
-⚠️ Une même couleur peut se répéter."
+⚪ = Bonne couleur, mauvaise position"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Orbes" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer"]
-visible = false
+[node name="Orbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer" node_paths=PackedStringArray("DisplayCollectInstruct", "OrbCollection", "OrbBlack", "OrbBlue", "OrbPurple", "OrbRed", "OrbWhite", "OrbYellow")]
 layout_mode = 2
+script = ExtResource("17_ipi4e")
+DisplayCollectInstruct = NodePath("DisplayCollecInstruct")
+OrbCollection = NodePath("OrbCollection")
+OrbBlack = NodePath("OrbCollection/GridContainer/CollectSlot/OrbBlack")
+OrbBlue = NodePath("OrbCollection/GridContainer/CollectSlot2/OrbBlue")
+OrbPurple = NodePath("OrbCollection/GridContainer/CollectSlot3/OrbPurple")
+OrbRed = NodePath("OrbCollection/GridContainer/CollectSlot4/OrbRed")
+OrbWhite = NodePath("OrbCollection/GridContainer/CollectSlot5/OrbWhite")
+OrbYellow = NodePath("OrbCollection/GridContainer/CollectSlot6/OrbYellow")
 metadata/_tab_index = 1
 
-[node name="OrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes"]
+[node name="OrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -5947,16 +6084,16 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
-[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection"]
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection"]
 layout_mode = 2
 columns = 3
 
-[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer"]
+[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -5975,7 +6112,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot"]
+[node name="OrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -5993,12 +6130,12 @@ texture = ExtResource("17_wuhsp")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer"]
+[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot2"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6017,7 +6154,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot2"]
+[node name="OrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6035,12 +6172,12 @@ texture = ExtResource("18_cal7y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer"]
+[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot3"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6059,7 +6196,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot3"]
+[node name="OrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6077,12 +6214,12 @@ texture = ExtResource("19_8hq12")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer"]
+[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot4"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6101,7 +6238,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot4"]
+[node name="OrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6119,12 +6256,12 @@ texture = ExtResource("20_2dy84")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer"]
+[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot5"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot5"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6143,7 +6280,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot5"]
+[node name="OrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot5"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6161,12 +6298,12 @@ texture = ExtResource("21_667dm")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer"]
+[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot6"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot6"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6185,7 +6322,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/OrbCollection/GridContainer/CollectSlot6"]
+[node name="OrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot6"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6203,7 +6340,7 @@ texture = ExtResource("22_crcpg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes"]
+[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6212,12 +6349,413 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_paw2n")
 
-[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/TabContainer/Orbes/DisplayCollecInstruct"]
+[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/DisplayCollecInstruct"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
 text = "Frottez-vous au Niveau Difficile pour tenter de remporter des Orbes de puissance,
 elles s'afficheront ici."
+label_settings = SubResource("LabelSettings_6tb1a")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SuperMind" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer" node_paths=PackedStringArray("DisplayRobotCollecInstruct", "PartCollection", "LeftArmButton", "RightArmButton", "LeftLegButton", "RightLegButton", "HeadButton", "ChestButton", "SwordButton", "ShieldButton")]
+visible = false
+layout_mode = 2
+script = ExtResource("25_4tmx4")
+DisplayRobotCollecInstruct = NodePath("DisplayRobotCollecInstruct")
+PartCollection = NodePath("PartCollection")
+LeftArmButton = NodePath("PartCollection/RobotParts/CollectSlot/LeftArmButton")
+RightArmButton = NodePath("PartCollection/RobotParts/CollectSlot2/RightArmButton")
+LeftLegButton = NodePath("PartCollection/RobotParts/CollectSlot3/LeftLegButton")
+RightLegButton = NodePath("PartCollection/RobotParts/CollectSlot4/RightLegButton")
+HeadButton = NodePath("PartCollection/RobotParts/CollectSlot5/HeadButton")
+ChestButton = NodePath("PartCollection/RobotParts/CollectSlot6/ChestButton")
+SwordButton = NodePath("PartCollection/RobotParts/CollectSlot7/SwordButton")
+ShieldButton = NodePath("PartCollection/RobotParts/CollectSlot8/ShieldButton")
+metadata/_tab_index = 2
+
+[node name="PartCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="RobotParts" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection"]
+layout_mode = 2
+columns = 4
+
+[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+
+[node name="LeftArmButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_gh155")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot2"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="RightArmButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("25_j34bq")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot3"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="LeftLegButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("26_8s0d3")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot4"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="RightLegButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot4"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("27_swgr2")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot5"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot5"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("28_ax470")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot6"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ChestButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot6"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("29_ipi4e")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot7" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot7"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SwordButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot7"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("30_4tmx4")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CollectSlot8" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot8"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ShieldButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot8"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("31_e2xik")
+texture_pressed = ExtResource("24_wrswc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DisplayRobotCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_paw2n")
+
+[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/DisplayRobotCollecInstruct"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Frottez-vous au Niveau Expert pour tenter de rassembler les différentes parties du robot géant SuperMind !"
 label_settings = SubResource("LabelSettings_6tb1a")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -6238,7 +6776,7 @@ offset_top = 281.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_r6gtk")
+theme_override_styles/panel = ExtResource("24_ojt81")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter"]
 layout_mode = 2
@@ -6312,6 +6850,290 @@ layout_mode = 2
 text = "option3"
 
 [node name="CloseOptionsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+icon = ExtResource("56_t3x2a")
+
+[node name="RobotPartsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("LeftArmZoom", "RightArmZoom", "LeftLegZoom", "RightLegZoom", "ChestZoom", "HeadZoom", "SwordZoom", "ShieldZoom")]
+visible = false
+anchors_preset = 0
+offset_right = 494.0
+offset_bottom = 1084.0
+script = ExtResource("28_wrswc")
+LeftArmZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/LeftArmZoom")
+RightArmZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/RightArmZoom")
+LeftLegZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/LeftLegZoom")
+RightLegZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/RightLegZoom")
+ChestZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/ChestZoom")
+HeadZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/HeadZoom")
+SwordZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom")
+ShieldZoom = NodePath("Filter/MarginContainer/VBoxContainer/PanelContainer/ShieldZoom")
+
+[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -219.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("24_ojt81")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SUPERMIND - Robot Géant"
+label_settings = ExtResource("14_5gwyn")
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftArmZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftArmZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftArmZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="LeftArmPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftArmZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("29_tjbi0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftArmZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bras Gauche"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="RightArmZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightArmZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightArmZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="RightArmPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightArmZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("31_oyo4v")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightArmZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bras Droit"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="LeftLegZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftLegZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftLegZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="LeftLegPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftLegZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("32_e03w5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/LeftLegZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Jambe Gauche"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="RightLegZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightLegZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightLegZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="RightLegPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightLegZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("33_qqb1g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/RightLegZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Jambe Droit"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="ChestZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ChestZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ChestZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="ChestPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ChestZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("34_1h6my")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ChestZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bras Gauche"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="HeadZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/HeadZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/HeadZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="HeadPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/HeadZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("35_j34bq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/HeadZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bras Gauche"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="SwordZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="SwordPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("36_8s0d3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bras Gauche"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="ShieldZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ShieldZoom"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackGround" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ShieldZoom/MarginContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_e2xik")
+
+[node name="ShieldPicture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ShieldZoom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("37_swgr2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ShieldZoom"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Bras Gauche"
+label_settings = ExtResource("18_1lsdj")
+horizontal_alignment = 1
+
+[node name="CloseRobotButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -7241,24 +8063,24 @@ TutorialOverlay = NodePath("../..")
 [node name="HintAudio" type="AudioStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
 stream = ExtResource("52_xf5i4")
 
-[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "OrbTexture", "ResultSlotContainer", "EndScreenAnim", "TopEndAnim", "ResultLabel", "WinCases", "LoseCases", "Hard", "EasyOrMedium", "OrbSpawn", "TreasureSpawn")]
-visible = false
+[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "ResultSlotContainer", "EndScreenAnim", "TopEndAnim", "ResultLabel", "WinCases", "EasyOrMedium", "Hard", "OrbSpawn", "TreasureSpawn", "Expert", "RobotPartSpawn", "LoseCases")]
 layout_mode = 2
 script = ExtResource("45_lfh1j")
 Brain = NodePath("../../../..")
 HomeScreen = NodePath("../HomeScreen")
-OrbTexture = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture")
 ResultSlotScene = ExtResource("54_xf5i4")
 ResultSlotContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer")
 EndScreenAnim = NodePath("EndScreenAnim")
-TopEndAnim = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/TopEndAnim")
+TopEndAnim = NodePath("VBoxContainer/BotEnd/MarginContainer/TopEndAnim")
 ResultLabel = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle/ResultLabel")
 WinCases = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases")
-LoseCases = NodePath("VBoxContainer/TopEnd/MarginContainer/LoseCases")
-Hard = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard")
 EasyOrMedium = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/EasyOrMedium")
+Hard = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard")
 OrbSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn")
 TreasureSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/TreasureSpawn")
+Expert = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Expert")
+RobotPartSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn")
+LoseCases = NodePath("VBoxContainer/TopEnd/MarginContainer/LoseCases")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
 layout_mode = 1
@@ -7284,6 +8106,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="EasyOrMedium" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
+visible = false
 anchors_preset = 0
 offset_right = 494.0
 offset_bottom = 358.0
@@ -8840,18 +9663,13 @@ texture = ExtResource("56_kddde")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
-custom_minimum_size = Vector2(0, 360)
-layout_mode = 0
-offset_bottom = 360.0
-
 [node name="Hard" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
 visible = false
 anchors_preset = 0
 offset_right = 494.0
 offset_bottom = 358.0
 
-[node name="OrbSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard"]
+[node name="OrbSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard" node_paths=PackedStringArray("OrbTexture", "HomeScreen")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -8859,6 +9677,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("86_4tmx4")
+OrbTexture = NodePath("MarginContainer/Orbs/OrbTexture")
+HomeScreen = NodePath("../../../../../../../HomeScreen")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn"]
 layout_mode = 2
@@ -9239,6 +10060,7 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="TreasureSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -10867,11 +11689,123 @@ label_settings = SubResource("LabelSettings_hbkoi")
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="TopEndAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
-root_node = NodePath("../EasyOrMedium/FallenStars")
-libraries = {
-&"": SubResource("AnimationLibrary_1nut0")
-}
+[node name="Expert" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RobotPartSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert" node_paths=PackedStringArray("PartTexture", "HomeScreen")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("104_y6xxu")
+PartTexture = NodePath("MarginContainer/Parts/PartTexture")
+HomeScreen = NodePath("../../../../../../../HomeScreen")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="EffetsBG" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer/EffetsBG"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
+texture = SubResource("NoiseTexture2D_ax470")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Parts" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PartTexture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer/Parts"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_tjbi0")
+expand_mode = 1
+script = ExtResource("100_8s0d3")
+PartTextures = Array[Texture2D]([ExtResource("29_tjbi0"), ExtResource("31_oyo4v"), ExtResource("33_qqb1g"), ExtResource("32_e03w5"), ExtResource("35_j34bq"), ExtResource("34_1h6my"), ExtResource("36_8s0d3"), ExtResource("37_swgr2")])
+
+[node name="SquareBG" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Square" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer/SquareBG"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_ipi4e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="CongratsPartLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "Obtenu : une pièce du robot SuperMind !"
+label_settings = SubResource("LabelSettings_u4uri")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ChallengeLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 6
+text = "Récupérez les toutes pour débloquez de nouvelles fonctionnalités gratuitement !"
+label_settings = SubResource("LabelSettings_hbkoi")
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="LoseCases" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer"]
 visible = false
@@ -11082,11 +12016,95 @@ theme_override_styles/normal = ExtResource("39_dgrhb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_btl52")
 text = "Accueil"
 
+[node name="TopEndAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer"]
+root_node = NodePath("../../../TopEnd/MarginContainer/WinCases/EasyOrMedium/FallenStars")
+libraries = {
+&"": SubResource("AnimationLibrary_1nut0")
+}
+
+[node name="ButtonBlocker" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="EndScreenAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
 root_node = NodePath("../VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow")
 libraries = {
 &"": SubResource("AnimationLibrary_612k1")
 }
+
+[node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("108_a22le")
+HomeScreen = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/HomeScreen")
+EndScreen = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/EndScreen")
+OrbSpawn = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn")
+RobotPartSpawn = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn")
+
+[node name="TestZone" type="Control" parent="TESTS_DEBUG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GetAllOrbs" type="Button" parent="TESTS_DEBUG/TestZone"]
+layout_mode = 1
+offset_left = -236.0
+offset_top = -389.0
+offset_right = -167.0
+offset_bottom = -358.0
+text = "All Orbs"
+
+[node name="OrbCount" type="Button" parent="TESTS_DEBUG/TestZone"]
+layout_mode = 1
+offset_left = -244.0
+offset_top = -344.0
+offset_right = -160.0
+offset_bottom = -313.0
+text = "OrbCount"
+
+[node name="GetAllParts" type="Button" parent="TESTS_DEBUG/TestZone"]
+layout_mode = 1
+offset_left = 144.0
+offset_top = -399.0
+offset_right = 239.0
+offset_bottom = -368.0
+text = "GetAllParts"
+
+[node name="PartCount" type="Button" parent="TESTS_DEBUG/TestZone"]
+layout_mode = 1
+offset_left = 149.0
+offset_top = -354.0
+offset_right = 236.0
+offset_bottom = -323.0
+text = "PartCount"
+
+[node name="Solution" type="Button" parent="TESTS_DEBUG/TestZone"]
+layout_mode = 1
+offset_left = -247.0
+offset_top = -294.0
+offset_right = -160.0
+offset_bottom = -263.0
+text = "Solution"
 
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/EasyBtn" to="." method="_on_easy_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/MediumBtn" to="." method="_on_medium_btn_pressed"]
@@ -11095,9 +12113,18 @@ libraries = {
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/OptionsBtn" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_options_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot/LeftArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_arm_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot2/RightArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_arm_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot3/LeftLegButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_leg_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot4/RightLegButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_leg_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot5/HeadButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_head_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot6/ChestButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_chest_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot7/SwordButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_sword_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/PartCollection/RobotParts/CollectSlot8/ShieldButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_shield_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/ResetAllButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_reset_all_button_pressed"]
 [connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/ConfirmationDialog" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/CloseOptionsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_close_options_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HomeButton" to="UIManager" method="_on_home_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HelpButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_help_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_blue_pressed"]
@@ -11110,7 +12137,12 @@ libraries = {
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer/ValidateButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_validate_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoCloseButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoCloseButton" method="_on_pressed"]
 [connection signal="focus_entered" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoExitLayer" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoExitLayer" method="_on_focus_entered"]
-[connection signal="animation_finished" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/TopEndAnim" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_top_end_anim_animation_finished"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer/PlayAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer/PlayAgain" to="UIManager" method="_on_play_again_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/BackHomeZone/MarginContainer/BackHome" to="UIManager" method="_on_back_home_pressed"]
+[connection signal="animation_finished" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/TopEndAnim" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_top_end_anim_animation_finished"]
+[connection signal="pressed" from="TESTS_DEBUG/TestZone/GetAllOrbs" to="TESTS_DEBUG" method="_on_get_all_orbs_pressed"]
+[connection signal="pressed" from="TESTS_DEBUG/TestZone/OrbCount" to="TESTS_DEBUG" method="_on_orb_count_pressed"]
+[connection signal="pressed" from="TESTS_DEBUG/TestZone/GetAllParts" to="TESTS_DEBUG" method="_on_get_all_parts_pressed"]
+[connection signal="pressed" from="TESTS_DEBUG/TestZone/PartCount" to="TESTS_DEBUG" method="_on_part_count_pressed"]
+[connection signal="pressed" from="TESTS_DEBUG/TestZone/Solution" to="." method="_on_solution_pressed"]

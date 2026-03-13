@@ -175,4 +175,18 @@ public partial class Brain : Node
 		EmitSignal(SignalName.UpdateCurrentRow, _currentRow);
 		GameScreen.NextRow(_currentRow);
 	}
+	
+	
+	//===============================================================================
+	// FIN DU SCRIPT
+	//===============================================================================
+	
+	//===============================================================================
+	// TEST TEST TEST
+	//===============================================================================
+	
+	private void _on_solution_pressed()
+	{
+		CheckRow(_solution);
+	}
 }
