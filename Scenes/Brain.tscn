@@ -12038,6 +12038,7 @@ libraries = {
 }
 
 [node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn")]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
