@@ -30,6 +30,7 @@ public partial class Orbs : Control
 
 	public void DisplayOrbCollection()
 	{
+		this.Visible = true;
 		OrbCollection.Visible = true;
 		DisplayCollectInstruct.Visible = false;
 		config.SetValue("UI", "OrbCollectionUnlocked", true);

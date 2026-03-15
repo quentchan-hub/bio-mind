@@ -1,6 +1,6 @@
 using Godot;
 using System;
-public partial class SuperMind : Control
+public partial class Parts : Control
 {
 	[Export] PanelContainer DisplayRobotCollecInstruct;
 	[Export] MarginContainer PartCollection;
@@ -37,7 +37,7 @@ public partial class SuperMind : Control
 		PartCollection.Visible = true;
 		DisplayRobotCollecInstruct.Visible = false;
 		config.SetValue("UI", "PartCollectionUnlocked", true);
-		config.Save("user://supermind.cfg");
+		config.Save("user://parts.cfg");
 	}
 
 	public void DisplayPart(int partEarned)
@@ -54,7 +54,7 @@ public partial class SuperMind : Control
 			case 6: SwordButton.Visible = true;    config.SetValue("Player", "SwordUnlocked", true);    break;
 			case 7: ShieldButton.Visible = true;   config.SetValue("Player", "ShieldUnlocked", true);   break;
 		}
-		config.Save("user://supermind.cfg");
+		config.Save("user://parts.cfg");
 	}
 
 	public void ResetData()
@@ -65,7 +65,7 @@ public partial class SuperMind : Control
 
 	private void LoadData()
 	{
-		Error err = config.Load("user://supermind.cfg");
+		Error err = config.Load("user://parts.cfg");
 		if (err != Error.Ok) return;
 
 		bool partUnlocked = (bool)config.GetValue("UI", "PartCollectionUnlocked", false);

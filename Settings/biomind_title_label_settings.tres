@@ -1,10 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://jajpelhbk5sf"]
 
-[sub_resource type="SystemFont" id="SystemFont_c5nr8"]
-font_names = PackedStringArray("Machine")
+[ext_resource type="FontFile" uid="uid://ctel1qbsugfxn" path="res://Fonts/MACHINE REGULAR.TTF" id="1_in61n"]
 
 [resource]
-font = SubResource("SystemFont_c5nr8")
+font = ExtResource("1_in61n")
 font_size = 70
 font_color = Color(1, 0.09019608, 0.039215688, 1)
 outline_size = 10

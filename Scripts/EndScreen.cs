@@ -28,6 +28,7 @@ public partial class EndScreen : Control
 	//	-> Cas 3 : en Expert
 	[Export] Control Expert;
 	[Export] RobotPartSpawn RobotPartSpawn;
+	[Export] VBoxContainer RobotCompleteSpawn;
 
 	// - Animations en cas de PERTE (LoseCases) -
 	[Export] Control LoseCases;
@@ -139,6 +140,8 @@ public partial class EndScreen : Control
 				if (OrbSpawn.orbCount < 6)
 				{
 					Hard.Visible = true;
+					OrbSpawn.Visible = true;
+					TreasureSpawn.Visible = false;
 					OrbRandomSelector();
 					TopEndAnim.Play("RESET");
 					TopEndAnim.Play("WinHard");
@@ -152,12 +155,13 @@ public partial class EndScreen : Control
 						config.Save("user://endscreen.cfg");
 						OnSixOrbsObtained();
 					}
-				}
-				else if (_isSixOrbsObtained == true)
-				{
-					EasyOrMedium.Visible = true;
-					TopEndAnim.Play("RESET");
-					TopEndAnim.Play("WinEasyMed");
+					else if (OrbSpawn.orbCount >= 6 && _isSixOrbsObtained == true)
+					{
+						GD.Print("test le cas du 6 orbs = déjà true");
+						EasyOrMedium.Visible = true;
+						TopEndAnim.Play("RESET");
+						TopEndAnim.Play("WinEasyMed");
+					}
 				}
 				break;
 
@@ -165,6 +169,8 @@ public partial class EndScreen : Control
 				if (RobotPartSpawn.partCount < 8)
 				{
 					Expert.Visible = true;
+					RobotPartSpawn.Visible = true;
+					RobotCompleteSpawn.Visible = false;
 					PartRandomSelector();
 					TopEndAnim.Play("RESET");
 					TopEndAnim.Play("WinExpert");
@@ -218,6 +224,8 @@ public partial class EndScreen : Control
 	private async void OnEightPartsObtained()
 	{
 		await ToSignal(TopEndAnim, "animation_finished");
+		RobotPartSpawn.Visible = false;
+		RobotCompleteSpawn.Visible = true;
 		TopEndAnim.Play("RESET");
 		TopEndAnim.Play("EightParts");
 		HomeScreen.OnEightPartsCompleted();
@@ -251,5 +259,12 @@ public partial class EndScreen : Control
 		GD.Print("_isSixOrbsObtained chargé = " + _isSixOrbsObtained);
 		GD.Print("_isEightPartsObtained chargé = " + _isEightPartsObtained);
 	}
+	
+	public void ResetData()
+	{
+		config = new ConfigFile();
+		_Ready();
+	}
+
 
 }
