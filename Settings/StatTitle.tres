@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ctoiminu6mc0o"]
+
+[ext_resource type="FontFile" uid="uid://dxw20vr4lvb1" path="res://Fonts/BLACKOPSONE-REGULAR.TTF" id="1_pi1f7"]
+
+[resource]
+font = ExtResource("1_pi1f7")
+font_size = 20
+font_color = Color(0.5411765, 0.80784315, 0.5411765, 1)

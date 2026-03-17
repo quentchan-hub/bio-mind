@@ -2,9 +2,13 @@ using Godot;
 using System;
 public partial class Parts : Control
 {
-	[Export] PanelContainer DisplayRobotCollecInstruct;
+	[Export] PanelContainer DisplayPartCollecInstruct;
+	[Export] PanelContainer OverVeil;
 	[Export] MarginContainer PartCollection;
-
+	[Export] Label PartsTitle;
+	[Export] Label PartsTitleCrypt;
+	[Export] Label CollecInstructLabel;
+	
 	[Export] TextureButton LeftArmButton;
 	[Export] TextureButton RightArmButton;
 	[Export] TextureButton LeftLegButton;
@@ -27,15 +31,31 @@ public partial class Parts : Control
 		SwordButton.Visible = false;
 		ShieldButton.Visible = false;
 		PartCollection.Visible = false;
-		DisplayRobotCollecInstruct.Visible = true;
-
+		DisplayPartCollecInstruct.Visible = true;
+		CollecInstructLabel.Visible = false;
+		
+		OverVeil.Visible = true;
+		PartsTitle.Visible = false;
+		PartsTitleCrypt.Visible = true;
+		
 		LoadData();
 	}
 
+	public void UnveilPartCollection()
+	{
+		OverVeil.Visible = false;
+		PartsTitle.Visible = true;
+		PartsTitleCrypt.Visible = false;
+		CollecInstructLabel.Visible = true;
+		
+		config.SetValue("UI", "PartCollectionUnveiled", true);
+		config.Save("user://parts.cfg");
+	}
+	
 	public void DisplayPartCollection()
 	{
 		PartCollection.Visible = true;
-		DisplayRobotCollecInstruct.Visible = false;
+		DisplayPartCollecInstruct.Visible = false;
 		config.SetValue("UI", "PartCollectionUnlocked", true);
 		config.Save("user://parts.cfg");
 	}
@@ -67,10 +87,16 @@ public partial class Parts : Control
 	{
 		Error err = config.Load("user://parts.cfg");
 		if (err != Error.Ok) return;
-
+		
+		bool partUnveiled = (bool)config.GetValue("UI", "PartCollectionUnveiled", false);
+		OverVeil.Visible = !partUnveiled;
+		PartsTitle.Visible = partUnveiled;
+		PartsTitleCrypt.Visible = !partUnveiled;
+		
+		
 		bool partUnlocked = (bool)config.GetValue("UI", "PartCollectionUnlocked", false);
 		PartCollection.Visible = partUnlocked;
-		DisplayRobotCollecInstruct.Visible = !partUnlocked;
+		DisplayPartCollecInstruct.Visible = !partUnlocked;
 
 		LeftArmButton.Visible =  (bool)config.GetValue("Player", "LeftArmUnlocked", false);
 		RightArmButton.Visible = (bool)config.GetValue("Player", "RightArmUnlocked", false);

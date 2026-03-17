@@ -7,13 +7,16 @@ public partial class UiManager : Control
 	[Export] GameScreen GameScreen;
 	[Export] EndScreen EndScreen;
 	[Export] Brain Brain;
-	
+
+
 	public override void _Ready()
 	{
 		DisplayHomeScreen();
 		Brain.OnGameOver += DisplayEndScreen;
 	}
+	
 
+	
 	public void OnGameStart()
 	{
 		DisplayGameScreen();

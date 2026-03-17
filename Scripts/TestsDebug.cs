@@ -3,6 +3,7 @@ using System;
 
 public partial class TestsDebug : Control
 {
+	[Export] Brain Brain;
 	[Export] HomeScreen HomeScreen;
 	[Export] EndScreen EndScreen;
 	[Export] OrbSpawn OrbSpawn;
@@ -48,5 +49,10 @@ public partial class TestsDebug : Control
 	{
 		GD.Print("partCount actuel = " + RobotPartSpawn.partCount);
 	}
-
+	
+	private void _on_solution_pressed()
+	{
+		Brain.CheckRow(Brain._solution);
+	}
+	
 }

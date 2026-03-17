@@ -1,13 +1,13 @@
-[gd_scene load_steps=183 format=3 uid="uid://e01tv4ge5kyh"]
+[gd_scene load_steps=214 format=3 uid="uid://e01tv4ge5kyh"]
 
 [ext_resource type="Script" uid="uid://dw1f07bu3f8rp" path="res://Scripts/UiManager.cs" id="1_8blbl"]
 [ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
 [ext_resource type="Script" uid="uid://bfmph3dhdkkh0" path="res://Scripts/Brain.cs" id="1_tk2p1"]
 [ext_resource type="LabelSettings" uid="uid://jajpelhbk5sf" path="res://Settings/biomind_title_label_settings.tres" id="1_vqx31"]
-[ext_resource type="Texture2D" uid="uid://cgtl0q3ognrqw" path="res://Assets/BioMinds/Team6NoBG2.webp" id="3_n04ve"]
 [ext_resource type="Script" uid="uid://dh2pyajtay41y" path="res://Scripts/HomeScreen.cs" id="4_gvfd6"]
 [ext_resource type="LabelSettings" uid="uid://cp5o8ivib11po" path="res://Settings/biomind_subtitle_label_settings.tres" id="4_qoydj"]
 [ext_resource type="Texture2D" uid="uid://e1ug7aqd584j" path="res://Assets/Safe/CoffreFerme5.4.webp" id="4_wi7yl"]
+[ext_resource type="Texture2D" uid="uid://l1kmlh41tu5p" path="res://Assets/BioMinds/_Six sentai_team3.webp" id="7_djl8r"]
 [ext_resource type="StyleBox" uid="uid://cudmoc7asxngr" path="res://Settings/difficulty_btn_normal_flat.tres" id="7_dm5gj"]
 [ext_resource type="StyleBox" uid="uid://ce8okfd7bj547" path="res://Settings/difficulty_btn_pressed_flat.tres" id="8_qoydj"]
 [ext_resource type="StyleBox" uid="uid://beej2epojqrvs" path="res://Settings/difficulty_btn_hover_flat.tres" id="9_lolh4"]
@@ -24,7 +24,6 @@
 [ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="15_yhvps"]
 [ext_resource type="Texture2D" uid="uid://drkvfygb83ppq" path="res://Assets/Effects/Circle/circle_02.png" id="16_btl52"]
 [ext_resource type="Script" uid="uid://s73pfeelqd8d" path="res://Scripts/GlowGreenEffect.cs" id="16_hpjjw"]
-[ext_resource type="Script" uid="uid://cl5r6uxo6tyc8" path="res://Scripts/BotTabContainer.cs" id="16_swgr2"]
 [ext_resource type="Script" uid="uid://dtvhhneemkn8d" path="res://Scripts/GameScreen.cs" id="17_65hfw"]
 [ext_resource type="Script" uid="uid://dkgy5tav6cp8q" path="res://Scripts/Orbs.cs" id="17_ipi4e"]
 [ext_resource type="Texture2D" uid="uid://cuw66t5cfbdd5" path="res://Assets/Orbs/Black_Orb2.webp" id="17_wuhsp"]
@@ -32,15 +31,22 @@
 [ext_resource type="Texture2D" uid="uid://co6woue5a3b5c" path="res://Assets/Orbs/Blue_Orb2.webp" id="18_cal7y"]
 [ext_resource type="Texture2D" uid="uid://iyqu1pmlc3ij" path="res://Assets/Orbs/Purple_Orb2.webp" id="19_8hq12"]
 [ext_resource type="Texture2D" uid="uid://cqwmbqh4da4bc" path="res://Assets/Orbs/Red_Orb2.webp" id="20_2dy84"]
+[ext_resource type="FontFile" uid="uid://c2lr1l6blohtp" path="res://Fonts/FFX FUTURIST REGULAR.TTF" id="21_7btnl"]
 [ext_resource type="Texture2D" uid="uid://chu2bgu80ehdt" path="res://Assets/Orbs/White_Orb2.webp" id="21_667dm"]
+[ext_resource type="SystemFont" uid="uid://bst8woildkesg" path="res://Settings/button.tres" id="21_djl8r"]
 [ext_resource type="Texture2D" uid="uid://bcai313hijbmn" path="res://Assets/Buttons/HomeButton.Webp" id="21_j7e3e"]
+[ext_resource type="LabelSettings" uid="uid://tqjkdptwgur8" path="res://Settings/StatOverlayFont.tres" id="22_7wntc"]
 [ext_resource type="Texture2D" uid="uid://dqgmlgy6cyl7h" path="res://Assets/Orbs/Yellow_Orb2.webp" id="22_crcpg"]
 [ext_resource type="Texture2D" uid="uid://b11m5qn20fqx4" path="res://Settings/bloc_background_dark_blue.tres" id="22_gvfd6"]
 [ext_resource type="Texture2D" uid="uid://buxckxojcp5dj" path="res://Assets/Buttons/HelpButton.webp" id="22_y2ulj"]
+[ext_resource type="Script" uid="uid://dw5hoes1hnks6" path="res://Scripts/CloseDiffButton.cs" id="22_yser8"]
+[ext_resource type="StyleBox" uid="uid://bflaflpd56hhe" path="res://Settings/StyleBoxDiffMode.tres" id="23_7f84e"]
 [ext_resource type="Texture2D" uid="uid://dkduod14h3hee" path="res://Assets/SuperMind/Icons/SuperMind - Icon - LeftArm.webp" id="23_gh155"]
+[ext_resource type="LabelSettings" uid="uid://ctoiminu6mc0o" path="res://Settings/StatTitle.tres" id="23_j17p2"]
 [ext_resource type="PackedScene" uid="uid://tto86px2ryko" path="res://Scenes/attempt_row.tscn" id="24_ep8v8"]
 [ext_resource type="StyleBox" uid="uid://cewbtw5alp0gd" path="res://Settings/GenericWindowBoxFlat.tres" id="24_ojt81"]
 [ext_resource type="Texture2D" uid="uid://ctfkr18rgom6v" path="res://Assets/SuperMind/Icons/SuperMind - Icon - EmptyGrey.webp" id="24_wrswc"]
+[ext_resource type="Script" uid="uid://dl7pbbqgl5hxv" path="res://Scripts/CloseStatsButton.cs" id="25_2foha"]
 [ext_resource type="Script" uid="uid://1nhux0iv1w7e" path="res://Scripts/Parts.cs" id="25_4tmx4"]
 [ext_resource type="Texture2D" uid="uid://cmtod2fvrg15b" path="res://Assets/SuperMind/Icons/SuperMind - Icon - RightArm.webp" id="25_j34bq"]
 [ext_resource type="Texture2D" uid="uid://bmnsrmw3uu3r8" path="res://Assets/SuperMind/Icons/SuperMind - Icon - LeftLeg.webp" id="26_8s0d3"]
@@ -56,7 +62,9 @@
 [ext_resource type="Texture2D" uid="uid://khq10oy6eb5l" path="res://Assets/SuperMind/Pictures/SuperMind - RightArm.webp" id="31_oyo4v"]
 [ext_resource type="Texture2D" uid="uid://cpqmrg17ofy66" path="res://Assets/SuperMind/Pictures/SuperMind - RightLeg.webp" id="32_e03w5"]
 [ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="32_reelv"]
+[ext_resource type="FontFile" uid="uid://ctel1qbsugfxn" path="res://Fonts/MACHINE REGULAR.TTF" id="32_yser8"]
 [ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="33_27bwp"]
+[ext_resource type="LabelSettings" uid="uid://c6qp4q7ssauni" path="res://Settings/Label2Collec.tres" id="33_fgaad"]
 [ext_resource type="Texture2D" uid="uid://dcdrn851530tu" path="res://Assets/SuperMind/Pictures/SuperMind - LeftLeg.webp" id="33_qqb1g"]
 [ext_resource type="Texture2D" uid="uid://ciodwwegwmi3g" path="res://Assets/SuperMind/Pictures/SuperMind - Chest.webp" id="34_1h6my"]
 [ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="34_e07rd"]
@@ -67,16 +75,17 @@
 [ext_resource type="Texture2D" uid="uid://cvbywoqhqj4ra" path="res://Assets/SuperMind/Pictures/SuperMind - Shield.webp" id="37_swgr2"]
 [ext_resource type="FontFile" uid="uid://bo4egf7tj6hh3" path="res://Fonts/FUTURE-EARTH.TTF" id="37_y6xxu"]
 [ext_resource type="StyleBox" uid="uid://cdagyo00whtfd" path="res://Settings/back_home_button.tres" id="39_dgrhb"]
-[ext_resource type="Texture2D" uid="uid://ofm3v60mi1y7" path="res://Assets/Buttons/ClearButtonNormal.NoText.2.1.webp" id="41_yisvs"]
 [ext_resource type="Script" uid="uid://brstn6ayrq1a3" path="res://Scripts/WarningLabels.cs" id="42_mtrk6"]
 [ext_resource type="Texture2D" uid="uid://bypvwxc6850lw" path="res://Assets/Buttons/ValidateButtonNormal.NoText.2.1.webp" id="42_rgw24"]
 [ext_resource type="StyleBox" uid="uid://b0qrib23c5tse" path="res://Settings/tuto_label_box_flat.tres" id="43_semxg"]
 [ext_resource type="StyleBox" uid="uid://d3jycox53b4x0" path="res://Settings/tuto_title_box_flat.tres" id="44_ep8v8"]
+[ext_resource type="Script" uid="uid://mxnwuwa06csn" path="res://Scripts/Poses.cs" id="45_2foha"]
 [ext_resource type="StyleBox" uid="uid://d4fkvl1jwyqjj" path="res://Settings/tuto_point.tres" id="45_65hfw"]
 [ext_resource type="LabelSettings" uid="uid://dmkcmvbgj1ted" path="res://Settings/tuto_title_font.tres" id="45_3133c"]
 [ext_resource type="Script" uid="uid://cwebiyg6uvi3d" path="res://Scripts/EndScreen.cs" id="45_lfh1j"]
 [ext_resource type="LabelSettings" uid="uid://derm3dpdmwcgm" path="res://Settings/tuto_text_yellow.tres" id="46_xf5i4"]
 [ext_resource type="Texture2D" uid="uid://d1m5aq71c28nt" path="res://Assets/Arrows/arrow_decorative_n.png" id="47_3133c"]
+[ext_resource type="Script" uid="uid://dfwoowwkmbuav" path="res://Scripts/CloseCollecButton.cs" id="48_7btnl"]
 [ext_resource type="LabelSettings" uid="uid://c8w4ut0w0dkwg" path="res://Settings/tuto2_1.tres" id="49_js5gh"]
 [ext_resource type="Texture2D" uid="uid://3g4u181ctrc3" path="res://Assets/Buttons/icon_cross_yellow.png" id="49_pfa0l"]
 [ext_resource type="Script" uid="uid://di1bei64o8767" path="res://Scripts/RobotCompleteOverlay.cs" id="51_3cxp2"]
@@ -103,6 +112,7 @@
 [ext_resource type="Texture2D" uid="uid://cp641v0tps52s" path="res://Assets/Orbs/White_Orb.webp" id="67_reelv"]
 [ext_resource type="Texture2D" uid="uid://bag4pmdycflif" path="res://Assets/Orbs/Yellow_Orb.webp" id="68_27bwp"]
 [ext_resource type="Texture2D" uid="uid://bwgvtu2fel07k" path="res://Assets/BioMinds/LosePose.1.png" id="70_hbkoi"]
+[ext_resource type="Texture2D" uid="uid://c0uqj0spho1ob" path="res://Assets/Buttons/ClearButtonNormal.NoText.256.webp" id="74_7wntc"]
 [ext_resource type="Texture2D" uid="uid://b7yhlvwscwh71" path="res://Assets/Safe/TreasureOpen.webp" id="77_cal7y"]
 [ext_resource type="Texture2D" uid="uid://b1f3opckea0eu" path="res://Assets/Effects/Sparks/spark_05.png" id="78_8hq12"]
 [ext_resource type="Texture2D" uid="uid://c0ley5vmm21r5" path="res://Assets/Effects/Sparks/spark_06.png" id="79_8hq12"]
@@ -191,36 +201,22 @@ border_width_bottom = 10
 border_color = Color(0, 0, 0, 1)
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rgw24"]
-content_margin_top = 14.0
-bg_color = Color(0.23921569, 0.23921569, 0.23921569, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 0.84313726, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing_size = 0.01
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbkoi"]
-content_margin_top = 14.0
-bg_color = Color(0.9018106, 0.2400937, 0.19966345, 0.5)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 0.84313726, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing_size = 0.01
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j17p2"]
+content_margin_top = 15.0
+bg_color = Color(0.23753911, 0.23753914, 0.23753902, 1)
+skew = Vector2(0.4, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_qoydj"]
-font_size = 25
+font = ExtResource("37_y6xxu")
+font_size = 29
 font_color = Color(1, 0.84313726, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_py4g2"]
@@ -232,14 +228,136 @@ border_width_bottom = 2
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="LabelSettings" id="LabelSettings_k8ik2"]
+font = ExtResource("37_y6xxu")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_7f84e"]
+font = ExtResource("21_djl8r")
+font_size = 29
+font_color = Color(1, 0.84313726, 0, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8ik2"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 0.7411765)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yser8"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.22, 0.22, 0.22, 0.7411765)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+border_blend = true
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg2o4"]
+bg_color = Color(0.1, 0.1, 0.1, 0.0627451)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.21176471, 0.7411765, 0.9647059, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35w38"]
+bg_color = Color(0.7532108, 0, 0.01823886, 0.15686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fgaad"]
+bg_color = Color(0.28980002, 0.69, 0.49657, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_fgaad"]
+font_names = PackedStringArray("Gears of Peace", "Avengeance Heroic Avenger", "B de bonita Rotulo", "B de bonita regular", "Alexana")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2foha"]
+font = SubResource("SystemFont_fgaad")
+font_size = 26
+font_color = Color(0.21176471, 0.7411765, 0.96862745, 1)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gdbje"]
+font = ExtResource("21_7btnl")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otlj2"]
+content_margin_left = 2.0
+content_margin_top = 10.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdbje"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_fgaad"]
+font = ExtResource("32_yser8")
+font_size = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2foha"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_7btnl"]
+color = Color(1, 0.84313726, 0, 1)
+grow_begin = -120.0
+grow_end = -120.0
+thickness = 2
+
+[sub_resource type="SystemFont" id="SystemFont_2foha"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7btnl"]
+font = SubResource("SystemFont_2foha")
+font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wuhsp"]
+bg_color = Color(0.07091781, 0.07231682, 0.43986425, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+anti_aliasing_size = 0.01
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paw2n"]
-bg_color = Color(1, 1, 1, 0)
+bg_color = Color(0.23099999, 0.23099999, 0.35, 0.9019608)
 border_color = Color(0, 0, 0.8235294, 1)
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_6tb1a"]
-font_size = 19
+font = ExtResource("32_yser8")
+font_size = 21
 
 [sub_resource type="Gradient" id="Gradient_ax470"]
 offsets = PackedFloat32Array(0.9060773, 0.9325843, 0.9719101)
@@ -251,18 +369,11 @@ fill = 2
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wuhsp"]
-bg_color = Color(0.9019608, 0.23921569, 0.2, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 0.84313726, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing_size = 0.01
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h46k2"]
+bg_color = Color(0, 0, 0, 0.22745098)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ng4ve"]
+font_size = 18
 
 [sub_resource type="Gradient" id="Gradient_4tmx4"]
 offsets = PackedFloat32Array(0.7016575, 1)
@@ -339,6 +450,9 @@ font_color = Color(1, 1, 0, 1)
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_68ajo"]
 color = Color(1, 0.84313726, 0, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djl8r"]
+texture = ExtResource("42_rgw24")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft0vu"]
 bg_color = Color(0.35057518, 0.43170124, 0.73695916, 1)
 border_width_left = 5
@@ -361,6 +475,34 @@ font_size = 28
 
 [sub_resource type="Animation" id="Animation_hptg1"]
 resource_name = "EmptySlots!"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 1, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nodbl1"]
+resource_name = "NoDouble!"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -417,6 +559,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ypcqt"]
 _data = {
 &"EmptySlots!": SubResource("Animation_hptg1"),
+&"NoDouble!": SubResource("Animation_nodbl1"),
 &"RESET": SubResource("Animation_luji1")
 }
 
@@ -537,6 +680,12 @@ _data = {
 &"RESET": SubResource("Animation_yisvs"),
 &"tuto_2_1": SubResource("Animation_rgw24")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7btnl"]
+bg_color = Color(0.23099999, 0.23099999, 0.35, 0)
+border_color = Color(0, 0, 0.8235294, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_u4uri"]
 font_size = 20
@@ -5747,6 +5896,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_8blbl")
 HomeScreen = NodePath("BorderlineBGPanel/MarginContainer/HomeScreen")
 GameScreen = NodePath("BorderlineBGPanel/MarginContainer/GameScreen")
@@ -5777,19 +5928,23 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 texture = SubResource("GradientTexture2D_us6mg")
 
-[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "BotTabContainer", "OptionsOverlay", "ConfirmReset", "Orbs", "Parts", "ExpertBtn", "OrbSpawn", "RobotPartSpawn")]
+[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "OptionsOverlay", "ConfirmReset", "Orbs", "Parts", "Poses", "ExpertBtn", "OrbSpawn", "RobotPartSpawn", "DifficultyOverlay", "StatsOverlay", "CollectionsOverlay")]
+visible = false
 layout_mode = 2
 script = ExtResource("4_gvfd6")
 Brain = NodePath("../../../..")
 EndScreen = NodePath("../EndScreen")
-BotTabContainer = NodePath("VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer")
-OptionsOverlay = NodePath("OptionsOverlay")
-ConfirmReset = NodePath("OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/ConfirmationDialog")
-Orbs = NodePath("VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs")
-Parts = NodePath("VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts")
+OptionsOverlay = NodePath("StatsOverlay")
+ConfirmReset = NodePath("StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmationDialog")
+Orbs = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs")
+Parts = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts")
+Poses = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses")
 ExpertBtn = NodePath("VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/ExpertBtn")
 OrbSpawn = NodePath("../EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn")
 RobotPartSpawn = NodePath("../EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn")
+DifficultyOverlay = NodePath("DifficultyOverlay")
+StatsOverlay = NodePath("StatsOverlay")
+CollectionsOverlay = NodePath("CollectionsOverlay")
 
 [node name="VBoxGlobal" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
 layout_mode = 1
@@ -5856,12 +6011,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -32.0
-offset_bottom = 32.0
+offset_top = -34.0
+offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_right = 50
 
 [node name="VBoxMid" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid1Home/MarginContainer"]
 layout_mode = 2
@@ -5873,9 +6026,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_5nuxi")
 
 [node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid1Home/MarginContainer/VBoxMid/PanelContainer"]
 layout_mode = 2
-texture = ExtResource("3_n04ve")
-expand_mode = 2
-stretch_mode = 4
+texture = ExtResource("7_djl8r")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Mid2Home" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
 layout_mode = 2
@@ -5897,18 +6050,72 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 theme_override_constants/separation = 37
 
+[node name="MarginContainer3" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 5
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer3"]
+layout_mode = 2
+
+[node name="VBoxSideButtons" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer3/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="StatButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer3/Control/VBoxSideButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("13_a22le")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_j17p2")
+theme_override_styles/pressed = ExtResource("8_qoydj")
+theme_override_styles/hover = ExtResource("9_lolh4")
+action_mode = 0
+text = "Statistiques"
+
+[node name="CollecButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer3/Control/VBoxSideButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("13_a22le")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_j17p2")
+theme_override_styles/pressed = ExtResource("8_qoydj")
+theme_override_styles/hover = ExtResource("9_lolh4")
+action_mode = 0
+text = "Collections"
+
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 5
+theme_override_constants/margin_left = 80
 theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 5
+theme_override_constants/margin_right = 80
 theme_override_constants/margin_bottom = 10
 
 [node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="DifficultyLevel" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -5930,7 +6137,6 @@ theme_override_styles/normal = ExtResource("7_dm5gj")
 theme_override_styles/pressed = ExtResource("8_qoydj")
 theme_override_styles/hover = ExtResource("9_lolh4")
 toggle_mode = true
-button_pressed = true
 action_mode = 0
 button_group = ExtResource("10_q8m6m")
 text = "Facile"
@@ -5991,8 +6197,8 @@ text = "Expert"
 [node name="MarginContainer2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_right = 0
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_right = 80
 
 [node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2"]
 layout_mode = 2
@@ -6010,9 +6216,15 @@ grow_vertical = 2
 theme_override_constants/separation = 13
 alignment = 1
 
-[node name="PlayBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer"]
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="LaunchBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer"]
 custom_minimum_size = Vector2(220, 60)
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("13_a22le")
@@ -6022,19 +6234,8 @@ theme_override_styles/pressed = ExtResource("12_gqamb")
 theme_override_styles/hover = ExtResource("13_q8m6m")
 text = "Jouer"
 
-[node name="OptionsBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("13_a22le")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_rgw24")
-theme_override_styles/pressed = ExtResource("12_gqamb")
-theme_override_styles/hover = SubResource("StyleBoxFlat_hbkoi")
-text = "Options"
-
 [node name="BotHome" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome"]
@@ -6052,8 +6253,9 @@ theme_override_constants/separation = 10
 [node name="SloganLine" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/BotHome/MarginContainer/VBoxBot"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+size_flags_vertical = 6
 text = "Cassez le code secret
-et rejoignez les Bio-Minds !"
+et rejoignez les BioMinds !"
 label_settings = SubResource("LabelSettings_qoydj")
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -6074,19 +6276,15 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="BotTabContainer" type="TabContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer" node_paths=PackedStringArray("Rules")]
+[node name="BotTabContainer" type="TabContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 theme_override_styles/panel = SubResource("StyleBoxFlat_py4g2")
-current_tab = 0
-script = ExtResource("16_swgr2")
-Rules = NodePath("Rules")
 
-[node name="Rules" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer"]
+[node name="Rules" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer"]
 layout_mode = 2
-metadata/_tab_index = 0
 
-[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Rules"]
+[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/Rules"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -6097,29 +6295,16 @@ grow_vertical = 2
 size_flags_vertical = 2
 accessibility_name = "RulesText"
 theme_override_colors/font_color = Color(18.892157, 18.892157, 18.892157, 1)
-theme_override_font_sizes/font_size = 20
-text = "Trouver le code secret de 4 couleurs parmi un total de 6 couleurs possible.
-⚠️ Une même couleur peut se répéter.
-🔴 = Bonne couleur, bonne position
-⚪ = Bonne couleur, mauvaise position"
+theme_override_font_sizes/font_size = 22
+text = "But du jeu : 
+Tenter de trouver la combinaison de couleurs exacte pour gagner la partie.
+"
+label_settings = SubResource("LabelSettings_k8ik2")
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Orbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer" node_paths=PackedStringArray("DisplayCollectInstruct", "OrbCollection", "OrbBlack", "OrbBlue", "OrbPurple", "OrbRed", "OrbWhite", "OrbYellow")]
-visible = false
-layout_mode = 2
-script = ExtResource("17_ipi4e")
-DisplayCollectInstruct = NodePath("DisplayCollecInstruct")
-OrbCollection = NodePath("OrbCollection")
-OrbBlack = NodePath("OrbCollection/GridContainer/CollectSlot/OrbBlack")
-OrbBlue = NodePath("OrbCollection/GridContainer/CollectSlot2/OrbBlue")
-OrbPurple = NodePath("OrbCollection/GridContainer/CollectSlot3/OrbPurple")
-OrbRed = NodePath("OrbCollection/GridContainer/CollectSlot4/OrbRed")
-OrbWhite = NodePath("OrbCollection/GridContainer/CollectSlot5/OrbWhite")
-OrbYellow = NodePath("OrbCollection/GridContainer/CollectSlot6/OrbYellow")
-metadata/_tab_index = 1
-
-[node name="OrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs"]
+[node name="DifficultyOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -6127,19 +6312,1111 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
+
+[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("24_ojt81")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 69.0
+grow_horizontal = 2
+size_flags_vertical = 2
+text = "MODE DE DIFFICULTE"
+label_settings = SubResource("LabelSettings_7f84e")
+
+[node name="Control2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 144.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_constants/separation = 0
+
+[node name="EasyMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k8ik2")
+text = "FACILE"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeRules" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Details" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 20
 
-[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection"]
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "3 couleurs à trouver."
+horizontal_alignment = 1
+
+[node name="StatLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "12 essais possible."
+horizontal_alignment = 1
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Pas de répétition de couleurs."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="EasyBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("23_7f84e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kg2o4")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("10_q8m6m")
+
+[node name="Tampon" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HardMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k8ik2")
+text = "DIFFICILE"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeRules" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Details" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "4 couleurs à trouver."
+horizontal_alignment = 1
+
+[node name="StatLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "8 essais possible."
+horizontal_alignment = 1
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Répétition de couleurs possible."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="HardBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("23_7f84e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kg2o4")
+toggle_mode = true
+button_group = ExtResource("10_q8m6m")
+
+[node name="Tampon3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExpertMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k8ik2")
+text = "EXPERT"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ModeRules" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Details" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "5 couleurs à trouver."
+horizontal_alignment = 1
+
+[node name="StatLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "7 essais possible."
+horizontal_alignment = 1
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Répétition de couleurs possible."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ExpertBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("23_7f84e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kg2o4")
+toggle_mode = true
+button_group = ExtResource("10_q8m6m")
+
+[node name="BlockExpertMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_35w38")
+
+[node name="Tampon6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HintTip" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fgaad")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HintTip"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HintTip/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="TipTitle" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HintTip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HintTip/MarginContainer/VBoxContainer/TipTitle"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -17.0
+offset_right = 66.0
+offset_bottom = 17.0
+grow_vertical = 2
+text = "Astuce"
+label_settings = SubResource("LabelSettings_2foha")
+vertical_alignment = 1
+
+[node name="Tips" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HintTip/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HintTip/MarginContainer/VBoxContainer/Tips"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -141.5
+offset_top = -22.5
+offset_right = -0.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Indice 🔴 = Bonne couleur, bonne position
+Indice ⚪ = Bonne couleur, mauvaise position"
+label_settings = SubResource("LabelSettings_gdbje")
+
+[node name="Tampon4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Launcher" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_k8ik2")
+text = "LANCEMENT"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 130
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_a22le")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = ExtResource("11_gqamb")
+text = "Jouer"
+
+[node name="Control2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -1.5
+offset_right = -29.0
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_a22le")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_otlj2")
+text = "  Chrono
+"
+
+[node name="Tampon5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Close" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CloseDiffButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close" node_paths=PackedStringArray("DifficultyOverlay")]
+layout_mode = 0
+offset_left = 394.0
+offset_top = -14.0
+offset_right = 503.0
+offset_bottom = 80.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gdbje")
+icon = ExtResource("56_t3x2a")
+icon_alignment = 1
+script = ExtResource("22_yser8")
+DifficultyOverlay = NodePath("../../..")
+
+[node name="StatsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("24_ojt81")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -14.5
+offset_right = 438.0
+offset_bottom = 14.5
+grow_vertical = 2
+size_flags_vertical = 2
+text = "PROGRESSION STATISTIQUE"
+label_settings = SubResource("LabelSettings_7f84e")
+
+[node name="Tampon" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="GameStats" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Statistiques de jeu"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GeneralStats" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Stats Générales"
+label_settings = ExtResource("23_j17p2")
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="GamesPlayed" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Parties jouées"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+text = "325"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="SuccessPercent" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Pourcentage de réussite"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/GeneralStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+text = "70%"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="EasyStats" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Stats en Facile"
+label_settings = ExtResource("23_j17p2")
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="GamesPlayed" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Parties jouées"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+text = "325"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="SuccessPercent" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Pourcentage de réussite"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/EasyStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+text = "70%"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="HardStats" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2foha")
+text = "Stats en Difficile"
+label_settings = ExtResource("23_j17p2")
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="GamesPlayed" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Parties jouées"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+text = "325"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="SuccessPercent" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Pourcentage de réussite"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/HardStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+text = "70%"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ExpertStats" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Stats en Expert"
+label_settings = ExtResource("23_j17p2")
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="GamesPlayed" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Parties jouées"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/GamesPlayed"]
+layout_mode = 2
+text = "325"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="SuccessPercent" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Pourcentage de réussite"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/ExpertStats/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/SuccessPercent"]
+layout_mode = 2
+text = "70%"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="BestTimes" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Meilleurs temps (option Chrono Activé)"
+label_settings = ExtResource("23_j17p2")
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="BestChronoEasy" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoEasy"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Meilleur Chrono Facile"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoEasy"]
+layout_mode = 2
+text = "2 min 27 s"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="BestChronoHard" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoHard"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Meilleur Chrono Difficile"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoHard"]
+layout_mode = 2
+text = "5 min 6 s"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="BestChronoExpert" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoExpert"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Meilleur Chrono Expert"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="ValueLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoExpert"]
+layout_mode = 2
+text = "12 min 54 s"
+label_settings = SubResource("LabelSettings_fgaad")
+
+[node name="Innerline" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
+
+[node name="ResetStat" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="ReinitLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "REINITIALISATION"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+
+[node name="ReinitLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Remise à zéro des statistiques."
+label_settings = SubResource("LabelSettings_7btnl")
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 20
+
+[node name="ResetStatButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("37_y6xxu")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wuhsp")
+text = "RESET"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer"]
+vrs_mode = 1
+oversampling = false
+oversampling_override = 1.0
+title = "Êtes-vous sûr ? "
+initial_position = 1
+size = Vector2i(238, 106)
+ok_button_text = "Valider"
+dialog_text = "La suppression des données 
+sera permanente. "
+cancel_button_text = "Annuler"
+
+[node name="Close" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CloseStatsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/Close" node_paths=PackedStringArray("StatsOverlay")]
+layout_mode = 0
+offset_left = 394.0
+offset_top = -26.0
+offset_right = 503.0
+offset_bottom = 68.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gdbje")
+icon = ExtResource("56_t3x2a")
+icon_alignment = 1
+script = ExtResource("25_2foha")
+StatsOverlay = NodePath("../../..")
+
+[node name="CollectionsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("24_ojt81")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -14.5
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+text = "COLLECTIONS"
+label_settings = SubResource("LabelSettings_7f84e")
+
+[node name="Innerline" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
+
+[node name="PowerOrbs" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs"]
+layout_mode = 2
+theme_override_constants/margin_top = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Orbes de puissance"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Orbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer" node_paths=PackedStringArray("DisplayCollecInstruct", "OrbCollection", "OrbBlack", "OrbBlue", "OrbPurple", "OrbRed", "OrbWhite", "OrbYellow")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("17_ipi4e")
+DisplayCollecInstruct = NodePath("DisplayCollecInstruct")
+OrbCollection = NodePath("OrbCollection")
+OrbBlack = NodePath("OrbCollection/GridContainer/CollectSlot/OrbBlack")
+OrbBlue = NodePath("OrbCollection/GridContainer/CollectSlot2/OrbBlue")
+OrbPurple = NodePath("OrbCollection/GridContainer/CollectSlot3/OrbPurple")
+OrbRed = NodePath("OrbCollection/GridContainer/CollectSlot4/OrbRed")
+OrbWhite = NodePath("OrbCollection/GridContainer/CollectSlot5/OrbWhite")
+OrbYellow = NodePath("OrbCollection/GridContainer/CollectSlot6/OrbYellow")
+
+[node name="OrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection"]
 layout_mode = 2
 columns = 3
 
-[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
+[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6158,7 +7435,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot"]
+[node name="OrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6176,12 +7453,12 @@ texture = ExtResource("17_wuhsp")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
+[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot2"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6200,7 +7477,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot2"]
+[node name="OrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6218,12 +7495,12 @@ texture = ExtResource("18_cal7y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
+[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot3"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6242,7 +7519,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot3"]
+[node name="OrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6260,12 +7537,12 @@ texture = ExtResource("19_8hq12")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
+[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot4"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6284,7 +7561,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot4"]
+[node name="OrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot4"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6302,12 +7579,12 @@ texture = ExtResource("20_2dy84")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
+[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot5"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot5"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6326,7 +7603,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot5"]
+[node name="OrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot5"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6344,12 +7621,12 @@ texture = ExtResource("21_667dm")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer"]
+[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot6"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot6"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6368,7 +7645,7 @@ texture = ExtResource("16_btl52")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/OrbCollection/GridContainer/CollectSlot6"]
+[node name="OrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/OrbCollection/GridContainer/CollectSlot6"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -6386,7 +7663,7 @@ texture = ExtResource("22_crcpg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs"]
+[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6395,23 +7672,59 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_paw2n")
 
-[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Orbs/DisplayCollecInstruct"]
+[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs/DisplayCollecInstruct"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
-text = "Frottez-vous au Niveau Difficile pour tenter de remporter des Orbes de puissance,
-elles s'afficheront ici."
+text = "Battez le niveau DIFFICILE et remportez des Orbes de puissance ! "
 label_settings = SubResource("LabelSettings_6tb1a")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Parts" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer" node_paths=PackedStringArray("DisplayRobotCollecInstruct", "PartCollection", "LeftArmButton", "RightArmButton", "LeftLegButton", "RightLegButton", "HeadButton", "ChestButton", "SwordButton", "ShieldButton")]
+[node name="Innerline2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
+
+[node name="RobotParts" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts"]
+layout_mode = 2
+theme_override_constants/margin_top = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer"]
+layout_mode = 2
+
+[node name="PartsTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
+size_flags_vertical = 0
+text = "PIECES DETACHEES : ROBOT GEANT"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="PartsTitleCrypt" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Piècus détafhéex : lovdt géaht"
+label_settings = ExtResource("33_fgaad")
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Parts" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer" node_paths=PackedStringArray("DisplayPartCollecInstruct", "OverVeil", "PartCollection", "PartsTitle", "PartsTitleCrypt", "CollecInstructLabel", "LeftArmButton", "RightArmButton", "LeftLegButton", "RightLegButton", "HeadButton", "ChestButton", "SwordButton", "ShieldButton")]
+layout_mode = 2
+size_flags_vertical = 3
 script = ExtResource("25_4tmx4")
-DisplayRobotCollecInstruct = NodePath("DisplayRobotCollecInstruct")
+DisplayPartCollecInstruct = NodePath("DisplayPartCollecInstruct")
+OverVeil = NodePath("OverVeil")
 PartCollection = NodePath("PartCollection")
+PartsTitle = NodePath("../PartsTitle")
+PartsTitleCrypt = NodePath("../PartsTitleCrypt")
+CollecInstructLabel = NodePath("DisplayPartCollecInstruct/CollecInstructLabel")
 LeftArmButton = NodePath("PartCollection/RobotParts/CollectSlot/LeftArmButton")
 RightArmButton = NodePath("PartCollection/RobotParts/CollectSlot2/RightArmButton")
 LeftLegButton = NodePath("PartCollection/RobotParts/CollectSlot3/LeftLegButton")
@@ -6420,10 +7733,8 @@ HeadButton = NodePath("PartCollection/RobotParts/CollectSlot5/HeadButton")
 ChestButton = NodePath("PartCollection/RobotParts/CollectSlot6/ChestButton")
 SwordButton = NodePath("PartCollection/RobotParts/CollectSlot7/SwordButton")
 ShieldButton = NodePath("PartCollection/RobotParts/CollectSlot8/ShieldButton")
-metadata/_tab_index = 2
 
-[node name="PartCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts"]
-visible = false
+[node name="PartCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6433,16 +7744,16 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
-[node name="RobotParts" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection"]
+[node name="RobotParts" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection"]
 layout_mode = 2
 columns = 4
 
-[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6461,7 +7772,7 @@ size_flags_vertical = 3
 texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 
-[node name="LeftArmButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot"]
+[node name="LeftArmButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6480,12 +7791,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot2"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot2"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6505,7 +7816,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="RightArmButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot2"]
+[node name="RightArmButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot2"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6524,12 +7835,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot3"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot3"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6549,7 +7860,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="LeftLegButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot3"]
+[node name="LeftLegButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot3"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6568,12 +7879,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot4"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot4"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6593,7 +7904,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="RightLegButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot4"]
+[node name="RightLegButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot4"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6612,12 +7923,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot5"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot5"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6637,7 +7948,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="HeadButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot5"]
+[node name="HeadButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot5"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6656,12 +7967,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot6"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot6"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6681,7 +7992,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="ChestButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot6"]
+[node name="ChestButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot6"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6700,12 +8011,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot7" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot7" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot7"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot7"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6725,7 +8036,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="SwordButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot7"]
+[node name="SwordButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot7"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6744,12 +8055,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot8" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts"]
+[node name="CollectSlot8" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot8"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot8"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 1
 anchors_preset = 8
@@ -6769,7 +8080,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="ShieldButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot8"]
+[node name="ShieldButton" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot8"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 8
@@ -6788,7 +8099,7 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="DisplayRobotCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts"]
+[node name="DisplayPartCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6797,22 +8108,72 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_paw2n")
 
-[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/DisplayRobotCollecInstruct"]
+[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/DisplayPartCollecInstruct"]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
-text = "Frottez-vous au Niveau Expert pour tenter de rassembler les différentes parties du robot géant SuperMind !"
+text = "Finissez le niveau DIFFICLE pour vous voir délivrer l'accès à cette section"
 label_settings = SubResource("LabelSettings_6tb1a")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="SuperMind" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer"]
+[node name="OverVeil" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h46k2")
+
+[node name="Innerline3" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
+
+[node name="SuperRobot" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot"]
+layout_mode = 2
+theme_override_constants/margin_top = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer"]
+layout_mode = 2
+
+[node name="RobotTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer"]
 visible = false
 layout_mode = 2
-metadata/_tab_index = 3
+size_flags_vertical = 0
+text = "ROBOT GEANT : SUPERMIND"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
+vertical_alignment = 3
 
-[node name="CompleteCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind"]
+[node name="RobotTitleCrypt" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Rcbt Gérnt : SugerMimd"
+label_settings = ExtResource("33_fgaad")
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Poses" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer" node_paths=PackedStringArray("DisplayRobotCollecInstruct", "OverVeil", "CollecInstructLabel", "RobotTitle", "RobotTitleCrypt", "SuperMindNW", "SuperMindSAS")]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("45_2foha")
+DisplayRobotCollecInstruct = NodePath("DisplayRobotCollecInstruct")
+OverVeil = NodePath("OverVeil")
+CollecInstructLabel = NodePath("DisplayRobotCollecInstruct/CollecInstructLabel")
+RobotTitle = NodePath("../RobotTitle")
+RobotTitleCrypt = NodePath("../RobotTitleCrypt")
+SuperMindNW = NodePath("RobotPoseCollection/RobotPics/Robot1/SuperMindNW")
+SuperMindSAS = NodePath("RobotPoseCollection/RobotPics/Robot2/SuperMindSAS")
+
+[node name="RobotPoseCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6822,16 +8183,16 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
-[node name="RobotParts" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection"]
+[node name="RobotPics" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection"]
 layout_mode = 2
 columns = 2
 
-[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts"]
+[node name="Robot1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts/CollectSlot"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6844,7 +8205,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="SuperMindNW" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts/CollectSlot"]
+[node name="SuperMindNW" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot1"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 15
@@ -6860,12 +8221,12 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts"]
+[node name="Robot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts/CollectSlot2"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -6878,7 +8239,7 @@ texture = SubResource("GradientTexture2D_ipi4e")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="SuperMindSAS" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts/CollectSlot2"]
+[node name="SuperMindSAS" type="TextureButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot2"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = 15
@@ -6896,50 +8257,62 @@ texture_pressed = ExtResource("24_wrswc")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="OptionsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
-anchors_preset = 0
-offset_right = 494.0
-offset_bottom = 1084.0
-
-[node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay"]
+[node name="DisplayRobotCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 281.0
-offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = ExtResource("24_ojt81")
+theme_override_styles/panel = SubResource("StyleBoxFlat_paw2n")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter"]
+[node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/DisplayRobotCollecInstruct"]
+visible = false
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+size_flags_vertical = 1
+text = "Finissez le niveau Expert pour obtenir l'accès à cette section"
+label_settings = SubResource("LabelSettings_6tb1a")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer"]
+[node name="OverVeil" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h46k2")
+
+[node name="Innerline4" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
+
+[node name="Settings" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings"]
 layout_mode = 2
 
-[node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "OPTIONS"
-label_settings = ExtResource("14_5gwyn")
-
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
-layout_mode = 2
-
-[node name="ReinitLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ReinitLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "Réinitaliser le jeu"
+text = "REGLAGES"
+label_settings = ExtResource("22_7wntc")
+horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ReinitLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Réinitaliser toutes les collections"
+label_settings = SubResource("LabelSettings_ng4ve")
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 120
@@ -6947,15 +8320,16 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 20
 
-[node name="ResetAllButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer"]
+[node name="ResetAllButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.21176471, 0.7411765, 0.96862745, 1)
 theme_override_fonts/font = ExtResource("37_y6xxu")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_wuhsp")
 text = "RESET"
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer"]
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
 vrs_mode = 1
 oversampling = false
 oversampling_override = 1.0
@@ -6967,27 +8341,23 @@ dialog_text = "La suppression des données
 sera permanente. "
 cancel_button_text = "Annuler"
 
-[node name="PanelContainer2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 0
 
-[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer2"]
-layout_mode = 2
-text = "option2"
-
-[node name="PanelContainer3" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer3"]
-layout_mode = 2
-text = "option3"
-
-[node name="CloseOptionsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter"]
-layout_mode = 2
+[node name="CloseCollecButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Control" node_paths=PackedStringArray("CollectionsOverlay")]
+layout_mode = 0
+offset_left = 403.0
+offset_top = -16.0
+offset_right = 512.0
+offset_bottom = 78.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gdbje")
 icon = ExtResource("56_t3x2a")
+icon_alignment = 1
+script = ExtResource("48_7btnl")
+CollectionsOverlay = NodePath("../../..")
 
 [node name="RobotPartsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("LeftArmZoom", "RightArmZoom", "LeftLegZoom", "RightLegZoom", "ChestZoom", "HeadZoom", "SwordZoom", "ShieldZoom")]
 visible = false
@@ -7426,7 +8796,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 icon = ExtResource("56_t3x2a")
 
-[node name="GameScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "LabelLevelValue", "LabelTryValue", "LabelTryMaxValue", "RowContainer", "scrollContainer", "TutorialOverlay", "WarningLabels", "HintAudio")]
+[node name="GameScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "LabelLevelValue", "LabelTryValue", "LabelTryMaxValue", "RowContainer", "scrollContainer", "TutorialOverlay", "WarningLabels", "HintAudio", "ColorKeyboard")]
 visible = false
 layout_mode = 2
 script = ExtResource("17_65hfw")
@@ -7440,6 +8810,7 @@ scrollContainer = NodePath("VBox/MidGameZone/MarginContainer/ScrollContainer")
 TutorialOverlay = NodePath("TutorialOverlay")
 WarningLabels = NodePath("WarningLabels")
 HintAudio = NodePath("HintAudio")
+ColorKeyboard = NodePath("VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard")
 
 [node name="VBox" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
 layout_mode = 1
@@ -7642,13 +9013,13 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2"]
+[node name="ColorKeyboard" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/v_separation = 5
 columns = 3
 
-[node name="HeadButtonBlue" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+[node name="HeadButtonBlack" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard"]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -7657,7 +9028,7 @@ theme_override_styles/normal = ExtResource("15_yhvps")
 theme_override_styles/hover = ExtResource("13_pinj1")
 theme_override_styles/focus = ExtResource("13_d1ul7")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlack"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -7670,41 +9041,13 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="BlueHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("30_hbkoi")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="HeadButtonBlack" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
-custom_minimum_size = Vector2(95, 95)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_styles/normal = ExtResource("15_yhvps")
-theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
-
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlack"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1, 0.9933322)
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="BlackHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlack/MarginContainer"]
+[node name="BlackHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlack/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("31_iuc65")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="HeadButtonPurple" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+[node name="HeadButtonBlue" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard"]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -7713,7 +9056,7 @@ theme_override_styles/normal = ExtResource("15_yhvps")
 theme_override_styles/hover = ExtResource("13_pinj1")
 theme_override_styles/focus = ExtResource("13_d1ul7")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonPurple"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlue"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -7726,13 +9069,41 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="PurpleHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonPurple/MarginContainer"]
+[node name="BlueHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlue/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("30_hbkoi")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeadButtonPurple" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard"]
+custom_minimum_size = Vector2(95, 95)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/hover = ExtResource("13_pinj1")
+theme_override_styles/focus = ExtResource("13_d1ul7")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonPurple"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.9933322)
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="PurpleHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonPurple/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("32_reelv")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="HeadButtonRed" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+[node name="HeadButtonRed" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard"]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -7741,7 +9112,7 @@ theme_override_styles/normal = ExtResource("15_yhvps")
 theme_override_styles/hover = ExtResource("13_pinj1")
 theme_override_styles/focus = ExtResource("13_d1ul7")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonRed"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonRed"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -7754,13 +9125,13 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="RedHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonRed/MarginContainer"]
+[node name="RedHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonRed/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("33_27bwp")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="HeadButtonWhite" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+[node name="HeadButtonWhite" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard"]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -7769,7 +9140,7 @@ theme_override_styles/normal = ExtResource("15_yhvps")
 theme_override_styles/hover = ExtResource("13_pinj1")
 theme_override_styles/focus = ExtResource("13_d1ul7")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonWhite"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonWhite"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -7782,13 +9153,13 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="WhiteHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonWhite/MarginContainer"]
+[node name="WhiteHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonWhite/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("34_e07rd")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="HeadButtonYellow" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer"]
+[node name="HeadButtonYellow" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard"]
 custom_minimum_size = Vector2(95, 95)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -7797,7 +9168,7 @@ theme_override_styles/normal = ExtResource("15_yhvps")
 theme_override_styles/hover = ExtResource("13_pinj1")
 theme_override_styles/focus = ExtResource("13_d1ul7")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonYellow"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonYellow"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -7810,7 +9181,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="YellowHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonYellow/MarginContainer"]
+[node name="YellowHead" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonYellow/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("35_mefj4")
 expand_mode = 2
@@ -7830,7 +9201,8 @@ theme_override_constants/separation = 10
 
 [node name="AspectRatioContainer2" type="AspectRatioContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+ratio = 0.5
+stretch_mode = 1
 
 [node name="ClearButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer2"]
 custom_minimum_size = Vector2(100, 50)
@@ -7838,8 +9210,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("37_y6xxu")
 theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_djl8r")
 text = "EFFACER"
-icon = ExtResource("41_yisvs")
 icon_alignment = 1
 expand_icon = true
 
@@ -7854,11 +9226,11 @@ focus_mode = 0
 theme_override_fonts/font = ExtResource("37_y6xxu")
 theme_override_font_sizes/font_size = 13
 text = "VALIDER"
-icon = ExtResource("42_rgw24")
+icon = ExtResource("74_7wntc")
 icon_alignment = 1
 expand_icon = true
 
-[node name="WarningLabels" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" node_paths=PackedStringArray("WarningPlayer")]
+[node name="WarningLabels" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" node_paths=PackedStringArray("WarningPlayer", "WarningEmptySlots", "WarningNoDouble")]
 visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
@@ -7877,10 +9249,19 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ft0vu")
 script = ExtResource("42_mtrk6")
 WarningPlayer = NodePath("WarningPlayer")
+WarningEmptySlots = NodePath("WarningEmptySlots")
+WarningNoDouble = NodePath("WarningNoDouble")
 
 [node name="WarningEmptySlots" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/WarningLabels"]
 layout_mode = 2
 text = "Emplacement(s) vide(s) ! "
+label_settings = SubResource("LabelSettings_uqa0b")
+horizontal_alignment = 1
+
+[node name="WarningNoDouble" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/WarningLabels"]
+visible = false
+layout_mode = 2
+text = "Couleur en double !"
 label_settings = SubResource("LabelSettings_uqa0b")
 horizontal_alignment = 1
 
@@ -8351,7 +9732,6 @@ TutorialOverlay = NodePath("../..")
 stream = ExtResource("52_xf5i4")
 
 [node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "ResultSlotContainer", "EndScreenAnim", "TopEndAnim", "ResultLabel", "WinCases", "EasyOrMedium", "Hard", "OrbSpawn", "TreasureSpawn", "Expert", "RobotPartSpawn", "RobotCompleteSpawn", "LoseCases")]
-visible = false
 layout_mode = 2
 script = ExtResource("45_lfh1j")
 Brain = NodePath("../../../..")
@@ -10325,6 +11705,301 @@ grow_vertical = 2
 texture = ExtResource("63_2qpyn")
 expand_mode = 5
 
+[node name="OrbRacks" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EndOrbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer" node_paths=PackedStringArray("DisplayCollecInstruct", "OrbCollection", "OrbBlack", "OrbBlue", "OrbPurple", "OrbRed", "OrbWhite", "OrbYellow")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("17_ipi4e")
+DisplayCollecInstruct = NodePath("OrbCollection/DisplayCollecInstruct")
+OrbCollection = NodePath("OrbCollection")
+OrbBlack = NodePath("OrbCollection/GridContainer/CollectSlot/OrbBlack")
+OrbBlue = NodePath("OrbCollection/GridContainer/CollectSlot2/OrbBlue")
+OrbPurple = NodePath("OrbCollection/GridContainer/CollectSlot3/OrbPurple")
+OrbRed = NodePath("OrbCollection/GridContainer/CollectSlot4/OrbRed")
+OrbWhite = NodePath("OrbCollection/GridContainer/CollectSlot5/OrbWhite")
+OrbYellow = NodePath("OrbCollection/GridContainer/CollectSlot6/OrbYellow")
+
+[node name="OrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection"]
+layout_mode = 2
+theme_override_constants/h_separation = 231
+theme_override_constants/v_separation = -20
+columns = 2
+
+[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("16_btl52")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("17_wuhsp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("16_btl52")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("18_cal7y")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("16_btl52")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("19_8hq12")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("16_btl52")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("20_2dy84")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("16_btl52")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("21_667dm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("16_btl52")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="OrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -43.0
+offset_right = 43.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("22_crcpg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7btnl")
+
 [node name="MarginContainer2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn"]
 layout_mode = 2
 
@@ -10342,7 +12017,7 @@ autowrap_mode = 2
 [node name="ChallengeLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-text = "Obtenez les 6 pour débloquer un bonus !"
+text = "Obtenez les 6 pour ouvrir le roffre et débloquer le prochain niveau de difficulté !"
 label_settings = SubResource("LabelSettings_hbkoi")
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -11991,7 +13666,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 50.0
+offset_right = 50.000122
 offset_bottom = 808.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -12430,7 +14105,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_612k1")
 }
 
-[node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn")]
+[node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("Brain", "HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -12442,6 +14117,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("108_a22le")
+Brain = NodePath("..")
 HomeScreen = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/HomeScreen")
 EndScreen = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/EndScreen")
 OrbSpawn = NodePath("../UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn")
@@ -12499,36 +14175,44 @@ offset_right = -160.0
 offset_bottom = -263.0
 text = "Solution"
 
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer3/Control/VBoxSideButtons/StatButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_stat_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer3/Control/VBoxSideButtons/CollecButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_collec_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/EasyBtn" to="." method="_on_easy_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/MediumBtn" to="." method="_on_medium_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/HardBtn" to="." method="_on_hard_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/ExpertBtn" to="." method="_on_expert_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/OptionsBtn" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_options_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot/LeftArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_arm_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot2/RightArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_arm_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot3/LeftLegButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_leg_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot4/RightLegButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_leg_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot5/HeadButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_head_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot6/ChestButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_chest_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot7/SwordButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_sword_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/Parts/PartCollection/RobotParts/CollectSlot8/ShieldButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_shield_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts/CollectSlot/SuperMindNW" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_nw_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Bot2Home/MarginContainer/BotTabContainer/SuperMind/CompleteCollection/RobotParts/CollectSlot2/SuperMindSAS" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_sas_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/ResetAllButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_reset_all_button_pressed"]
-[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MarginContainer/ConfirmationDialog" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/OptionsOverlay/Filter/CloseOptionsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_close_options_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer2/Control/HBoxContainer/LaunchBtn" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_launch_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/EasyBtn" to="." method="_on_easy_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/HardBtn" to="." method="_on_hard_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/ExpertBtn" to="." method="_on_expert_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close/CloseDiffButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close/CloseDiffButton" method="_on_pressed"]
+[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmationDialog" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/Close/CloseStatsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/Close/CloseStatsButton" method="_on_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot/LeftArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_arm_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot2/RightArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_arm_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot3/LeftLegButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_leg_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot4/RightLegButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_leg_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot5/HeadButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_head_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot6/ChestButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_chest_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot7/SwordButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_sword_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot8/ShieldButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_shield_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot1/SuperMindNW" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_nw_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot2/SuperMindSAS" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_sas_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ResetAllButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_reset_all_button_pressed"]
+[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ConfirmationDialog" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Control/CloseCollecButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Control/CloseCollecButton" method="_on_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HomeButton" to="UIManager" method="_on_home_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HelpButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_help_button_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlue" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_blue_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonBlack" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_black_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonPurple" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_purple_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonRed" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_red_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonWhite" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_white_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/HBoxContainer/HeadButtonYellow" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_yellow_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlack" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_black_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlue" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_blue_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonPurple" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_purple_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonRed" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_red_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonWhite" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_white_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonYellow" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_yellow_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer2/ClearButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_clear_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/MarginContainer/VBoxContainer/AspectRatioContainer/ValidateButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_validate_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoCloseButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/TutoCloseButton" method="_on_pressed"]
@@ -12541,4 +14225,4 @@ text = "Solution"
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/OrbCount" to="TESTS_DEBUG" method="_on_orb_count_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/GetAllParts" to="TESTS_DEBUG" method="_on_get_all_parts_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/PartCount" to="TESTS_DEBUG" method="_on_part_count_pressed"]
-[connection signal="pressed" from="TESTS_DEBUG/TestZone/Solution" to="." method="_on_solution_pressed"]
+[connection signal="pressed" from="TESTS_DEBUG/TestZone/Solution" to="TESTS_DEBUG" method="_on_solution_pressed"]

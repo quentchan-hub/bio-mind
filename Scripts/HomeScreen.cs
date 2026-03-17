@@ -6,15 +6,18 @@ public partial class HomeScreen : Control
 
 	[Export] Brain Brain;
 	[Export] EndScreen EndScreen;
-	[Export] BotTabContainer BotTabContainer;
 	[Export] Control OptionsOverlay;
 	[Export] ConfirmationDialog ConfirmReset;
 	[Export] Orbs Orbs;
 	[Export] Parts Parts;
+	[Export] Poses Poses;
 	[Export] Button ExpertBtn;
 	[Export] OrbSpawn OrbSpawn;
 	[Export] RobotPartSpawn RobotPartSpawn;
-
+	[Export] Control DifficultyOverlay;
+	[Export] Control StatsOverlay;
+	[Export] Control CollectionsOverlay;
+	
 	ConfigFile configFile = new ConfigFile();
 
 	public override void _Ready()
@@ -24,7 +27,22 @@ public partial class HomeScreen : Control
 		ExpertBtn.Visible = false;
 		LoadData();
 	}
-
+	
+	private void _on_launch_btn_pressed()
+	{
+		DifficultyOverlay.Visible = true;
+	}
+	
+	private void _on_stat_button_pressed()
+	{
+		StatsOverlay.Visible = true;
+	}
+	
+	private void _on_collec_button_pressed()
+	{
+		CollectionsOverlay.Visible = true;
+	}
+	
 	// ===========================
 	//     MENU OPTIONS
 	// ===========================
@@ -49,8 +67,6 @@ public partial class HomeScreen : Control
 		RobotPartSpawn.ResetData();
 		EndScreen.ResetData();
 		
-		BotTabContainer.HidePartsTab();
-		BotTabContainer.HideSuperMindTab();
 		OrbSpawn.orbCount = 0;
 		RobotPartSpawn.partCount = 0;
 
@@ -66,7 +82,11 @@ public partial class HomeScreen : Control
 	//      ORB COLLECTION
 	// ============================
 	// -- Collecting --
-	public void DisplayOrbCollection() => Orbs.DisplayOrbCollection();
+	public void DisplayOrbCollection()
+	{
+		Orbs.DisplayOrbCollection();
+		Parts.UnveilPartCollection();
+	}	
 	public void DisplayOrb(int orbEarned) => Orbs.DisplayOrb(orbEarned);
 
 	// -- Orb Collection complete --
@@ -75,14 +95,17 @@ public partial class HomeScreen : Control
 		ExpertBtn.Visible = true;
 		configFile.SetValue("UI", "ExpertButtonVisible", true);
 		configFile.Save("user://homescreen.cfg");
-		BotTabContainer.ShowPartsTab();
 	}
 
 	// ============================
 	//    ROBOT PARTS COLLECTION
 	// ============================
 	// -- Collecting --
-	public void DisplayPartCollection() => Parts.DisplayPartCollection();
+	public void DisplayPartCollection()
+	{
+		Parts.DisplayPartCollection();
+		Poses.UnveilRobotCollection();
+	}
 	public void DisplayPart(int partEarned) => Parts.DisplayPart(partEarned);
 	
 	// -- Part Collection complete --
@@ -90,7 +113,6 @@ public partial class HomeScreen : Control
 	{
 		configFile.SetValue("UI", "SuperMindTabVisible", true);
 		configFile.Save("user://homescreen.cfg");
-		BotTabContainer.ShowSuperMindTab();
 	} 
 
 	// =============================================
@@ -104,7 +126,7 @@ public partial class HomeScreen : Control
 		bool expertVisible = (bool)configFile.GetValue("UI", "ExpertButtonVisible", false);
 		ExpertBtn.Visible = expertVisible;
 
-		bool superMindVisible = (bool)configFile.GetValue("UI", "SuperMindTabVisible", false);
-		if (superMindVisible) BotTabContainer.ShowSuperMindTab();
+		//bool superMindVisible = (bool)configFile.GetValue("UI", "SuperMindTabVisible", false);
+		//if (superMindVisible) BotTabContainer.ShowSuperMindTab();
 	}
 }

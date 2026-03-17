@@ -18,6 +18,10 @@ public partial class GameScreen : Control
 	[Export] Control TutorialOverlay;
 	[Export] WarningLabels WarningLabels;
 	[Export] AudioStreamPlayer HintAudio;
+	[Export] GridContainer ColorKeyboard;
+	
+	// Facile : interdit les doublons de couleur dans une ligne
+	public bool AllowDuplicateColors = true;
 	
 	private AttemptRow rowInstance;
 	private AttemptRow _firstRow;
@@ -80,13 +84,45 @@ public partial class GameScreen : Control
 		
 	}
 	
+	public void DisplayColors(int colors)
+	{
+		ColorKeyboard.Columns = 3;
+		int lastIndex = ColorKeyboard.GetChildCount() - 1;
+		foreach (Node child in ColorKeyboard.GetChildren())
+		{
+			if (child is Button color)
+			{
+				color.Visible = true;
+			}
+		}
+		for (int i = lastIndex; i >= colors; i--)
+		{
+			if (ColorKeyboard.GetChild(i) is Button color)
+			{
+				color.Visible = false;
+			}
+		}
+		GD.Print("colors = " + colors);
+		if (colors == 4)
+		{
+			ColorKeyboard.Columns = 4;
+		}
+		if (colors <= 3)
+		{
+			ColorKeyboard.Columns = colors;
+		}
+		//else { ColorKeyboard.Columns = 3; }
+		GD.Print("nb de colonne = " + ColorKeyboard.Columns);
+	}
+
+	
 	public void FirstButtonFocus()
 	{
-		// joue une méthode de RowAttempt pour Focus premier bouton du board
+		// joue une methode de RowAttempt pour Focus premier bouton du board
 		_firstRow.CallDeferred("FocusFirstInRow");
-		// Force le scroll à commencer tout en haut
+		// Force le scroll a commencer tout en haut
 		scrollContainer.ScrollVertical = 0;
-		// Récupère en tant que _boardButtonFocused le bouton qui a le focus (FirstButton)
+		// Recupere en tant que _boardButtonFocused le bouton qui a le focus (FirstButton)
 		//_boardButtonFocused = GetViewport().GuiGetFocusOwner() as BoardButton;
 	}
 	
@@ -152,7 +188,7 @@ public partial class GameScreen : Control
 		TutorialOverlay.Visible = true;
 	}
 	
-	// APPUI SUR VALIDER => Envoi selection à Brain
+	// APPUI SUR VALIDER => Envoi selection a Brain
 	public void _on_validate_button_pressed()
 	{
 		var playerSlotContainer = _boardButtonFocused.GetParent().GetParent();
@@ -175,7 +211,7 @@ public partial class GameScreen : Control
 					}
 					else 
 					{
-						// si oui on récupère index des couleurs et on stocke dans playerGuess
+						// si oui on recupere index des couleurs et on stocke dans playerGuess
 						int index = Array.IndexOf(boardButton.HeadTextures, boardButton.Icon);
 						playerGuess.Add(index);
 					}
@@ -183,8 +219,19 @@ public partial class GameScreen : Control
 				}
 			}
 		}
+		
+		// Facile : refuse les doublons de couleur
+		if (!AllowDuplicateColors)
+		{
+			var uniq = new System.Collections.Generic.HashSet<int>(playerGuess);
+			if (uniq.Count != playerGuess.Count)
+			{
+				WarningLabels.NoDoubleColorWarning();
+				return;
+			}
+		}
 		FocusedRow.StopAnim();
-		// Ensuite il y a l'envoi à la logique de jeu GameLogic
+		// Ensuite il y a l'envoi a la logique de jeu GameLogic
 		EmitSignal(SignalName.OnRowComplete, playerGuess);
 	}
 	
@@ -221,7 +268,7 @@ public partial class GameScreen : Control
 		
 		int hintIndex = 0;
 
-		// Hints rouges (bien placés)
+		// Hints rouges (bien places)
 		for (int i = 0; i < rightPosition; i++)
 		{
 			if (hintIndex < hintButtons.Count)
@@ -233,7 +280,7 @@ public partial class GameScreen : Control
 			}
 		}
 		
-		// Hints blancs (mal placés)
+		// Hints blancs (mal places)
 		for (int i = 0; i < wrongPosition; i++)
 		{
 			if (hintIndex < hintButtons.Count)

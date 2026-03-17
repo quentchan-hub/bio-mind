@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bo4egf7tj6hh3"
-path="res://.godot/imported/FUTURE-EARTH.TTF-1140c59d8b5d65f4df5d780839bb4ee5.fontdata"
+uid="uid://dxqy310vqudkn"
+path="res://.godot/imported/ALEXANA.TTF-f6731acf79dbb763084efc3e0ef89ed9.fontdata"
 
 [deps]
 
-source_file="res://Fonts/FUTURE-EARTH.TTF"
-dest_files=["res://.godot/imported/FUTURE-EARTH.TTF-1140c59d8b5d65f4df5d780839bb4ee5.fontdata"]
+source_file="res://Fonts/ALEXANA.TTF"
+dest_files=["res://.godot/imported/ALEXANA.TTF-f6731acf79dbb763084efc3e0ef89ed9.fontdata"]
 
 [params]
 
@@ -18,7 +18,7 @@ generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
-msdf_size=200
+msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false

@@ -2,7 +2,7 @@ using Godot;
 using System;
 public partial class Orbs : Control
 {
-	[Export] PanelContainer DisplayCollectInstruct;
+	[Export] PanelContainer DisplayCollecInstruct;
 	[Export] MarginContainer OrbCollection;
 
 	[Export] TextureRect OrbBlack;
@@ -23,7 +23,7 @@ public partial class Orbs : Control
 		OrbWhite.Visible = false;
 		OrbYellow.Visible = false;
 		OrbCollection.Visible = false;
-		DisplayCollectInstruct.Visible = true;
+		DisplayCollecInstruct.Visible = true;
 
 		LoadData();
 	}
@@ -32,7 +32,7 @@ public partial class Orbs : Control
 	{
 		this.Visible = true;
 		OrbCollection.Visible = true;
-		DisplayCollectInstruct.Visible = false;
+		DisplayCollecInstruct.Visible = false;
 		config.SetValue("UI", "OrbCollectionUnlocked", true);
 		config.Save("user://orbs.cfg");
 	}
@@ -65,7 +65,7 @@ public partial class Orbs : Control
 
 		bool orbUnlocked = (bool)config.GetValue("UI", "OrbCollectionUnlocked", false);
 		OrbCollection.Visible = orbUnlocked;
-		DisplayCollectInstruct.Visible = !orbUnlocked;
+		DisplayCollecInstruct.Visible = !orbUnlocked;
 
 		OrbBlack.Visible =  (bool)config.GetValue("Player", "OrbBlackUnlocked", false);
 		OrbBlue.Visible =   (bool)config.GetValue("Player", "OrbBlueUnlocked", false);

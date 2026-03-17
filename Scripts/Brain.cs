@@ -23,10 +23,11 @@ public partial class Brain : Node
 	private int _slots = 4;
 	private int _hints = 4;
 	private int _rows = 12;
+	private int _colors = 6;
 	private int _currentRow = 0;
 	private int _gameDifficulty = 1;
 
-	private Godot.Collections.Array<int> _solution = new();
+	public Godot.Collections.Array<int> _solution = new();
 
 	public override void _Ready()
 	{
@@ -41,19 +42,23 @@ public partial class Brain : Node
 
 	// ================= CONFIGURATION =================
 
-	private void GameConfigurator(string difficulty, int rows, int slots, int hints)
+	private void GameConfigurator(string difficulty, int rows, int slots, int hints, int colors)
 	{
 		GameScreen.DisplayLevel(difficulty);
 		GameScreen.InstantiateBoard(rows, slots, hints);
 		GameScreen.DisplayMaxTry(rows.ToString());
+		GameScreen.DisplayColors(colors);
 		EndScreen.InstantiateResultSlots(slots);
 		EndScreen.DifficultyMode(_gameDifficulty);
 		
-
 		_rows = rows;
 		_slots = slots;
 		_hints = hints;
+		_colors = colors;
 		_currentRow = 0;
+
+		// Facile : interdit les doublons de couleur
+		GameScreen.AllowDuplicateColors = _gameDifficulty != 1;
 
 		EmitSignal(SignalName.UpdateCurrentRow, _currentRow);
 	}
@@ -61,25 +66,25 @@ public partial class Brain : Node
 	private void _on_easy_btn_pressed()
 	{
 		_gameDifficulty = 1;
-		GameConfigurator("Facile", 12, 4, 4);
+		GameConfigurator(difficulty: "Facile", rows: 12, slots: 3, hints: 4, colors: 4);
 	}
 
 	private void _on_medium_btn_pressed()
 	{
 		_gameDifficulty = 2;
-		GameConfigurator("Moyen", 10, 4, 4);
+		GameConfigurator(difficulty: "Moyen", rows: 10, slots: 4, hints: 4, colors: 6);
 	}
 
 	private void _on_hard_btn_pressed()
 	{
 		_gameDifficulty = 3;
-		GameConfigurator("Difficile", 8, 4, 4);
+		GameConfigurator(difficulty: "Difficile", rows: 8, slots: 4, hints: 4, colors: 6);
 	}
 
 	private void _on_expert_btn_pressed()
 	{
 		_gameDifficulty = 4;
-		GameConfigurator("Expert", 8, 5, 5);
+		GameConfigurator(difficulty: "Expert", rows: 8, slots: 5, hints: 5, colors: 6);
 	}
 	
 	private void _on_play_btn_pressed()
@@ -118,10 +123,32 @@ public partial class Brain : Node
 	{
 		_solution.Clear();
 
-		for (int i = 0; i < _slots; i++)
+		if (_gameDifficulty == 1)
 		{
-			int randomNb = (int)(GD.Randi() % 6); // Randi renvoi un type uint = entier positif seulement
-			_solution.Add(randomNb);
+			// Facile : tire sans repetition
+			var pool = new System.Collections.Generic.List<int>();
+			for (int i = 0; i < _colors; i++) pool.Add(i);
+
+			for (int i = pool.Count - 1; i > 0; i--)
+			{
+				int j = (int)(GD.Randi() % (uint)(i + 1));
+				int tmp = pool[i];
+				pool[i] = pool[j];
+				pool[j] = tmp;
+			}
+
+			for (int i = 0; i < _slots; i++)
+			{
+				_solution.Add(pool[i]);
+			}
+		}
+		else
+		{
+			for (int i = 0; i < _slots; i++)
+			{
+				int randomNb = (int)(GD.Randi() % (uint)_colors); // Randi renvoi un type uint = entier positif seulement
+				_solution.Add(randomNb);
+			}
 		}
 
 		GD.Print("CODE : " + _solution);
@@ -129,7 +156,7 @@ public partial class Brain : Node
 
 	// ================= CHECK =================
 
-	private void CheckRow(Godot.Collections.Array<int> playerGuess)
+	public void CheckRow(Godot.Collections.Array<int> playerGuess)
 	{
 		int rightPosition = 0;
 		int wrongPosition = 0;
@@ -159,7 +186,7 @@ public partial class Brain : Node
 
 		if (rightPosition == _slots)
 		{
-			EmitSignal(SignalName.OnGameOver, true); // partie gagné
+			EmitSignal(SignalName.OnGameOver, true); // partie gagne
 			EmitSignal(SignalName.DisplaySolution, _solution);
 			return;
 		}
@@ -181,12 +208,4 @@ public partial class Brain : Node
 	// FIN DU SCRIPT
 	//===============================================================================
 	
-	//===============================================================================
-	// TEST TEST TEST
-	//===============================================================================
-	
-	private void _on_solution_pressed()
-	{
-		CheckRow(_solution);
-	}
 }

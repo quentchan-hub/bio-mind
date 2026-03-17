@@ -1,5 +1,8 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://cp5o8ivib11po"]
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cp5o8ivib11po"]
+
+[ext_resource type="FontFile" uid="uid://bo4egf7tj6hh3" path="res://Fonts/FUTURE-EARTH.TTF" id="1_ck3se"]
 
 [resource]
+font = ExtResource("1_ck3se")
 font_size = 27
 font_color = Color(1, 0.84313726, 0, 1)

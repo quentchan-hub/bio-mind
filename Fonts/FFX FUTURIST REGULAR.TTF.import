@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bo4egf7tj6hh3"
-path="res://.godot/imported/FUTURE-EARTH.TTF-1140c59d8b5d65f4df5d780839bb4ee5.fontdata"
+uid="uid://c2lr1l6blohtp"
+path="res://.godot/imported/FFX FUTURIST REGULAR.TTF-cceedb95a156275f25fc237a049486a1.fontdata"
 
 [deps]
 
-source_file="res://Fonts/FUTURE-EARTH.TTF"
-dest_files=["res://.godot/imported/FUTURE-EARTH.TTF-1140c59d8b5d65f4df5d780839bb4ee5.fontdata"]
+source_file="res://Fonts/FFX FUTURIST REGULAR.TTF"
+dest_files=["res://.godot/imported/FFX FUTURIST REGULAR.TTF-cceedb95a156275f25fc237a049486a1.fontdata"]
 
 [params]
 
@@ -16,9 +16,9 @@ Rendering=null
 antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
-msdf_size=200
+msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
