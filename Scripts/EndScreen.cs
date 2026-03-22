@@ -5,12 +5,15 @@ public partial class EndScreen : Control
 {
 	[Export] Brain Brain;
 	[Export] HomeScreen HomeScreen;
+	[Export] EndOrbs EndOrbs;
 
 	[Export] PackedScene ResultSlotScene;
 	[Export] HBoxContainer ResultSlotContainer;
-
+	[Export] MarginContainer OrbSpawnText;
+	
 	[Export] AnimationPlayer EndScreenAnim;
 	[Export] AnimationPlayer TopEndAnim;
+	[Export] AnimationPlayer RayOrbAnim;
 
 	[Export] Label ResultLabel;
 
@@ -24,6 +27,7 @@ public partial class EndScreen : Control
 	[Export] Control Hard;
 	[Export] OrbSpawn OrbSpawn;
 	[Export] VBoxContainer TreasureSpawn;
+	[Export] Control OrbSpawnFilter;
 
 	//	-> Cas 3 : en Expert
 	[Export] Control Expert;
@@ -42,6 +46,7 @@ public partial class EndScreen : Control
 
 	public bool _isSixOrbsObtained = false;
 	public bool _isEightPartsObtained = false;
+	private bool _isNewOrbColor = false;
 
 	public override void _Ready()
 	{
@@ -135,33 +140,26 @@ public partial class EndScreen : Control
 				TopEndAnim.Play("RESET");
 				TopEndAnim.Play("WinEasyMed");
 				break;
-
+				
 			case "Difficile":
+				
 				if (OrbSpawn.orbCount < 6)
 				{
-					Hard.Visible = true;
-					OrbSpawn.Visible = true;
-					TreasureSpawn.Visible = false;
-					OrbRandomSelector();
+					PlayHardRewardSequence();
+				}
+				if (OrbSpawn.orbCount == 6 && _isSixOrbsObtained == false)
+				{
+					_isSixOrbsObtained = true;
+					config.SetValue("Player", "IsSixOrbsObtained", true);
+					config.Save("user://endscreen.cfg");
+					OnSixOrbsObtained();
+				}
+				else if (OrbSpawn.orbCount >= 6 && _isSixOrbsObtained == true)
+				{
+					GD.Print("test le cas du 6 orbs = déjà true");
+					EasyOrMedium.Visible = true;
 					TopEndAnim.Play("RESET");
-					TopEndAnim.Play("WinHard");
-					OrbSpawn.GetOrbInCollec(_randomOrb);
-					GD.Print("orbCount dans WinCase = " + OrbSpawn.orbCount);
-
-					if (OrbSpawn.orbCount == 6 && _isSixOrbsObtained == false)
-					{
-						_isSixOrbsObtained = true;
-						config.SetValue("Player", "IsSixOrbsObtained", true);
-						config.Save("user://endscreen.cfg");
-						OnSixOrbsObtained();
-					}
-					else if (OrbSpawn.orbCount >= 6 && _isSixOrbsObtained == true)
-					{
-						GD.Print("test le cas du 6 orbs = déjà true");
-						EasyOrMedium.Visible = true;
-						TopEndAnim.Play("RESET");
-						TopEndAnim.Play("WinEasyMed");
-					}
+					TopEndAnim.Play("WinEasyMed");
 				}
 				break;
 
@@ -194,7 +192,57 @@ public partial class EndScreen : Control
 				break;
 		}
 	}
+	
+	private async void PlayHardRewardSequence()
+	{
+		Hard.Visible = true;
+		OrbSpawn.Visible = true;
+		TreasureSpawn.Visible = false;
 
+		OrbRandomSelector();
+
+		TopEndAnim.Play("RESET");
+		TopEndAnim.Play("WinHard");
+		await ToSignal(TopEndAnim, "animation_finished");
+		
+		// si l'orbe tirée est d'une nouvelle couleur 
+		_isNewOrbColor = OrbSpawn.GetOrbInCollec(_randomOrb); 
+		GD.Print("isNewOrbColor");
+		if (_isNewOrbColor) {TopEndAnim.Play("NewOrbColor");}
+		else {TopEndAnim.Play("OldOrbColor");}
+		
+		EndOrbs.DisplayEndOrbCollection();
+		EndOrbs.DisplayEndOrb(_randomOrb);
+
+		GD.Print("orbCount dans WinCase = " + OrbSpawn.orbCount);
+	}
+	
+	private async void _on_orb_spawn_button_pressed()
+	{
+		
+		TopEndAnim.Play("CloseAnnouncePanel");
+		if (_isNewOrbColor)
+		{
+			RayOrbAnim.Play(GetRayAnimName(_randomOrb));
+			await ToSignal(RayOrbAnim, "animation_finished");
+		}
+		OrbSpawnFilter.Visible = false;
+	}
+	
+	private string GetRayAnimName(int orb)
+	{
+		return orb switch
+		{
+			0 => "RayOrbBlack0",
+			1 => "RayOrbBlue1",
+			2 => "RayOrbPurple2",
+			3 => "RayOrbRed3",
+			4 => "RayOrbWhite4",
+			5 => "RayOrbYellow5",
+			_ => "RayOrbBlack0"
+		};
+	}
+	
 	public void LoseCase()
 	{
 		WinCases.Visible = false;

@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=3 uid="uid://e01tv4ge5kyh"]
+[gd_scene load_steps=249 format=3 uid="uid://e01tv4ge5kyh"]
 
 [ext_resource type="Script" uid="uid://dw1f07bu3f8rp" path="res://Scripts/UiManager.cs" id="1_8blbl"]
 [ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
@@ -122,6 +122,12 @@
 [ext_resource type="Script" uid="uid://dgij0uqsvx6t7" path="res://Scripts/RobotPartSpawn.cs" id="104_y6xxu"]
 [ext_resource type="Texture2D" uid="uid://dbhldu7o0k8ml" path="res://Assets/SuperMind/Pictures/SuperMind Shield and Sword.webp" id="106_a22le"]
 [ext_resource type="Script" uid="uid://b4bsqngcxkksy" path="res://Scripts/TestsDebug.cs" id="108_a22le"]
+[ext_resource type="Script" uid="uid://fq23facb1baq" path="res://Scripts/EndOrbs.cs" id="114_gdbje"]
+[ext_resource type="Texture2D" uid="uid://cumkeitocln2i" path="res://Assets/Effects/Circle/circle_gold4.webp" id="115_otlj2"]
+[ext_resource type="Texture2D" uid="uid://jbdu57lt0gv4" path="res://Assets/Effects/Ray/RayEffect5.webp" id="116_h46k2"]
+[ext_resource type="Texture2D" uid="uid://dybojrw6n88ch" path="res://Assets/Effects/Ray/RayEffect4.webp" id="117_ng4ve"]
+[ext_resource type="Texture2D" uid="uid://ef1iqdwascgf" path="res://Assets/Effects/Ray/RayEffect3.webp" id="118_ycc86"]
+[ext_resource type="LabelSettings" uid="uid://ci7ymtq1tsl4i" path="res://Settings/Bravo2.tres" id="126_h46k2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_robvp"]
 bg_color = Color(0, 0, 0, 1)
@@ -681,18 +687,108 @@ _data = {
 &"tuto_2_1": SubResource("Animation_rgw24")
 }
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2gs5g"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_by6ua"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jk0kb"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k26lw"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iplxh"]
+load_path = "res://.godot/imported/circle_gold4.webp-501e251d9d222dfd96838a56b09f40bc.ctex"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dioyd"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o3uba"]
+load_path = "res://.godot/imported/circle_gold4.webp-501e251d9d222dfd96838a56b09f40bc.ctex"
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ng4ve"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ycc86"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ed4qa"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 128
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_otlj2"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h46k2"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_iplxh"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_o3uba"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ey3pl"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_613lv"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7btnl"]
 bg_color = Color(0.23099999, 0.23099999, 0.35, 0)
 border_color = Color(0, 0, 0.8235294, 1)
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="LabelSettings" id="LabelSettings_u4uri"]
-font_size = 20
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k1mrf"]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 60
+particles_anim_loop = false
 
-[sub_resource type="LabelSettings" id="LabelSettings_hbkoi"]
-font_size = 20
-font_color = Color(1, 1, 0.22352941, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycc86"]
+bg_color = Color(0.19, 0.19, 0.19, 0.69803923)
 
 [sub_resource type="Gradient" id="Gradient_2dy84"]
 offsets = PackedFloat32Array(0.2596685, 0.37016574)
@@ -713,6 +809,1923 @@ fill = 1
 fill_from = Vector2(0.7905983, 0.37179488)
 fill_to = Vector2(0.20512821, 0.72649574)
 
+[sub_resource type="LabelSettings" id="LabelSettings_u4uri"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_hbkoi"]
+font = ExtResource("37_y6xxu")
+font_size = 20
+
+[sub_resource type="Animation" id="Animation_0fmss"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Control/RayFromCenter:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerBG:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HeliometerFG:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.1415927]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.1415927]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [60]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/RayOnOrb:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/RayOnOrb:material:particles_anim_v_frames")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/Lightball:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/Lightball:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:material:particles_anim_v_frames")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot2:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:material:particles_anim_v_frames")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:scale")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:material:particles_anim_v_frames")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:material:particles_anim_v_frames")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [8]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:modulate")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:material:particles_anim_v_frames")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:scale")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:material:particles_anim_v_frames")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:modulate")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:material:particles_anim_v_frames")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ey3pl"]
+resource_name = "RayOrbBlack0"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeliometerBG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.1415927, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerFG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [3.1415927, 3.1415927, 6.2831855, 9.773844]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pivot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [3.1415927, 3.1415927, 6.2831855, 9.773844]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2.1666667, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [60, 60, 3, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/RayOnOrb:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.9333333, 2.2, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/RayOnOrb:material:particles_anim_v_frames")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2, 2, 128]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/Lightball:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.5666666, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(0.5, 0.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black/Lightball:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 2.3, 2.5333333, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:material:particles_anim_v_frames")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.3333333, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_613lv"]
+resource_name = "RayOrbBlue1"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeliometerBG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.1415927, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerFG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 12.18239817892042]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pivot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 12.18239817892042]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.1666667, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [60, 3, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Blue/Lightball:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.5666666, 3.1333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.25, 1.25), Vector2(0.5, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Blue/Lightball:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 2.3, 2.5333333, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Blue/RayOnOrb:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.9333333, 2.2, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Blue/RayOnOrb:material:particles_anim_v_frames")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.4, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2, 128]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Slot:material:particles_anim_v_frames")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Slot2:material:particles_anim_v_frames")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Slot2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Slot:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4n7bh"]
+resource_name = "RayOrbPurple2"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeliometerBG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.1415927, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerFG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.0666666, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 9.42477796076938]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pivot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 9.42477796076938]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.1666667, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [60, 3, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pivot/Control/RayFromCenter:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0.93)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Purple/RayOnOrb:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.9333333, 2.2, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.84313726), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Purple/RayOnOrb:material:particles_anim_v_frames")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2.4, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2, 128]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Purple/Lightball:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.5666666, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(0.5, 0.5)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Purple/Lightball:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 2.3, 2.5333333, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot:material:particles_anim_v_frames")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot2:material:particles_anim_v_frames")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot2:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1b5aq"]
+resource_name = "RayOrbRed3"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeliometerBG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.1415927, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerFG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 12.566370614359172]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pivot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 12.566370614359172]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.1666667, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [60, 3, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Red/Lightball:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.5666666, 3.1333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.25, 1.25), Vector2(0.5, 0.5)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Red/Lightball:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 2.3, 2.5333333, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Red/RayOnOrb:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 1.9333333, 2.2, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Red/RayOnOrb:material:particles_anim_v_frames")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.4, 2.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2, 128]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Slot:material:particles_anim_v_frames")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(-0.033333335, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Slot2:material:particles_anim_v_frames")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Slot2:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Slot:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_itsob"]
+resource_name = "RayOrbWhite4"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeliometerBG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.1415927, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerFG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 9.040805525330628]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pivot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 9.040805525330628]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.1666667, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [60, 3, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.9333333, 2.2, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:material:particles_anim_v_frames")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 2, 128]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.5666666, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(0.5, 0.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 2.3, 2.5333333, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:material:particles_anim_v_frames")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:material:particles_anim_v_frames")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [8, 8, 1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_loq2r"]
+resource_name = "RayOrbYellow5"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HeliometerBG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HeliometerBG:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.1415927, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HeliometerFG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HeliometerFG:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 12.915436464758038]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pivot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [3.1415927, 6.2831855, 12.915436464758038]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pivot:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.1666667, 2.3666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pivot/Control/RayFromCenter:material:particles_anim_v_frames")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [60, 3, 1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pivot/Control/RayFromCenter:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.1941755),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.9333333, 2.2, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:material:particles_anim_v_frames")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 2, 128]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.5666666, 3.1333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.25, 1.25), Vector2(1.25, 1.25), Vector2(0.5, 0.5)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 2.3, 2.5333333, 3.2333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:material:particles_anim_v_frames")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [8, 8, 1]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 2.8, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:material:particles_anim_v_frames")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 2.33, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [8, 8, 1]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xvwxe"]
+_data = {
+&"RESET": SubResource("Animation_0fmss"),
+&"RayOrbBlack0": SubResource("Animation_ey3pl"),
+&"RayOrbBlue1": SubResource("Animation_613lv"),
+&"RayOrbPurple2": SubResource("Animation_4n7bh"),
+&"RayOrbRed3": SubResource("Animation_1b5aq"),
+&"RayOrbWhite4": SubResource("Animation_itsob"),
+&"RayOrbYellow5": SubResource("Animation_loq2r")
+}
+
 [sub_resource type="Gradient" id="Gradient_8s0d3"]
 colors = PackedColorArray(0, 0.90588236, 1, 0, 0.58431375, 1, 1, 0.6784314)
 
@@ -730,6 +2743,22 @@ color_ramp = SubResource("Gradient_8s0d3")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kia4f"]
 bg_color = Color(0, 0, 0, 0.20784314)
+
+[sub_resource type="Animation" id="Animation_ng4ve"]
+resource_name = "CloseAnnoucePanel"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.0067621, 1.0067621), Vector2(1.0238466, 1.0238466), Vector2(1.0464506, 1.0464506), Vector2(1.0697713, 1.0697713), Vector2(1.089006, 1.089006), Vector2(1.0993516, 1.0993516), Vector2(1.0960057, 1.0960057), Vector2(1.0741653, 1.0741653), Vector2(1.0290275, 1.0290275), Vector2(0.9557896, 0.9557896), Vector2(0.8496488, 0.8496488), Vector2(0.70580214, 0.70580214), Vector2(0.5194471, 0.5194471), Vector2(0.28578055, 0.28578055), Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_q1amn"]
 resource_name = "EightParts"
@@ -1935,13 +3964,92 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_2gs5g"]
+resource_name = "NewOrbColor"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.2857877, 0.2857877), Vector2(0.5194519, 0.5194519), Vector2(0.70580506, 0.70580506), Vector2(0.84965026, 0.84965026), Vector2(0.9557901, 0.9557901), Vector2(1.0290272, 1.0290272), Vector2(1.0741646, 1.0741646), Vector2(1.0960048, 1.0960048), Vector2(1.0993507, 1.0993507), Vector2(1.0890051, 1.0890051), Vector2(1.0697706, 1.0697706), Vector2(1.0464501, 1.0464501), Vector2(1.0238463, 1.0238463), Vector2(1.006762, 1.006762), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer/Case1NewColor:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer/Case2OldColor:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_h46k2"]
+resource_name = "OldOrbColor"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer/Case1NewColor:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer/Case2OldColor:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.2857877, 0.2857877), Vector2(0.5194519, 0.5194519), Vector2(0.70580506, 0.70580506), Vector2(0.84965026, 0.84965026), Vector2(0.9557901, 0.9557901), Vector2(1.0290272, 1.0290272), Vector2(1.0741646, 1.0741646), Vector2(1.0960048, 1.0960048), Vector2(1.0993507, 1.0993507), Vector2(1.0890051, 1.0890051), Vector2(1.0697706, 1.0697706), Vector2(1.0464501, 1.0464501), Vector2(1.0238463, 1.0238463), Vector2(1.006762, 1.006762), Vector2(1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_reelv"]
 resource_name = "OrbTwirling"
 length = 3.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:modulate")
+tracks/0/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1953,7 +4061,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:scale")
+tracks/1/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1965,7 +4073,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1:modulate")
+tracks/2/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1977,7 +4085,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2:modulate")
+tracks/3/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -1989,7 +4097,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3:modulate")
+tracks/4/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -2001,7 +4109,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/TwirlCenter:modulate")
+tracks/5/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/TwirlCenter:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -2013,7 +4121,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash:modulate")
+tracks/6/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -2025,7 +4133,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:rotation")
+tracks/7/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -2037,7 +4145,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash:rotation")
+tracks/8/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -2049,7 +4157,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1:scale")
+tracks/9/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -2061,7 +4169,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2:scale")
+tracks/10/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2:scale")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -2073,7 +4181,7 @@ tracks/10/keys = {
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3:scale")
+tracks/11/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3:scale")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -2085,7 +4193,7 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture:scale")
+tracks/12/path = NodePath("../../Hard/OrbSpawn/Design/OrbDelivery/OrbTexture:scale")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
@@ -2097,7 +4205,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture:modulate")
+tracks/13/path = NodePath("../../Hard/OrbSpawn/Design/OrbDelivery/OrbTexture:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -3108,7 +5216,7 @@ tracks/81/keys = {
 tracks/82/type = "value"
 tracks/82/imported = false
 tracks/82/enabled = true
-tracks/82/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:modulate")
+tracks/82/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:modulate")
 tracks/82/interp = 1
 tracks/82/loop_wrap = true
 tracks/82/keys = {
@@ -3120,7 +5228,7 @@ tracks/82/keys = {
 tracks/83/type = "value"
 tracks/83/imported = false
 tracks/83/enabled = true
-tracks/83/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:scale")
+tracks/83/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:scale")
 tracks/83/interp = 1
 tracks/83/loop_wrap = true
 tracks/83/keys = {
@@ -3132,7 +5240,7 @@ tracks/83/keys = {
 tracks/84/type = "value"
 tracks/84/imported = false
 tracks/84/enabled = true
-tracks/84/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1:modulate")
+tracks/84/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1:modulate")
 tracks/84/interp = 1
 tracks/84/loop_wrap = true
 tracks/84/keys = {
@@ -3144,7 +5252,7 @@ tracks/84/keys = {
 tracks/85/type = "value"
 tracks/85/imported = false
 tracks/85/enabled = true
-tracks/85/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2:modulate")
+tracks/85/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2:modulate")
 tracks/85/interp = 1
 tracks/85/loop_wrap = true
 tracks/85/keys = {
@@ -3156,7 +5264,7 @@ tracks/85/keys = {
 tracks/86/type = "value"
 tracks/86/imported = false
 tracks/86/enabled = true
-tracks/86/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3:modulate")
+tracks/86/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3:modulate")
 tracks/86/interp = 1
 tracks/86/loop_wrap = true
 tracks/86/keys = {
@@ -3168,7 +5276,7 @@ tracks/86/keys = {
 tracks/87/type = "value"
 tracks/87/imported = false
 tracks/87/enabled = true
-tracks/87/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/TwirlCenter:modulate")
+tracks/87/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/TwirlCenter:modulate")
 tracks/87/interp = 1
 tracks/87/loop_wrap = true
 tracks/87/keys = {
@@ -3180,7 +5288,7 @@ tracks/87/keys = {
 tracks/88/type = "value"
 tracks/88/imported = false
 tracks/88/enabled = true
-tracks/88/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash:modulate")
+tracks/88/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash:modulate")
 tracks/88/interp = 1
 tracks/88/loop_wrap = true
 tracks/88/keys = {
@@ -3192,7 +5300,7 @@ tracks/88/keys = {
 tracks/89/type = "value"
 tracks/89/imported = false
 tracks/89/enabled = true
-tracks/89/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:rotation")
+tracks/89/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:rotation")
 tracks/89/interp = 1
 tracks/89/loop_wrap = true
 tracks/89/keys = {
@@ -3204,7 +5312,7 @@ tracks/89/keys = {
 tracks/90/type = "value"
 tracks/90/imported = false
 tracks/90/enabled = true
-tracks/90/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash:rotation")
+tracks/90/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash:rotation")
 tracks/90/interp = 1
 tracks/90/loop_wrap = true
 tracks/90/keys = {
@@ -3216,7 +5324,7 @@ tracks/90/keys = {
 tracks/91/type = "value"
 tracks/91/imported = false
 tracks/91/enabled = true
-tracks/91/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1:scale")
+tracks/91/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1:scale")
 tracks/91/interp = 1
 tracks/91/loop_wrap = true
 tracks/91/keys = {
@@ -3228,7 +5336,7 @@ tracks/91/keys = {
 tracks/92/type = "value"
 tracks/92/imported = false
 tracks/92/enabled = true
-tracks/92/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2:scale")
+tracks/92/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2:scale")
 tracks/92/interp = 1
 tracks/92/loop_wrap = true
 tracks/92/keys = {
@@ -3240,7 +5348,7 @@ tracks/92/keys = {
 tracks/93/type = "value"
 tracks/93/imported = false
 tracks/93/enabled = true
-tracks/93/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3:scale")
+tracks/93/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3:scale")
 tracks/93/interp = 1
 tracks/93/loop_wrap = true
 tracks/93/keys = {
@@ -3252,7 +5360,7 @@ tracks/93/keys = {
 tracks/94/type = "value"
 tracks/94/imported = false
 tracks/94/enabled = true
-tracks/94/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture:scale")
+tracks/94/path = NodePath("../../Hard/OrbSpawn/Design/OrbDelivery/OrbTexture:scale")
 tracks/94/interp = 1
 tracks/94/loop_wrap = true
 tracks/94/keys = {
@@ -3264,7 +5372,7 @@ tracks/94/keys = {
 tracks/95/type = "value"
 tracks/95/imported = false
 tracks/95/enabled = true
-tracks/95/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture:modulate")
+tracks/95/path = NodePath("../../Hard/OrbSpawn/Design/OrbDelivery/OrbTexture:modulate")
 tracks/95/interp = 1
 tracks/95/loop_wrap = true
 tracks/95/keys = {
@@ -3884,6 +5992,42 @@ tracks/146/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/147/type = "value"
+tracks/147/imported = false
+tracks/147/enabled = true
+tracks/147/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText:scale")
+tracks/147/interp = 1
+tracks/147/loop_wrap = true
+tracks/147/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/148/type = "value"
+tracks/148/imported = false
+tracks/148/enabled = true
+tracks/148/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer/Case1NewColor:visible")
+tracks/148/interp = 1
+tracks/148/loop_wrap = true
+tracks/148/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/149/type = "value"
+tracks/149/imported = false
+tracks/149/enabled = true
+tracks/149/path = NodePath("../../../../../../AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer/Case2OldColor:visible")
+tracks/149/interp = 1
+tracks/149/loop_wrap = true
+tracks/149/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_py4g2"]
@@ -5464,7 +7608,7 @@ tracks/31/keys = {
 tracks/32/type = "value"
 tracks/32/imported = false
 tracks/32/enabled = true
-tracks/32/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:modulate")
+tracks/32/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:modulate")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
@@ -5476,7 +7620,7 @@ tracks/32/keys = {
 tracks/33/type = "value"
 tracks/33/imported = false
 tracks/33/enabled = true
-tracks/33/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:scale")
+tracks/33/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:scale")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/keys = {
@@ -5488,7 +7632,7 @@ tracks/33/keys = {
 tracks/34/type = "value"
 tracks/34/imported = false
 tracks/34/enabled = true
-tracks/34/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1:modulate")
+tracks/34/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1:modulate")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/keys = {
@@ -5500,7 +7644,7 @@ tracks/34/keys = {
 tracks/35/type = "value"
 tracks/35/imported = false
 tracks/35/enabled = true
-tracks/35/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2:modulate")
+tracks/35/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2:modulate")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
@@ -5512,7 +7656,7 @@ tracks/35/keys = {
 tracks/36/type = "value"
 tracks/36/imported = false
 tracks/36/enabled = true
-tracks/36/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3:modulate")
+tracks/36/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3:modulate")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/keys = {
@@ -5524,7 +7668,7 @@ tracks/36/keys = {
 tracks/37/type = "value"
 tracks/37/imported = false
 tracks/37/enabled = true
-tracks/37/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/TwirlCenter:modulate")
+tracks/37/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/TwirlCenter:modulate")
 tracks/37/interp = 1
 tracks/37/loop_wrap = true
 tracks/37/keys = {
@@ -5536,7 +7680,7 @@ tracks/37/keys = {
 tracks/38/type = "value"
 tracks/38/imported = false
 tracks/38/enabled = true
-tracks/38/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash:modulate")
+tracks/38/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash:modulate")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
@@ -5548,7 +7692,7 @@ tracks/38/keys = {
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot:rotation")
+tracks/39/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot:rotation")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
@@ -5560,7 +7704,7 @@ tracks/39/keys = {
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash:rotation")
+tracks/40/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash:rotation")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/keys = {
@@ -5572,7 +7716,7 @@ tracks/40/keys = {
 tracks/41/type = "value"
 tracks/41/imported = false
 tracks/41/enabled = true
-tracks/41/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1:scale")
+tracks/41/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1:scale")
 tracks/41/interp = 1
 tracks/41/loop_wrap = true
 tracks/41/keys = {
@@ -5584,7 +7728,7 @@ tracks/41/keys = {
 tracks/42/type = "value"
 tracks/42/imported = false
 tracks/42/enabled = true
-tracks/42/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2:scale")
+tracks/42/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2:scale")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/keys = {
@@ -5596,7 +7740,7 @@ tracks/42/keys = {
 tracks/43/type = "value"
 tracks/43/imported = false
 tracks/43/enabled = true
-tracks/43/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3:scale")
+tracks/43/path = NodePath("../../Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3:scale")
 tracks/43/interp = 1
 tracks/43/loop_wrap = true
 tracks/43/keys = {
@@ -5608,7 +7752,7 @@ tracks/43/keys = {
 tracks/44/type = "value"
 tracks/44/imported = false
 tracks/44/enabled = true
-tracks/44/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture:scale")
+tracks/44/path = NodePath("../../Hard/OrbSpawn/Design/OrbDelivery/OrbTexture:scale")
 tracks/44/interp = 1
 tracks/44/loop_wrap = true
 tracks/44/keys = {
@@ -5620,7 +7764,7 @@ tracks/44/keys = {
 tracks/45/type = "value"
 tracks/45/imported = false
 tracks/45/enabled = true
-tracks/45/path = NodePath("../../Hard/OrbSpawn/MarginContainer/Orbs/OrbTexture:modulate")
+tracks/45/path = NodePath("../../Hard/OrbSpawn/Design/OrbDelivery/OrbTexture:modulate")
 tracks/45/interp = 1
 tracks/45/loop_wrap = true
 tracks/45/keys = {
@@ -5644,10 +7788,13 @@ tracks/46/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1nut0"]
 _data = {
+&"CloseAnnouncePanel": SubResource("Animation_ng4ve"),
 &"EightParts": SubResource("Animation_q1amn"),
 &"FallenStars": SubResource("Animation_kddde"),
 &"FlashStarsLoop": SubResource("Animation_27bwp"),
 &"LosePose": SubResource("Animation_mefj4"),
+&"NewOrbColor": SubResource("Animation_2gs5g"),
+&"OldOrbColor": SubResource("Animation_h46k2"),
 &"OrbTwirling": SubResource("Animation_reelv"),
 &"RESET": SubResource("Animation_frub1"),
 &"SixOrbs": SubResource("Animation_py4g2"),
@@ -5667,28 +7814,6 @@ corner_radius_bottom_left = 15
 corner_detail = 20
 shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
 shadow_size = 20
-
-[sub_resource type="LabelSettings" id="LabelSettings_65hfw"]
-font_size = 60
-font_color = Color(1, 0.84313726, 0, 1)
-outline_size = 10
-outline_color = Color(1, 0, 0, 1)
-stacked_outline_count = 1
-stacked_shadow_count = 4
-stacked_outline_0/size = 4
-stacked_outline_0/color = Color(0, 0, 1, 1)
-stacked_shadow_0/offset = Vector2(0, 6)
-stacked_shadow_0/color = Color(0, 0, 1, 1)
-stacked_shadow_0/outline_size = 10
-stacked_shadow_1/offset = Vector2(0, 10)
-stacked_shadow_1/color = Color(0.2398856, 0.4627601, 1, 1)
-stacked_shadow_1/outline_size = 14
-stacked_shadow_2/offset = Vector2(0, 14)
-stacked_shadow_2/color = Color(0.38623577, 0.5774652, 1, 1)
-stacked_shadow_2/outline_size = 17
-stacked_shadow_3/offset = Vector2(0, 18)
-stacked_shadow_3/color = Color(1, 1, 1, 1)
-stacked_shadow_3/outline_size = 19
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68ajo"]
 bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
@@ -5882,6 +8007,18 @@ _data = {
 &"RESET": SubResource("Animation_b8rtp")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng4ve"]
+content_margin_top = 20.0
+bg_color = Color(0.23753911, 0.23753914, 0.23753902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [node name="Brain" type="CanvasLayer" node_paths=PackedStringArray("HomeScreen", "GameScreen", "EndScreen", "UiManager")]
 script = ExtResource("1_tk2p1")
 HomeScreen = NodePath("UIManager/BorderlineBGPanel/MarginContainer/HomeScreen")
@@ -5928,23 +8065,21 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 texture = SubResource("GradientTexture2D_us6mg")
 
-[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "OptionsOverlay", "ConfirmReset", "Orbs", "Parts", "Poses", "ExpertBtn", "OrbSpawn", "RobotPartSpawn", "DifficultyOverlay", "StatsOverlay", "CollectionsOverlay")]
-visible = false
+[node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "Orbs", "Parts", "Poses", "OrbSpawn", "RobotPartSpawn", "DifficultyOverlay", "StatsOverlay", "ConfirmResetStat", "CollectionsOverlay", "ConfirmResetCollec")]
 layout_mode = 2
 script = ExtResource("4_gvfd6")
 Brain = NodePath("../../../..")
 EndScreen = NodePath("../EndScreen")
-OptionsOverlay = NodePath("StatsOverlay")
-ConfirmReset = NodePath("StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmationDialog")
 Orbs = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs")
 Parts = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts")
 Poses = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses")
-ExpertBtn = NodePath("VBoxGlobal/Mid2Home/MarginContainer/VBoxMid/MarginContainer/Control/DifficultyLevel/ExpertBtn")
 OrbSpawn = NodePath("../EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn")
 RobotPartSpawn = NodePath("../EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn")
 DifficultyOverlay = NodePath("DifficultyOverlay")
 StatsOverlay = NodePath("StatsOverlay")
+ConfirmResetStat = NodePath("StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmResetStat")
 CollectionsOverlay = NodePath("CollectionsOverlay")
+ConfirmResetCollec = NodePath("CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ConfirmResetCollec")
 
 [node name="VBoxGlobal" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen"]
 layout_mode = 1
@@ -7283,7 +9418,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_wuhsp")
 text = "RESET"
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer"]
+[node name="ConfirmResetStat" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer"]
 vrs_mode = 1
 oversampling = false
 oversampling_override = 1.0
@@ -8109,11 +10244,10 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_paw2n")
 
 [node name="CollecInstructLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/DisplayPartCollecInstruct"]
-visible = false
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
-text = "Finissez le niveau DIFFICLE pour vous voir délivrer l'accès à cette section"
+text = "Finissez le niveau DIFFICLE pour vous octroyer l'accès à cette section"
 label_settings = SubResource("LabelSettings_6tb1a")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -8320,7 +10454,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 20
 
-[node name="ResetAllButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
+[node name="ResetCollectionsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.21176471, 0.7411765, 0.96862745, 1)
@@ -8329,7 +10463,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_wuhsp")
 text = "RESET"
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
+[node name="ConfirmResetCollec" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
 vrs_mode = 1
 oversampling = false
 oversampling_override = 1.0
@@ -8341,11 +10475,11 @@ dialog_text = "La suppression des données
 sera permanente. "
 cancel_button_text = "Annuler"
 
-[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter"]
+[node name="Close" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter"]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="CloseCollecButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Control" node_paths=PackedStringArray("CollectionsOverlay")]
+[node name="CloseCollecButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Close" node_paths=PackedStringArray("CollectionsOverlay")]
 layout_mode = 0
 offset_left = 403.0
 offset_top = -16.0
@@ -9731,21 +11865,26 @@ TutorialOverlay = NodePath("../..")
 [node name="HintAudio" type="AudioStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
 stream = ExtResource("52_xf5i4")
 
-[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "ResultSlotContainer", "EndScreenAnim", "TopEndAnim", "ResultLabel", "WinCases", "EasyOrMedium", "Hard", "OrbSpawn", "TreasureSpawn", "Expert", "RobotPartSpawn", "RobotCompleteSpawn", "LoseCases")]
+[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "EndOrbs", "ResultSlotContainer", "OrbSpawnText", "EndScreenAnim", "TopEndAnim", "RayOrbAnim", "ResultLabel", "WinCases", "EasyOrMedium", "Hard", "OrbSpawn", "TreasureSpawn", "OrbSpawnFilter", "Expert", "RobotPartSpawn", "RobotCompleteSpawn", "LoseCases")]
+visible = false
 layout_mode = 2
 script = ExtResource("45_lfh1j")
 Brain = NodePath("../../../..")
 HomeScreen = NodePath("../HomeScreen")
+EndOrbs = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs")
 ResultSlotScene = ExtResource("54_xf5i4")
 ResultSlotContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer")
+OrbSpawnText = NodePath("AnnounceOverlay/OrbSpawnText")
 EndScreenAnim = NodePath("EndScreenAnim")
 TopEndAnim = NodePath("VBoxContainer/TopEnd/TopEndAnim")
+RayOrbAnim = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/RayOrbAnim")
 ResultLabel = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle/ResultLabel")
 WinCases = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases")
 EasyOrMedium = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/EasyOrMedium")
 Hard = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard")
 OrbSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn")
 TreasureSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/TreasureSpawn")
+OrbSpawnFilter = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/OrbsSpawnFilter")
 Expert = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Expert")
 RobotPartSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotPartSpawn")
 RobotCompleteSpawn = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Expert/RobotCompleteSpawn")
@@ -11338,7 +13477,7 @@ anchors_preset = 0
 offset_right = 494.0
 offset_bottom = 358.0
 
-[node name="OrbSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard" node_paths=PackedStringArray("OrbTexture", "HomeScreen")]
+[node name="OrbSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard" node_paths=PackedStringArray("OrbTexture", "HomeScreen", "EndOrbs")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -11346,10 +13485,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("86_4tmx4")
-OrbTexture = NodePath("MarginContainer/Orbs/OrbTexture")
+OrbTexture = NodePath("Design/OrbDelivery/OrbTexture")
 HomeScreen = NodePath("../../../../../../../HomeScreen")
+EndOrbs = NodePath("Design/OrbRacks/MarginContainer/EndOrbs")
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn"]
+[node name="Design" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 0
@@ -11357,10 +13497,10 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
-[node name="Twirls" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer"]
+[node name="Twirls" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design"]
 layout_mode = 2
 
-[node name="TirlResize" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls"]
+[node name="TirlResize" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11371,14 +13511,14 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 
-[node name="TwirlPivot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize"]
+[node name="TwirlPivot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize"]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 scale = Vector2(0.1, 0.1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Twirl1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot"]
+[node name="Twirl1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -11392,12 +13532,12 @@ scale = Vector2(0.1, 0.1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="TwirlExt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1"]
+[node name="TwirlExt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Twirl_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1/TwirlExt"]
+[node name="Twirl_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1/TwirlExt"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11414,7 +13554,7 @@ texture = ExtResource("57_qh70x")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TwirlInt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1"]
+[node name="TwirlInt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11425,7 +13565,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
 
-[node name="Twirl_02" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl1/TwirlInt"]
+[node name="Twirl_02" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl1/TwirlInt"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11442,7 +13582,7 @@ texture = ExtResource("58_j1oki")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Twirl2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot"]
+[node name="Twirl2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -11457,12 +13597,12 @@ scale = Vector2(0.1, 0.1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="TwirlExt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2"]
+[node name="TwirlExt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Twirl_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2/TwirlExt"]
+[node name="Twirl_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2/TwirlExt"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11479,7 +13619,7 @@ texture = ExtResource("57_qh70x")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TwirlInt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2"]
+[node name="TwirlInt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11490,7 +13630,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
 
-[node name="Twirl_02" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl2/TwirlInt"]
+[node name="Twirl_02" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl2/TwirlInt"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11507,7 +13647,7 @@ texture = ExtResource("58_j1oki")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Twirl3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot"]
+[node name="Twirl3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -11522,12 +13662,12 @@ scale = Vector2(0.1, 0.1)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="TwirlExt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3"]
+[node name="TwirlExt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Twirl_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3/TwirlExt"]
+[node name="Twirl_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3/TwirlExt"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11544,7 +13684,7 @@ texture = ExtResource("57_qh70x")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TwirlInt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3"]
+[node name="TwirlInt" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11555,7 +13695,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.75, 0.75)
 
-[node name="Twirl_02" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/Twirl3/TwirlInt"]
+[node name="Twirl_02" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/Twirl3/TwirlInt"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11572,7 +13712,7 @@ texture = ExtResource("58_j1oki")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TwirlCenter" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot"]
+[node name="TwirlCenter" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -11584,7 +13724,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 
-[node name="Twirl_03" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/TwirlCenter"]
+[node name="Twirl_03" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/TwirlCenter"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11601,7 +13741,7 @@ texture = ExtResource("59_s7yga")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MagicFlash" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot"]
+[node name="MagicFlash" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -11613,7 +13753,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = 4.1887903
 
-[node name="Magic_03" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash"]
+[node name="Magic_03" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11629,7 +13769,7 @@ grow_vertical = 2
 texture = ExtResource("60_2lc6o")
 expand_mode = 1
 
-[node name="Pivot1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash"]
+[node name="Pivot1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11641,7 +13781,7 @@ grow_vertical = 2
 rotation = 0.7853982
 scale = Vector2(1.2, 1.2)
 
-[node name="Magic_04" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Twirls/TirlResize/TwirlPivot/MagicFlash/Pivot1"]
+[node name="Magic_04" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Twirls/TirlResize/TwirlPivot/MagicFlash/Pivot1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11657,12 +13797,12 @@ grow_vertical = 2
 texture = ExtResource("61_ard6l")
 expand_mode = 1
 
-[node name="Orbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer"]
+[node name="OrbDelivery" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="OrbTexture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Orbs"]
+[node name="OrbTexture" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbDelivery"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11683,12 +13823,12 @@ stretch_mode = 5
 script = ExtResource("63_j1oki")
 OrbTextures = Array[Texture2D]([ExtResource("56_b6wfu"), ExtResource("64_u4uri"), ExtResource("65_hbkoi"), ExtResource("66_iuc65"), ExtResource("67_reelv"), ExtResource("68_27bwp")])
 
-[node name="Circle" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer"]
+[node name="Circle" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Circle_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/Circle"]
+[node name="Circle_01" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/Circle"]
 modulate = Color(1, 1, 1, 0.627451)
 layout_mode = 1
 anchors_preset = 8
@@ -11705,70 +13845,59 @@ grow_vertical = 2
 texture = ExtResource("63_2qpyn")
 expand_mode = 5
 
-[node name="OrbRacks" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer"]
+[node name="OrbRacks" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="EndOrbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer" node_paths=PackedStringArray("DisplayCollecInstruct", "OrbCollection", "OrbBlack", "OrbBlue", "OrbPurple", "OrbRed", "OrbWhite", "OrbYellow")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("17_ipi4e")
-DisplayCollecInstruct = NodePath("OrbCollection/DisplayCollecInstruct")
-OrbCollection = NodePath("OrbCollection")
-OrbBlack = NodePath("OrbCollection/GridContainer/CollectSlot/OrbBlack")
-OrbBlue = NodePath("OrbCollection/GridContainer/CollectSlot2/OrbBlue")
-OrbPurple = NodePath("OrbCollection/GridContainer/CollectSlot3/OrbPurple")
-OrbRed = NodePath("OrbCollection/GridContainer/CollectSlot4/OrbRed")
-OrbWhite = NodePath("OrbCollection/GridContainer/CollectSlot5/OrbWhite")
-OrbYellow = NodePath("OrbCollection/GridContainer/CollectSlot6/OrbYellow")
-
-[node name="OrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection"]
-layout_mode = 2
-theme_override_constants/h_separation = 231
-theme_override_constants/v_separation = -20
-columns = 2
-
-[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -48.0
-offset_right = 48.0
-offset_bottom = 48.0
+offset_left = -247.0
+offset_top = -175.0
+offset_right = 247.0
+offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="EndOrbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer" node_paths=PackedStringArray("EndOrbCollection", "EndOrbBlack", "EndOrbBlue", "EndOrbPurple", "EndOrbRed", "EndOrbWhite", "EndOrbYellow")]
+layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("16_btl52")
-expand_mode = 2
-stretch_mode = 5
+script = ExtResource("114_gdbje")
+EndOrbCollection = NodePath("EndOrbCollection")
+EndOrbBlack = NodePath("EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack")
+EndOrbBlue = NodePath("EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue")
+EndOrbPurple = NodePath("EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple")
+EndOrbRed = NodePath("EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed")
+EndOrbWhite = NodePath("EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite")
+EndOrbYellow = NodePath("EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow")
 
-[node name="OrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot"]
+[node name="EndOrbCollection" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection"]
+layout_mode = 2
+theme_override_constants/h_separation = 231
+theme_override_constants/v_separation = -136
+columns = 2
+
+[node name="CollectSlot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="EndOrbBlack" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11786,12 +13915,9 @@ texture = ExtResource("17_wuhsp")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot2"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_2gs5g")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11806,11 +13932,92 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("16_btl52")
+texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot2"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_2gs5g")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(48, 48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("115_otlj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Black" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.34906584
+
+[node name="RayOnOrb" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_by6ua")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.10107
+offset_top = 1.399141
+offset_right = 110.89893
+offset_bottom = 231.39914
+grow_horizontal = 2
+rotation = -1.5707964
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+expand_mode = 1
+
+[node name="Lightball" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Black"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_jk0kb")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.000002
+offset_right = 25.0
+offset_bottom = 25.000002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("59_s7yga")
+expand_mode = 1
+
+[node name="CollectSlot2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="EndOrbBlue" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11828,12 +14035,9 @@ texture = ExtResource("18_cal7y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot3"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_k26lw")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11848,11 +14052,90 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("16_btl52")
+texture = SubResource("CompressedTexture2D_iplxh")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot3"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_dioyd")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(48, 48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("CompressedTexture2D_o3uba")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Blue" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 2.7576203
+
+[node name="RayOnOrb" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Blue"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_by6ua")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.10107
+offset_top = 1.399141
+offset_right = 110.89893
+offset_bottom = 231.39914
+grow_horizontal = 2
+rotation = -1.5707964
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+expand_mode = 1
+
+[node name="Lightball" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Blue"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_jk0kb")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.000002
+offset_right = 25.0
+offset_bottom = 25.000002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("59_s7yga")
+expand_mode = 1
+
+[node name="CollectSlot3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="EndOrbPurple" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11870,12 +14153,9 @@ texture = ExtResource("19_8hq12")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot4"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_ng4ve")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11890,11 +14170,89 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("16_btl52")
+texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot4"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_ycc86")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(48, 48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("115_otlj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Purple" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3"]
+material = SubResource("CanvasItemMaterial_ed4qa")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+
+[node name="RayOnOrb" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Purple"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_by6ua")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -312.0
+offset_right = 312.0
+offset_bottom = 624.0
+grow_horizontal = 2
+scale = Vector2(1, 0.58)
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+
+[node name="Lightball" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Purple"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_jk0kb")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.000002
+offset_right = 25.0
+offset_bottom = 25.000002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("59_s7yga")
+expand_mode = 1
+
+[node name="CollectSlot4" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="EndOrbRed" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11912,12 +14270,9 @@ texture = ExtResource("20_2dy84")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot5"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_otlj2")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11932,11 +14287,87 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("16_btl52")
+texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot5"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_h46k2")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(48, 48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("115_otlj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Red" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+rotation = 3.1415927
+
+[node name="RayOnOrb" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Red"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_by6ua")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -109.10107
+offset_top = 1.399141
+offset_right = 110.89893
+offset_bottom = 231.39914
+grow_horizontal = 2
+rotation = -1.5707964
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+expand_mode = 1
+
+[node name="Lightball" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Red"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_jk0kb")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.000002
+offset_right = 25.0
+offset_bottom = 25.000002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("59_s7yga")
+expand_mode = 1
+
+[node name="CollectSlot5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="EndOrbWhite" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11954,12 +14385,9 @@ texture = ExtResource("21_667dm")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 6
-
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot6"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_iplxh")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11974,11 +14402,90 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("16_btl52")
+texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="OrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection/GridContainer/CollectSlot6"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_o3uba")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(48, 48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("115_otlj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="White" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.34906584
+
+[node name="RayOnOrb" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_by6ua")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -111.02606
+offset_top = -2.8190613
+offset_right = 108.97394
+offset_bottom = 227.18094
+grow_horizontal = 2
+rotation = -2.268928
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+expand_mode = 1
+
+[node name="Lightball" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_jk0kb")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.000002
+offset_right = 25.0
+offset_bottom = 25.000002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("59_s7yga")
+expand_mode = 1
+
+[node name="CollectSlot6" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="EndOrbYellow" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -11996,31 +14503,208 @@ texture = ExtResource("22_crcpg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer/OrbRacks/MarginContainer/EndOrbs/OrbCollection"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_ey3pl")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("115_otlj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_613lv")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(48, 48)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("115_otlj2")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Yellow" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.34906584
+
+[node name="RayOnOrb" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_by6ua")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_right = 110.0
+offset_bottom = 230.0
+grow_horizontal = 2
+rotation = 1.5707964
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+expand_mode = 1
+
+[node name="Lightball" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_jk0kb")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.000002
+offset_right = 25.0
+offset_bottom = 25.000002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.25, 1.25)
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("59_s7yga")
+expand_mode = 1
+
+[node name="DisplayCollecInstruct" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_7btnl")
 
-[node name="MarginContainer2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn"]
+[node name="RayEffect" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer2"]
-layout_mode = 2
+[node name="HeliometerBG" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/RayEffect"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -95.0
+offset_right = 95.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(95, 95)
+texture = ExtResource("117_ng4ve")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="CongratsOrbLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer2/VBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-text = "Félicitations : vous avez obtenu une Orbe de puissance."
-label_settings = SubResource("LabelSettings_u4uri")
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="HeliometerFG" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/RayEffect"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -95.0
+offset_right = 95.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(95, 95)
+texture = ExtResource("118_ycc86")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="ChallengeLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/MarginContainer2/VBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
+[node name="Pivot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/RayEffect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/RayEffect/Pivot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RayFromCenter" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/RayEffect/Pivot/Control"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_k1mrf")
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_right = 110.0
+offset_bottom = 230.0
+grow_horizontal = 2
+rotation = -1.5707964
+pivot_offset = Vector2(110, 0)
+texture = ExtResource("116_h46k2")
+expand_mode = 1
+
+[node name="OrbsSpawnFilter" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn"]
+visible = false
 layout_mode = 2
-text = "Obtenez les 6 pour ouvrir le roffre et débloquer le prochain niveau de difficulté !"
-label_settings = SubResource("LabelSettings_hbkoi")
-horizontal_alignment = 1
-autowrap_mode = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/OrbsSpawnFilter"]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = 384.0
+offset_right = 250.0
+offset_bottom = 722.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ycc86")
 
 [node name="TreasureSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard"]
 visible = false
@@ -13652,6 +16336,12 @@ label_settings = SubResource("LabelSettings_hbkoi")
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="RayOrbAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard"]
+root_node = NodePath("../OrbSpawn/Design/RayEffect")
+libraries = {
+&"": SubResource("AnimationLibrary_xvwxe")
+}
+
 [node name="Expert" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
 visible = false
 layout_mode = 1
@@ -13667,7 +16357,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 50.000122
-offset_bottom = 808.0
+offset_bottom = 998.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("104_y6xxu")
@@ -13911,6 +16601,7 @@ libraries = {
 custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd"]
 layout_mode = 1
@@ -13922,6 +16613,7 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="ResultTitle" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -13933,14 +16625,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 99.0
-offset_top = 56.0
-offset_right = -99.0
-offset_bottom = -32.0
+offset_left = 148.0
+offset_top = 54.0
+offset_right = -148.0
+offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-mouse_filter = 1
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6lb63")
 
 [node name="ResultLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle"]
@@ -13952,13 +16644,14 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 6
 text = "BRAVO !"
-label_settings = SubResource("LabelSettings_65hfw")
+label_settings = ExtResource("126_h46k2")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="ResultRow" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
@@ -14024,9 +16717,11 @@ size_flags_vertical = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.078
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -0.0020008087
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 40
@@ -14093,9 +16788,11 @@ text = "Accueil"
 [node name="ButtonBlocker" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd"]
 visible = false
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.156
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -0.0040016174
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -14105,7 +16802,111 @@ libraries = {
 &"": SubResource("AnimationLibrary_612k1")
 }
 
+[node name="AnnounceOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -172.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="OrbSpawnText" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = -43.0
+offset_right = 200.0
+offset_bottom = 393.0
+grow_horizontal = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(200, 200)
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("24_ojt81")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText"]
+layout_mode = 2
+
+[node name="CongratsOrbLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Félicitations !"
+label_settings = ExtResource("1_vqx31")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_right = 2
+
+[node name="Case1NewColor" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "
+Vous avez obtenu une Orbe de puissance.
+
+Collectez les 6 orbes différentes pour débloquer le prochain niveau de difficulté !
+"
+label_settings = SubResource("LabelSettings_hbkoi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Case2OldColor" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "
+Vous avez obtenu une Orbe de puissance... Mais vous l'aviez déjà...
+
+ Les grandes victoires sont faites de petits succès. La prochaine fois sera la bonne !
+"
+label_settings = SubResource("LabelSettings_hbkoi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 122.0
+offset_top = 11.0
+offset_right = -122.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="OrbSpawnButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/Control/MarginContainer"]
+z_index = 100
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("13_a22le")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_ng4ve")
+text = "Valider
+"
+
 [node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("Brain", "HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn")]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -14188,7 +16989,8 @@ text = "Solution"
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close/CloseDiffButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close/CloseDiffButton" method="_on_pressed"]
-[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmationDialog" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ResetStatButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_reset_stat_button_pressed"]
+[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmResetStat" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/Close/CloseStatsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/Close/CloseStatsButton" method="_on_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot/LeftArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_left_arm_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot2/RightArmButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_right_arm_button_pressed"]
@@ -14200,9 +17002,9 @@ text = "Solution"
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot8/ShieldButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_shield_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot1/SuperMindNW" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_nw_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot2/SuperMindSAS" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_sas_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ResetAllButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_reset_all_button_pressed"]
-[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ConfirmationDialog" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirmation_dialog_confirmed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Control/CloseCollecButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Control/CloseCollecButton" method="_on_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ResetCollectionsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_reset_collections_button_pressed"]
+[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ConfirmResetCollec" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" method="_on_confirm_reset_collec_confirmed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Close/CloseCollecButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Close/CloseCollecButton" method="_on_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HomeButton" to="UIManager" method="_on_home_button_pressed"]
@@ -14221,6 +17023,7 @@ text = "Solution"
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer/PlayAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/PlayAgainZone/MarginContainer/PlayAgain" to="UIManager" method="_on_play_again_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/BotEnd/MarginContainer/VBoxContainer/BackHomeZone/MarginContainer/BackHome" to="UIManager" method="_on_back_home_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/Control/MarginContainer/OrbSpawnButton" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_orb_spawn_button_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/GetAllOrbs" to="TESTS_DEBUG" method="_on_get_all_orbs_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/OrbCount" to="TESTS_DEBUG" method="_on_orb_count_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/GetAllParts" to="TESTS_DEBUG" method="_on_get_all_parts_pressed"]

@@ -136,14 +136,14 @@ public partial class GameScreen : Control
 	}
 	
 	//  == MISE EN RELATION COULEUR SELECTIONNEE/APPLIQUEE == //
-	private void _on_head_button_blue_pressed()
-	{
-		_boardButtonFocused?.SetHead((int)BoardButton.HeadColor.Blue);
-		FocusNextButton();
-	}
 	private void _on_head_button_black_pressed()
 	{
 		_boardButtonFocused?.SetHead((int)BoardButton.HeadColor.Black);
+		FocusNextButton();
+	}
+	private void _on_head_button_blue_pressed()
+	{
+		_boardButtonFocused?.SetHead((int)BoardButton.HeadColor.Blue);
 		FocusNextButton();
 	}
 	private void _on_head_button_purple_pressed()

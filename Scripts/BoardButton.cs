@@ -9,8 +9,8 @@ public partial class BoardButton : Button
 	
 	public enum HeadColor
 	{
-		Blue,		// index 0
-		Black,		// index 1
+		Black,		// index 0
+		Blue,		// index 1
 		Purple,		// index 2 etc. 
 		Red,
 		White,

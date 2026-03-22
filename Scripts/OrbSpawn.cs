@@ -4,6 +4,7 @@ public partial class OrbSpawn : VBoxContainer
 {
 	[Export] OrbTexture OrbTexture;
 	[Export] HomeScreen HomeScreen;
+	[Export] EndOrbs EndOrbs;
 
 	ConfigFile config = new ConfigFile();
 

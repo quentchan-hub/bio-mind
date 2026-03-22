@@ -6,59 +6,54 @@ public partial class HomeScreen : Control
 
 	[Export] Brain Brain;
 	[Export] EndScreen EndScreen;
-	[Export] Control OptionsOverlay;
-	[Export] ConfirmationDialog ConfirmReset;
 	[Export] Orbs Orbs;
 	[Export] Parts Parts;
 	[Export] Poses Poses;
-	[Export] Button ExpertBtn;
 	[Export] OrbSpawn OrbSpawn;
 	[Export] RobotPartSpawn RobotPartSpawn;
 	[Export] Control DifficultyOverlay;
+	
 	[Export] Control StatsOverlay;
+	[Export] ConfirmationDialog ConfirmResetStat;
+	
 	[Export] Control CollectionsOverlay;
+	[Export] ConfirmationDialog ConfirmResetCollec;
 	
 	ConfigFile configFile = new ConfigFile();
 
 	public override void _Ready()
 	{
-		OptionsOverlay.Visible = false;
-		ConfirmReset.Visible = false;
-		ExpertBtn.Visible = false;
+		DifficultyOverlay.Visible = false;
+		
+		StatsOverlay.Visible = false;
+		ConfirmResetStat.Visible = false;
+		
+		CollectionsOverlay.Visible = false;
+		ConfirmResetCollec.Visible = false;
+		
 		LoadData();
 	}
 	
-	private void _on_launch_btn_pressed()
-	{
-		DifficultyOverlay.Visible = true;
-	}
+	// DifficultyOverlay = GameLauncher
+	private void _on_launch_btn_pressed() => DifficultyOverlay.Visible = true;
 	
-	private void _on_stat_button_pressed()
-	{
-		StatsOverlay.Visible = true;
-	}
+	// StatsOverlay
+	private void _on_stat_button_pressed() => StatsOverlay.Visible = true;
+	private void _on_reset_stat_button_pressed() => ConfirmResetStat.Visible = true;
 	
-	private void _on_collec_button_pressed()
-	{
-		CollectionsOverlay.Visible = true;
-	}
-	
-	// ===========================
-	//     MENU OPTIONS
-	// ===========================
-	private void _on_options_btn_pressed() => OptionsOverlay.Visible = true;
-	private void _on_close_options_button_pressed() => OptionsOverlay.Visible = false;
-	private void _on_reset_all_button_pressed() => ConfirmReset.Visible = true;
-
-	private void _on_confirmation_dialog_confirmed()
+	// CollectionsOverlay
+	private void _on_collec_button_pressed() => CollectionsOverlay.Visible = true;
+	private void _on_reset_collections_button_pressed() => ConfirmResetCollec.Visible = true;
+	private void _on_confirm_reset_collec_confirmed()
 	{
 		DirAccess dir = DirAccess.Open("user://");
 		dir.Remove("homescreen.cfg");
+		dir.Remove("orbs.cfg"); // dans CollectionsOverlay
+		dir.Remove("parts.cfg"); // dans CollectionsOverlay
+		
 		dir.Remove("endscreen.cfg");
-		dir.Remove("orbs.cfg");
-		dir.Remove("parts.cfg");
-		dir.Remove("orbspawn.cfg");
-		dir.Remove("robotpartspawn.cfg");
+		dir.Remove("orbspawn.cfg"); // dans EndScreen
+		dir.Remove("robotpartspawn.cfg"); // dans EndScreen
 
 		configFile = new ConfigFile();
 		OrbSpawn.ResetData();
@@ -70,13 +65,12 @@ public partial class HomeScreen : Control
 		OrbSpawn.orbCount = 0;
 		RobotPartSpawn.partCount = 0;
 
-		ExpertBtn.Visible = false;
-		OptionsOverlay.Visible = false;
-		ConfirmReset.Visible = false;
+		ConfirmResetCollec.Visible = false;
 		
 		GD.Print(" après reset orbCount = " + OrbSpawn.orbCount);
 		GD.Print(" après reset partCount = " + RobotPartSpawn.partCount);
 	}
+	
 
 	// ============================
 	//      ORB COLLECTION
@@ -92,9 +86,9 @@ public partial class HomeScreen : Control
 	// -- Orb Collection complete --
 	public void OnSixOrbsCompleted()
 	{
-		ExpertBtn.Visible = true;
-		configFile.SetValue("UI", "ExpertButtonVisible", true);
-		configFile.Save("user://homescreen.cfg");
+		//ExpertBtn.Visible = true;
+		//configFile.SetValue("UI", "ExpertButtonVisible", true);
+		//configFile.Save("user://homescreen.cfg");
 	}
 
 	// ============================
@@ -111,8 +105,8 @@ public partial class HomeScreen : Control
 	// -- Part Collection complete --
 	public void OnEightPartsCompleted() 
 	{
-		configFile.SetValue("UI", "SuperMindTabVisible", true);
-		configFile.Save("user://homescreen.cfg");
+		//configFile.SetValue("UI", "SuperMindTabVisible", true);
+		//configFile.Save("user://homescreen.cfg");
 	} 
 
 	// =============================================
@@ -123,8 +117,8 @@ public partial class HomeScreen : Control
 		Error err = configFile.Load("user://homescreen.cfg");
 		if (err != Error.Ok) return;
 
-		bool expertVisible = (bool)configFile.GetValue("UI", "ExpertButtonVisible", false);
-		ExpertBtn.Visible = expertVisible;
+		//bool expertVisible = (bool)configFile.GetValue("UI", "ExpertButtonVisible", false);
+		//ExpertBtn.Visible = expertVisible;
 
 		//bool superMindVisible = (bool)configFile.GetValue("UI", "SuperMindTabVisible", false);
 		//if (superMindVisible) BotTabContainer.ShowSuperMindTab();

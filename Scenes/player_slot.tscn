@@ -25,6 +25,6 @@ theme_override_styles/focus = ExtResource("3_gv6ec")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_00yvh")
-HeadTextures = Array[Texture2D]([ExtResource("5_o32ue"), ExtResource("6_1qh0f"), ExtResource("7_jp02q"), ExtResource("8_1yohw"), ExtResource("9_1wumi"), ExtResource("10_ybyyp")])
+HeadTextures = Array[Texture2D]([ExtResource("6_1qh0f"), ExtResource("5_o32ue"), ExtResource("7_jp02q"), ExtResource("8_1yohw"), ExtResource("9_1wumi"), ExtResource("10_ybyyp")])
 
 [connection signal="pressed" from="BoardButton" to="BoardButton" method="_on_pressed"]

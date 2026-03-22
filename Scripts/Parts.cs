@@ -92,6 +92,7 @@ public partial class Parts : Control
 		OverVeil.Visible = !partUnveiled;
 		PartsTitle.Visible = partUnveiled;
 		PartsTitleCrypt.Visible = !partUnveiled;
+		CollecInstructLabel.Visible = partUnveiled;
 		
 		
 		bool partUnlocked = (bool)config.GetValue("UI", "PartCollectionUnlocked", false);

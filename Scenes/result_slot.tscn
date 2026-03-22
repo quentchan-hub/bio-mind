@@ -25,4 +25,4 @@ theme_override_styles/focus = ExtResource("3_0wp5a")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_s5c8i")
-ResultTextures = Array[Texture2D]([ExtResource("6_jl5wy"), ExtResource("7_q4hyv"), ExtResource("8_ku13e"), ExtResource("9_vorxv"), ExtResource("10_ecuji"), ExtResource("11_im5wa")])
+ResultTextures = Array[Texture2D]([ExtResource("7_q4hyv"), ExtResource("6_jl5wy"), ExtResource("8_ku13e"), ExtResource("9_vorxv"), ExtResource("10_ecuji"), ExtResource("11_im5wa")])

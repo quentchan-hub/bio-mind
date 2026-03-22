@@ -1,0 +1,17 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ci7ymtq1tsl4i"]
+
+[ext_resource type="FontFile" uid="uid://ctel1qbsugfxn" path="res://Fonts/MACHINE REGULAR.TTF" id="1_dd4cr"]
+
+[resource]
+font = ExtResource("1_dd4cr")
+font_size = 50
+font_color = Color(1, 0.09019608, 0.039215688, 1)
+outline_size = 10
+outline_color = Color(0.9999997, 0.99419457, 0.9931635, 1)
+shadow_size = 16
+shadow_color = Color(0, 0, 0.8235294, 1)
+shadow_offset = Vector2(1, 15)
+stacked_shadow_count = 1
+stacked_shadow_0/offset = Vector2(1, 4)
+stacked_shadow_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/outline_size = 10
