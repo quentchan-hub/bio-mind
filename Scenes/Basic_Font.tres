@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dyuuemoe1rg8e"]
+
+[ext_resource type="FontFile" uid="uid://3v7fr417osqt" path="res://Fonts/MERRIWEATHERSANS-VARIABLEFONT_WGHT.TTF" id="1_vlbuh"]
+
+[resource]
+font = ExtResource("1_vlbuh")
+font_size = 17

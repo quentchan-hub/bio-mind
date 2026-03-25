@@ -8,6 +8,8 @@ public partial class TestsDebug : Control
 	[Export] EndScreen EndScreen;
 	[Export] OrbSpawn OrbSpawn;
 	[Export] RobotPartSpawn RobotPartSpawn;
+	[Export] Label SolutionLabel; 
+	[Export] Control TestZone;
 	
 	private ConfigFile config = new ConfigFile();
 
@@ -54,5 +56,28 @@ public partial class TestsDebug : Control
 	{
 		Brain.CheckRow(Brain._solution);
 	}
+
+	private void _on_force_orb_toggle_toggled(bool pressed)
+	{
+		EndScreen.DevForceOrbEnabled = pressed;
+		GD.Print("DevForceOrbEnabled = " + pressed);
+	}
 	
+	private void _on_display_solution_button_pressed()
+	{
+		if (Brain._solution == null) return;
+		SolutionLabel.Text = string.Join(" ", Brain._solution);
+	}
+	
+	private void _on_super_power_pressed()
+	{
+		if (!TestZone.Visible)
+			TestZone.Visible = true;
+		else {TestZone.Visible = false;}
+	}
+	
+	private void _on_item_list_item_selected(int index)
+	{
+		EndScreen.DevForceOrbIndex = index;
+	}
 }

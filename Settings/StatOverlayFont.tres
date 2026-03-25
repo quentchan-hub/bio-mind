@@ -1,10 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://tqjkdptwgur8"]
 
-[sub_resource type="SystemFont" id="SystemFont_426b3"]
-font_names = PackedStringArray("Alexana", "Future Earth", "Perfect Dark (BRK)", "Quantum")
+[ext_resource type="FontFile" uid="uid://dxqy310vqudkn" path="res://Fonts/ALEXANA.TTF" id="1_k2a2e"]
 
 [resource]
-font = SubResource("SystemFont_426b3")
-font_size = 19
+font = ExtResource("1_k2a2e")
+font_size = 24
 outline_size = 1
 outline_color = Color(0.70511293, 0.7051127, 3.85046e-07, 1)

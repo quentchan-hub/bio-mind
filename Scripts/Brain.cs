@@ -10,6 +10,9 @@ public partial class Brain : Node
 	public delegate void OnHintsReadyEventHandler(int rightPosition, int wrongPosition);
 	
 	[Signal]
+	public delegate void OnAccountingGamePlayedEventHandler(int _gameDifficulty, bool _victory);
+	
+	[Signal]
 	public delegate void UpdateCurrentRowEventHandler(int currentRow);
 
 	[Signal]
@@ -50,6 +53,7 @@ public partial class Brain : Node
 		GameScreen.DisplayColors(colors);
 		EndScreen.InstantiateResultSlots(slots);
 		EndScreen.DifficultyMode(_gameDifficulty);
+		GameScreen.SetDifficulty(_gameDifficulty);
 		
 		_rows = rows;
 		_slots = slots;
@@ -181,11 +185,12 @@ public partial class Brain : Node
 				pendingSolution[index] = -1;
 			}
 		}
-		GD.Print("right "+ rightPosition, " wrong "+ wrongPosition);
+		//GD.Print("right "+ rightPosition, " wrong "+ wrongPosition);
 		EmitSignal(SignalName.OnHintsReady, rightPosition, wrongPosition);
 
 		if (rightPosition == _slots)
 		{
+			EmitSignal(SignalName.OnAccountingGamePlayed, _gameDifficulty, true);
 			EmitSignal(SignalName.OnGameOver, true); // partie gagne
 			EmitSignal(SignalName.DisplaySolution, _solution);
 			return;
@@ -193,6 +198,7 @@ public partial class Brain : Node
 
 		if (_currentRow >= _rows - 1)
 		{
+			EmitSignal(SignalName.OnAccountingGamePlayed, _gameDifficulty, false);
 			EmitSignal(SignalName.OnGameOver, false); // partie perdue
 			EmitSignal(SignalName.DisplaySolution, _solution);
 			return;
@@ -202,6 +208,7 @@ public partial class Brain : Node
 		EmitSignal(SignalName.UpdateCurrentRow, _currentRow);
 		GameScreen.NextRow(_currentRow);
 	}
+	
 	
 	
 	//===============================================================================

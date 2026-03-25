@@ -4,14 +4,17 @@ using System;
 
 public partial class GameScreen : Control
 {
-	
-	[Signal] public delegate void OnRowCompleteEventHandler(Godot.Collections.Array<int> playerGuess);
+	[Signal] 
+	public delegate void ChronoTimeEventHandler(int chronoElapsed, int difficulty);
 
+	[Signal] 
+	public delegate void OnRowCompleteEventHandler(Godot.Collections.Array<int> playerGuess);
 	
 	[Export] Brain Brain;
 	[Export] Label LabelLevelValue;
 	[Export] Label LabelTryValue;
 	[Export] Label LabelTryMaxValue;
+	[Export] Label LabelChronoValue; 
 	[Export] VBoxContainer RowContainer;
 	[Export] PackedScene AttemptRowScene;
 	[Export] ScrollContainer scrollContainer;
@@ -32,18 +35,84 @@ public partial class GameScreen : Control
 	
 	public Godot.Collections.Array<int> playerGuess = new();
 	
+	// Chrono
+	private float _chronoElapsed = 0f;
+	private bool  _chronoRunning = false;
+	private bool  _chronoEnabled = false;
+	private int   _currentDifficulty = 1;
 	
-	// Ready
+	// ============================================================
+	// READY / PROCESS
+	// ============================================================
+	
 	public override void _Ready()
 	{
-		//_boardButtonFocused = rowInstance.btnFocused;
+		Brain.OnGameOver += OnGameOver;
 		Brain.UpdateCurrentRow += DisplayCurrentTryValue;
 		Brain.OnHintsReady += ManageHints;
 	}
 	
-	// Process
 	public override void _Process(double delta)
-	{}
+	{
+		if (!_chronoRunning) return;
+
+		_chronoElapsed += (float)delta;
+
+		if (LabelChronoValue != null)
+		{
+			int minutes = (int)(_chronoElapsed / 60);
+			int seconds = (int)(_chronoElapsed % 60);
+			LabelChronoValue.Text = $"{minutes:00}:{seconds:00}";
+		}
+	}
+
+	// ============================================================
+	// CHRONO
+	// ============================================================
+
+	// Connecté via l'inspecteur au signal toggled du CheckButton
+	private void _on_check_button_toggled(bool toggledOn)
+	{
+		_chronoEnabled = toggledOn;
+	}
+
+	public void StartChrono()
+	{
+		if (!_chronoEnabled) return;
+
+		_chronoElapsed = 0f;
+		_chronoRunning = true;
+
+		if (LabelChronoValue != null)
+			LabelChronoValue.Text = "00:00";
+	}
+
+	public void StopChrono()
+	{
+		if (!_chronoEnabled) return;
+
+		_chronoRunning = false;
+
+		int elapsed = (int)_chronoElapsed;
+		EmitSignal(SignalName.ChronoTime, elapsed, _currentDifficulty);
+
+		GD.Print($"Chrono arrêté : {elapsed}s  difficulté : {_currentDifficulty}");
+	}
+
+	private void OnGameOver(bool victory)
+	{
+		if (victory) StopChrono();
+		else {_chronoRunning = false;}
+	}
+
+	// ============================================================
+	// CONFIGURATION
+	// ============================================================
+	
+	public void SetDifficulty(int difficulty)
+	{
+		_currentDifficulty = difficulty;
+	}
 	
 	public void DisplayLevel(string difficulty)
 	{
@@ -66,8 +135,6 @@ public partial class GameScreen : Control
 			child.QueueFree();
 		}
 		
-		GD.Print("test gamescreen -> rows : " + rows);
-		
 		for (int i = 0; i < rows; i++)
 		{
 			var rowInstance = AttemptRowScene.Instantiate() as AttemptRow;
@@ -81,7 +148,6 @@ public partial class GameScreen : Control
 		}
 		
 		_firstRow = RowContainer.GetChild(0) as AttemptRow;
-		
 	}
 	
 	public void DisplayColors(int colors)
@@ -102,7 +168,7 @@ public partial class GameScreen : Control
 				color.Visible = false;
 			}
 		}
-		GD.Print("colors = " + colors);
+		//GD.Print("colors = " + colors);
 		if (colors == 4)
 		{
 			ColorKeyboard.Columns = 4;
@@ -111,31 +177,47 @@ public partial class GameScreen : Control
 		{
 			ColorKeyboard.Columns = colors;
 		}
-		//else { ColorKeyboard.Columns = 3; }
-		GD.Print("nb de colonne = " + ColorKeyboard.Columns);
+		//GD.Print("nb de colonne = " + ColorKeyboard.Columns);
 	}
 
+	// ============================================================
+	// FOCUS / NAVIGATION
+	// ============================================================
 	
 	public void FirstButtonFocus()
 	{
-		// joue une methode de RowAttempt pour Focus premier bouton du board
 		_firstRow.CallDeferred("FocusFirstInRow");
-		// Force le scroll a commencer tout en haut
 		scrollContainer.ScrollVertical = 0;
-		// Recupere en tant que _boardButtonFocused le bouton qui a le focus (FirstButton)
-		//_boardButtonFocused = GetViewport().GuiGetFocusOwner() as BoardButton;
 	}
 	
 	public void OnBoardButtonFocused(BoardButton button)
 	{
 		_boardButtonFocused = button;
 	}
+
 	public void OnFocusedRow(AttemptRow row)
 	{
 		FocusedRow = row;
 	}
 	
-	//  == MISE EN RELATION COULEUR SELECTIONNEE/APPLIQUEE == //
+	private void FocusNextButton()
+	{
+		var playerSlotContainer = _boardButtonFocused.GetParent().GetParent();
+		var currentSlotIndex = _boardButtonFocused.GetParent().GetIndex();
+		if (currentSlotIndex < _slots - 1)
+		{
+			int nextSlotIndex = currentSlotIndex + 1;
+			var nextPlayerSlot = playerSlotContainer.GetChild(nextSlotIndex);
+			var nextBoardButton = nextPlayerSlot.GetChild(0) as BoardButton;
+			nextBoardButton.GrabFocus();
+			_boardButtonFocused = nextBoardButton;
+		}
+	}
+
+	// ============================================================
+	// COULEURS
+	// ============================================================
+	
 	private void _on_head_button_black_pressed()
 	{
 		_boardButtonFocused?.SetHead((int)BoardButton.HeadColor.Black);
@@ -166,34 +248,24 @@ public partial class GameScreen : Control
 		_boardButtonFocused?.SetHead((int)BoardButton.HeadColor.Yellow);
 		FocusNextButton();
 	}
+
+	// ============================================================
+	// AIDE DE JEU
+	// ============================================================
 	
-	private void FocusNextButton()
-	{
-		// On automatise la passation de focus au prochain bouton(1)
-		var playerSlotContainer = _boardButtonFocused.GetParent().GetParent();
-		var currentSlotIndex = _boardButtonFocused.GetParent().GetIndex();
-		if (currentSlotIndex < _slots - 1)
-		{
-			int nextSlotIndex = currentSlotIndex + 1;
-			var nextPlayerSlot = playerSlotContainer.GetChild(nextSlotIndex);
-			var nextBoardButton = nextPlayerSlot.GetChild(0) as BoardButton;
-			nextBoardButton.GrabFocus();
-			_boardButtonFocused = nextBoardButton;
-		}
-	}
-	
-	// AFFICHAGE AIDE DE JEU
 	private void _on_help_button_pressed()
 	{
 		TutorialOverlay.Visible = true;
 	}
+
+	// ============================================================
+	// VALIDER / EFFACER
+	// ============================================================
 	
-	// APPUI SUR VALIDER => Envoi selection a Brain
 	public void _on_validate_button_pressed()
 	{
 		var playerSlotContainer = _boardButtonFocused.GetParent().GetParent();
 		
-		// RAZ playerGuess entre chaque ligne
 		playerGuess.Clear();
 		
 		foreach (Node child in playerSlotContainer.GetChildren())
@@ -202,25 +274,20 @@ public partial class GameScreen : Control
 			{
 				if (button is BoardButton boardButton)
 				{
-					// d'abord on s'assure que toute la ligne est remplie
 					if (boardButton.Icon == null)
 					{
-						// sinon on affiche un warning et return
 						WarningLabels.EmptySlotWarning();
 						return;
 					}
 					else 
 					{
-						// si oui on recupere index des couleurs et on stocke dans playerGuess
 						int index = Array.IndexOf(boardButton.HeadTextures, boardButton.Icon);
 						playerGuess.Add(index);
 					}
-					
 				}
 			}
 		}
 		
-		// Facile : refuse les doublons de couleur
 		if (!AllowDuplicateColors)
 		{
 			var uniq = new System.Collections.Generic.HashSet<int>(playerGuess);
@@ -231,7 +298,6 @@ public partial class GameScreen : Control
 			}
 		}
 		FocusedRow.StopAnim();
-		// Ensuite il y a l'envoi a la logique de jeu GameLogic
 		EmitSignal(SignalName.OnRowComplete, playerGuess);
 	}
 	
@@ -253,6 +319,10 @@ public partial class GameScreen : Control
 		_firstButton.AcceptEvent();
 		OnBoardButtonFocused(_firstButton);
 	}
+
+	// ============================================================
+	// HINTS
+	// ============================================================
 	
 	public async void ManageHints(int rightPosition, int wrongPosition)
 	{
@@ -268,7 +338,6 @@ public partial class GameScreen : Control
 		
 		int hintIndex = 0;
 
-		// Hints rouges (bien places)
 		for (int i = 0; i < rightPosition; i++)
 		{
 			if (hintIndex < hintButtons.Count)
@@ -280,7 +349,6 @@ public partial class GameScreen : Control
 			}
 		}
 		
-		// Hints blancs (mal places)
 		for (int i = 0; i < wrongPosition; i++)
 		{
 			if (hintIndex < hintButtons.Count)
@@ -292,21 +360,21 @@ public partial class GameScreen : Control
 			}
 		}
 	}
+
+	// ============================================================
+	// LABELS
+	// ============================================================
 	
 	public void NextRow(int _currentRow)
 	{
-		// car currentRow  = nextRow index
 		AttemptRow nextRow = RowContainer.GetChild(_currentRow) as AttemptRow; 
 		nextRow.FocusFirstInRow();
 	}
 	
-	// MAJ Compteur "Essai"
 	private void DisplayCurrentTryValue(int row)
 	{
 		int current = row + 1;
 		LabelTryValue.Text = current.ToString();
-		GD.Print($"Essai {current}");
+		//GD.Print($"Essai {current}");
 	}
-	
-
 }

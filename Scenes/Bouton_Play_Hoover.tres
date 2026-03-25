@@ -1,0 +1,14 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ce7jokrdu8xw3"]
+
+[ext_resource type="Texture2D" uid="uid://bvsxacki7aems" path="res://Assets/Frames/LightenFrameRed.webp" id="1_d6sil"]
+
+[resource]
+content_margin_top = 42.0
+content_margin_right = 7.0
+content_margin_bottom = 20.0
+texture = ExtResource("1_d6sil")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+modulate_color = Color(1, 0.8039216, 1, 0.9490196)

@@ -46,8 +46,8 @@ public partial class Poses : Control
 		config.Save("user://robot.cfg");
 	}
 
-	//public void DisplayPose(int poseEarned)
-	//{
+	public void DisplayPose(int poseEarned)
+	{
 		//GD.Print("Pose robot gagnée (0-1) = " + poseEarned);
 		//switch (poseEarned)
 		//{
@@ -55,7 +55,7 @@ public partial class Poses : Control
 			//case 1: SuperMindSAS.Visible = true; config.SetValue("Player", "SuperMindSAS", true); break;
 		//}
 		//config.Save("user://robot.cfg");
-	//}
+	}
 
 	public void ResetData()
 	{

@@ -20,6 +20,7 @@ public partial class UiManager : Control
 	public void OnGameStart()
 	{
 		DisplayGameScreen();
+		GameScreen.StartChrono();
 		GameScreen.FirstButtonFocus();
 	}
 	

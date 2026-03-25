@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://benarpg8sm25r"]
+
+[ext_resource type="Texture2D" uid="uid://dhinlkewk7tji" path="res://Assets/Frames/ClassicBlueFrame.webp" id="1_d4qou"]
+
+[resource]
+content_margin_top = 15.0
+content_margin_right = 5.0
+texture = ExtResource("1_d4qou")
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0

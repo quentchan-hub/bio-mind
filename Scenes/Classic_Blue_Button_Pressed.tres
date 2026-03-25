@@ -1,0 +1,9 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cad6qp52ftloo"]
+
+[ext_resource type="Texture2D" uid="uid://dhinlkewk7tji" path="res://Assets/Frames/ClassicBlueFrame.webp" id="1_5p6xy"]
+
+[resource]
+content_margin_top = 15.0
+content_margin_right = 5.0
+texture = ExtResource("1_5p6xy")
+modulate_color = Color(1, 1, 0.19607843, 1)

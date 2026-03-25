@@ -25,7 +25,7 @@ public partial class OrbSpawn : VBoxContainer
 	public void SelectOrb(int randomOrb)
 	{
 		OrbTexture.Select(randomOrb);
-		GD.Print("test pour voir si ça va jusque là");
+		//GD.Print("test pour voir si ça va jusque là");
 	}
 
 	public bool GetOrbInCollec(int randomOrb)
@@ -46,7 +46,7 @@ public partial class OrbSpawn : VBoxContainer
 			HomeScreen.DisplayOrbCollection();
 			config.Save("user://orbspawn.cfg");
 		}
-		GD.Print("orbCount après GetOrbInCollec = " + orbCount);
+		//GD.Print("orbCount après GetOrbInCollec = " + orbCount);
 		return isNew;
 	}
 

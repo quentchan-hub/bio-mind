@@ -11,6 +11,13 @@ public partial class EndOrbs : Control
 	[Export] TextureRect EndOrbRed;
 	[Export] TextureRect EndOrbWhite;
 	[Export] TextureRect EndOrbYellow;
+	
+	[Export] TextureRect EverSlotBlack;
+	[Export] TextureRect EverSlotBlue;
+	[Export] TextureRect EverSlotPurple;
+	[Export] TextureRect EverSlotRed;
+	[Export] TextureRect EverSlotWhite;
+	[Export] TextureRect EverSlotYellow;
 
 	ConfigFile config = new ConfigFile();
 
@@ -23,15 +30,34 @@ public partial class EndOrbs : Control
 		EndOrbWhite.Visible = false;
 		EndOrbYellow.Visible = false;
 		EndOrbCollection.Visible = false;
-
+		
+		EverSlotBlack.Visible = false;
+		EverSlotBlue.Visible = false;
+		EverSlotPurple.Visible = false;
+		EverSlotRed.Visible = false;
+		EverSlotWhite.Visible = false;
+		EverSlotYellow.Visible = false;
+		
 		LoadData();
+		
+		GD.Print(
+			"Dans Ready de EndOrbs après LoadData() : " +
+			$"Black={EndOrbBlack.Visible}, " +
+			$"Blue={EndOrbBlue.Visible}, " +
+			$"Purple={EndOrbPurple.Visible}, " +
+			$"Red={EndOrbRed.Visible}, " +
+			$"White={EndOrbWhite.Visible}, " +
+			$"Yellow={EndOrbYellow.Visible}, " +
+			$"Collection={EndOrbCollection.Visible}"
+		);
+		
 	}
 
 	public void DisplayEndOrbCollection()
 	{
 		this.Visible = true;
 		EndOrbCollection.Visible = true;
-		config.SetValue("UI", "OrbEndCollectionUnlocked", true);
+		config.SetValue("UI", "EndOrbCollectionUnlocked", true);
 		config.Save("user://endorbs.cfg");
 	}
 
@@ -52,17 +78,20 @@ public partial class EndOrbs : Control
 
 	public void ResetData()
 	{
+		DirAccess dir = DirAccess.Open("user://");
+		dir.Remove("user://endorbs.cfg");
 		config = new ConfigFile();
 		_Ready();
 	}
 
 	private void LoadData()
 	{
-		Error err = config.Load("user://orbs.cfg");
+		Error err = config.Load("user://endorbs.cfg");
 		if (err != Error.Ok) return;
 
 		bool orbUnlocked = (bool)config.GetValue("UI", "EndOrbCollectionUnlocked", false);
 		EndOrbCollection.Visible = orbUnlocked;
+		this.Visible = orbUnlocked;
 
 		EndOrbBlack.Visible =  (bool)config.GetValue("Player", "EndOrbBlackUnlocked", false);
 		EndOrbBlue.Visible =   (bool)config.GetValue("Player", "EndOrbBlueUnlocked", false);
@@ -70,5 +99,23 @@ public partial class EndOrbs : Control
 		EndOrbRed.Visible =    (bool)config.GetValue("Player", "EndOrbRedUnlocked", false);
 		EndOrbWhite.Visible =  (bool)config.GetValue("Player", "EndOrbWhiteUnlocked", false);
 		EndOrbYellow.Visible = (bool)config.GetValue("Player", "EndOrbYellowUnlocked", false);
+		
+		EverSlotBlack.Visible = EndOrbBlack.Visible;
+		EverSlotBlue.Visible = EndOrbBlue.Visible;
+		EverSlotPurple.Visible = EndOrbPurple.Visible;
+		EverSlotRed.Visible = EndOrbRed.Visible;
+		EverSlotWhite.Visible = EndOrbWhite.Visible;
+		EverSlotYellow.Visible = EndOrbYellow.Visible;
+		
+		GD.Print(
+			"Dans LoadData() : " +
+			$"Black={EndOrbBlack.Visible}, " +
+			$"Blue={EndOrbBlue.Visible}, " +
+			$"Purple={EndOrbPurple.Visible}, " +
+			$"Red={EndOrbRed.Visible}, " +
+			$"White={EndOrbWhite.Visible}, " +
+			$"Yellow={EndOrbYellow.Visible}, " +
+			$"Collection={EndOrbCollection.Visible}"
+		);
 	}
 }

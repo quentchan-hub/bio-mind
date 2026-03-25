@@ -39,6 +39,7 @@ folder_colors={
 "res://Assets/Effects/": "teal",
 "res://Assets/Effects/Sparks/": "teal",
 "res://Assets/Effects/Trace/": "teal",
+"res://Assets/Frames/": "teal",
 "res://Assets/Orbs/": "teal",
 "res://Assets/Safe/": "teal",
 "res://Assets/Sounds/": "teal",

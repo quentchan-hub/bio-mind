@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bevcfxbup7s35"]
+
+[ext_resource type="FontFile" uid="uid://bo4egf7tj6hh3" path="res://Fonts/FUTURE-EARTH.TTF" id="1_sgkdh"]
+
+[resource]
+font = ExtResource("1_sgkdh")
+font_size = 20
