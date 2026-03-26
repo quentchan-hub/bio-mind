@@ -9338,7 +9338,6 @@ layout_mode = 2
 texture = SubResource("GradientTexture2D_us6mg")
 
 [node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "DifficultyOverlay", "StatsOverlay", "CollectionsOverlay", "TitleAnim")]
-visible = false
 layout_mode = 2
 script = ExtResource("4_gvfd6")
 Brain = NodePath("../../../..")
@@ -13292,6 +13291,7 @@ TutorialOverlay = NodePath("../..")
 stream = ExtResource("52_xf5i4")
 
 [node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "EndOrbs", "ResultSlotContainer", "OrbSpawnText", "EndScreenAnim", "TopEndAnim", "RayOrbAnim", "AnnounceAnim", "ResultLabel", "WinCases", "EasyOrMedium", "ThumbsUpPose", "Hard", "OrbSpawn", "TreasureSpawn", "Expert", "RobotPartSpawn", "RobotCompleteSpawn", "LoseCases", "ButtonBlocker")]
+visible = false
 layout_mode = 2
 script = ExtResource("45_lfh1j")
 Brain = NodePath("../../../..")
@@ -18664,6 +18664,7 @@ text = "Valider
 "
 
 [node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("Brain", "HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn", "SolutionLabel", "TestZone")]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
