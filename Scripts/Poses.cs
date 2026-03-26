@@ -43,6 +43,13 @@ public partial class Poses : Control
 	{
 		DisplayRobotCollecInstruct.Visible = false;
 		config.SetValue("UI", "RobotCollectionUnveiled", true);
+		
+		SuperMindNW.Visible = true;
+		config.SetValue("Player", "SuperMindNW", true);
+		
+		SuperMindSAS.Visible = true;
+		config.SetValue("Player", "SuperMindSAS", true);
+		
 		config.Save("user://robot.cfg");
 	}
 

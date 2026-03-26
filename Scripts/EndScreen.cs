@@ -14,12 +14,15 @@ public partial class EndScreen : Control
 	[Export] AnimationPlayer EndScreenAnim;
 	[Export] AnimationPlayer TopEndAnim;
 	[Export] AnimationPlayer RayOrbAnim;
+	[Export] AnimationPlayer AnnounceAnim;
 
 	[Export] Label ResultLabel;
 
 	[Export] Control WinCases;
+	
 	[Export] Control EasyOrMedium;
-
+	[Export] ThumbsUpPose ThumbsUpPose;
+	
 	[Export] Control Hard;
 	[Export] OrbSpawn OrbSpawn;
 	[Export] VBoxContainer TreasureSpawn;
@@ -33,14 +36,16 @@ public partial class EndScreen : Control
 
 	private string _difficultyMode;
 	public ConfigFile config = new ConfigFile();
-
+	
 	private int _randomOrb = 0;
-	private int _randomPart = 0;
-
-	public bool _isSixOrbsObtained = false;
-	public bool _isEightPartsObtained = false;
 	private bool _isNewOrbColor = false;
-
+	public bool _isSixOrbsObtained = false;
+	
+	private int _randomPart = 0;
+	private bool _isNewPart = false;
+	public bool _isEightPartsObtained = false;
+	
+	// Variables Test/debug
 	[Export] public bool DevForceOrbEnabled = false;
 	[Export] public int DevForceOrbIndex = 0;
 
@@ -61,7 +66,7 @@ public partial class EndScreen : Control
 	}
 
 	// ================================================================
-	// BOARD SETUP
+	// GAME / HINT SETUP
 	// ================================================================
 
 	public void InstantiateResultSlots(int slots)
@@ -93,7 +98,7 @@ public partial class EndScreen : Control
 	}
 
 	// ================================================================
-	// WIN / LOSE ENTRY POINTS
+	// WIN / LOSE CASES
 	// ================================================================
 
 	public void WinCase()
@@ -137,6 +142,8 @@ public partial class EndScreen : Control
 	private void PlayEasyMedWin()
 	{
 		EasyOrMedium.Visible = true;
+		ThumbsUpPose.ThumbsUpRandomSelector();
+		AnnounceAnim.Play("RESET");
 		TopEndAnim.Play("RESET");
 		TopEndAnim.Play("WinEasyMed");
 	}
@@ -173,30 +180,54 @@ public partial class EndScreen : Control
 
 	private void OnExpertWinCase()
 	{
+		ButtonBlocker.Visible = true;
+		
 		if (_isEightPartsObtained)
 		{
-			PlayEasyMedWin();
+			PlayEasyMedWin(); // à modifier en séquence combat Super Robot contre super mechant
+			ButtonBlocker.Visible = false;
 			return;
 		}
-
+		
 		Expert.Visible = true;
 		RobotPartSpawn.Visible = true;
 		RobotCompleteSpawn.Visible = false;
-		PartRandomSelector();
-		TopEndAnim.Play("RESET");
-		TopEndAnim.Play("WinExpert");
-		RobotPartSpawn.GetPartInCollec(_randomPart);
-		GD.Print("partCount = " + RobotPartSpawn.partCount);
+		
+		if (RobotPartSpawn.partCount < 8)
+		{
+			PartRandomSelector();
+			TopEndAnim.Play("RESET");
+			TopEndAnim.Play("WinExpert");
+			
+			// récupère l'info si nouvelle relique (_isNewPart) ou pas
+			_isNewPart = RobotPartSpawn.GetPartInCollec(_randomPart);
+			GD.Print("_isNewPart = " + _isNewPart);
+			GD.Print("partCount = " + RobotPartSpawn.partCount);
+			
+			// si nouvelle relique -> joue anim NewPart, sinon -> anim OldPart
+			AnnounceAnim.Play(_isNewPart ? "NewPart" : "OldPart");
+		}
 
+		
+		// si les 8 parties on été trouvées 
 		if (RobotPartSpawn.partCount == 8)
 		{
 			_isEightPartsObtained = true;
+			AnnounceAnim.Play("EightParts");
 			config.SetValue("Player", "IsEightPartsObtained", true);
 			config.Save("user://endscreen.cfg");
 			OnEightPartsObtained();
+			return;
 		}
+		
 	}
-
+	
+	private void _on_robot_parts_button_pressed()
+	{
+		AnnounceAnim.Play("CloseAnnouncePanel");
+		ButtonBlocker.Visible = false;
+	}
+		
 	// ================================================================
 	// HARD REWARD SEQUENCE (appelée depuis OnHardWinCase)
 	// ================================================================
@@ -243,13 +274,13 @@ public partial class EndScreen : Control
 				return;
 			}
 		}
-
 		HideButtonBlocker();
 	}
 	
 	private void _on_six_orb_button_pressed()
 	{
 		TopEndAnim.Play("CloseAnnouncePanel");
+		HomeScreen.ExpertModeOpen();
 		HideButtonBlocker();
 	}
 	private void HideButtonBlocker()

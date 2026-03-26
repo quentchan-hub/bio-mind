@@ -3,6 +3,8 @@ using System;
 
 public partial class CollectionsOverlay : Control
 {
+	[Signal] public delegate void OnResetDifficultyProgressEventHandler();
+	
 	[Export] Orbs Orbs;
 	[Export] Parts Parts;
 	[Export] Poses Poses;
@@ -37,7 +39,7 @@ public partial class CollectionsOverlay : Control
 	// -- Orb Collection complete --
 	public void OnSixOrbsCompleted()
 	{
-		// au cas où
+		DisplayPartCollection();
 	}
 
 
@@ -58,7 +60,7 @@ public partial class CollectionsOverlay : Control
 	// -- Part Collection complete --
 	public void OnEightPartsCompleted() 
 	{
-		// au cas où
+		DisplayRobotCollection();
 	} 
 	
 	// ============================
@@ -88,7 +90,9 @@ public partial class CollectionsOverlay : Control
 		Orbs.ResetData();
 		Parts.ResetData();
 		Poses.ResetData();
-
+		
+		EmitSignal(SignalName.OnResetDifficultyProgress); 
+		
 		EndScreen.ResetEndScreenAndRewards();
 
 		ConfirmResetCollec.Visible = false;

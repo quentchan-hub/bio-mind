@@ -10,17 +10,30 @@ public partial class GameScreen : Control
 	[Signal] 
 	public delegate void OnRowCompleteEventHandler(Godot.Collections.Array<int> playerGuess);
 	
+	// Logique de jeu
 	[Export] Brain Brain;
+	
+	// Messages d'erreur
+	[Export] WarningLabels WarningLabels;
+	
+	// Labels affichage HUD
 	[Export] Label LabelLevelValue;
 	[Export] Label LabelTryValue;
 	[Export] Label LabelTryMaxValue;
 	[Export] Label LabelChronoValue; 
+	
+	// Gestion Lignes de réponse joueur
+	[Export] ScrollContainer scrollContainer;
 	[Export] VBoxContainer RowContainer;
 	[Export] PackedScene AttemptRowScene;
-	[Export] ScrollContainer scrollContainer;
+	
+	// Overlay tuto
 	[Export] Control TutorialOverlay;
-	[Export] WarningLabels WarningLabels;
+	
+	// Audio
 	[Export] AudioStreamPlayer HintAudio;
+	
+	// Clavier de sélection de couleur en bas
 	[Export] GridContainer ColorKeyboard;
 	
 	// Facile : interdit les doublons de couleur dans une ligne
@@ -168,16 +181,14 @@ public partial class GameScreen : Control
 				color.Visible = false;
 			}
 		}
-		//GD.Print("colors = " + colors);
 		if (colors == 4)
 		{
-			ColorKeyboard.Columns = 4;
+			ColorKeyboard.Columns = 2;
 		}
 		if (colors <= 3)
 		{
 			ColorKeyboard.Columns = colors;
 		}
-		//GD.Print("nb de colonne = " + ColorKeyboard.Columns);
 	}
 
 	// ============================================================
