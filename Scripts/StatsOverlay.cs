@@ -148,7 +148,7 @@ public partial class StatsOverlay : Control
 		int minutes = totalSeconds / 60;
 		int seconds = totalSeconds % 60;
 		GD.Print($"test formatage temps retenu {minutes:00}:{seconds:00}");
-		return $"{minutes:00}:{seconds:00}";
+		return $"{minutes:00} : {seconds:00}";
 		
 	}
 

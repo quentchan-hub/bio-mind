@@ -17,7 +17,13 @@ public partial class Brain : Node
 
 	[Signal]
 	public delegate void OnGameOverEventHandler(bool victory);
-
+	
+	[Signal]
+	public delegate void OnLevelDescriptionsEventHandler(string difficulty, int rows, int slots, int colors, bool colorRepeat);
+	
+	[Signal]
+	public delegate void DisplayFailAnswerEventHandler(Godot.Collections.Array<int> playerGuess);
+	
 	[Export] HomeScreen HomeScreen;
 	[Export] GameScreen GameScreen;
 	[Export] EndScreen EndScreen;
@@ -45,15 +51,17 @@ public partial class Brain : Node
 
 	// ================= CONFIGURATION =================
 
-	private void GameConfigurator(string difficulty, int rows, int slots, int hints, int colors)
+	private void GameConfigurator(string difficulty, int rows, int slots, int hints, int colors, bool colorRepeat)
 	{
 		GameScreen.DisplayLevel(difficulty);
 		GameScreen.InstantiateBoard(rows, slots, hints);
 		GameScreen.DisplayMaxTry(rows.ToString());
 		GameScreen.DisplayColors(colors);
 		EndScreen.InstantiateResultSlots(slots);
+		EndScreen.InstantiateFailSlots(slots);
 		EndScreen.DifficultyMode(_gameDifficulty);
 		GameScreen.SetDifficulty(_gameDifficulty);
+		EmitSignal(SignalName.OnLevelDescriptions, difficulty, rows, slots, colors, colorRepeat);
 		
 		_rows = rows;
 		_slots = slots;
@@ -70,25 +78,25 @@ public partial class Brain : Node
 	private void _on_easy_btn_pressed()
 	{
 		_gameDifficulty = 1;
-		GameConfigurator(difficulty: "Facile", rows: 12, slots: 3, hints: 4, colors: 4);
+		GameConfigurator(difficulty: "Facile", rows: 12, slots: 3, hints: 3, colors: 4, colorRepeat: false);
 	}
 
 	private void _on_medium_btn_pressed()
 	{
 		_gameDifficulty = 2;
-		GameConfigurator(difficulty: "Moyen", rows: 10, slots: 4, hints: 4, colors: 6);
+		GameConfigurator(difficulty: "Moyen", rows: 9, slots: 4, hints: 4, colors: 6, colorRepeat: false);
 	}
 
 	private void _on_hard_btn_pressed()
 	{
 		_gameDifficulty = 3;
-		GameConfigurator(difficulty: "Difficile", rows: 8, slots: 4, hints: 4, colors: 6);
+		GameConfigurator(difficulty: "Difficile", rows: 8, slots: 4, hints: 4, colors: 6, colorRepeat: true);
 	}
 
 	private void _on_expert_btn_pressed()
 	{
 		_gameDifficulty = 4;
-		GameConfigurator(difficulty: "Expert", rows: 8, slots: 5, hints: 5, colors: 6);
+		GameConfigurator(difficulty: "Expert", rows: 8, slots: 5, hints: 5, colors: 6, colorRepeat: true);
 	}
 	
 	private void _on_play_btn_pressed()
@@ -201,6 +209,8 @@ public partial class Brain : Node
 			EmitSignal(SignalName.OnAccountingGamePlayed, _gameDifficulty, false);
 			EmitSignal(SignalName.OnGameOver, false); // partie perdue
 			EmitSignal(SignalName.DisplaySolution, _solution);
+			EmitSignal(SignalName.DisplayFailAnswer, playerGuess);
+			GD.Print(playerGuess);
 			return;
 		}
 

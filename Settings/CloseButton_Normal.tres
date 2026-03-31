@@ -1,0 +1,6 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://di42um2jyqycu"]
+
+[ext_resource type="Texture2D" uid="uid://cc8xl2fi60f16" path="res://Assets/Buttons/CloseButtonBlueCross6.Webp" id="1_ihl74"]
+
+[resource]
+texture = ExtResource("1_ihl74")

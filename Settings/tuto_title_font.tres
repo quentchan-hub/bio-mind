@@ -1,9 +1,0 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dmkcmvbgj1ted"]
-
-[sub_resource type="SystemFont" id="SystemFont_vctoe"]
-font_names = PackedStringArray("Black Ops One")
-
-[resource]
-font = SubResource("SystemFont_vctoe")
-font_size = 28
-font_color = Color(1, 0.8, 0, 1)

@@ -1,5 +1,0 @@
-[gd_resource type="SystemFont" format=3 uid="uid://bst8woildkesg"]
-
-[resource]
-font_names = PackedStringArray("Future Earth", "Haettenschweiler")
-multichannel_signed_distance_field = true

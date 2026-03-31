@@ -1,10 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c6qp4q7ssauni"]
 
-[sub_resource type="SystemFont" id="SystemFont_7f84e"]
-font_names = PackedStringArray("Alexana")
+[ext_resource type="FontFile" uid="uid://dxqy310vqudkn" path="res://Fonts/ALEXANA.TTF" id="1_anh2y"]
 
 [resource]
-font = SubResource("SystemFont_7f84e")
+font = ExtResource("1_anh2y")
 font_size = 19
 font_color = Color(0.38347387, 0.38461366, 0.5572234, 1)
 outline_size = 4

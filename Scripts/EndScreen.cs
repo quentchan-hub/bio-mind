@@ -6,17 +6,25 @@ public partial class EndScreen : Control
 	[Export] Brain Brain;
 	[Export] HomeScreen HomeScreen;
 	[Export] EndOrbs EndOrbs;
+	[Export] GameScreen GameScreen;
 
 	[Export] PackedScene ResultSlotScene;
 	[Export] HBoxContainer ResultSlotContainer;
+	
+	[Export] VBoxContainer FalseResultContainer;
+	[Export] HBoxContainer FailSlotContainer;
+	
 	[Export] MarginContainer OrbSpawnText;
 
 	[Export] AnimationPlayer EndScreenAnim;
+	[Export] AnimationPlayer EndScreenAnim2;
 	[Export] AnimationPlayer TopEndAnim;
 	[Export] AnimationPlayer RayOrbAnim;
 	[Export] AnimationPlayer AnnounceAnim;
 
 	[Export] Label ResultLabel;
+	[Export] Label ChronoWinLabel;
+	[Export] TextureRect ChronoWinTex;
 
 	[Export] Control WinCases;
 	
@@ -52,6 +60,8 @@ public partial class EndScreen : Control
 	public override void _Ready()
 	{
 		Brain.DisplaySolution += OnDisplaySolution;
+		Brain.DisplayFailAnswer += OnDisplayFailAnswer;
+		GameScreen.ChronoTime += OnChronoTime;
 
 		WinCases.Visible = false;
 		EasyOrMedium.Visible = false;
@@ -61,7 +71,10 @@ public partial class EndScreen : Control
 		TreasureSpawn.Visible = false;
 		LoseCases.Visible = false;
 		ButtonBlocker.Visible = false;
-
+		
+		FalseResultContainer.Visible = false;
+		ChronoWinTex.Visible = false;
+		
 		LoadData();
 	}
 
@@ -82,6 +95,23 @@ public partial class EndScreen : Control
 			slotInstance.Name = $"ResultSlot_{i}";
 			ResultSlotContainer.AddChild(slotInstance);
 		}
+	}
+
+	public void InstantiateFailSlots(int slots)
+	{
+		foreach (Node child in FailSlotContainer.GetChildren())
+		{
+			FailSlotContainer.RemoveChild(child);
+			child.QueueFree();
+		}
+		for (int i = 0; i < slots; i++)
+		{
+			var slotInstance = ResultSlotScene.Instantiate();
+			slotInstance.Name = $"FailSlot_{i}";
+			FailSlotContainer.AddChild(slotInstance);
+			GD.Print("nombre de failslot " + i);
+		}
+		
 	}
 
 	public void DifficultyMode(int gameDifficulty)
@@ -107,6 +137,8 @@ public partial class EndScreen : Control
 		LoseCases.Visible = false;
 		Hard.Visible = false;
 		EasyOrMedium.Visible = false;
+		FalseResultContainer.Visible = false;
+		ChronoWinTex.Visible = true;
 		ResultLabel.Text = "BRAVO !";
 
 		switch (_difficultyMode)
@@ -130,6 +162,8 @@ public partial class EndScreen : Control
 	{
 		WinCases.Visible = false;
 		LoseCases.Visible = true;
+		FalseResultContainer.Visible = true;
+		ChronoWinTex.Visible = false;
 		ResultLabel.Text = "PERDU !";
 		TopEndAnim.Play("RESET");
 		TopEndAnim.Play("LosePose");
@@ -351,6 +385,7 @@ public partial class EndScreen : Control
 
 	private void OnDisplaySolution(Godot.Collections.Array<int> solution)
 	{
+		
 		EndScreenAnim.Play("MidGlowEffect");
 		var slots = ResultSlotContainer.GetChildren();
 		for (int i = 0; i < solution.Count; i++)
@@ -359,6 +394,28 @@ public partial class EndScreen : Control
 			button.SetResult(solution[i]);
 		}
 	}
+	
+	private void OnDisplayFailAnswer(Godot.Collections.Array<int> playerGuess)
+	{
+		EndScreenAnim2.Play("FailAnswerFrame");
+		var slots = FailSlotContainer.GetChildren();	
+		for (int i = 0; i < playerGuess.Count; i++)
+		{
+			ResultButton button = slots[i].GetChild(0) as ResultButton;
+			button.SetResult(playerGuess[i]);
+		}
+	}
+	
+	private void OnChronoTime(int elapsedSeconds, int difficulty)
+	{
+		if (ChronoWinLabel == null) return;
+
+		int minutes = elapsedSeconds / 60;
+		int seconds = elapsedSeconds % 60;
+		ChronoWinLabel.Text = $"{minutes:00}:{seconds:00}";
+		ChronoWinTex.Visible = true;
+	}
+	
 
 	// ================================================================
 	// SAVE / LOAD / RESET

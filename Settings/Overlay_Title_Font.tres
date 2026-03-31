@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cjgysklyfhvyv"]
+
+[ext_resource type="FontFile" uid="uid://bo4egf7tj6hh3" path="res://Fonts/FUTURE-EARTH.TTF" id="1_lmreq"]
+
+[resource]
+font = ExtResource("1_lmreq")
+font_size = 29
+font_color = Color(1, 0.84313726, 0, 1)
+stacked_outline_count = 1
+stacked_outline_0/size = 5

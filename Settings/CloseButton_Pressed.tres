@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://jsf8p50ygbvg"]
+
+[ext_resource type="Texture2D" uid="uid://cc8xl2fi60f16" path="res://Assets/Buttons/CloseButtonBlueCross6.Webp" id="1_lsjuh"]
+
+[resource]
+texture = ExtResource("1_lsjuh")
+modulate_color = Color(1, 1, 0, 1)

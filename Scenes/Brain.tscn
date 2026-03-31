@@ -1,26 +1,26 @@
-[gd_scene load_steps=300 format=3 uid="uid://e01tv4ge5kyh"]
+[gd_scene load_steps=339 format=3 uid="uid://e01tv4ge5kyh"]
 
 [ext_resource type="Script" uid="uid://dw1f07bu3f8rp" path="res://Scripts/UiManager.cs" id="1_8blbl"]
 [ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
 [ext_resource type="Script" uid="uid://bfmph3dhdkkh0" path="res://Scripts/Brain.cs" id="1_tk2p1"]
 [ext_resource type="LabelSettings" uid="uid://jajpelhbk5sf" path="res://Settings/biomind_title_label_settings.tres" id="1_vqx31"]
 [ext_resource type="Script" uid="uid://dh2pyajtay41y" path="res://Scripts/HomeScreen.cs" id="4_gvfd6"]
+[ext_resource type="Texture2D" uid="uid://v2ogviqrobtd" path="res://Settings/Night_Space_Blue_Black_BG.tres" id="4_loq2r"]
 [ext_resource type="LabelSettings" uid="uid://cp5o8ivib11po" path="res://Settings/biomind_subtitle_label_settings.tres" id="4_qoydj"]
 [ext_resource type="Texture2D" uid="uid://e1ug7aqd584j" path="res://Assets/Safe/CoffreFerme5.4.webp" id="4_wi7yl"]
 [ext_resource type="Texture2D" uid="uid://d1h12biknivbt" path="res://Assets/BioMinds/_Six sentai_team4.png" id="7_xvwxe"]
 [ext_resource type="Texture2D" uid="uid://bu7mqwnb3fy2y" path="res://Assets/Buttons/stat_button.webp" id="9_dioyd"]
 [ext_resource type="Texture2D" uid="uid://bf5wdmalw2g4w" path="res://Assets/Buttons/collec_button.webp" id="10_o3uba"]
 [ext_resource type="ButtonGroup" uid="uid://cj28bwx6bssol" path="res://Settings/difficulty_button_group.tres" id="10_q8m6m"]
-[ext_resource type="StyleBox" uid="uid://cpm13llr6iex1" path="res://Scenes/Bouton_Play_Normal.tres" id="11_613lv"]
-[ext_resource type="StyleBox" uid="uid://ddmod7fiteh7e" path="res://Scenes/Bouton_Play_Pressed.tres" id="12_4n7bh"]
+[ext_resource type="StyleBox" uid="uid://cpm13llr6iex1" path="res://Settings/Bouton_Play_Normal.tres" id="11_613lv"]
+[ext_resource type="StyleBox" uid="uid://ddmod7fiteh7e" path="res://Settings/Bouton_Play_Pressed.tres" id="12_4n7bh"]
 [ext_resource type="FontFile" uid="uid://dxw20vr4lvb1" path="res://Fonts/BLACKOPSONE-REGULAR.TTF" id="12_b8rtp"]
 [ext_resource type="StyleBox" uid="uid://2wxum48qd44p" path="res://Settings/play_btn_pressed_flat.tres" id="12_gqamb"]
-[ext_resource type="StyleBox" uid="uid://ce7jokrdu8xw3" path="res://Scenes/Bouton_Play_Hoover.tres" id="13_1b5aq"]
+[ext_resource type="StyleBox" uid="uid://ce7jokrdu8xw3" path="res://Settings/Bouton_Play_Hoover.tres" id="13_1b5aq"]
 [ext_resource type="FontFile" uid="uid://c5pgju5k8hoe1" path="res://Fonts/IMPACT.TTF" id="13_612k1"]
 [ext_resource type="FontFile" uid="uid://b82m2op14wcvj" path="res://Fonts/AVENGEANCE HEROIC AVENGER.TTF" id="13_a22le"]
 [ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="13_d1ul7"]
 [ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="13_pinj1"]
-[ext_resource type="LabelSettings" uid="uid://cbvg855oq8h1i" path="res://Settings/tuto_label_font_dyn.tres" id="14_5gwyn"]
 [ext_resource type="Texture2D" uid="uid://bvsxacki7aems" path="res://Assets/Frames/LightenFrameRed.webp" id="15_o3uba"]
 [ext_resource type="StyleBox" uid="uid://dqwl0qcou80sx" path="res://Settings/bouton_reponse_normal.tres" id="15_yhvps"]
 [ext_resource type="Texture2D" uid="uid://drkvfygb83ppq" path="res://Assets/Effects/Circle/circle_02.png" id="16_btl52"]
@@ -30,21 +30,22 @@
 [ext_resource type="Texture2D" uid="uid://cuw66t5cfbdd5" path="res://Assets/Orbs/Black_Orb2.webp" id="17_wuhsp"]
 [ext_resource type="LabelSettings" uid="uid://cpgglm6jxn5ie" path="res://Settings/font_midgamezone_label.tres" id="18_1lsdj"]
 [ext_resource type="Texture2D" uid="uid://co6woue5a3b5c" path="res://Assets/Orbs/Blue_Orb2.webp" id="18_cal7y"]
+[ext_resource type="Texture2D" uid="uid://dyov42g686jhu" path="res://Assets/Frames/BluePrintUnderline3.png" id="18_k1mrf"]
 [ext_resource type="Texture2D" uid="uid://iyqu1pmlc3ij" path="res://Assets/Orbs/Purple_Orb2.webp" id="19_8hq12"]
 [ext_resource type="Texture2D" uid="uid://e11crsyo61je" path="res://Assets/Frames/PeanutFrame3.webp" id="19_ed4qa"]
+[ext_resource type="LabelSettings" uid="uid://cjgysklyfhvyv" path="res://Settings/Overlay_Title_Font.tres" id="19_xvwxe"]
+[ext_resource type="Script" uid="uid://bhpo3ad6m4xec" path="res://Scripts/EasyMode.cs" id="20_0fmss"]
 [ext_resource type="Texture2D" uid="uid://cqwmbqh4da4bc" path="res://Assets/Orbs/Red_Orb2.webp" id="20_2dy84"]
-[ext_resource type="LabelSettings" uid="uid://dyuuemoe1rg8e" path="res://Scenes/Basic_Font.tres" id="20_613lv"]
+[ext_resource type="LabelSettings" uid="uid://dyuuemoe1rg8e" path="res://Settings/Basic_Font.tres" id="20_613lv"]
 [ext_resource type="Texture2D" uid="uid://chu2bgu80ehdt" path="res://Assets/Orbs/White_Orb2.webp" id="21_667dm"]
-[ext_resource type="SystemFont" uid="uid://bst8woildkesg" path="res://Settings/button.tres" id="21_djl8r"]
 [ext_resource type="Texture2D" uid="uid://d2s3cj7hfka56" path="res://Assets/Frames/ClassicBlueFrameNOBG3.webp" id="21_ey3pl"]
 [ext_resource type="LabelSettings" uid="uid://tqjkdptwgur8" path="res://Settings/StatOverlayFont.tres" id="22_7wntc"]
 [ext_resource type="Texture2D" uid="uid://couvnwfwx57o6" path="res://Assets/Frames/PeanutFrame4.webp" id="22_613lv"]
 [ext_resource type="Texture2D" uid="uid://dqgmlgy6cyl7h" path="res://Assets/Orbs/Yellow_Orb2.webp" id="22_crcpg"]
-[ext_resource type="Texture2D" uid="uid://b11m5qn20fqx4" path="res://Settings/bloc_background_dark_blue.tres" id="22_gvfd6"]
 [ext_resource type="Script" uid="uid://dw5hoes1hnks6" path="res://Scripts/CloseDiffButton.cs" id="22_yser8"]
 [ext_resource type="Texture2D" uid="uid://dkduod14h3hee" path="res://Assets/SuperMind/Icons/SuperMind - Icon - LeftArm.webp" id="23_gh155"]
 [ext_resource type="LabelSettings" uid="uid://ctoiminu6mc0o" path="res://Settings/StatTitle.tres" id="23_j17p2"]
-[ext_resource type="StyleBox" uid="uid://nilybnjr4ekv" path="res://Scenes/Chrono_Button.tres" id="23_jk0kb"]
+[ext_resource type="StyleBox" uid="uid://nilybnjr4ekv" path="res://Settings/Chrono_Button.tres" id="23_jk0kb"]
 [ext_resource type="FontFile" uid="uid://d3122c71gffso" path="res://Fonts/GEARSOFPEACE.TTF" id="24_4n7bh"]
 [ext_resource type="Texture2D" uid="uid://cup0vv354wwqc" path="res://Assets/Buttons/ToggleOn.webp" id="24_dioyd"]
 [ext_resource type="PackedScene" uid="uid://tto86px2ryko" path="res://Scenes/attempt_row.tscn" id="24_ep8v8"]
@@ -52,22 +53,25 @@
 [ext_resource type="Texture2D" uid="uid://ctfkr18rgom6v" path="res://Assets/SuperMind/Icons/SuperMind - Icon - EmptyGrey.webp" id="24_wrswc"]
 [ext_resource type="Script" uid="uid://dl7pbbqgl5hxv" path="res://Scripts/CloseStatsButton.cs" id="25_2foha"]
 [ext_resource type="Script" uid="uid://1nhux0iv1w7e" path="res://Scripts/Parts.cs" id="25_4tmx4"]
-[ext_resource type="StyleBox" uid="uid://7fohs5ds4skj" path="res://Scenes/Chrono_Button_Hover.tres" id="25_ey3pl"]
+[ext_resource type="StyleBox" uid="uid://7fohs5ds4skj" path="res://Settings/Chrono_Button_Hover.tres" id="25_ey3pl"]
 [ext_resource type="Texture2D" uid="uid://cmtod2fvrg15b" path="res://Assets/SuperMind/Icons/SuperMind - Icon - RightArm.webp" id="25_j34bq"]
+[ext_resource type="Script" uid="uid://c2is2ah0q1aps" path="res://Scripts/HardMode.cs" id="25_loq2r"]
 [ext_resource type="Texture2D" uid="uid://cequjspu64se3" path="res://Assets/Buttons/ToggleOff.webp" id="25_o3uba"]
 [ext_resource type="Texture2D" uid="uid://bmnsrmw3uu3r8" path="res://Assets/SuperMind/Icons/SuperMind - Icon - LeftLeg.webp" id="26_8s0d3"]
+[ext_resource type="Script" uid="uid://b8xfqssn6pnwk" path="res://Scripts/ExpertMode.cs" id="26_xvwxe"]
 [ext_resource type="Texture2D" uid="uid://bl8cuag48cjr" path="res://Assets/SuperMind/Icons/SuperMind - Icon - RightLeg.webp" id="27_swgr2"]
 [ext_resource type="Texture2D" uid="uid://daqq4l3i1c5bv" path="res://Assets/Buttons/CloseButtonBlueCross.Webp" id="28_613lv"]
 [ext_resource type="Texture2D" uid="uid://dyolxhjcyrve6" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Head.webp" id="28_ax470"]
 [ext_resource type="Script" uid="uid://dgsm52lf26m7d" path="res://Scripts/RobotPartsOverlay.cs" id="28_wrswc"]
 [ext_resource type="Texture2D" uid="uid://btx38j0ewqq2w" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Chest.webp" id="29_ipi4e"]
-[ext_resource type="LabelSettings" uid="uid://bevcfxbup7s35" path="res://Scenes/Instruct_Font_Label.tres" id="29_k26lw"]
+[ext_resource type="LabelSettings" uid="uid://bevcfxbup7s35" path="res://Settings/Instruct_Font_Label.tres" id="29_k26lw"]
 [ext_resource type="Texture2D" uid="uid://un4gfxfx5k7e" path="res://Assets/SuperMind/Pictures/SuperMind - LeftArm.webp" id="29_tjbi0"]
 [ext_resource type="Texture2D" uid="uid://dmbvhlp0tsw5q" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Sword.png" id="30_4tmx4"]
-[ext_resource type="StyleBox" uid="uid://di42um2jyqycu" path="res://Scenes/CloseButton_Normal.tres" id="30_itsob"]
-[ext_resource type="StyleBox" uid="uid://btjeor4yw8q8u" path="res://Scenes/CloseButton_Hover.tres" id="31_0fmss"]
+[ext_resource type="StyleBox" uid="uid://di42um2jyqycu" path="res://Settings/CloseButton_Normal.tres" id="30_itsob"]
+[ext_resource type="Texture2D" uid="uid://d0ea62b1scsn0" path="res://Assets/Frames/LightenFrameRed2.webp" id="30_loq2r"]
+[ext_resource type="StyleBox" uid="uid://btjeor4yw8q8u" path="res://Settings/CloseButton_Hover.tres" id="31_0fmss"]
 [ext_resource type="Texture2D" uid="uid://bohhwiewd7a3y" path="res://Assets/SuperMind/Icons/SuperMind - Icon - Shield.png" id="31_e2xik"]
-[ext_resource type="StyleBox" uid="uid://jsf8p50ygbvg" path="res://Scenes/CloseButton_Pressed.tres" id="31_loq2r"]
+[ext_resource type="StyleBox" uid="uid://jsf8p50ygbvg" path="res://Settings/CloseButton_Pressed.tres" id="31_loq2r"]
 [ext_resource type="Texture2D" uid="uid://khq10oy6eb5l" path="res://Assets/SuperMind/Pictures/SuperMind - RightArm.webp" id="31_oyo4v"]
 [ext_resource type="Texture2D" uid="uid://cpqmrg17ofy66" path="res://Assets/SuperMind/Pictures/SuperMind - RightLeg.webp" id="32_e03w5"]
 [ext_resource type="FontFile" uid="uid://ctel1qbsugfxn" path="res://Fonts/MACHINE REGULAR.TTF" id="32_yser8"]
@@ -80,25 +84,19 @@
 [ext_resource type="Texture2D" uid="uid://cvbywoqhqj4ra" path="res://Assets/SuperMind/Pictures/SuperMind - Shield.webp" id="37_swgr2"]
 [ext_resource type="FontFile" uid="uid://bo4egf7tj6hh3" path="res://Fonts/FUTURE-EARTH.TTF" id="37_y6xxu"]
 [ext_resource type="Script" uid="uid://brstn6ayrq1a3" path="res://Scripts/WarningLabels.cs" id="42_mtrk6"]
-[ext_resource type="StyleBox" uid="uid://b0qrib23c5tse" path="res://Settings/tuto_label_box_flat.tres" id="43_semxg"]
-[ext_resource type="StyleBox" uid="uid://d3jycox53b4x0" path="res://Settings/tuto_title_box_flat.tres" id="44_ep8v8"]
+[ext_resource type="StyleBox" uid="uid://b1wrhxx7mdrk2" path="res://Settings/Bouton_Reset_Normal.tres" id="44_nfrgo"]
+[ext_resource type="Theme" uid="uid://b67shovnqe5yh" path="res://Settings/Confirmation_Dialog_Theme.tres" id="44_nyotn"]
 [ext_resource type="Script" uid="uid://mxnwuwa06csn" path="res://Scripts/Poses.cs" id="45_2foha"]
-[ext_resource type="StyleBox" uid="uid://d4fkvl1jwyqjj" path="res://Settings/tuto_point.tres" id="45_65hfw"]
-[ext_resource type="LabelSettings" uid="uid://dmkcmvbgj1ted" path="res://Settings/tuto_title_font.tres" id="45_3133c"]
 [ext_resource type="Script" uid="uid://cwebiyg6uvi3d" path="res://Scripts/EndScreen.cs" id="45_lfh1j"]
-[ext_resource type="LabelSettings" uid="uid://derm3dpdmwcgm" path="res://Settings/tuto_text_yellow.tres" id="46_xf5i4"]
-[ext_resource type="Texture2D" uid="uid://d1m5aq71c28nt" path="res://Assets/Arrows/arrow_decorative_n.png" id="47_3133c"]
+[ext_resource type="StyleBox" uid="uid://ck3g78d1q6mt2" path="res://Settings/Bouton_Reset_Pressed.tres" id="45_xybag"]
 [ext_resource type="Script" uid="uid://dfwoowwkmbuav" path="res://Scripts/CloseCollecButton.cs" id="48_7btnl"]
-[ext_resource type="LabelSettings" uid="uid://c8w4ut0w0dkwg" path="res://Settings/tuto2_1.tres" id="49_js5gh"]
 [ext_resource type="Texture2D" uid="uid://3g4u181ctrc3" path="res://Assets/Buttons/icon_cross_yellow.png" id="49_pfa0l"]
 [ext_resource type="Script" uid="uid://di1bei64o8767" path="res://Scripts/RobotCompleteOverlay.cs" id="51_3cxp2"]
-[ext_resource type="Texture2D" uid="uid://cx2cb5xpcc2ij" path="res://Assets/Arrows/arrow_decorative_n_small.png" id="51_5gwyn"]
 [ext_resource type="Script" uid="uid://dfx43uldpfgke" path="res://Scripts/TutoExitLayer.cs" id="51_65hfw"]
 [ext_resource type="Texture2D" uid="uid://ceqkjq613bwmq" path="res://Assets/Effects/Stars/etoile.png" id="52_afx26"]
 [ext_resource type="AudioStream" uid="uid://ck4wniq5p3rma" path="res://Assets/Sounds/universfield-bright-notification-352449.mp3" id="52_xf5i4"]
 [ext_resource type="PackedScene" uid="uid://b57pd5ra7nt37" path="res://Scenes/result_slot.tscn" id="54_xf5i4"]
 [ext_resource type="Texture2D" uid="uid://bwgkymqibtfnl" path="res://Assets/Effects/Stars/star_02.png" id="55_pfa0l"]
-[ext_resource type="Texture2D" uid="uid://dr8iukm866i4r" path="res://Assets/Orbs/Black_Orb.webp" id="56_b6wfu"]
 [ext_resource type="Script" uid="uid://cgl2hity0htx5" path="res://Scripts/TutoCloseButton.cs" id="57_1bbis"]
 [ext_resource type="Texture2D" uid="uid://bc71aa8e2y2xi" path="res://Assets/Effects/Twirls/twirl_01.png" id="57_qh70x"]
 [ext_resource type="Texture2D" uid="uid://dgxquxb86pw1k" path="res://Assets/Effects/Twirls/twirl_02.png" id="58_j1oki"]
@@ -107,14 +105,8 @@
 [ext_resource type="Texture2D" uid="uid://bpcyrktbakkql" path="res://Assets/Effects/Magic/magic_04.png" id="61_ard6l"]
 [ext_resource type="Texture2D" uid="uid://d1kmj1cur21tf" path="res://Assets/Effects/Circle/circle_01.png" id="63_2qpyn"]
 [ext_resource type="Script" uid="uid://dspb0uj3alrch" path="res://Scripts/OrbTexture.cs" id="63_j1oki"]
-[ext_resource type="Texture2D" uid="uid://cogd0qyr4dl7i" path="res://Assets/Orbs/Blue_Orb.webp" id="64_u4uri"]
-[ext_resource type="Texture2D" uid="uid://clxbbj5tylr8l" path="res://Assets/Orbs/Purple_Orb.webp" id="65_hbkoi"]
-[ext_resource type="Texture2D" uid="uid://bkmi0quxmt68k" path="res://Assets/Orbs/Red_Orb.webp" id="66_iuc65"]
-[ext_resource type="Texture2D" uid="uid://cp641v0tps52s" path="res://Assets/Orbs/White_Orb.webp" id="67_reelv"]
-[ext_resource type="Texture2D" uid="uid://bag4pmdycflif" path="res://Assets/Orbs/Yellow_Orb.webp" id="68_27bwp"]
-[ext_resource type="Texture2D" uid="uid://bwgvtu2fel07k" path="res://Assets/BioMinds/LosePose.1.png" id="70_hbkoi"]
+[ext_resource type="StyleBox" uid="uid://bdic21smuufv3" path="res://Settings/Bouton_Reset_Hoover.tres" id="71_y56ge"]
 [ext_resource type="Texture2D" uid="uid://b7yhlvwscwh71" path="res://Assets/Safe/TreasureOpen.webp" id="77_cal7y"]
-[ext_resource type="Texture2D" uid="uid://qggi6b51vyco" path="res://Assets/Frames/LightenFrame.webp" id="77_ey3pl"]
 [ext_resource type="Texture2D" uid="uid://b1f3opckea0eu" path="res://Assets/Effects/Sparks/spark_05.png" id="78_8hq12"]
 [ext_resource type="Texture2D" uid="uid://c0ley5vmm21r5" path="res://Assets/Effects/Sparks/spark_06.png" id="79_8hq12"]
 [ext_resource type="Texture2D" uid="uid://blrnjt6tnddp1" path="res://Assets/Buttons/HomeButton4.Webp" id="79_ey3pl"]
@@ -122,34 +114,53 @@
 [ext_resource type="Texture2D" uid="uid://vt0nvp8s2bbl" path="res://Assets/Buttons/HelpButtonRound.webp" id="80_613lv"]
 [ext_resource type="Texture2D" uid="uid://cmllhjpmdyryo" path="res://Assets/BioMindhead/BioMind_Black_Head2.webp" id="84_613lv"]
 [ext_resource type="Texture2D" uid="uid://b8lkffl3genpp" path="res://Assets/BioMindhead/BioMind_Blue_Head2.webp" id="85_4n7bh"]
+[ext_resource type="Texture2D" uid="uid://cr65nqgggtlji" path="res://Assets/Frames/LightenFrame2.webp" id="85_xvwxe"]
 [ext_resource type="Texture2D" uid="uid://bgfsbhoruvvb1" path="res://Assets/BioMindhead/BioMind_Purple_Head2.webp" id="86_1b5aq"]
 [ext_resource type="Script" uid="uid://c5io1tlpegagj" path="res://Scripts/OrbSpawn.cs" id="86_4tmx4"]
 [ext_resource type="Texture2D" uid="uid://0xcm2amv22va" path="res://Assets/BioMindhead/BioMind_Red_Head2.webp" id="87_itsob"]
 [ext_resource type="Texture2D" uid="uid://xtyegtdsgua" path="res://Assets/BioMindhead/BioMind_White_Head2.webp" id="88_0fmss"]
 [ext_resource type="Texture2D" uid="uid://cqp7pe8rsjg0r" path="res://Assets/BioMindhead/BioMind_Yellow_Head2.webp" id="89_loq2r"]
 [ext_resource type="Texture2D" uid="uid://dpg37cb3p1r55" path="res://Assets/Frames/ClassicBlueFrameSquareGreen.webp" id="90_xvwxe"]
+[ext_resource type="Script" uid="uid://wclt05g5wj0d" path="res://Scripts/TutorialOverlay.cs" id="97_0f8fj"]
+[ext_resource type="FontFile" uid="uid://bhsbhsf1jnq7p" path="res://Fonts/MERRIWEATHERSANS-ITALIC-VARIABLEFONT_WGHT.TTF" id="98_nyotn"]
+[ext_resource type="StyleBox" uid="uid://cl7spbhg72juh" path="res://Settings/panelboutonsreponses.tres" id="99_k1mrf"]
 [ext_resource type="Script" uid="uid://bn8fh0ghmqjg8" path="res://Scripts/PartTexture.cs" id="100_8s0d3"]
+[ext_resource type="Texture2D" uid="uid://cpwemt8m85vn5" path="res://Assets/Buttons/redHint.webp" id="100_ubiiw"]
+[ext_resource type="Texture2D" uid="uid://xhuogxgh41cn" path="res://Assets/Buttons/whiteHint.webp" id="101_nfrgo"]
 [ext_resource type="Script" uid="uid://dgij0uqsvx6t7" path="res://Scripts/RobotPartSpawn.cs" id="104_y6xxu"]
 [ext_resource type="Texture2D" uid="uid://dbhldu7o0k8ml" path="res://Assets/SuperMind/Pictures/SuperMind Shield and Sword.webp" id="106_a22le"]
 [ext_resource type="Script" uid="uid://b4bsqngcxkksy" path="res://Scripts/TestsDebug.cs" id="108_a22le"]
-[ext_resource type="Script" uid="uid://byyxd35w1b1fn" path="res://Scenes/ThumbsUpPose.cs" id="112_0f8fj"]
-[ext_resource type="Texture2D" uid="uid://dnw8j4jvp1dot" path="res://Assets/BioMinds/ThumbsUpPoseYellow1.webp" id="112_xvwxe"]
-[ext_resource type="Texture2D" uid="uid://cfwp3vditvm2n" path="res://Assets/BioMinds/ThumbsUpPoseBlue1.webp" id="113_24erj"]
+[ext_resource type="Script" uid="uid://byyxd35w1b1fn" path="res://Scripts/ThumbsUpPose.cs" id="112_0f8fj"]
+[ext_resource type="Texture2D" uid="uid://cswbggd47ylbo" path="res://Assets/BioMinds/VictoryPose.webp" id="114_0f8fj"]
 [ext_resource type="Script" uid="uid://fq23facb1baq" path="res://Scripts/EndOrbs.cs" id="114_gdbje"]
-[ext_resource type="Script" uid="uid://cchxhdyxllghs" path="res://Scenes/ThumbsUpTex.cs" id="114_nyotn"]
+[ext_resource type="Texture2D" uid="uid://cuv23n5ifbfot" path="res://Assets/BioMinds/ThumbsUpPoseBlue3.webp" id="114_k1mrf"]
+[ext_resource type="Script" uid="uid://cchxhdyxllghs" path="res://Scripts/ThumbsUpTex.cs" id="114_nyotn"]
 [ext_resource type="Texture2D" uid="uid://cumkeitocln2i" path="res://Assets/Effects/Circle/circle_gold4.webp" id="115_otlj2"]
+[ext_resource type="Texture2D" uid="uid://dvob13a8pgrl3" path="res://Assets/BioMinds/ThumbsUpPoseYellow4.webp" id="116_0f8fj"]
 [ext_resource type="Texture2D" uid="uid://jbdu57lt0gv4" path="res://Assets/Effects/Ray/RayEffect5.webp" id="116_h46k2"]
-[ext_resource type="Texture2D" uid="uid://dwru1g2ydepi4" path="res://Assets/BioMinds/ThumbsUpPoseBlack1.webp" id="116_ubiiw"]
 [ext_resource type="Texture2D" uid="uid://dybojrw6n88ch" path="res://Assets/Effects/Ray/RayEffect4.webp" id="117_ng4ve"]
+[ext_resource type="Texture2D" uid="uid://dbfnfken3v5g" path="res://Assets/BioMinds/ThumbsUpPoseBlack7.webp" id="117_nyotn"]
 [ext_resource type="Texture2D" uid="uid://ef1iqdwascgf" path="res://Assets/Effects/Ray/RayEffect3.webp" id="118_ycc86"]
 [ext_resource type="Script" uid="uid://cu3dvb7let2bi" path="res://Scripts/DifficultyOverlay.cs" id="120_o9k3g"]
 [ext_resource type="Script" uid="uid://bxv6trlnb7cg5" path="res://Scripts/StatsOverlay.cs" id="121_o9k3g"]
 [ext_resource type="Script" uid="uid://1yp2gh4ewovr" path="res://Scripts/CollectionsOverlay.cs" id="122_o9k3g"]
 [ext_resource type="Texture2D" uid="uid://dhinlkewk7tji" path="res://Assets/Frames/ClassicBlueFrame.webp" id="138_613lv"]
-[ext_resource type="StyleBox" uid="uid://cad6qp52ftloo" path="res://Scenes/Classic_Blue_Button_Pressed.tres" id="143_xvwxe"]
-[ext_resource type="StyleBox" uid="uid://benarpg8sm25r" path="res://Scenes/Classic_Blue_Button_Hover.tres" id="144_k1mrf"]
-[ext_resource type="StyleBox" uid="uid://c31hhnn8ov8ao" path="res://Scenes/Classic_Blue_Button_Normal.tres" id="145_0f8fj"]
+[ext_resource type="Texture2D" uid="uid://28qj40osmwq0" path="res://Assets/BioMinds/LosePose2.webp" id="139_k1mrf"]
+[ext_resource type="StyleBox" uid="uid://cad6qp52ftloo" path="res://Settings/Classic_Blue_Button_Pressed.tres" id="143_xvwxe"]
+[ext_resource type="Script" uid="uid://byd3k8h0pmtxe" path="res://Scripts/QuitDialog.cs" id="144_0f8fj"]
+[ext_resource type="StyleBox" uid="uid://benarpg8sm25r" path="res://Settings/Classic_Blue_Button_Hover.tres" id="144_k1mrf"]
+[ext_resource type="Texture2D" uid="uid://vfoyaaw5rqhc" path="res://Assets/Frames/Chrono.webp" id="144_xybag"]
+[ext_resource type="StyleBox" uid="uid://c31hhnn8ov8ao" path="res://Settings/Classic_Blue_Button_Normal.tres" id="145_0f8fj"]
+[ext_resource type="FontFile" uid="uid://rd3hfrpsu6w8" path="res://Fonts/ASIMOVIAN-REGULAR.TTF" id="145_nyotn"]
 [ext_resource type="Texture2D" uid="uid://csa3f3t5vd830" path="res://Assets/Effects/Circle/lightning_circle3.png" id="147_k1mrf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ffxgq"]
+
+[sub_resource type="Theme" id="Theme_87jxk"]
+Button/styles/focus = SubResource("StyleBoxEmpty_ffxgq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loq2r"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_robvp"]
 bg_color = Color(0, 0, 0, 1)
@@ -163,14 +174,21 @@ corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
 
-[sub_resource type="Gradient" id="Gradient_612k1"]
-offsets = PackedFloat32Array(0, 0.44626167, 1)
-colors = PackedColorArray(0.007843138, 0.12156863, 0.3137255, 1, 0, 0, 0, 0, 0.007843138, 0.12156863, 0.3137255, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_us6mg"]
-gradient = SubResource("Gradient_612k1")
-fill_from = Vector2(0.5555556, 0)
-fill_to = Vector2(0.55128205, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfrgo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 18
+border_width_top = 18
+border_width_right = 18
+border_width_bottom = 18
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+expand_margin_left = 18.0
+expand_margin_top = 18.0
+expand_margin_right = 18.0
+expand_margin_bottom = 18.0
 
 [sub_resource type="Gradient" id="Gradient_lrj6d"]
 offsets = PackedFloat32Array(0, 0.75)
@@ -236,12 +254,18 @@ modulate_color = Color(1, 1, 0.5882353, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24erj"]
 texture = ExtResource("10_o3uba")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0fmss"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ubiiw"]
 texture = ExtResource("10_o3uba")
 modulate_color = Color(1, 1, 0.5882353, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0f8fj"]
 texture = ExtResource("10_o3uba")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0f8fj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nyotn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qoydj"]
 font = ExtResource("37_y6xxu")
@@ -260,12 +284,7 @@ font_size = 27
 font = ExtResource("37_y6xxu")
 font_size = 25
 
-[sub_resource type="LabelSettings" id="LabelSettings_7f84e"]
-font = ExtResource("21_djl8r")
-font_size = 29
-font_color = Color(1, 0.84313726, 0, 1)
-stacked_outline_count = 1
-stacked_outline_0/size = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gwi58"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8ik2"]
 bg_color = Color(0.21960784, 0.21960784, 0.21960784, 0.7411765)
@@ -293,6 +312,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1b5aq"]
 texture = ExtResource("21_ey3pl")
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b5aq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -301,12 +321,21 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.654902, 0.9882353, 1, 1)
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_loq2r"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4n7bh"]
 texture = ExtResource("21_ey3pl")
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvwxe"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_itsob"]
 texture = ExtResource("21_ey3pl")
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1mrf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_35w38"]
 bg_color = Color(0.7532108, 0, 0.01823886, 0.15686275)
@@ -323,14 +352,36 @@ content_margin_top = 15.0
 content_margin_right = 5.0
 texture = ExtResource("15_o3uba")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pucy7"]
+content_margin_top = 15.0
+content_margin_right = 5.0
+texture = ExtResource("30_loq2r")
+modulate_color = Color(1, 1, 0.2627451, 0.47058824)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mwysh"]
+content_margin_top = 15.0
+content_margin_right = 5.0
+texture = ExtResource("15_o3uba")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+modulate_color = Color(1, 0.8039216, 1, 0.9490196)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24erj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ubiiw"]
+
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_itsob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nfrgo"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0f8fj"]
 blend_mode = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_fgaad"]
 font = ExtResource("32_yser8")
-font_size = 20
+font_size = 21
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2foha"]
 
@@ -340,25 +391,11 @@ grow_begin = -120.0
 grow_end = -120.0
 thickness = 2
 
-[sub_resource type="SystemFont" id="SystemFont_2foha"]
-subpixel_positioning = 0
-
 [sub_resource type="LabelSettings" id="LabelSettings_7btnl"]
-font = SubResource("SystemFont_2foha")
-font_size = 18
+font = ExtResource("145_nyotn")
+font_size = 22
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wuhsp"]
-bg_color = Color(0.07091781, 0.07231682, 0.43986425, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 0.84313726, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
-anti_aliasing_size = 0.01
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xybag"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paw2n"]
 bg_color = Color(0.23099999, 0.23099999, 0.35, 0.9019608)
@@ -366,11 +403,8 @@ border_color = Color(0, 0, 0.8235294, 1)
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="SystemFont" id="SystemFont_4n7bh"]
-font_names = PackedStringArray("Asimovian")
-
 [sub_resource type="LabelSettings" id="LabelSettings_6tb1a"]
-font = SubResource("SystemFont_4n7bh")
+font = ExtResource("145_nyotn")
 font_size = 22
 
 [sub_resource type="Gradient" id="Gradient_ax470"]
@@ -383,11 +417,18 @@ fill = 2
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_nfrgo"]
+font = ExtResource("145_nyotn")
+font_size = 22
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h46k2"]
 bg_color = Color(0, 0, 0, 0.22745098)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ng4ve"]
-font_size = 18
+font = ExtResource("145_nyotn")
+font_size = 22
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y56ge"]
 
 [sub_resource type="Gradient" id="Gradient_4tmx4"]
 offsets = PackedFloat32Array(0.7016575, 1)
@@ -463,6 +504,10 @@ font_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_613lv"]
 texture = ExtResource("79_ey3pl")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvwxe"]
 texture = ExtResource("79_ey3pl")
@@ -471,8 +516,14 @@ texture = ExtResource("79_ey3pl")
 texture = ExtResource("79_ey3pl")
 modulate_color = Color(0.74978, 0.74978, 0.7497799, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vemfk"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loq2r"]
 texture = ExtResource("80_613lv")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y56ge"]
 texture = ExtResource("80_613lv")
@@ -481,8 +532,14 @@ texture = ExtResource("80_613lv")
 texture = ExtResource("80_613lv")
 modulate_color = Color(0.67481464, 0.67481464, 0.6748146, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n416n"]
+
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_68ajo"]
 color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87jxk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bxqjf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djl8r"]
 texture = ExtResource("15_o3uba")
@@ -624,25 +681,145 @@ _data = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn2g2"]
-bg_color = Color(0.6, 0.6, 0.6, 0.32941177)
+bg_color = Color(0.29586652, 0.29586652, 0.29586637, 0.46666667)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6wfu"]
-bg_color = Color(0.20392157, 0.3019608, 0.45882353, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ubiiw"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(1, 0.8, 0, 1)
-border_blend = true
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+border_color = Color(0.078431375, 0.8901961, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kddde"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sl8xh"]
+texture = ExtResource("100_ubiiw")
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yisvs"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10are"]
+texture = ExtResource("101_nfrgo")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pucy7"]
+font = ExtResource("37_y6xxu")
+font_size = 29
+font_color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nyotn"]
+line_spacing = 12.0
+font = ExtResource("98_nyotn")
+font_size = 23
+
+[sub_resource type="Animation" id="Animation_slrm8"]
+resource_name = "HintExplanation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/HintFrame:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/FirstHint:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/SecondHind:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/ThirdHint:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_1m6q3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/HintFrame:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/FirstHint:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/SecondHind:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock/ThirdHint:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qipt5"]
+_data = {
+&"HintExplanation": SubResource("Animation_slrm8"),
+&"RESET": SubResource("Animation_1m6q3")
+}
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2gs5g"]
 particles_animation = true
@@ -793,7 +970,7 @@ corner_detail = 20
 shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
 shadow_size = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68ajo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y56ge"]
 bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 draw_center = false
 border_width_left = 5
@@ -808,6 +985,35 @@ corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 shadow_color = Color(0.9964751, 0.69151497, 0, 0.4)
 shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffxgq"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+draw_center = false
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(1, 0, 0, 0.4)
+shadow_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_xybag"]
+font = ExtResource("32_yser8")
+font_size = 21
+outline_size = 23
+outline_color = Color(0.8345203, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y56ge"]
+font = ExtResource("37_y6xxu")
+font_size = 30
+font_color = Color(0, 1, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fmss"]
 content_margin_top = 15.0
@@ -974,7 +1180,7 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:modulate")
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot2:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
@@ -986,91 +1192,91 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot2:modulate")
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [true]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:modulate")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:modulate")
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:material:particles_anim_v_frames")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"update": 1,
+"values": [2]
 }
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/RayOnOrb:material:particles_anim_v_frames")
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:scale")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
+"update": 0,
+"values": [Vector2(1.25, 1.25)]
 }
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:scale")
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:modulate")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1.25, 1.25)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/White/Lightball:modulate")
+tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:material:particles_anim_v_frames")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [8]
 }
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:material:particles_anim_v_frames")
+tracks/21/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:material:particles_anim_v_frames")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -1082,115 +1288,115 @@ tracks/21/keys = {
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:material:particles_anim_v_frames")
+tracks/22/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:modulate")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [8]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:modulate")
+tracks/23/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:modulate")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/24/type = "value"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:modulate")
+tracks/24/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:material:particles_anim_v_frames")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [2]
 }
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:modulate")
+tracks/25/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:scale")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Vector2(1.25, 1.25)]
 }
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/RayOnOrb:material:particles_anim_v_frames")
+tracks/26/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:modulate")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:scale")
+tracks/27/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:material:particles_anim_v_frames")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1.25, 1.25)]
+"update": 1,
+"values": [8]
 }
 tracks/28/type = "value"
 tracks/28/imported = false
 tracks/28/enabled = true
-tracks/28/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Yellow/Lightball:modulate")
+tracks/28/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:modulate")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
 tracks/29/enabled = true
-tracks/29/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:modulate")
+tracks/29/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:material:particles_anim_v_frames")
 tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [8]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
 tracks/30/enabled = true
-tracks/30/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:material:particles_anim_v_frames")
+tracks/30/path = NodePath("../OrbDelivery/OrbTexture:modulate")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [8]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/31/type = "value"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:modulate")
+tracks/31/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:modulate")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
@@ -1202,43 +1408,43 @@ tracks/31/keys = {
 tracks/32/type = "value"
 tracks/32/imported = false
 tracks/32/enabled = true
-tracks/32/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:material:particles_anim_v_frames")
+tracks/32/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:visible")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [false]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
 tracks/33/enabled = true
-tracks/33/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/33/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:visible")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/34/type = "value"
 tracks/34/imported = false
 tracks/34/enabled = true
-tracks/34/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:modulate")
+tracks/34/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:visible")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
 tracks/35/enabled = true
-tracks/35/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:visible")
+tracks/35/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:visible")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
@@ -1250,7 +1456,7 @@ tracks/35/keys = {
 tracks/36/type = "value"
 tracks/36/imported = false
 tracks/36/enabled = true
-tracks/36/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:visible")
+tracks/36/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:visible")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/keys = {
@@ -1262,7 +1468,7 @@ tracks/36/keys = {
 tracks/37/type = "value"
 tracks/37/imported = false
 tracks/37/enabled = true
-tracks/37/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:visible")
+tracks/37/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:visible")
 tracks/37/interp = 1
 tracks/37/loop_wrap = true
 tracks/37/keys = {
@@ -1274,43 +1480,43 @@ tracks/37/keys = {
 tracks/38/type = "value"
 tracks/38/imported = false
 tracks/38/enabled = true
-tracks/38/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:visible")
+tracks/38/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
 tracks/38/interp = 1
 tracks/38/loop_wrap = true
 tracks/38/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/39/type = "value"
 tracks/39/imported = false
 tracks/39/enabled = true
-tracks/39/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:visible")
+tracks/39/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
 tracks/39/interp = 1
 tracks/39/loop_wrap = true
 tracks/39/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/40/type = "value"
 tracks/40/imported = false
 tracks/40/enabled = true
-tracks/40/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:visible")
+tracks/40/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
 tracks/40/interp = 1
 tracks/40/loop_wrap = true
 tracks/40/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/41/type = "value"
 tracks/41/imported = false
 tracks/41/enabled = true
-tracks/41/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
+tracks/41/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
 tracks/41/interp = 1
 tracks/41/loop_wrap = true
 tracks/41/keys = {
@@ -1322,46 +1528,10 @@ tracks/41/keys = {
 tracks/42/type = "value"
 tracks/42/imported = false
 tracks/42/enabled = true
-tracks/42/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
+tracks/42/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
 tracks/42/interp = 1
 tracks/42/loop_wrap = true
 tracks/42/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/43/type = "value"
-tracks/43/imported = false
-tracks/43/enabled = true
-tracks/43/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
-tracks/43/interp = 1
-tracks/43/loop_wrap = true
-tracks/43/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/44/type = "value"
-tracks/44/imported = false
-tracks/44/enabled = true
-tracks/44/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
-tracks/44/interp = 1
-tracks/44/loop_wrap = true
-tracks/44/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/45/type = "value"
-tracks/45/imported = false
-tracks/45/enabled = true
-tracks/45/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
-tracks/45/interp = 1
-tracks/45/loop_wrap = true
-tracks/45/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -1530,70 +1700,58 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:modulate")
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot2:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0, 2.8, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot2:modulate")
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbDelivery/OrbTexture:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:visible")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -1769,75 +1927,63 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0, 2.8, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Slot:modulate")
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0, 0.1, 2.5, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:visible")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -2006,94 +2152,82 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot:modulate")
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot2:material:particles_anim_v_frames")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
-}
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot2:material:particles_anim_v_frames")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
 "times": PackedFloat32Array(0, 2.33, 2.8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [8, 8, 1]
 }
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot2:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
 "times": PackedFloat32Array(0, 2.8, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0, 0.1, 2.5, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("../OrbDelivery/OrbTexture:modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:visible")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -2269,75 +2403,63 @@ tracks/13/keys = {
 "times": PackedFloat32Array(0, 2.8, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Slot:modulate")
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0, 0.1, 2.5, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:visible")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -2506,82 +2628,70 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:modulate")
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0, 2.8, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot2:modulate")
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0, 0.1, 2.5, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:visible")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -2738,106 +2848,94 @@ tracks/11/keys = {
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:modulate")
+tracks/12/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:material:particles_anim_v_frames")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
+"times": PackedFloat32Array(0, 2.33, 2.8),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
+"update": 1,
+"values": [8, 8, 1]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:material:particles_anim_v_frames")
+tracks/13/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 2.33, 2.8),
+"times": PackedFloat32Array(0, 2.8, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [8, 8, 1]
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:modulate")
+tracks/14/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:material:particles_anim_v_frames")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 2.8, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.39215687)]
-}
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot2:material:particles_anim_v_frames")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
 "times": PackedFloat32Array(0, 2.33, 2.8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [8, 8, 1]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0, 0.1, 2.5, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("../OrbDelivery/OrbTexture:modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbDelivery/OrbTexture:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/20/type = "value"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:visible")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -9087,6 +9185,18 @@ tracks/45/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("../../Hard:visible")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1nut0"]
 _data = {
@@ -9269,6 +9379,109 @@ _data = {
 &"RESET": SubResource("Animation_b8rtp")
 }
 
+[sub_resource type="Animation" id="Animation_ffxgq"]
+resource_name = "FailAnswerFrame"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_87jxk"]
+_data = {
+&"FailAnswerFrame": SubResource("Animation_ffxgq")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_xvwxe"]
+font = ExtResource("32_yser8")
+font_size = 60
+font_color = Color(1, 0.09019608, 0.039215688, 1)
+outline_size = 15
+outline_color = Color(0.9999997, 0.99419457, 0.9931635, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0.8235294, 1)
+shadow_offset = Vector2(1, 15)
+stacked_shadow_count = 2
+stacked_shadow_0/offset = Vector2(-1, 15)
+stacked_shadow_0/color = Color(0, 0, 1, 1)
+stacked_shadow_0/outline_size = 10
+stacked_shadow_1/offset = Vector2(0, 16)
+stacked_shadow_1/color = Color(1, 1, 1, 1)
+stacked_shadow_1/outline_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xybag"]
+bg_color = Color(0, 0, 0.2901961, 0.92156863)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.84313726, 0, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_24erj"]
+font = ExtResource("12_b8rtp")
+font_size = 25
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slrm8"]
+texture = ExtResource("90_xvwxe")
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1m6q3"]
+texture = ExtResource("90_xvwxe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_045wd"]
+texture = ExtResource("90_xvwxe")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qipt5"]
+texture = ExtResource("15_o3uba")
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+modulate_color = Color(1, 1, 1, 0.68235296)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kwjmp"]
+texture = ExtResource("15_o3uba")
+modulate_color = Color(0.27022192, 0.27022192, 0.2702219, 0.68235296)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_giogc"]
+texture = ExtResource("15_o3uba")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(1, 1, 1, 0.68235296)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyotn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -9307,11 +9520,21 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource("Theme_87jxk")
 script = ExtResource("1_8blbl")
 HomeScreen = NodePath("BorderlineBGPanel/MarginContainer/HomeScreen")
 GameScreen = NodePath("BorderlineBGPanel/MarginContainer/GameScreen")
 EndScreen = NodePath("BorderlineBGPanel/MarginContainer/EndScreen")
 Brain = NodePath("..")
+
+[node name="FullBlackBGPanel" type="Panel" parent="UIManager"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_loq2r")
 
 [node name="BorderlineBGPanel" type="PanelContainer" parent="UIManager"]
 layout_mode = 1
@@ -9322,10 +9545,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_robvp")
 
-[node name="StarfieldEffect" type="Control" parent="UIManager/BorderlineBGPanel"]
-layout_mode = 2
-script = ExtResource("1_13dyv")
-
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
@@ -9333,9 +9552,17 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
+[node name="StarfieldEffect" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer"]
+layout_mode = 2
+script = ExtResource("1_13dyv")
+
 [node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer"]
 layout_mode = 2
-texture = SubResource("GradientTexture2D_us6mg")
+texture = ExtResource("4_loq2r")
+
+[node name="TextureRect2" type="Panel" parent="UIManager/BorderlineBGPanel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfrgo")
 
 [node name="HomeScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "EndScreen", "DifficultyOverlay", "StatsOverlay", "CollectionsOverlay", "TitleAnim")]
 layout_mode = 2
@@ -9490,6 +9717,7 @@ theme_override_fonts/font = ExtResource("13_a22le")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/pressed = SubResource("StyleBoxTexture_nyotn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_24erj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0fmss")
 action_mode = 0
 icon = ExtResource("9_dioyd")
 icon_alignment = 1
@@ -9506,6 +9734,7 @@ theme_override_fonts/font = ExtResource("13_a22le")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ubiiw")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0f8fj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0f8fj")
 action_mode = 0
 icon = ExtResource("10_o3uba")
 icon_alignment = 1
@@ -9555,6 +9784,7 @@ theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = ExtResource("11_613lv")
 theme_override_styles/pressed = ExtResource("12_4n7bh")
 theme_override_styles/hover = ExtResource("13_1b5aq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nyotn")
 text = "Jouer"
 
 [node name="BotHome" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/VBoxGlobal"]
@@ -9609,11 +9839,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 22
 theme_override_constants/margin_bottom = 30
 
@@ -9639,7 +9868,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="DifficultyOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("BlockExpertMode", "CollectionsOverlay")]
+[node name="DifficultyOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("Brain", "EasyMode", "HardMode", "ExpertMode", "CollectionsOverlay", "BlockExpertMode")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -9648,8 +9877,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("120_o9k3g")
-BlockExpertMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/BlockExpertMode")
+Brain = NodePath("../../../../..")
+EasyMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/EasyMode")
+HardMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/HardMode")
+ExpertMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/ExpertMode")
 CollectionsOverlay = NodePath("../CollectionsOverlay")
+BlockExpertMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/BlockExpertMode")
 
 [node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay"]
 layout_mode = 1
@@ -9670,6 +9903,19 @@ theme_override_constants/margin_bottom = 10
 [node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 40.0
+offset_right = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_k1mrf")
+expand_mode = 2
 
 [node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control"]
 layout_mode = 1
@@ -9679,8 +9925,9 @@ offset_top = 40.0
 offset_bottom = 69.0
 grow_horizontal = 2
 size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_gwi58")
 text = "MODE DE DIFFICULTE"
-label_settings = SubResource("LabelSettings_7f84e")
+label_settings = ExtResource("19_xvwxe")
 
 [node name="Control2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer"]
 layout_mode = 2
@@ -9697,9 +9944,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 8
 theme_override_constants/separation = 0
 
-[node name="EasyMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+[node name="EasyMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer" node_paths=PackedStringArray("LevelDescriptLabel", "LevelDescriptLabel2", "LevelDescriptLabel3", "LevelDescriptLabel4")]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+script = ExtResource("20_0fmss")
+LevelDescriptLabel = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel")
+LevelDescriptLabel2 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel2")
+LevelDescriptLabel3 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel3")
+LevelDescriptLabel4 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel4")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode"]
 layout_mode = 2
@@ -9760,21 +10012,28 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "3 couleurs à trouver."
 label_settings = ExtResource("20_613lv")
 horizontal_alignment = 1
 
-[node name="StatLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel4" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "4 couleurs à disposition."
+label_settings = ExtResource("20_613lv")
+horizontal_alignment = 1
+
+[node name="LevelDescriptLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "12 essais possible."
 label_settings = ExtResource("20_613lv")
 horizontal_alignment = 1
 
-[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel3" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
 text = "Pas de répétition de couleurs."
@@ -9787,8 +10046,10 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_4n7bh")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1b5aq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1b5aq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_loq2r")
 toggle_mode = true
 button_pressed = true
+action_mode = 0
 button_group = ExtResource("10_q8m6m")
 
 [node name="Tampon" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
@@ -9796,9 +10057,14 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HardMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+[node name="HardMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer" node_paths=PackedStringArray("LevelDescriptLabel", "LevelDescriptLabel2", "LevelDescriptLabel3", "LevelDescriptLabel4")]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+script = ExtResource("25_loq2r")
+LevelDescriptLabel = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel")
+LevelDescriptLabel2 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel2")
+LevelDescriptLabel3 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel3")
+LevelDescriptLabel4 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel4")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode"]
 layout_mode = 2
@@ -9859,21 +10125,28 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "4 couleurs à trouver."
 label_settings = ExtResource("20_613lv")
 horizontal_alignment = 1
 
-[node name="StatLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel4" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "6 couleurs à disposition."
+label_settings = ExtResource("20_613lv")
+horizontal_alignment = 1
+
+[node name="LevelDescriptLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "8 essais possible."
 label_settings = ExtResource("20_613lv")
 horizontal_alignment = 1
 
-[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel3" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
 text = "Répétition de couleurs possible."
@@ -9886,7 +10159,9 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_4n7bh")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_4n7bh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1b5aq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xvwxe")
 toggle_mode = true
+action_mode = 0
 button_group = ExtResource("10_q8m6m")
 
 [node name="Tampon3" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
@@ -9894,9 +10169,14 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ExpertMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+[node name="ExpertMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer" node_paths=PackedStringArray("LevelDescriptLabel", "LevelDescriptLabel2", "LevelDescriptLabel3", "LevelDescriptLabel4")]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+script = ExtResource("26_xvwxe")
+LevelDescriptLabel = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel")
+LevelDescriptLabel2 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel2")
+LevelDescriptLabel3 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel3")
+LevelDescriptLabel4 = NodePath("MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/LevelDescriptLabel4")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode"]
 layout_mode = 2
@@ -9957,21 +10237,28 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_yser8")
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer"]
 layout_mode = 2
 
-[node name="StatLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "5 couleurs à trouver."
 label_settings = ExtResource("20_613lv")
 horizontal_alignment = 1
 
-[node name="StatLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel4" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
-text = "7 essais possible."
+text = "6 couleurs à disposition."
 label_settings = ExtResource("20_613lv")
 horizontal_alignment = 1
 
-[node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="LevelDescriptLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "8 essais possible."
+label_settings = ExtResource("20_613lv")
+horizontal_alignment = 1
+
+[node name="LevelDescriptLabel3" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/MarginContainer/VBoxContainer/ModeRules/VBoxContainer/Details/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
 text = "Répétition de couleurs possible."
@@ -9984,7 +10271,9 @@ layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_4n7bh")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_itsob")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1b5aq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k1mrf")
 toggle_mode = true
+action_mode = 0
 button_group = ExtResource("10_q8m6m")
 
 [node name="BlockExpertMode" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode"]
@@ -9997,7 +10286,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="HintTip" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_nfrgo")
 
@@ -10118,8 +10407,9 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("13_a22le")
 theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxTexture_ed4qa")
-theme_override_styles/pressed = ExtResource("12_4n7bh")
-theme_override_styles/hover = ExtResource("13_1b5aq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pucy7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mwysh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_24erj")
 text = "Jouer"
 
 [node name="Tampon5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
@@ -10158,6 +10448,7 @@ theme_override_styles/hover = ExtResource("25_ey3pl")
 theme_override_styles/hover_mirrored = ExtResource("25_ey3pl")
 theme_override_styles/hover_pressed = ExtResource("25_ey3pl")
 theme_override_styles/hover_pressed_mirrored = ExtResource("25_ey3pl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ubiiw")
 theme_override_icons/checked = ExtResource("24_dioyd")
 theme_override_icons/unchecked = ExtResource("25_o3uba")
 text = "  Chrono
@@ -10176,13 +10467,14 @@ anchor_right = 1.0
 offset_left = -75.0
 offset_top = 18.0
 offset_right = -15.0
-offset_bottom = 78.0
+offset_bottom = 68.0
 grow_horizontal = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/normal = ExtResource("30_itsob")
 theme_override_styles/pressed = ExtResource("31_loq2r")
 theme_override_styles/hover = ExtResource("31_0fmss")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nfrgo")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("22_yser8")
@@ -10250,6 +10542,19 @@ custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 4
 
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+offset_right = -77.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_k1mrf")
+expand_mode = 2
+
 [node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
 anchors_preset = 4
@@ -10261,7 +10566,7 @@ offset_bottom = 14.5
 grow_vertical = 2
 size_flags_vertical = 2
 text = "STATISTIQUES"
-label_settings = SubResource("LabelSettings_7f84e")
+label_settings = ExtResource("19_xvwxe")
 
 [node name="Tampon" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
 visible = false
@@ -10561,7 +10866,7 @@ grow_vertical = 2
 [node name="StatTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 10
-text = "Meilleurs temps (option Chrono Activé)"
+text = "Meilleurs temps ( Chrono Activé )"
 label_settings = ExtResource("23_j17p2")
 vertical_alignment = 2
 
@@ -10588,7 +10893,7 @@ label_settings = SubResource("LabelSettings_fgaad")
 
 [node name="EasyChronoValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoEasy"]
 layout_mode = 2
-text = "2 min 27 s"
+text = "-- : --"
 label_settings = SubResource("LabelSettings_fgaad")
 
 [node name="BestChronoHard" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
@@ -10602,7 +10907,7 @@ label_settings = SubResource("LabelSettings_fgaad")
 
 [node name="HardChronoValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoHard"]
 layout_mode = 2
-text = "5 min 6 s"
+text = "-- : --"
 label_settings = SubResource("LabelSettings_fgaad")
 
 [node name="BestChronoExpert" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
@@ -10616,7 +10921,7 @@ label_settings = SubResource("LabelSettings_fgaad")
 
 [node name="ExpertChronoValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/GameStats/MarginContainer/VBoxContainer/Control/VBoxContainer/BestTimes/VBoxContainer/MarginContainer/PanelContainer/VBoxContainer/BestChronoExpert"]
 layout_mode = 2
-text = "12 min 54 s"
+text = "-- : --"
 label_settings = SubResource("LabelSettings_fgaad")
 
 [node name="Innerline" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer"]
@@ -10680,11 +10985,15 @@ theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 20
 
 [node name="ResetStatButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer"]
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("37_y6xxu")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_wuhsp")
+theme_override_styles/normal = ExtResource("44_nfrgo")
+theme_override_styles/pressed = ExtResource("45_xybag")
+theme_override_styles/hover = ExtResource("71_y56ge")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xybag")
 text = "RESET"
 
 [node name="ConfirmResetStat" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer"]
@@ -10693,10 +11002,13 @@ oversampling = false
 oversampling_override = 1.0
 title = "Êtes-vous sûr ? "
 initial_position = 1
-size = Vector2i(238, 106)
+size = Vector2i(400, 200)
+min_size = Vector2i(200, 100)
+max_size = Vector2i(400, 200)
+theme = ExtResource("44_nyotn")
 ok_button_text = "Valider"
-dialog_text = "La suppression des données 
-sera permanente. "
+dialog_text = "La suppression des données sera permanente. "
+dialog_autowrap = true
 cancel_button_text = "Annuler"
 
 [node name="Close" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter"]
@@ -10708,7 +11020,7 @@ layout_mode = 0
 offset_left = 408.0
 offset_top = 17.0
 offset_right = 468.0
-offset_bottom = 77.0
+offset_bottom = 67.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/normal = ExtResource("30_itsob")
@@ -10730,7 +11042,7 @@ script = ExtResource("122_o9k3g")
 Orbs = NodePath("Filter/MarginContainer/VBoxContainer/PowerOrbs/MarginContainer/VBoxContainer/Orbs")
 Parts = NodePath("Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts")
 Poses = NodePath("Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses")
-ConfirmResetCollec = NodePath("Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ConfirmResetCollec")
+ConfirmResetCollec = NodePath("Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer/MarginContainer/ConfirmResetCollec")
 EndScreen = NodePath("../../EndScreen")
 
 [node name="Filter" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay"]
@@ -10752,11 +11064,24 @@ theme_override_constants/margin_bottom = 10
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 10
+theme_override_constants/separation = 14
 
 [node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 25.0
+offset_right = -76.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_k1mrf")
+expand_mode = 2
 
 [node name="OptionsTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
 layout_mode = 1
@@ -10770,9 +11095,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 0
 text = "COLLECTIONS"
-label_settings = SubResource("LabelSettings_7f84e")
+label_settings = ExtResource("19_xvwxe")
 
 [node name="Innerline" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
@@ -11524,7 +11850,7 @@ custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 1
 text = "Gagnez en niveau Expert et remportez des pièces détachées de Robot Géant ! "
-label_settings = SubResource("LabelSettings_6tb1a")
+label_settings = SubResource("LabelSettings_nfrgo")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -11703,26 +12029,31 @@ theme_override_styles/panel = SubResource("StyleBoxLine_7btnl")
 
 [node name="Settings" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings"]
 layout_mode = 2
 
-[node name="ReinitLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 6
+
+[node name="ReinitLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 text = "REGLAGES"
 label_settings = ExtResource("22_7wntc")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ReinitLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer"]
+[node name="ReinitLabel2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 6
-text = "Réinitaliser toutes les collections"
+size_flags_vertical = 3
+text = "Réinitialiser toutes les collections"
 label_settings = SubResource("LabelSettings_ng4ve")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 120
@@ -11730,25 +12061,32 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 20
 
-[node name="ResetCollectionsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
+[node name="ResetCollectionsButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.21176471, 0.7411765, 0.96862745, 1)
 theme_override_fonts/font = ExtResource("37_y6xxu")
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_wuhsp")
+theme_override_styles/normal = ExtResource("44_nfrgo")
+theme_override_styles/pressed = ExtResource("45_xybag")
+theme_override_styles/hover = ExtResource("71_y56ge")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y56ge")
 text = "RESET"
 
-[node name="ConfirmResetCollec" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer"]
+[node name="ConfirmResetCollec" type="ConfirmationDialog" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer/MarginContainer"]
 vrs_mode = 1
 oversampling = false
 oversampling_override = 1.0
 title = "Êtes-vous sûr ? "
 initial_position = 1
-size = Vector2i(238, 106)
+size = Vector2i(400, 200)
+min_size = Vector2i(200, 100)
+max_size = Vector2i(400, 200)
+theme = ExtResource("44_nyotn")
 ok_button_text = "Valider"
-dialog_text = "La suppression des données 
-sera permanente. "
+dialog_text = "La suppression des données  sera permanente. "
+dialog_autowrap = true
 cancel_button_text = "Annuler"
 
 [node name="Close" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter"]
@@ -11760,11 +12098,11 @@ layout_mode = 0
 offset_left = 408.0
 offset_top = 16.0
 offset_right = 468.0
-offset_bottom = 76.0
+offset_bottom = 66.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/normal = ExtResource("30_itsob")
-theme_override_styles/pressed = ExtResource("12_4n7bh")
+theme_override_styles/pressed = ExtResource("31_loq2r")
 theme_override_styles/hover = ExtResource("31_0fmss")
 icon_alignment = 1
 script = ExtResource("48_7btnl")
@@ -11807,10 +12145,33 @@ theme_override_constants/margin_bottom = 10
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer"]
 layout_mode = 2
 
-[node name="RobotTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-text = "SUPERMIND - Robot Géant"
-label_settings = ExtResource("14_5gwyn")
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_right = -86.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_k1mrf")
+expand_mode = 2
+
+[node name="RobotTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SUPERMIND"
+label_settings = ExtResource("19_xvwxe")
+vertical_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -12052,12 +12413,12 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="CloseRobotButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/Close"]
-custom_minimum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(60, 50)
 layout_mode = 0
 offset_left = 415.0
 offset_top = 9.0
 offset_right = 475.0
-offset_bottom = 69.0
+offset_bottom = 59.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/normal = ExtResource("30_itsob")
@@ -12095,10 +12456,33 @@ theme_override_constants/margin_bottom = 10
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer"]
 layout_mode = 2
 
-[node name="RobotTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer"]
+[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-text = "SUPERMIND - Robot Géant"
-label_settings = ExtResource("14_5gwyn")
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.0
+offset_right = -86.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_k1mrf")
+expand_mode = 2
+
+[node name="RobotTitleLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SUPERMIND"
+label_settings = ExtResource("19_xvwxe")
+vertical_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -12153,7 +12537,7 @@ stretch_mode = 5
 [node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SuperMindNWZoom"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "SuperMind - Super pose"
+text = "Pose classique"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
@@ -12207,7 +12591,7 @@ stretch_mode = 5
 [node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SuperMindSASZoom"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "SuperMind - Pose Combat"
+text = "Pose Combat"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
@@ -12215,11 +12599,12 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="CloseRobotButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/Close"]
+custom_minimum_size = Vector2(60, 50)
 layout_mode = 0
 offset_left = 415.0
 offset_top = 9.0
 offset_right = 475.0
-offset_bottom = 69.0
+offset_bottom = 59.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_styles/normal = ExtResource("30_itsob")
@@ -12232,10 +12617,10 @@ layout_mode = 2
 script = ExtResource("17_65hfw")
 Brain = NodePath("../../../..")
 WarningLabels = NodePath("WarningLabels")
-LabelLevelValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelLevelValue")
-LabelTryValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelTryValue")
-LabelTryMaxValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelTryMaxValue")
-LabelChronoValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer/LabelChronoValue")
+LabelLevelValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer/LabelLevelValue")
+LabelTryValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer/LabelTryValue")
+LabelTryMaxValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer/LabelTryMaxValue")
+LabelChronoValue = NodePath("VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer/LabelChronoValue")
 scrollContainer = NodePath("VBox/MidGameZone/MarginContainer/ScrollContainer")
 RowContainer = NodePath("VBox/MidGameZone/MarginContainer/ScrollContainer/RowContainer")
 AttemptRowScene = ExtResource("24_ep8v8")
@@ -12306,87 +12691,93 @@ libraries = {
 &"": SubResource("AnimationLibrary_lrj6d")
 }
 
-[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer"]
+[node name="TextureRect" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(350, 80)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("22_gvfd6")
 
 [node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = -0.312
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -19.965921
-offset_top = -31.0
-offset_right = 17.127716
-offset_bottom = 23.0
+anchor_bottom = 1.312
+offset_top = -0.03999901
+offset_bottom = 0.039993286
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("77_ey3pl")
+texture = ExtResource("85_xvwxe")
 expand_mode = 1
 
-[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 10.0
-offset_bottom = -10.0
+anchor_bottom = 0.5
+offset_top = -29.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 24
+
+[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer"]
+layout_mode = 2
 columns = 4
 
-[node name="LabelTry" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelTry" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Essai"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="LabelLevel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelLevel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Niveau"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
-[node name="LabelTryMax" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelTryMax" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Max Essais"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
-[node name="LabelChrono" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelChrono" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Chrono"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
-[node name="LabelTryValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelTryValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "1"
 label_settings = SubResource("LabelSettings_bb0on")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="LabelLevelValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelLevelValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Facile"
 label_settings = SubResource("LabelSettings_bb0on")
 horizontal_alignment = 1
 
-[node name="LabelTryMaxValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelTryMaxValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "12"
 label_settings = SubResource("LabelSettings_bb0on")
 horizontal_alignment = 1
 
-[node name="LabelChronoValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/GridContainer"]
+[node name="LabelChronoValue" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/MarginContainer/VBoxContainer/TextureRect/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "--:--"
@@ -12398,7 +12789,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -245.0
+offset_bottom = -97.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -12407,16 +12798,17 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 3.993185
-offset_top = -45.5
-offset_right = 99.99319
-offset_bottom = 50.5
+offset_left = 12.97785
+offset_top = -40.0
+offset_right = 92.97785
+offset_bottom = 40.0
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_613lv")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xvwxe")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xybag")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vemfk")
 expand_icon = true
 
 [node name="HelpButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons"]
@@ -12427,10 +12819,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -87.98636
-offset_top = -39.0
-offset_right = -7.9863586
-offset_bottom = 41.0
+offset_left = -89.98306
+offset_top = -40.0
+offset_right = -9.983063
+offset_bottom = 40.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -12438,6 +12830,7 @@ size_flags_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_loq2r")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_y56ge")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ffxgq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n416n")
 expand_icon = true
 
 [node name="MidGameZone" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox"]
@@ -12531,8 +12924,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -21.0
-offset_right = 21.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -12554,8 +12945,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/pressed = ExtResource("13_d1ul7")
 theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_87jxk")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlack"]
 layout_mode = 1
@@ -12582,8 +12974,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/pressed = ExtResource("13_d1ul7")
 theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bxqjf")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlue"]
 layout_mode = 1
@@ -12612,8 +13005,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/pressed = ExtResource("13_d1ul7")
 theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bxqjf")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonPurple"]
 layout_mode = 1
@@ -12642,8 +13036,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/pressed = ExtResource("13_d1ul7")
 theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bxqjf")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonRed"]
 layout_mode = 1
@@ -12672,8 +13067,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/pressed = ExtResource("13_d1ul7")
 theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bxqjf")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonWhite"]
 layout_mode = 1
@@ -12702,8 +13098,9 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("15_yhvps")
+theme_override_styles/pressed = ExtResource("13_d1ul7")
 theme_override_styles/hover = ExtResource("13_pinj1")
-theme_override_styles/focus = ExtResource("13_d1ul7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bxqjf")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonYellow"]
 layout_mode = 1
@@ -12835,7 +13232,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_ypcqt")
 }
 
-[node name="TutorialOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
+[node name="TutorialOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" node_paths=PackedStringArray("tutoAnim")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -12843,7 +13240,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+script = ExtResource("97_0f8fj")
+tutoAnim = NodePath("TutoAnim")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay"]
 layout_mode = 1
@@ -12861,409 +13259,172 @@ theme_override_constants/margin_bottom = 1
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yn2g2")
 
-[node name="Top" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="TopOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top"]
-layout_mode = 1
-offset_top = 13.0
-offset_right = 494.0
-offset_bottom = 221.0
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6wfu")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay"]
-layout_mode = 2
-size_flags_vertical = 4
-theme_override_constants/separation = 10
-
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_styles/panel = ExtResource("43_semxg")
-
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/PanelContainer"]
-layout_mode = 2
-theme_override_styles/panel = ExtResource("44_ep8v8")
-
-[node name="Tuto1Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/PanelContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-text = "But du jeu "
-label_settings = ExtResource("45_3133c")
-horizontal_alignment = 1
-
-[node name="PanelContainer2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kddde")
-
-[node name="GameRules" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/PanelContainer2"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-text = "Trouver le code de 4 couleurs parmi un total 
-de 6 couleurs possible, avec un nombre d'essais maximum. "
-label_settings = ExtResource("49_js5gh")
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer"]
-layout_mode = 2
-
-[node name="Tuto1_1" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Niveau de difficulté"
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Tuto1_2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Essai actuel"
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Tuto1_3" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Nombre d'essai maximal"
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Arrow1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 197.0
-offset_right = 438.0
-offset_bottom = 252.0
-
-[node name="ArrowTuto1_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-flip_v = true
-
-[node name="ArrowTuto1_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-flip_v = true
-
-[node name="ArrowTuto1_3" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Top/TopOverlay/Arrow1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-flip_v = true
-
 [node name="Mid" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
 layout_mode = 2
 
-[node name="MidOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid"]
-layout_mode = 1
-offset_left = 1.0
-offset_top = 488.0
-offset_right = 495.0
-offset_bottom = 570.0
-size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6wfu")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 4
-alignment = 2
-
-[node name="Tuto2_1" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Emplacements à remplir	"
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Tuto2_2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 1
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Indices"
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-theme_override_styles/panel = ExtResource("43_semxg")
-
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/PanelContainer"]
-layout_mode = 2
-theme_override_styles/panel = ExtResource("44_ep8v8")
-
-[node name="Tuto2Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/PanelContainer"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Ligne de réponse"
-label_settings = ExtResource("45_3133c")
-horizontal_alignment = 1
-
-[node name="PanelContainer2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_kddde")
-
-[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/VBoxContainer/PanelContainer2"]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_vertical = 2
-accessibility_name = "RulesText"
-theme_override_font_sizes/font_size = 20
-text = "🔴 = Bonne couleur, bonne position
-⚪ = Bonne couleur, mauvaise position
-⚠️ Une même couleur peut se répéter."
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Arrow2_1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1"]
-layout_mode = 0
-offset_left = 61.0
-offset_top = -53.0
-offset_right = 356.0
-offset_bottom = -20.0
-
-[node name="ArrowTuto2_1_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-
-[node name="ArrowTuto2_1_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-
-[node name="ArrowTuto2_1_3" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-
-[node name="ArrowTuto2_1_4" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_1/HBoxContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-texture = ExtResource("47_3133c")
-stretch_mode = 4
-
-[node name="Arrow2_2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay"]
-layout_mode = 2
-
-[node name="ArrowTuto2_2_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/MidOverlay/Arrow2_2"]
-material = SubResource("CanvasItemMaterial_yisvs")
+[node name="AnswerRow" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 412.0
-offset_top = -53.0
-offset_right = -40.0
-offset_bottom = -93.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("47_3133c")
-stretch_mode = 4
 
-[node name="Bot" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="BotOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot"]
-layout_mode = 0
+[node name="MidOverlay" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow"]
+layout_mode = 1
 offset_left = 1.0
-offset_top = 741.0
+offset_top = 488.0
 offset_right = 495.0
-offset_bottom = 852.0
-size_flags_vertical = 8
-theme_override_styles/panel = SubResource("StyleBoxFlat_b6wfu")
+offset_bottom = 857.0
+size_flags_vertical = 4
+theme_override_styles/panel = ExtResource("24_ojt81")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay"]
+[node name="AnimationHelperBlock" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay"]
+layout_mode = 2
+
+[node name="HintFrame" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.63000005
+offset_left = 378.0
+offset_top = -112.0
+offset_right = 153.07999
+offset_bottom = -32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ubiiw")
+
+[node name="HintFrame2" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.63000005
+offset_left = 386.0
+offset_top = -104.0
+offset_right = 145.07999
+offset_bottom = -40.0
+theme_override_styles/panel = ExtResource("99_k1mrf")
+
+[node name="FirstHint" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.63000005
+offset_left = 388.0
+offset_top = -101.0
+offset_right = 112.07999
+offset_bottom = -74.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_sl8xh")
+
+[node name="SecondHind" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.63000005
+offset_left = 418.0
+offset_top = -101.0
+offset_right = 142.07999
+offset_bottom = -74.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_10are")
+
+[node name="ThirdHint" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/AnimationHelperBlock"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.63000005
+offset_left = 388.0
+offset_top = -71.0
+offset_right = 112.07999
+offset_bottom = -44.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_10are")
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HintHelperBlock" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_styles/panel = ExtResource("43_semxg")
-
-[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/PanelContainer"]
-layout_mode = 2
-theme_override_styles/panel = ExtResource("44_ep8v8")
-
-[node name="Tuto3Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/PanelContainer"]
-layout_mode = 2
-text = "Sélection et Validation"
-label_settings = ExtResource("45_3133c")
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer"]
+[node name="TitlePart" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Tuto3_1" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
+[node name="MarginContainer2" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TitlePart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 25
+
+[node name="TextureRect" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TitlePart/MarginContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Saisissez 
-votre sélection"
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
+size_flags_vertical = 3
+texture = ExtResource("18_k1mrf")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TitlePart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 30
+
+[node name="Tuto2Title" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TitlePart/MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Indices"
+label_settings = SubResource("LabelSettings_pucy7")
+vertical_alignment = 1
+
+[node name="TextPart" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextBlock" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TextPart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextFrame" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TextPart/TextBlock"]
+modulate = Color(1, 1, 1, 0.64705884)
+layout_mode = 2
+texture = ExtResource("22_613lv")
+expand_mode = 1
+
+[node name="Text" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TextPart/TextBlock"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="RulesTextLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Mid/AnswerRow/MidOverlay/MarginContainer/HintHelperBlock/TextPart/TextBlock/Text"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+accessibility_name = "RulesText"
+theme_override_font_sizes/font_size = 20
+text = "🔴 = Bonne couleur, bonne position
+⚪ = Bonne couleur, mauvaise position
+⚠️Les pions indices ne sont pas disposés dans l'ordre des pions réponses."
+label_settings = SubResource("LabelSettings_nyotn")
+vertical_alignment = 1
 autowrap_mode = 3
-
-[node name="Tuto3_2" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = ExtResource("45_65hfw")
-text = "Effacer / Valider 
-la ligne complète."
-label_settings = ExtResource("46_xf5i4")
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Arrows3_1" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay"]
-layout_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1"]
-layout_mode = 0
-offset_left = -6.0
-offset_top = 120.0
-offset_right = 370.0
-offset_bottom = 331.0
-columns = 3
-
-[node name="ArrowTuto3_1_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-texture = ExtResource("51_5gwyn")
-stretch_mode = 2
-flip_v = true
-
-[node name="ArrowTuto3_1_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-texture = ExtResource("51_5gwyn")
-stretch_mode = 2
-flip_v = true
-
-[node name="ArrowTuto3_1_3" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-texture = ExtResource("51_5gwyn")
-stretch_mode = 2
-flip_v = true
-
-[node name="ArrowTuto3_1_4" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-texture = ExtResource("51_5gwyn")
-stretch_mode = 2
-flip_v = true
-
-[node name="ArrowTuto3_1_5" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-texture = ExtResource("51_5gwyn")
-stretch_mode = 2
-flip_v = true
-
-[node name="ArrowTuto3_1_6" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_1/GridContainer"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-texture = ExtResource("51_5gwyn")
-stretch_mode = 2
-flip_v = true
-
-[node name="Arrows3_2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay"]
-layout_mode = 2
-
-[node name="ArrowTuto3_2_1" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_2"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 0
-offset_left = 359.00006
-offset_top = 170.0
-offset_right = 391.00006
-offset_bottom = 202.0
-rotation = 2.3561945
-pivot_offset = Vector2(16, 16)
-texture = ExtResource("51_5gwyn")
-stretch_mode = 3
-
-[node name="ArrowTuto3_2_2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer/Bot/BotOverlay/Arrows3_2"]
-material = SubResource("CanvasItemMaterial_yisvs")
-layout_mode = 0
-offset_left = 361.62744
-offset_top = 263.62744
-offset_right = 393.62744
-offset_bottom = 295.62744
-rotation = 2.3561945
-pivot_offset = Vector2(16, 16)
-texture = ExtResource("51_5gwyn")
-stretch_mode = 3
 
 [node name="Arrows" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer"]
 layout_mode = 2
@@ -13271,6 +13432,7 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="TutoCloseButton" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay/MarginContainer" node_paths=PackedStringArray("TutorialOverlay")]
+visible = false
 z_index = 4
 layout_mode = 2
 size_flags_horizontal = 8
@@ -13287,24 +13449,35 @@ focus_mode = 2
 script = ExtResource("51_65hfw")
 TutorialOverlay = NodePath("../..")
 
+[node name="TutoAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay"]
+libraries = {
+&"": SubResource("AnimationLibrary_qipt5")
+}
+
 [node name="HintAudio" type="AudioStreamPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/GameScreen"]
 stream = ExtResource("52_xf5i4")
 
-[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "EndOrbs", "ResultSlotContainer", "OrbSpawnText", "EndScreenAnim", "TopEndAnim", "RayOrbAnim", "AnnounceAnim", "ResultLabel", "WinCases", "EasyOrMedium", "ThumbsUpPose", "Hard", "OrbSpawn", "TreasureSpawn", "Expert", "RobotPartSpawn", "RobotCompleteSpawn", "LoseCases", "ButtonBlocker")]
+[node name="EndScreen" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer" node_paths=PackedStringArray("Brain", "HomeScreen", "EndOrbs", "GameScreen", "ResultSlotContainer", "FalseResultContainer", "FailSlotContainer", "OrbSpawnText", "EndScreenAnim", "EndScreenAnim2", "TopEndAnim", "RayOrbAnim", "AnnounceAnim", "ResultLabel", "ChronoWinLabel", "ChronoWinTex", "WinCases", "EasyOrMedium", "ThumbsUpPose", "Hard", "OrbSpawn", "TreasureSpawn", "Expert", "RobotPartSpawn", "RobotCompleteSpawn", "LoseCases", "ButtonBlocker")]
 visible = false
 layout_mode = 2
 script = ExtResource("45_lfh1j")
 Brain = NodePath("../../../..")
 HomeScreen = NodePath("../HomeScreen")
 EndOrbs = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs")
+GameScreen = NodePath("../GameScreen")
 ResultSlotScene = ExtResource("54_xf5i4")
-ResultSlotContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer")
+ResultSlotContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow/RowEffects/ResultSlots/ResultSlotContainer")
+FalseResultContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer")
+FailSlotContainer = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/ResultRow/RowEffects/FailSlots/FailSlotContainer")
 OrbSpawnText = NodePath("AnnounceOverlay/OrbSpawnText")
 EndScreenAnim = NodePath("EndScreenAnim")
+EndScreenAnim2 = NodePath("EndScreenAnim2")
 TopEndAnim = NodePath("TopEndAnim")
 RayOrbAnim = NodePath("RayOrbAnim")
 AnnounceAnim = NodePath("AnnounceAnim")
 ResultLabel = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ResultTitle/ResultLabel")
+ChronoWinLabel = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ChronoWin/ChronoWinTex/ChronoWinLabel")
+ChronoWinTex = NodePath("VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ChronoWin/ChronoWinTex")
 WinCases = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases")
 EasyOrMedium = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/EasyOrMedium")
 ThumbsUpPose = NodePath("VBoxContainer/TopEnd/MarginContainer/WinCases/EasyOrMedium/FallenStars/ThumbsUpPose")
@@ -13342,6 +13515,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="EasyOrMedium" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
+visible = false
 anchors_preset = 0
 offset_right = 494.0
 offset_bottom = 358.0
@@ -13355,7 +13529,7 @@ offset_bottom = 358.0
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
-offset_bottom = 40.00064
+offset_bottom = 40.000732
 
 [node name="LittleStars" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/EasyOrMedium/FallenStars/FirstWave"]
 anchors_preset = 0
@@ -14897,11 +15071,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(247, 179)
-texture = ExtResource("113_24erj")
+texture = ExtResource("114_0f8fj")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("114_nyotn")
-ThumbsUpTextures = Array[Texture2D]([ExtResource("112_xvwxe"), ExtResource("116_ubiiw"), ExtResource("113_24erj")])
+ThumbsUpTextures = Array[Texture2D]([ExtResource("116_0f8fj"), ExtResource("117_nyotn"), ExtResource("114_k1mrf"), ExtResource("114_0f8fj")])
 
 [node name="Hard" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
 visible = false
@@ -14913,7 +15087,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="OrbSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard" node_paths=PackedStringArray("OrbTexture", "HomeScreen", "EndOrbs")]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -15253,11 +15426,11 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1e-05, 1e-05)
 pivot_offset = Vector2(128, 128)
-texture = ExtResource("56_b6wfu")
+texture = ExtResource("21_667dm")
 expand_mode = 2
 stretch_mode = 5
 script = ExtResource("63_j1oki")
-OrbTextures = Array[Texture2D]([ExtResource("56_b6wfu"), ExtResource("64_u4uri"), ExtResource("65_hbkoi"), ExtResource("66_iuc65"), ExtResource("67_reelv"), ExtResource("68_27bwp")])
+OrbTextures = Array[Texture2D]([ExtResource("17_wuhsp"), ExtResource("18_cal7y"), ExtResource("19_8hq12"), ExtResource("20_2dy84"), ExtResource("21_667dm"), ExtResource("22_crcpg")])
 
 [node name="Circle" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design"]
 layout_mode = 2
@@ -16254,6 +16427,7 @@ texture = ExtResource("116_h46k2")
 expand_mode = 1
 
 [node name="TreasureSpawn" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18022,6 +18196,7 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_crcpg")
 
 [node name="Expert" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18212,14 +18387,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 12.259949
-offset_bottom = 35.74005
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("70_hbkoi")
-expand_mode = 5
+texture = ExtResource("139_k1mrf")
+expand_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/LoseCases"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18239,6 +18413,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 20.0
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -18279,12 +18455,17 @@ label_settings = ExtResource("1_vqx31")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+[node name="Tampon" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="GoodResult" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="ResultRow" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control"]
+[node name="ResultRow" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18297,14 +18478,14 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="HBoxSlots" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow"]
+[node name="HBoxSlots" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="RowEffects" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow"]
+[node name="RowEffects" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow"]
 layout_mode = 2
 
-[node name="GlowEffect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
+[node name="GlowEffect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow/RowEffects"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -18314,9 +18495,9 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_68ajo")
+theme_override_styles/panel = SubResource("StyleBoxFlat_y56ge")
 
-[node name="ResultSlots" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
+[node name="ResultSlots" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow/RowEffects"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18328,19 +18509,119 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
 
-[node name="ResultSlotContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots"]
+[node name="ResultSlotContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow/RowEffects/ResultSlots"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="ResultSlot" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects/ResultSlots/ResultSlotContainer" instance=ExtResource("54_xf5i4")]
+[node name="ResultSlot" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow/RowEffects/ResultSlots/ResultSlotContainer" instance=ExtResource("54_xf5i4")]
 layout_mode = 2
 
-[node name="Fader" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow/RowEffects"]
+[node name="Fader" type="ColorRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow/RowEffects"]
 visible = false
 layout_mode = 0
 offset_right = 454.0
 offset_bottom = 138.0
 color = Color(0, 0, 0, 1)
+
+[node name="FalseResult" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="FalseResultContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultRow" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="RowEffects" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/ResultRow"]
+layout_mode = 2
+
+[node name="FailSlots" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/ResultRow/RowEffects"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Rect" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/ResultRow/RowEffects/FailSlots"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ffxgq")
+
+[node name="FailSlotContainer" type="HBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/ResultRow/RowEffects/FailSlots"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="FailSlot" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/ResultRow/RowEffects/FailSlots/FailSlotContainer" instance=ExtResource("54_xf5i4")]
+layout_mode = 2
+
+[node name="PlayerFailAnswer" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="YourAnswer" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/FalseResult/FalseResultContainer/PlayerFailAnswer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Votre réponse"
+label_settings = SubResource("LabelSettings_xybag")
+horizontal_alignment = 1
+
+[node name="ChronoWin" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ChronoWinTex" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ChronoWin"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 112.0
+offset_top = -176.0
+offset_right = -112.0
+offset_bottom = 154.66666
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("144_xybag")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="ChronoWinLabel" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/MidEnd/MarginContainer/VBoxContainer/ChronoWin/ChronoWinTex"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "15 : 03"
+label_settings = SubResource("LabelSettings_y56ge")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BotEnd" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer"]
 layout_mode = 2
@@ -18435,9 +18716,14 @@ libraries = {
 }
 
 [node name="EndScreenAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
-root_node = NodePath("../VBoxContainer/MidEnd/MarginContainer/VBoxContainer/Control/ResultRow")
+root_node = NodePath("../VBoxContainer/MidEnd/MarginContainer/VBoxContainer/GoodResult/ResultRow")
 libraries = {
 &"": SubResource("AnimationLibrary_612k1")
+}
+
+[node name="EndScreenAnim2" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
+libraries = {
+&"": SubResource("AnimationLibrary_87jxk")
 }
 
 [node name="ButtonBlocker" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen"]
@@ -18489,7 +18775,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 text = "Félicitations !"
-label_settings = ExtResource("1_vqx31")
+label_settings = SubResource("LabelSettings_xvwxe")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -18662,6 +18948,88 @@ theme_override_styles/pressed = ExtResource("143_xvwxe")
 theme_override_styles/hover = ExtResource("144_k1mrf")
 text = "Valider
 "
+
+[node name="QuitDialog" type="Control" parent="UIManager"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("144_0f8fj")
+
+[node name="Panel" type="Panel" parent="UIManager/QuitDialog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/QuitDialog"]
+custom_minimum_size = Vector2(100, 250)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -50.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="UIManager/QuitDialog/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xybag")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/QuitDialog/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIManager/QuitDialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Voulez-vous quitter le jeu ? "
+label_settings = SubResource("LabelSettings_24erj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/QuitDialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIManager/QuitDialog/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="OK" type="Button" parent="UIManager/QuitDialog/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("145_nyotn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_slrm8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1m6q3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_045wd")
+text = "OK"
+
+[node name="Cancel" type="Button" parent="UIManager/QuitDialog/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("145_nyotn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_qipt5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kwjmp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_giogc")
+text = "Annuler"
 
 [node name="TESTS_DEBUG" type="Control" parent="." node_paths=PackedStringArray("Brain", "HomeScreen", "EndScreen", "OrbSpawn", "RobotPartSpawn", "SolutionLabel", "TestZone")]
 visible = false
@@ -18840,13 +19208,14 @@ item_5/text = "5"
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer/Parts/PartCollection/RobotParts/CollectSlot8/ShieldButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_shield_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot1/SuperMindNW" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_nw_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/SuperRobot/MarginContainer/VBoxContainer/Poses/RobotPoseCollection/RobotPics/Robot2/SuperMindSAS" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_super_mind_sas_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ResetCollectionsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay" method="_on_reset_collections_button_pressed"]
-[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/VBoxContainer/MarginContainer/ConfirmResetCollec" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay" method="_on_confirm_reset_collec_confirmed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer/MarginContainer/ResetCollectionsButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay" method="_on_reset_collections_button_pressed"]
+[connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/Settings/MarginContainer/VBoxContainer/MarginContainer/ConfirmResetCollec" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay" method="_on_confirm_reset_collec_confirmed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Close/CloseCollecButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/Close/CloseCollecButton" method="_on_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/Close/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay/Filter/Close/CloseRobotButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotCompleteOverlay" method="_on_close_robot_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HomeButton" to="UIManager" method="_on_home_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HelpButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_help_button_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/TopGameZone/Buttons/HelpButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/TutorialOverlay" method="_on_help_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlack" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_black_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonBlue" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_blue_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/GameScreen/VBox/BotGameZone/HBoxContainer/BottomUIOption2/ColorKeyboard/HeadButtonPurple" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_head_button_purple_pressed"]
@@ -18864,6 +19233,8 @@ item_5/text = "5"
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/Buttons/MarginContainer/OrbSpawnButton" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_orb_spawn_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/Buttons/MarginContainer/SixOrbButton" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_six_orb_button_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/AnnounceOverlay/OrbSpawnText/VBoxContainer/Buttons/MarginContainer/RobotPartsButton" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_robot_parts_button_pressed"]
+[connection signal="pressed" from="UIManager/QuitDialog/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/OK" to="UIManager/QuitDialog" method="_on_ok_pressed"]
+[connection signal="pressed" from="UIManager/QuitDialog/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Cancel" to="UIManager/QuitDialog" method="_on_cancel_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/SuperPower" to="TESTS_DEBUG" method="_on_super_power_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/GetAllOrbs" to="TESTS_DEBUG" method="_on_get_all_orbs_pressed"]
 [connection signal="pressed" from="TESTS_DEBUG/TestZone/OrbCount" to="TESTS_DEBUG" method="_on_orb_count_pressed"]

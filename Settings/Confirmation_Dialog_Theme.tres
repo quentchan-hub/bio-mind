@@ -1,0 +1,76 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://b67shovnqe5yh"]
+
+[ext_resource type="FontFile" uid="uid://bhsbhsf1jnq7p" path="res://Fonts/MERRIWEATHERSANS-ITALIC-VARIABLEFONT_WGHT.TTF" id="1_08bod"]
+[ext_resource type="FontFile" uid="uid://c2lr1l6blohtp" path="res://Fonts/FFX FUTURIST REGULAR.TTF" id="2_8yxcm"]
+[ext_resource type="Texture2D" uid="uid://d2s3cj7hfka56" path="res://Assets/Frames/ClassicBlueFrameNOBG3.webp" id="3_85jag"]
+[ext_resource type="Texture2D" uid="uid://dhinlkewk7tji" path="res://Assets/Frames/ClassicBlueFrame.webp" id="4_rnl20"]
+
+[sub_resource type="Gradient" id="Gradient_nmrw3"]
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v7dnt"]
+gradient = SubResource("Gradient_nmrw3")
+width = 1
+height = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjwtt"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 40.0
+bg_color = Color(0.11119685, 0.11119685, 0.11119678, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2rwgp"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("3_85jag")
+expand_margin_left = 7.0
+expand_margin_top = 7.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+modulate_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_08bod"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("4_rnl20")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+modulate_color = Color(1, 1, 1, 0.627451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fldkj"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+texture = ExtResource("4_rnl20")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[resource]
+default_font = ExtResource("1_08bod")
+default_font_size = 24
+AcceptDialog/colors/title_color = Color(1, 1, 1, 1)
+AcceptDialog/constants/buttons_separation = 40
+AcceptDialog/font_sizes/title_font_size = 25
+AcceptDialog/fonts/title_font = ExtResource("1_08bod")
+AcceptDialog/icons/close = SubResource("GradientTexture2D_v7dnt")
+AcceptDialog/styles/embedded_border = null
+AcceptDialog/styles/embedded_unfocused_border = null
+AcceptDialog/styles/panel = SubResource("StyleBoxFlat_vjwtt")
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 23
+Button/fonts/font = ExtResource("2_8yxcm")
+Button/icons/icon = null
+Button/styles/focus = SubResource("StyleBoxTexture_2rwgp")
+Button/styles/hover = SubResource("StyleBoxTexture_08bod")
+Button/styles/normal = SubResource("StyleBoxTexture_fldkj")
+Button/styles/pressed = null

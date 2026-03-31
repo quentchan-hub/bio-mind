@@ -4,12 +4,12 @@
 [ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="2_4shfp"]
 [ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="3_0wp5a"]
 [ext_resource type="Script" uid="uid://c45413vjwk77t" path="res://Scripts/ResultButton.cs" id="4_s5c8i"]
-[ext_resource type="Texture2D" uid="uid://colganbfsvqmj" path="res://Assets/BioMindhead/BioMind_Blue_Head.webp" id="6_jl5wy"]
-[ext_resource type="Texture2D" uid="uid://bqe6gi1qnbkl0" path="res://Assets/BioMindhead/BioMind_Black_Head.webp" id="7_q4hyv"]
-[ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="8_ku13e"]
-[ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="9_vorxv"]
-[ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="10_ecuji"]
-[ext_resource type="Texture2D" uid="uid://cqfp5xj8v2mvp" path="res://Assets/BioMindhead/BioMind_Yellow_Head.webp" id="11_im5wa"]
+[ext_resource type="Texture2D" uid="uid://cmllhjpmdyryo" path="res://Assets/BioMindhead/BioMind_Black_Head2.webp" id="5_nuloa"]
+[ext_resource type="Texture2D" uid="uid://b8lkffl3genpp" path="res://Assets/BioMindhead/BioMind_Blue_Head2.webp" id="6_jl5wy"]
+[ext_resource type="Texture2D" uid="uid://bgfsbhoruvvb1" path="res://Assets/BioMindhead/BioMind_Purple_Head2.webp" id="7_q4hyv"]
+[ext_resource type="Texture2D" uid="uid://0xcm2amv22va" path="res://Assets/BioMindhead/BioMind_Red_Head2.webp" id="8_ku13e"]
+[ext_resource type="Texture2D" uid="uid://xtyegtdsgua" path="res://Assets/BioMindhead/BioMind_White_Head2.webp" id="9_vorxv"]
+[ext_resource type="Texture2D" uid="uid://cqp7pe8rsjg0r" path="res://Assets/BioMindhead/BioMind_Yellow_Head2.webp" id="10_ecuji"]
 
 [node name="ResultSlot" type="AspectRatioContainer"]
 size_flags_horizontal = 3
@@ -25,4 +25,4 @@ theme_override_styles/focus = ExtResource("3_0wp5a")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_s5c8i")
-ResultTextures = Array[Texture2D]([ExtResource("7_q4hyv"), ExtResource("6_jl5wy"), ExtResource("8_ku13e"), ExtResource("9_vorxv"), ExtResource("10_ecuji"), ExtResource("11_im5wa")])
+ResultTextures = Array[Texture2D]([ExtResource("5_nuloa"), ExtResource("6_jl5wy"), ExtResource("7_q4hyv"), ExtResource("8_ku13e"), ExtResource("9_vorxv"), ExtResource("10_ecuji")])

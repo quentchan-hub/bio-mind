@@ -4,12 +4,12 @@
 [ext_resource type="StyleBox" uid="uid://bh6025r7bvm3j" path="res://Settings/boutonreponsehover.tres" id="2_xu7ug"]
 [ext_resource type="StyleBox" uid="uid://njlb0r2phr42" path="res://Settings/boutonreponsefocuhover.tres" id="3_gv6ec"]
 [ext_resource type="Script" uid="uid://b01yajd41slxt" path="res://Scripts/BoardButton.cs" id="4_00yvh"]
-[ext_resource type="Texture2D" uid="uid://colganbfsvqmj" path="res://Assets/BioMindhead/BioMind_Blue_Head.webp" id="5_o32ue"]
-[ext_resource type="Texture2D" uid="uid://bqe6gi1qnbkl0" path="res://Assets/BioMindhead/BioMind_Black_Head.webp" id="6_1qh0f"]
-[ext_resource type="Texture2D" uid="uid://c4tpvxytwj57e" path="res://Assets/BioMindhead/BioMind_Purple_Head.webp" id="7_jp02q"]
-[ext_resource type="Texture2D" uid="uid://c7t6p7i35hrrc" path="res://Assets/BioMindhead/BioMind_Red_Head.webp" id="8_1yohw"]
-[ext_resource type="Texture2D" uid="uid://c3j67ts44y8qh" path="res://Assets/BioMindhead/BioMind_White_Head.webp" id="9_1wumi"]
-[ext_resource type="Texture2D" uid="uid://cqfp5xj8v2mvp" path="res://Assets/BioMindhead/BioMind_Yellow_Head.webp" id="10_ybyyp"]
+[ext_resource type="Texture2D" uid="uid://cmllhjpmdyryo" path="res://Assets/BioMindhead/BioMind_Black_Head2.webp" id="5_ngvu5"]
+[ext_resource type="Texture2D" uid="uid://b8lkffl3genpp" path="res://Assets/BioMindhead/BioMind_Blue_Head2.webp" id="6_xu7ug"]
+[ext_resource type="Texture2D" uid="uid://bgfsbhoruvvb1" path="res://Assets/BioMindhead/BioMind_Purple_Head2.webp" id="7_gv6ec"]
+[ext_resource type="Texture2D" uid="uid://0xcm2amv22va" path="res://Assets/BioMindhead/BioMind_Red_Head2.webp" id="8_00yvh"]
+[ext_resource type="Texture2D" uid="uid://xtyegtdsgua" path="res://Assets/BioMindhead/BioMind_White_Head2.webp" id="9_o32ue"]
+[ext_resource type="Texture2D" uid="uid://cqp7pe8rsjg0r" path="res://Assets/BioMindhead/BioMind_Yellow_Head2.webp" id="10_1qh0f"]
 
 [node name="PlayerSlot" type="AspectRatioContainer"]
 size_flags_horizontal = 3
@@ -25,6 +25,6 @@ theme_override_styles/focus = ExtResource("3_gv6ec")
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_00yvh")
-HeadTextures = Array[Texture2D]([ExtResource("6_1qh0f"), ExtResource("5_o32ue"), ExtResource("7_jp02q"), ExtResource("8_1yohw"), ExtResource("9_1wumi"), ExtResource("10_ybyyp")])
+HeadTextures = Array[Texture2D]([ExtResource("5_ngvu5"), ExtResource("6_xu7ug"), ExtResource("7_gv6ec"), ExtResource("8_00yvh"), ExtResource("9_o32ue"), ExtResource("10_1qh0f")])
 
 [connection signal="pressed" from="BoardButton" to="BoardButton" method="_on_pressed"]
