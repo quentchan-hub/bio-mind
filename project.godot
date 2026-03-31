@@ -32,6 +32,12 @@ window/handheld/orientation=1
 
 project/assembly_name="BioMind"
 
+[editor]
+
+movie_writer/video_quality=0.5
+movie_writer/movie_file="C:/Users/quent/PROJETS GODOT/bio-mind/Videos/Test1.avi"
+movie_writer/fps=30
+
 [file_customization]
 
 folder_colors={

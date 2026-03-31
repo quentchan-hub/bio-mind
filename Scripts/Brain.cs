@@ -193,7 +193,6 @@ public partial class Brain : Node
 				pendingSolution[index] = -1;
 			}
 		}
-		//GD.Print("right "+ rightPosition, " wrong "+ wrongPosition);
 		EmitSignal(SignalName.OnHintsReady, rightPosition, wrongPosition);
 
 		if (rightPosition == _slots)
@@ -210,7 +209,6 @@ public partial class Brain : Node
 			EmitSignal(SignalName.OnGameOver, false); // partie perdue
 			EmitSignal(SignalName.DisplaySolution, _solution);
 			EmitSignal(SignalName.DisplayFailAnswer, playerGuess);
-			GD.Print(playerGuess);
 			return;
 		}
 

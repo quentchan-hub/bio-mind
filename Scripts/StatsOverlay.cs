@@ -147,7 +147,6 @@ public partial class StatsOverlay : Control
 		if (totalSeconds == 0) return "--:--";
 		int minutes = totalSeconds / 60;
 		int seconds = totalSeconds % 60;
-		GD.Print($"test formatage temps retenu {minutes:00}:{seconds:00}");
 		return $"{minutes:00} : {seconds:00}";
 		
 	}
@@ -194,7 +193,6 @@ public partial class StatsOverlay : Control
 	private void RefreshChronoLabels()
 	{
 		EasyChronoValue.Text   = FormatTime(easyBestTime);
-		GD.Print("teste le passage au label : " +  FormatTime(easyBestTime));
 		HardChronoValue.Text   = FormatTime(hardBestTime);
 		ExpertChronoValue.Text = FormatTime(expertBestTime);
 	}

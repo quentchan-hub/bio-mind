@@ -84,7 +84,7 @@ public partial class GameScreen : Control
 	// ============================================================
 
 	// Connecté via l'inspecteur au signal toggled du CheckButton
-	private void _on_check_button_toggled(bool toggledOn)
+	private void _on_chrono_button_toggled(bool toggledOn)
 	{
 		_chronoEnabled = toggledOn;
 	}
@@ -109,7 +109,7 @@ public partial class GameScreen : Control
 		int elapsed = (int)_chronoElapsed;
 		EmitSignal(SignalName.ChronoTime, elapsed, _currentDifficulty);
 
-		GD.Print($"Chrono arrêté : {elapsed}s  difficulté : {_currentDifficulty}");
+		//GD.Print($"Chrono arrêté : {elapsed}s  difficulté : {_currentDifficulty}");
 	}
 
 	private void OnGameOver(bool victory)

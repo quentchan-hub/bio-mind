@@ -39,7 +39,7 @@ public partial class Orbs : Control
 
 	public void DisplayOrb(int orbEarned)
 	{
-		GD.Print("Orbe gagnée (0-5) = " + orbEarned);
+		//GD.Print("Orbe gagnée (0-5) = " + orbEarned);
 		switch (orbEarned)
 		{
 			case 0: OrbBlack.Visible = true;  config.SetValue("Player", "OrbBlackUnlocked", true);  break;

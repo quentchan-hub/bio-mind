@@ -3,6 +3,8 @@ using System;
 
 public partial class EndOrbs : Control
 {
+	[Export] AnimationPlayer RayOrbAnim;
+	
 	[Export] MarginContainer EndOrbCollection;
 
 	[Export] TextureRect EndOrbBlack;
@@ -23,34 +25,9 @@ public partial class EndOrbs : Control
 
 	public override void _Ready()
 	{
-		EndOrbBlack.Visible = false;
-		EndOrbBlue.Visible = false;
-		EndOrbPurple.Visible = false;
-		EndOrbRed.Visible = false;
-		EndOrbWhite.Visible = false;
-		EndOrbYellow.Visible = false;
-		EndOrbCollection.Visible = false;
-		
-		EverSlotBlack.Visible = false;
-		EverSlotBlue.Visible = false;
-		EverSlotPurple.Visible = false;
-		EverSlotRed.Visible = false;
-		EverSlotWhite.Visible = false;
-		EverSlotYellow.Visible = false;
-		
+		ResetVisibility();
+		ResetOrbSlotParticles();
 		LoadData();
-		
-		GD.Print(
-			"Dans Ready de EndOrbs après LoadData() : " +
-			$"Black={EndOrbBlack.Visible}, " +
-			$"Blue={EndOrbBlue.Visible}, " +
-			$"Purple={EndOrbPurple.Visible}, " +
-			$"Red={EndOrbRed.Visible}, " +
-			$"White={EndOrbWhite.Visible}, " +
-			$"Yellow={EndOrbYellow.Visible}, " +
-			$"Collection={EndOrbCollection.Visible}"
-		);
-		
 	}
 
 	public void DisplayEndOrbCollection()
@@ -75,47 +52,87 @@ public partial class EndOrbs : Control
 		}
 		config.Save("user://endorbs.cfg");
 	}
+	
+	private void ResetVisibility()
+	{
+		RayOrbAnim.Play("RESET");
+		
+		EndOrbBlack.Visible = false;
+		EndOrbBlue.Visible = false;
+		EndOrbPurple.Visible = false;
+		EndOrbRed.Visible = false;	
+		EndOrbWhite.Visible = false;
+		EndOrbYellow.Visible = false;
+
+		EverSlotBlack.Visible = false;
+		EverSlotBlue.Visible = false;
+		EverSlotPurple.Visible = false;
+		EverSlotRed.Visible = false;
+		EverSlotWhite.Visible = false;
+		EverSlotYellow.Visible = false;
+
+		EndOrbCollection.Visible = false;
+		this.Visible = false;
+	}
+
+	public void ResetOrbSlotParticles()
+	{
+		foreach (var node in GetTree().GetNodesInGroup("orb_slot_particles"))
+		{
+			if (node is TextureRect tr && tr.Material is CanvasItemMaterial mat)
+			{
+				mat.ParticlesAnimVFrames = 8;
+			}
+		}
+	}
 
 	public void ResetData()
 	{
-		DirAccess dir = DirAccess.Open("user://");
-		dir.Remove("user://endorbs.cfg");
+		var err = DirAccess.RemoveAbsolute("user://endorbs.cfg");
+		var exists = FileAccess.FileExists("user://endorbs.cfg");
 		config = new ConfigFile();
-		_Ready();
+		ResetVisibility();
+		ResetOrbSlotParticles();
 	}
-
+	
 	private void LoadData()
 	{
+		var exists = FileAccess.FileExists("user://endorbs.cfg");
 		Error err = config.Load("user://endorbs.cfg");
-		if (err != Error.Ok) return;
-
+		if (err != Error.Ok)
+		{
+			ResetVisibility();
+			return;
+		}
+		
 		bool orbUnlocked = (bool)config.GetValue("UI", "EndOrbCollectionUnlocked", false);
 		EndOrbCollection.Visible = orbUnlocked;
 		this.Visible = orbUnlocked;
 
-		EndOrbBlack.Visible =  (bool)config.GetValue("Player", "EndOrbBlackUnlocked", false);
-		EndOrbBlue.Visible =   (bool)config.GetValue("Player", "EndOrbBlueUnlocked", false);
-		EndOrbPurple.Visible = (bool)config.GetValue("Player", "EndOrbPurpleUnlocked", false);
-		EndOrbRed.Visible =    (bool)config.GetValue("Player", "EndOrbRedUnlocked", false);
-		EndOrbWhite.Visible =  (bool)config.GetValue("Player", "EndOrbWhiteUnlocked", false);
-		EndOrbYellow.Visible = (bool)config.GetValue("Player", "EndOrbYellowUnlocked", false);
+		bool displayBlack =  (bool)config.GetValue("Player", "EndOrbBlackUnlocked", false);
+		bool displayBlue =   (bool)config.GetValue("Player", "EndOrbBlueUnlocked", false);
+		bool displayPurple = (bool)config.GetValue("Player", "EndOrbPurpleUnlocked", false);
+		bool displayRed =    (bool)config.GetValue("Player", "EndOrbRedUnlocked", false);
+		bool displayWhite =  (bool)config.GetValue("Player", "EndOrbWhiteUnlocked", false);
+		bool displayYellow = (bool)config.GetValue("Player", "EndOrbYellowUnlocked", false);
 		
-		EverSlotBlack.Visible = EndOrbBlack.Visible;
-		EverSlotBlue.Visible = EndOrbBlue.Visible;
-		EverSlotPurple.Visible = EndOrbPurple.Visible;
-		EverSlotRed.Visible = EndOrbRed.Visible;
-		EverSlotWhite.Visible = EndOrbWhite.Visible;
-		EverSlotYellow.Visible = EndOrbYellow.Visible;
+		EndOrbBlack.Visible = displayBlack;
+		EverSlotBlack.Visible = displayBlack;
 		
-		GD.Print(
-			"Dans LoadData() : " +
-			$"Black={EndOrbBlack.Visible}, " +
-			$"Blue={EndOrbBlue.Visible}, " +
-			$"Purple={EndOrbPurple.Visible}, " +
-			$"Red={EndOrbRed.Visible}, " +
-			$"White={EndOrbWhite.Visible}, " +
-			$"Yellow={EndOrbYellow.Visible}, " +
-			$"Collection={EndOrbCollection.Visible}"
-		);
+		EndOrbBlue.Visible = displayBlue;
+		EverSlotBlue.Visible = displayBlue;
+		
+		EndOrbPurple.Visible = displayPurple;
+		EverSlotPurple.Visible = displayPurple;
+		
+		EndOrbRed.Visible = displayRed;
+		EverSlotRed.Visible = displayRed;
+		
+		EndOrbWhite.Visible = displayWhite;
+		EverSlotWhite.Visible = displayWhite;
+		
+		EndOrbYellow.Visible = displayYellow;
+		EverSlotYellow.Visible = displayYellow;
+		
 	}
 }

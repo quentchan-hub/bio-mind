@@ -19,7 +19,7 @@ public partial class OrbSpawn : VBoxContainer
 	public override void _Ready()
 	{
 		LoadData();
-		GD.Print("orbCount au ready après Load Data dans OrbSpawn = " + orbCount);
+		//GD.Print("orbCount au ready après Load Data dans OrbSpawn = " + orbCount);
 	}
 
 	public void SelectOrb(int randomOrb)

@@ -47,7 +47,7 @@ public partial class RobotPartSpawn : VBoxContainer
 			HomeScreen.DisplayPartCollection();
 			config.Save("user://robotpartspawn.cfg");
 		}
-		GD.Print("partCount après GetPartInCollec = " + partCount);
+		//GD.Print("partCount après GetPartInCollec = " + partCount);
 		return isNew;
 	}
 
@@ -84,6 +84,6 @@ public partial class RobotPartSpawn : VBoxContainer
 		if (_firstSword) partCount++;
 		if (_firstShield) partCount++;
 
-		GD.Print("partCount chargé = " + partCount);
+		//GD.Print("partCount chargé = " + partCount);
 	}
 }

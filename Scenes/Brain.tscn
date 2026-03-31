@@ -1,4 +1,4 @@
-[gd_scene load_steps=339 format=3 uid="uid://e01tv4ge5kyh"]
+[gd_scene load_steps=344 format=3 uid="uid://e01tv4ge5kyh"]
 
 [ext_resource type="Script" uid="uid://dw1f07bu3f8rp" path="res://Scripts/UiManager.cs" id="1_8blbl"]
 [ext_resource type="Script" uid="uid://dreutok0rdx1k" path="res://Scripts/StarfieldEffect.cs" id="1_13dyv"]
@@ -347,6 +347,18 @@ texture = ExtResource("22_613lv")
 font = ExtResource("24_4n7bh")
 font_size = 26
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwi58"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pucy7"]
+bg_color = Color(0.35686275, 0.49411765, 0.6039216, 1)
+draw_center = false
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0.42745098, 0.5921569, 0.7764706, 1)
+shadow_size = 18
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ed4qa"]
 content_margin_top = 15.0
 content_margin_right = 5.0
@@ -378,6 +390,44 @@ modulate_color = Color(1, 0.8039216, 1, 0.9490196)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0f8fj"]
 blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_mwysh"]
+resource_name = "GlowEffectPlay"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/GlowFrame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7, 7.25, 7.5, 7.75, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sl8xh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/GlowFrame:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_10are"]
+_data = {
+&"GlowEffectPlay": SubResource("Animation_mwysh"),
+&"RESET": SubResource("Animation_sl8xh")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_fgaad"]
 font = ExtResource("32_yser8")
@@ -1408,130 +1458,58 @@ tracks/31/keys = {
 tracks/32/type = "value"
 tracks/32/imported = false
 tracks/32/enabled = true
-tracks/32/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack:visible")
+tracks/32/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
 tracks/33/enabled = true
-tracks/33/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:visible")
+tracks/33/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/34/type = "value"
 tracks/34/imported = false
 tracks/34/enabled = true
-tracks/34/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:visible")
+tracks/34/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/35/type = "value"
 tracks/35/imported = false
 tracks/35/enabled = true
-tracks/35/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:visible")
+tracks/35/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/36/type = "value"
 tracks/36/imported = false
 tracks/36/enabled = true
-tracks/36/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:visible")
+tracks/36/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
 tracks/36/interp = 1
 tracks/36/loop_wrap = true
 tracks/36/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/37/type = "value"
-tracks/37/imported = false
-tracks/37/enabled = true
-tracks/37/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:visible")
-tracks/37/interp = 1
-tracks/37/loop_wrap = true
-tracks/37/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/38/type = "value"
-tracks/38/imported = false
-tracks/38/enabled = true
-tracks/38/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue:modulate")
-tracks/38/interp = 1
-tracks/38/loop_wrap = true
-tracks/38/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/39/type = "value"
-tracks/39/imported = false
-tracks/39/enabled = true
-tracks/39/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/EndOrbPurple:modulate")
-tracks/39/interp = 1
-tracks/39/loop_wrap = true
-tracks/39/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/40/type = "value"
-tracks/40/imported = false
-tracks/40/enabled = true
-tracks/40/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/EndOrbRed:modulate")
-tracks/40/interp = 1
-tracks/40/loop_wrap = true
-tracks/40/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/41/type = "value"
-tracks/41/imported = false
-tracks/41/enabled = true
-tracks/41/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/EndOrbWhite:modulate")
-tracks/41/interp = 1
-tracks/41/loop_wrap = true
-tracks/41/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/42/type = "value"
-tracks/42/imported = false
-tracks/42/enabled = true
-tracks/42/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/EndOrbYellow:modulate")
-tracks/42/interp = 1
-tracks/42/loop_wrap = true
-tracks/42/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -1753,6 +1731,18 @@ tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
 "times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot/Slot:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -1985,6 +1975,18 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2/Slot:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -2233,6 +2235,18 @@ tracks/19/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3/Slot:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_1b5aq"]
 resource_name = "RayOrbRed3"
@@ -2461,6 +2475,18 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4/Slot:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -2697,6 +2723,18 @@ tracks/18/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5/Slot:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_loq2r"]
 resource_name = "RayOrbYellow5"
@@ -2854,7 +2892,7 @@ tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0, 2.33, 2.8),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [8, 8, 1]
 }
 tracks/13/type = "value"
@@ -2878,7 +2916,7 @@ tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0, 2.33, 2.8),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [8, 8, 1]
 }
 tracks/15/type = "value"
@@ -2937,6 +2975,18 @@ tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
 "times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("../OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6/Slot:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -9868,7 +9918,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="DifficultyOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("Brain", "EasyMode", "HardMode", "ExpertMode", "CollectionsOverlay", "BlockExpertMode")]
+[node name="DifficultyOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("Brain", "EasyMode", "HardMode", "ExpertMode", "DifficultyAnim", "CollectionsOverlay", "BlockExpertMode")]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -9881,6 +9931,7 @@ Brain = NodePath("../../../../..")
 EasyMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/EasyMode")
 HardMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/HardMode")
 ExpertMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/ExpertMode")
+DifficultyAnim = NodePath("DifficultyAnim")
 CollectionsOverlay = NodePath("../CollectionsOverlay")
 BlockExpertMode = NodePath("Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/BlockExpertMode")
 
@@ -10348,13 +10399,17 @@ size_flags_vertical = 3
 [node name="Launcher" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_gwi58")
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer"]
+layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer"]
 layout_mode = 2
@@ -10382,28 +10437,18 @@ anchor_bottom = 1.0
 offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 130
+theme_override_constants/margin_left = 129
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 130
+theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer"]
+[node name="GlowFrame" type="PanelContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_styles/panel = SubResource("StyleBoxFlat_pucy7")
 
-[node name="Control" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer"]
+[node name="PlayBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-
-[node name="PlayBtn" type="Button" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.15400001
-anchor_right = 1.0
-anchor_bottom = 0.846
-offset_top = 0.057998657
-offset_bottom = -0.057998657
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_fonts/font = ExtResource("13_a22le")
 theme_override_font_sizes/font_size = 37
 theme_override_styles/normal = SubResource("StyleBoxTexture_ed4qa")
@@ -10412,30 +10457,25 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_mwysh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_24erj")
 text = "Jouer"
 
-[node name="Tampon5" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
+[node name="ChronoOption" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Control2" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Tampon5"]
-custom_minimum_size = Vector2(0, 30)
-anchors_preset = 0
-offset_left = 135.0
-offset_top = -32.0
-offset_right = 329.0
-offset_bottom = -2.0
-
-[node name="CheckButton" type="CheckButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Tampon5/Control2"]
+[node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ChronoOption"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -13.5
-offset_top = 35.890556
-offset_right = 13.5
-offset_bottom = 56.109444
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 30
+
+[node name="ChronoButton" type="CheckButton" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ChronoOption/MarginContainer"]
+layout_mode = 2
 theme_override_constants/h_separation = 59
 theme_override_constants/icon_max_width = 97
 theme_override_fonts/font = ExtResource("13_a22le")
@@ -10491,6 +10531,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("28_613lv")
 expand_mode = 1
+
+[node name="DifficultyAnim" type="AnimationPlayer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay"]
+libraries = {
+&"": SubResource("AnimationLibrary_10are")
+}
 
 [node name="StatsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("ConfirmResetStat", "Brain", "GameScreen", "EasyValueLabel", "WinEasyValueLabel", "HardValueLabel", "HardWinValueLabel", "ExpertValueLabel", "ExpertWinValueLabel", "GeneralValueLabel", "WinGeneralValueLabel", "EasyChronoValue", "HardChronoValue", "ExpertChronoValue")]
 visible = false
@@ -11031,7 +11076,6 @@ script = ExtResource("25_2foha")
 StatsOverlay = NodePath("../../..")
 
 [node name="CollectionsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("Orbs", "Parts", "Poses", "ConfirmResetCollec", "EndScreen")]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -11436,7 +11480,6 @@ theme_override_constants/margin_top = 3
 layout_mode = 2
 
 [node name="PartsTitle" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 size_flags_vertical = 0
 text = "PIECES DETACHEES"
@@ -11445,6 +11488,7 @@ horizontal_alignment = 1
 vertical_alignment = 3
 
 [node name="PartsTitleCrypt" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/CollectionsOverlay/Filter/MarginContainer/VBoxContainer/RobotParts/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 0
 text = "Piècus détafhéex : lovdt géaht"
@@ -12109,7 +12153,6 @@ script = ExtResource("48_7btnl")
 CollectionsOverlay = NodePath("../../..")
 
 [node name="RobotPartsOverlay" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen" node_paths=PackedStringArray("LeftArmZoom", "RightArmZoom", "LeftLegZoom", "RightLegZoom", "ChestZoom", "HeadZoom", "SwordZoom", "ShieldZoom")]
-visible = false
 anchors_preset = 0
 offset_right = 494.0
 offset_bottom = 1084.0
@@ -12318,7 +12361,7 @@ stretch_mode = 5
 [node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ChestZoom"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Bras Gauche"
+text = "Torse"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
@@ -12347,12 +12390,11 @@ stretch_mode = 5
 [node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/HeadZoom"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Bras Gauche"
+text = "Tête"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
 [node name="SwordZoom" type="VBoxContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer"]
-visible = false
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom"]
@@ -12376,7 +12418,7 @@ stretch_mode = 5
 [node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/SwordZoom"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Bras Gauche"
+text = "Épée"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
@@ -12405,7 +12447,7 @@ stretch_mode = 5
 [node name="Description" type="Label" parent="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/RobotPartsOverlay/Filter/MarginContainer/VBoxContainer/PanelContainer/ShieldZoom"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Bras Gauche"
+text = "Bouclier"
 label_settings = ExtResource("18_1lsdj")
 horizontal_alignment = 1
 
@@ -15473,11 +15515,12 @@ offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="EndOrbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer" node_paths=PackedStringArray("EndOrbCollection", "EndOrbBlack", "EndOrbBlue", "EndOrbPurple", "EndOrbRed", "EndOrbWhite", "EndOrbYellow", "EverSlotBlack", "EverSlotBlue", "EverSlotPurple", "EverSlotRed", "EverSlotWhite", "EverSlotYellow")]
+[node name="EndOrbs" type="Control" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer" node_paths=PackedStringArray("RayOrbAnim", "EndOrbCollection", "EndOrbBlack", "EndOrbBlue", "EndOrbPurple", "EndOrbRed", "EndOrbWhite", "EndOrbYellow", "EverSlotBlack", "EverSlotBlue", "EverSlotPurple", "EverSlotRed", "EverSlotWhite", "EverSlotYellow")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("114_gdbje")
+RayOrbAnim = NodePath("../../../../../../../../../../RayOrbAnim")
 EndOrbCollection = NodePath("EndOrbCollection")
 EndOrbBlack = NodePath("EndOrbCollection/GridContainer/CollectSlot/EndOrbBlack")
 EndOrbBlue = NodePath("EndOrbCollection/GridContainer/CollectSlot2/EndOrbBlue")
@@ -15530,7 +15573,7 @@ texture = ExtResource("17_wuhsp")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_2gs5g")
 layout_mode = 1
@@ -15551,7 +15594,7 @@ texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_2gs5g")
 layout_mode = 1
@@ -15671,7 +15714,7 @@ texture = ExtResource("18_cal7y")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_k26lw")
 layout_mode = 1
@@ -15692,7 +15735,7 @@ texture = SubResource("CompressedTexture2D_iplxh")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot2" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_dioyd")
 layout_mode = 1
@@ -15810,7 +15853,7 @@ texture = ExtResource("19_8hq12")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_ng4ve")
 layout_mode = 1
@@ -15831,7 +15874,7 @@ texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot3" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_ycc86")
 layout_mode = 1
@@ -15948,7 +15991,7 @@ texture = ExtResource("20_2dy84")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_otlj2")
 layout_mode = 1
@@ -15969,7 +16012,7 @@ texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot4" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_h46k2")
 layout_mode = 1
@@ -16084,7 +16127,7 @@ texture = ExtResource("21_667dm")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_iplxh")
 layout_mode = 1
@@ -16105,7 +16148,7 @@ texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot5" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_o3uba")
 layout_mode = 1
@@ -16223,7 +16266,7 @@ texture = ExtResource("22_crcpg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6"]
+[node name="Slot" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_ey3pl")
 layout_mode = 1
@@ -16244,7 +16287,7 @@ texture = ExtResource("115_otlj2")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6"]
+[node name="Slot2" type="TextureRect" parent="UIManager/BorderlineBGPanel/MarginContainer/EndScreen/VBoxContainer/TopEnd/MarginContainer/WinCases/Hard/OrbSpawn/Design/OrbRacks/MarginContainer/EndOrbs/EndOrbCollection/GridContainer/CollectSlot6" groups=["orb_slot_particles"]]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_613lv")
 layout_mode = 1
@@ -19190,10 +19233,11 @@ item_5/text = "5"
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/EasyMode/EasyBtn" to="." method="_on_easy_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/HardMode/HardBtn" to="." method="_on_hard_btn_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ExpertMode/ExpertBtn" to="." method="_on_expert_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="." method="_on_play_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
-[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/VBoxContainer/Control/PlayBtn" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay" method="_on_play_btn_pressed"]
-[connection signal="toggled" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Tampon5/Control2/CheckButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_check_button_toggled"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/PlayBtn" to="UIManager" method="_on_play_btn_pressed"]
+[connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/Launcher/MarginContainer/VBoxContainer/Control2/MarginContainer/PlayBtn" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay" method="_on_play_btn_pressed"]
+[connection signal="toggled" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ChronoOption/MarginContainer/ChronoButton" to="UIManager/BorderlineBGPanel/MarginContainer/GameScreen" method="_on_chrono_button_toggled"]
+[connection signal="toggled" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/MarginContainer/Control2/VBoxContainer/ChronoOption/MarginContainer/ChronoButton" to="UIManager/BorderlineBGPanel/MarginContainer/EndScreen" method="_on_chrono_button_toggled"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close/CloseDiffButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/DifficultyOverlay/Filter/Close/CloseDiffButton" method="_on_pressed"]
 [connection signal="pressed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ResetStatButton" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay" method="_on_reset_stat_button_pressed"]
 [connection signal="confirmed" from="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay/Filter/MarginContainer/VBoxContainer/ResetStat/VBoxContainer/Control2/MarginContainer/ConfirmResetStat" to="UIManager/BorderlineBGPanel/MarginContainer/HomeScreen/StatsOverlay" method="_on_confirmation_dialog_confirmed"]

@@ -9,6 +9,8 @@ public partial class DifficultyOverlay : Control
 	[Export] HardMode HardMode;
 	[Export] ExpertMode ExpertMode;
 	
+	[Export] AnimationPlayer DifficultyAnim;
+	
 	[Export] CollectionsOverlay CollectionsOverlay;
 	[Export] PanelContainer BlockExpertMode;
 	
@@ -25,15 +27,17 @@ public partial class DifficultyOverlay : Control
 		Visible = false;
 		LoadData();
 	}
-
-	private void _on_check_button_toggled(bool toggledOn)
+	
+	public void DisplayThisOverlay()
 	{
-		IsChronoEnabled = toggledOn;
+		Visible = true;
+		DifficultyAnim.Play("GlowEffectPlay");
 	}
-
+	
 	private void _on_play_btn_pressed()
 	{
 		Visible = false;
+		DifficultyAnim.Stop();
 	}
 	
 	public void HideBlockExpertMode()

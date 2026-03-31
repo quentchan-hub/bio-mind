@@ -18,6 +18,5 @@ public partial class ThumbsUpTex : TextureRect
 	public void SelectThumbsUp(int index)
 	{
 		Texture = ThumbsUpTextures[index];
-		GD.Print("test ThumbsUpTex");
 	}
 }

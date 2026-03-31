@@ -109,7 +109,6 @@ public partial class EndScreen : Control
 			var slotInstance = ResultSlotScene.Instantiate();
 			slotInstance.Name = $"FailSlot_{i}";
 			FailSlotContainer.AddChild(slotInstance);
-			GD.Print("nombre de failslot " + i);
 		}
 		
 	}
@@ -138,7 +137,6 @@ public partial class EndScreen : Control
 		Hard.Visible = false;
 		EasyOrMedium.Visible = false;
 		FalseResultContainer.Visible = false;
-		ChronoWinTex.Visible = true;
 		ResultLabel.Text = "BRAVO !";
 
 		switch (_difficultyMode)
@@ -191,7 +189,7 @@ public partial class EndScreen : Control
 		// Cas : toutes les orbes déjà obtenues, rien à animer
 		if (OrbSpawn.orbCount >= 6 && _isSixOrbsObtained)
 		{
-			GD.Print("6 orbes déjà obtenues, on passe direct.");
+			//GD.Print("6 orbes déjà obtenues, on passe à l'animation EasyMedWin.");
 			PlayEasyMedWin();
 			ButtonBlocker.Visible = false;
 			return;
@@ -235,8 +233,6 @@ public partial class EndScreen : Control
 			
 			// récupère l'info si nouvelle relique (_isNewPart) ou pas
 			_isNewPart = RobotPartSpawn.GetPartInCollec(_randomPart);
-			GD.Print("_isNewPart = " + _isNewPart);
-			GD.Print("partCount = " + RobotPartSpawn.partCount);
 			
 			// si nouvelle relique -> joue anim NewPart, sinon -> anim OldPart
 			AnnounceAnim.Play(_isNewPart ? "NewPart" : "OldPart");
@@ -282,7 +278,6 @@ public partial class EndScreen : Control
 
 		// récupère l'info si nouvelle couleur d'orbe (_isNewOrbColor) ou pas
 		_isNewOrbColor = OrbSpawn.GetOrbInCollec(_randomOrb);
-		GD.Print("isNewOrbColor = " + _isNewOrbColor);
 
 		// si nouvelle couleur -> joue anim NewOrbColor, sinon -> anim OldOrbColor
 		TopEndAnim.Play(_isNewOrbColor ? "NewOrbColor" : "OldOrbColor");
@@ -334,7 +329,6 @@ public partial class EndScreen : Control
 		HomeScreen.OnSixOrbsCompleted();
 		await ToSignal(TopEndAnim, "animation_finished");
 		
-		GD.Print("Le joueur a obtenu tous les Orbes !");
 	}
 
 	private async void OnEightPartsObtained()
@@ -380,7 +374,7 @@ public partial class EndScreen : Control
 	};
 
 	// ================================================================
-	// SOLUTION DISPLAY
+	// AFFICHAGES PAR SIGNALS : SOLUTION, DERNIERE LIGNE JOUEUR, CHRONO
 	// ================================================================
 
 	private void OnDisplaySolution(Godot.Collections.Array<int> solution)
@@ -406,6 +400,11 @@ public partial class EndScreen : Control
 		}
 	}
 	
+	private void _on_chrono_button_toggled(bool toggled_on)
+	{
+		ChronoWinTex.Visible = toggled_on;
+	}
+	
 	private void OnChronoTime(int elapsedSeconds, int difficulty)
 	{
 		if (ChronoWinLabel == null) return;
@@ -413,7 +412,7 @@ public partial class EndScreen : Control
 		int minutes = elapsedSeconds / 60;
 		int seconds = elapsedSeconds % 60;
 		ChronoWinLabel.Text = $"{minutes:00}:{seconds:00}";
-		ChronoWinTex.Visible = true;
+		//ChronoWinTex.Visible = true;
 	}
 	
 

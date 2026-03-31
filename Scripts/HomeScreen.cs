@@ -21,7 +21,7 @@ public partial class HomeScreen : Control
 	}
 	
 	// Transmission vers DifficultyOverlay = GameLauncher
-	private void _on_launch_btn_pressed() => DifficultyOverlay.Visible = true;
+	private void _on_launch_btn_pressed() => DifficultyOverlay.DisplayThisOverlay();
 	public void ExpertModeOpen() => DifficultyOverlay.HideBlockExpertMode();
 	
 	// Transmission vers StatsOverlay

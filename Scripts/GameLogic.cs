@@ -134,8 +134,7 @@ public partial class GameLogic : Node
 			}
 		}
 		
-		GD.Print($"Bien placés: {rightPosition}, Mal placés: {wrongPosition}");
-		
+	
 		// Transmettre le bilan à GameZone pour qu'il gère l'affichage des hints
 		
 		EmitSignal(SignalName.OnHintsReady, rightPosition, wrongPosition);

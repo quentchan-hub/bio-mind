@@ -62,7 +62,6 @@ public partial class Parts : Control
 
 	public void DisplayPart(int partEarned)
 	{
-		GD.Print("Partie robot gagnée (0-7) = " + partEarned);
 		switch (partEarned)
 		{
 			case 0: LeftArmButton.Visible = true;  config.SetValue("Player", "LeftArmUnlocked", true);  break;

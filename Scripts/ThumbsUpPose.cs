@@ -14,7 +14,6 @@ public partial class ThumbsUpPose : Control
 	{
 		int randomThumbsUp = (int)(GD.Randi() % 3);
 		ThumbsUpTex.SelectThumbsUp(randomThumbsUp);
-		GD.Print("ThumbsUpTex dans ThumbsUpPose = " + randomThumbsUp);
 	}
 	
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
